@@ -1,0 +1,20 @@
+[
+{
+  "modid": "ElEx",
+  "name": "Elemental Experimentation",
+  "description": "All of the elements recreated in Minecraft.",
+  "version": "0.0.01.001-dev",
+  "url": "www.github.com/myoKun345/ElementalExperimentation/",
+  "updateUrl": "",
+  "authorList": [
+    "Myo-kun"
+  ],
+  "credits": "By Myo-kun; thanks to Pahimar for his Let's Mod series!",
+  "logoFile": "",
+  "screenshots": [
+  ],
+  "parent":"",
+  "dependencies": [
+  ]
+}
+]
