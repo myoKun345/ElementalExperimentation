@@ -24,7 +24,7 @@ public class BlockElExOre extends Block {
         textures = new Icon[4];
         
         for(int i = 0; i < textures.length; i++) {
-            textures[i] = iconRegister.registerIcon(Reference.MOD_ID.toLowerCase() + ":" + this.getUnlocalizedName2());
+            textures[i] = iconRegister.registerIcon(Reference.MOD_ID.toLowerCase() + ":" + this.getUnlocalizedName());
         }
     }
 }

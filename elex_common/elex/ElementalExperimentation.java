@@ -1,5 +1,9 @@
 package elex;
 
+import java.io.File;
+
+import elex.configuration.ConfigurationHandler;
+
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
 import cpw.mods.fml.common.Mod.PostInit;
@@ -15,6 +19,9 @@ import elex.lib.Reference;
 public class ElementalExperimentation {
     @PreInit
     public void preInit(FMLPreInitializationEvent event) {
+        /* Config */
+        //ConfigurationHandler.init(new File(event.getModConfigurationDirectory().getAbsolutePath() + File.separator + Reference.CHANNEL_NAME + File.separator + Reference.MOD_ID + ".cfg"));
+        
         /* Block Init */
         ModBlocks.init();
         
