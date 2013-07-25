@@ -1,21 +1,21 @@
 package elex.lib;
 
 public class ItemIds {
+    /* Config Category */
+    public static final String CATEGORY_ITEM_IDS = "Item IDs";
+    
     /* Default Item IDs */
-    public static int AQUAMARINE_DEFAULT = 16231;
-    public static int BORAX_DEFAULT = 16232;
-    public static int FLUORITE_DEFAULT = 16233;
-    public static int FORSTERITE_DEFAULT = 16234;
-    public static int PETALITE_DEFAULT = 16235;
-    public static int ARTIFICIAL_QUARTZ_DEFAULT = 16236;
-    public static int SPODUMENE_DEFAULT = 16237;
+    public static final int ELEX_ORE_DEFAULT = 16231;
+    public static final int MERCURY_INJECTOR_DEFAULT = 16232;
     
     /* Current Item IDs */
-    public static int AQUAMARINE;
-    public static int BORAX;
-    public static int FLUORITE;
-    public static int FORSTERITE;
-    public static int PETALITE;
-    public static int ARTIFICIAL_QUARTZ;
-    public static int SPODUMENE;
+    public static int ELEX_ORE;
+    public static int MERCURY_INJECTOR;
+    
+    /* Item Config Keys */
+    public static final String ELEX_ORE_KEY = "ORES";
+    public static final String MERCURY_INJECTOR_KEY = "MercuryInjectorID";
+    
+    /* Item Unlocalized Names */
+    public static final String MERCURY_INJECTOR_UNLOCALIZED_NAME = "mercuryInjector";
 }

@@ -1,5 +1,6 @@
 package elex.item;
 
+import cpw.mods.fml.common.registry.LanguageRegistry;
 import elex.lib.ItemIds;
 import net.minecraft.item.Item;
 
@@ -11,14 +12,13 @@ public class ModItems {
     public static Item petalite;
     public static Item quartzArtificial;
     public static Item spodumene;
+    public static Item mercuryInjector;
     
     public static void init() {
-        aquamarine = new ItemElExOre(ItemIds.AQUAMARINE);
-        borax = new ItemElExOre(ItemIds.BORAX);
-        fluorite = new ItemElExOre(ItemIds.FLUORITE);
-        forsterite = new ItemElExOre(ItemIds.FORSTERITE);
-        petalite = new ItemElExOre(ItemIds.PETALITE);
-        quartzArtificial = new ItemElExOre(ItemIds.ARTIFICIAL_QUARTZ);
-        spodumene = new ItemElExOre(ItemIds.SPODUMENE);
+        mercuryInjector = new ItemMercuryInjector(ItemIds.MERCURY_INJECTOR);
+    }
+    
+    public static void addNames() {
+        LanguageRegistry.addName(mercuryInjector, "Mercury Injector");
     }
 }

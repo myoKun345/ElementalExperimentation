@@ -7,6 +7,14 @@ import elex.element.Element;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.item.Item;
 
+/**
+ * Elemental Experimentation
+ * 
+ * ItemElExOre
+ * 
+ * @author Myo-kun
+ * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
+ */
 public class ItemElExOre extends Item {
 
     public ItemElExOre(int id) {
