@@ -16,5 +16,6 @@ import elex.item.ModItems;
 public class CraftingRecipes {
     public static void registerRecipes() {
         GameRegistry.addRecipe(new ItemStack(ModItems.mercuryInjector, 1), new Object[] { "X", "Z", "Y", 'X', Item.ingotIron, 'Z', Item.slimeBall, 'Y', Item.stick });
+        GameRegistry.addRecipe(new ItemStack(ModItems.mercuryInjector, 1), new Object[] { "X", "Z", "Y", 'X', Item.ingotIron, 'Z', "molecule_1hg", 'Y', Item.stick });
     }
 }

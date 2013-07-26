@@ -13,9 +13,14 @@ public class ItemIds {
     public static int MERCURY_INJECTOR;
     
     /* Item Config Keys */
-    public static final String ELEX_ORE_KEY = "ORES";
+    public static final String ELEX_ORE_KEY = "ITEMORES";
     public static final String MERCURY_INJECTOR_KEY = "MercuryInjectorID";
     
     /* Item Unlocalized Names */
+    public static final String ELEX_ORE_UNLOCALIZED_NAME = "itemElexOre";
+    public static final String[] ELEX_ORE_REAL_UNLOCALIZED_NAMES = { "aquamarine", "borax", "fluorite", "forsterite", "petalite", "quartzArtificial", "spodumene" };
     public static final String MERCURY_INJECTOR_UNLOCALIZED_NAME = "mercuryInjector";
+    
+    /* Temporary Item English Names */
+    public static final String[] ELEX_ORE_ENGLISH_NAMES = { "Aquamarine", "Borax", "Fluorite", "Forsterite", "Petalite", "Artificial Quartz", "Spodumene" };
 }

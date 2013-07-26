@@ -5,6 +5,7 @@ import java.util.List;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import elex.ElementalExperimentation;
 import elex.lib.ItemIds;
 import elex.lib.Reference;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -15,6 +16,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.Icon;
 
 /**
  * Elemental Experimentation
@@ -28,10 +30,16 @@ public class ItemMercuryInjector extends Item {
 
     private int milliBuckets;
     
+    @SideOnly(Side.CLIENT)
+    private Icon emptyIcon;
+    
+    @SideOnly(Side.CLIENT)
+    private Icon halfIcon;
+    
     public ItemMercuryInjector(int par1) 
     {
-        super(par1);
-        setCreativeTab(CreativeTabs.tabCombat);
+        super(par1 - Reference.SHIFTED_ID_RANGE_CORRECTION);
+        setCreativeTab(ElementalExperimentation.elexTab);
         setMaxStackSize(1);
         setUnlocalizedName(ItemIds.MERCURY_INJECTOR_UNLOCALIZED_NAME);
         setMaxDamage(125);
@@ -40,7 +48,7 @@ public class ItemMercuryInjector extends Item {
     @Override
     public boolean func_111207_a(ItemStack stack, EntityPlayer player, EntityLivingBase target)
     {
-        target.attackEntityFrom(DamageSource.generic, 100.0F);
+        target.attackEntityFrom(DamageSource.causePlayerDamage(player), 20.0F);
         stack.damageItem(1, target);
         
         return false;
@@ -50,6 +58,20 @@ public class ItemMercuryInjector extends Item {
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister register) {
         itemIcon = register.registerIcon(Reference.MOD_ID.toLowerCase() + ":" + ItemIds.MERCURY_INJECTOR_UNLOCALIZED_NAME);
+        emptyIcon = register.registerIcon(Reference.MOD_ID.toLowerCase() + ":" + ItemIds.MERCURY_INJECTOR_UNLOCALIZED_NAME + "_empty");
+        halfIcon = register.registerIcon(Reference.MOD_ID.toLowerCase() + ":" + ItemIds.MERCURY_INJECTOR_UNLOCALIZED_NAME + "_half");
+    }
+    
+    @Override
+    @SideOnly(Side.CLIENT)
+    public Icon getIconFromDamage(int dmg) {
+        if (dmg >= 120) {
+            return emptyIcon;
+        }
+        if (dmg >= 62) {
+            return halfIcon;
+        }
+        return itemIcon;
     }
     
     @Override
