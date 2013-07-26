@@ -3,17 +3,19 @@ package elex.element;
 import net.minecraft.item.Item;
 
 public class Element {
-    public float meltingPoint;
+    private float meltingPoint;
     
-    public float boilingPoint;
+    private float boilingPoint;
     
-    public float sublimationPoint;
+    private float sublimationPoint;
     
-    public String symbol;
+    private String symbol;
     
-    public boolean metal;
+    private boolean metal;
     
-    public Item vanillaIngot;
+    private Item vanillaIngot;
+    
+    private int elementID;
     
     public static final Element[] elementList = new Element[128];
 
@@ -92,6 +94,35 @@ public class Element {
     
     public Element(int num)
     {
-        
+        elementID = num;
+        elementList[num] = this;
+    }
+    
+    public int getID() {
+        return elementID;
+    }
+    
+    public String getSymbol() {
+        return symbol;
+    }
+    
+    public float getSublimationPoint() {
+        return sublimationPoint;
+    }
+    
+    public float getMeltingPoint() {
+        return meltingPoint;
+    }
+    
+    public float getBoilingPoint() {
+        return boilingPoint;
+    }
+    
+    public boolean getIsMetal() {
+        return metal;
+    }
+    
+    public Item getVanillaIngot() {
+        return vanillaIngot;
     }
 }

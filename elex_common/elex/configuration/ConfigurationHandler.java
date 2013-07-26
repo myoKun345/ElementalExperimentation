@@ -29,6 +29,7 @@ public class ConfigurationHandler {
         
         ItemIds.ELEX_ORE = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.ELEX_ORE_KEY, ItemIds.ELEX_ORE_DEFAULT).getInt();
         ItemIds.MERCURY_INJECTOR = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.MERCURY_INJECTOR_KEY, ItemIds.MERCURY_INJECTOR_DEFAULT).getInt();
+        ItemIds.ELEX_DUST = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.ELEX_DUST_KEY, ItemIds.ELEX_DUST_DEFAULT).getInt();
         
         config.save();
         
