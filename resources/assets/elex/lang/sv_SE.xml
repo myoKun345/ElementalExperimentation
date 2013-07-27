@@ -5,6 +5,7 @@
 	<entry key="itemGroup.ElEx">Elemental Experimentation</entry>
 	
 	<entry key="tile.centrifuge.name">Centrifug</entry>
+	
 	<entry key="tile.elexOreBlock.0.name">Kopparmalm</entry>
 	<entry key="tile.elexOreBlock.1.name">Silvermalm</entry>
 	<entry key="tile.elexOreBlock.2.name">Tennmalm</entry>
@@ -22,7 +23,7 @@
 	<entry key="tile.elexOreBlock.14.name">Indiummalm</entry>
 	<entry key="tile.elexOreBlock.15.name">Aluminiummalm</entry>
 	<entry key="tile.elexOreBlock2.0.name">Tantalmalm</entry>
-	<entry key="tile.elexOreBlock2.1.name">Selenmalm</entry>
+	<entry key="tile.elexOreBlock2.1.name">Arsenikmalm</entry>
 	<entry key="tile.elexOreBlock2.2.name">Tellurmalm</entry>
 	<entry key="tile.elexOreBlock2.3.name">Antimonmalm</entry>
 	<entry key="tile.elexOreBlock2.4.name">Vismutmalm</entry>
@@ -35,6 +36,7 @@
 	<entry key="item.itemElexOre4.name">Petalit</entry>
 	<entry key="item.itemElexOre5.name">Syntetiskkvarts</entry>
 	<entry key="item.itemElexOre6.name">Spodumen</entry>
+	
 	<entry key="item.itemElexDust0.name">Akvamarindamm</entry>
 	<entry key="item.itemElexDust1.name">Boraxdamm</entry>
 	<entry key="item.itemElexDust2.name">Fluoritdamm</entry>
@@ -43,5 +45,53 @@
 	<entry key="item.itemElexDust5.name">Syntetiskkvartsdamm</entry>
 	<entry key="item.itemElexDust6.name">Spodumendamm</entry>
 	<entry key="item.itemElexDust7.name">Nederkvartsdamm</entry>
+	<entry key="item.itemElexDust8.name">Koppardamm</entry>
+	<entry key="item.itemElexDust9.name">Silverdamm</entry>
+	<entry key="item.itemElexDust10.name">Tenndamm</entry>
+	<entry key="item.itemElexDust11.name">Kromdamm</entry>
+	<entry key="item.itemElexDust12.name">Osmiumdamm</entry>
+	<entry key="item.itemElexDust13.name">Ruteniumdamm</entry>
+	<entry key="item.itemElexDust14.name">Rodiumdamm</entry>
+	<entry key="item.itemElexDust15.name">Palladiumdamm</entry>
+	<entry key="item.itemElexDust16.name">Iridiumdamm</entry>
+	<entry key="item.itemElexDust17.name">Platinadamm</entry>
+	<entry key="item.itemElexDust18.name">Nickeldamm</entry>
+	<entry key="item.itemElexDust19.name">Koboltdamm</entry>
+	<entry key="item.itemElexDust20.name">Kadmiumdamm</entry>
+	<entry key="item.itemElexDust21.name">Molybdendamm</entry>
+	<entry key="item.itemElexDust22.name">Indiumdamm</entry>
+	<entry key="item.itemElexDust23.name">Aluminiumdamm</entry>
+	<entry key="item.itemElexDust24.name">Tantaldamm</entry>
+	<entry key="item.itemElexDust25.name">Arsenikdamm</entry>
+	<entry key="item.itemElexDust26.name">Tellurdamm</entry>
+	<entry key="item.itemElexDust27.name">Antimondamm</entry>
+	<entry key="item.itemElexDust28.name">Vismutdamm</entry>
+	<entry key="item.itemElexDust29.name">Blydamm</entry>
+	<entry key="item.itemElexDust30.name">Järndamm</entry>
+	<entry key="item.itemElexDust31.name">Gulddamm</entry>
+	
+	<entry key="item.itemElexIngot0.name">Koppartacka</entry>
+	<entry key="item.itemElexIngot1.name">Silvertacka</entry>
+	<entry key="item.itemElexIngot2.name">Tenntacka</entry>
+	<entry key="item.itemElexIngot3.name">Kromtacka</entry>
+	<entry key="item.itemElexIngot4.name">Osmiumtacka</entry>
+	<entry key="item.itemElexIngot5.name">Ruteniumtacka</entry>
+	<entry key="item.itemElexIngot6.name">Rodiumtacka</entry>
+	<entry key="item.itemElexIngot7.name">Palladiumtacka</entry>
+	<entry key="item.itemElexIngot8.name">Iridiumtacka</entry>
+	<entry key="item.itemElexIngot9.name">Platinatacka</entry>
+	<entry key="item.itemElexIngot10.name">Nickeltacka</entry>
+	<entry key="item.itemElexIngot11.name">Kobolttacka</entry>
+	<entry key="item.itemElexIngot12.name">Kadmiumtacka</entry>
+	<entry key="item.itemElexIngot13.name">Molybdentacka</entry>
+	<entry key="item.itemElexIngot14.name">Indiumtacka</entry>
+	<entry key="item.itemElexIngot15.name">Aluminiumtacka</entry>
+	<entry key="item.itemElexIngot16.name">Tantaltacka</entry>
+	<entry key="item.itemElexIngot17.name">Arseniktacka</entry>
+	<entry key="item.itemElexIngot18.name">Tellurtacka</entry>
+	<entry key="item.itemElexIngot19.name">Antimontacka</entry>
+	<entry key="item.itemElexIngot20.name">Vismuttacka</entry>
+	<entry key="item.itemElexIngot21.name">Blytacka</entry>
+	
 	<entry key="item.mercuryInjector.name">Kvicksilverspruta</entry>
 </properties>

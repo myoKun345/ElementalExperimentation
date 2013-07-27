@@ -5,6 +5,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
 import cpw.mods.fml.common.registry.GameRegistry;
 import elex.item.ModItems;
+import elex.lib.BlockIds;
 import elex.lib.ItemIds;
 
 /**
@@ -24,5 +25,18 @@ public class CraftingRecipes {
             FurnaceRecipes.smelting().addSmelting(ItemIds.ELEX_DUST, i, new ItemStack(ModItems.itemElExOre, 1, i), 5F);
         }
         FurnaceRecipes.smelting().addSmelting(ItemIds.ELEX_DUST, 7, new ItemStack(Item.netherQuartz, 1), 5F);
+        for (int i = 0; i < ItemIds.ELEX_INGOT_REAL_UNLOCALIZED_NAMES.length; i++) {
+            int j = i + 8;
+            FurnaceRecipes.smelting().addSmelting(ItemIds.ELEX_DUST, j, new ItemStack(ModItems.itemElExIngot, 1, i), 5F);
+        }
+        FurnaceRecipes.smelting().addSmelting(ItemIds.ELEX_DUST, 30, new ItemStack(Item.ingotIron, 1), 5F);
+        FurnaceRecipes.smelting().addSmelting(ItemIds.ELEX_DUST, 31, new ItemStack(Item.ingotGold, 1), 5F);
+        for (int i = 0; i < BlockIds.BLOCK_ELEX_ORE_REAL_UNLOCALIZED_NAMES.length; i++) {
+            FurnaceRecipes.smelting().addSmelting(BlockIds.BLOCK_ELEX_ORE, i, new ItemStack(ModItems.itemElExIngot, 1, i), 5F);
+        }
+        for (int i = 0; i < BlockIds.BLOCK_ELEX_ORE_2_REAL_UNLOCALIZED_NAMES.length; i++) {
+            int j = i + BlockIds.BLOCK_ELEX_ORE_REAL_UNLOCALIZED_NAMES.length;
+            FurnaceRecipes.smelting().addSmelting(BlockIds.BLOCK_ELEX_ORE_2, i, new ItemStack(ModItems.itemElExIngot, 1, j), 5F);
+        }
     }
 }

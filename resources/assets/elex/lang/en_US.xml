@@ -5,6 +5,7 @@
 	<entry key="itemGroup.ElEx">Elemental Experimentation</entry>
 	
 	<entry key="tile.centrifuge.name">Centrifuge</entry>
+	
 	<entry key="tile.elexOreBlock.0.name">Copper Ore</entry>
 	<entry key="tile.elexOreBlock.1.name">Silver Ore</entry>
 	<entry key="tile.elexOreBlock.2.name">Tin Ore</entry>
@@ -35,6 +36,7 @@
 	<entry key="item.itemElexOre4.name">Petalite</entry>
 	<entry key="item.itemElexOre5.name">Artificial Quartz</entry>
 	<entry key="item.itemElexOre6.name">Spodumene</entry>
+	
 	<entry key="item.itemElexDust0.name">Aquamarine Dust</entry>
 	<entry key="item.itemElexDust1.name">Borax Dust</entry>
 	<entry key="item.itemElexDust2.name">Fluorite Dust</entry>
@@ -43,5 +45,53 @@
 	<entry key="item.itemElexDust5.name">Artificial Quartz Dust</entry>
 	<entry key="item.itemElexDust6.name">Spodumene Dust</entry>
 	<entry key="item.itemElexDust7.name">Nether Quartz Dust</entry>
+	<entry key="item.itemElexDust8.name">Copper Dust</entry>
+	<entry key="item.itemElexDust9.name">Silver Dust</entry>
+	<entry key="item.itemElexDust10.name">Tin Dust</entry>
+	<entry key="item.itemElexDust11.name">Chromium Dust</entry>
+	<entry key="item.itemElexDust12.name">Osmium Dust</entry>
+	<entry key="item.itemElexDust13.name">Ruthenium Dust</entry>
+	<entry key="item.itemElexDust14.name">Rhodium Dust</entry>
+	<entry key="item.itemElexDust15.name">Palladium Dust</entry>
+	<entry key="item.itemElexDust16.name">Iridium Dust</entry>
+	<entry key="item.itemElexDust17.name">Platinum Dust</entry>
+	<entry key="item.itemElexDust18.name">Nickel Dust</entry>
+	<entry key="item.itemElexDust19.name">Cobalt Dust</entry>
+	<entry key="item.itemElexDust20.name">Cadmium Dust</entry>
+	<entry key="item.itemElexDust21.name">Molybdenum Dust</entry>
+	<entry key="item.itemElexDust22.name">Indium Dust</entry>
+	<entry key="item.itemElexDust23.name">Aluminium Dust</entry>
+	<entry key="item.itemElexDust24.name">Tantalum Dust</entry>
+	<entry key="item.itemElexDust25.name">Arsenic Dust</entry>
+	<entry key="item.itemElexDust26.name">Tellurium Dust</entry>
+	<entry key="item.itemElexDust27.name">Antimony Dust</entry>
+	<entry key="item.itemElexDust28.name">Bismuth Dust</entry>
+	<entry key="item.itemElexDust29.name">Lead Dust</entry>
+	<entry key="item.itemElexDust30.name">Iron Dust</entry>
+	<entry key="item.itemElexDust31.name">Gold Dust</entry>
+	
+	<entry key="item.itemElexIngot0.name">Copper Ingot</entry>
+	<entry key="item.itemElexIngot1.name">Silver Ingot</entry>
+	<entry key="item.itemElexIngot2.name">Tin Ingot</entry>
+	<entry key="item.itemElexIngot3.name">Chromium Ingot</entry>
+	<entry key="item.itemElexIngot4.name">Osmium Ingot</entry>
+	<entry key="item.itemElexIngot5.name">Ruthenium Ingot</entry>
+	<entry key="item.itemElexIngot6.name">Rhodium Ingot</entry>
+	<entry key="item.itemElexIngot7.name">Palladium Ingot</entry>
+	<entry key="item.itemElexIngot8.name">Iridium Ingot</entry>
+	<entry key="item.itemElexIngot9.name">Platinum Ingot</entry>
+	<entry key="item.itemElexIngot10.name">Nickel Ingot</entry>
+	<entry key="item.itemElexIngot11.name">Cobalt Ingot</entry>
+	<entry key="item.itemElexIngot12.name">Cadmium Ingot</entry>
+	<entry key="item.itemElexIngot13.name">Molybdenum Ingot</entry>
+	<entry key="item.itemElexIngot14.name">Indium Ingot</entry>
+	<entry key="item.itemElexIngot15.name">Aluminium Ingot</entry>
+	<entry key="item.itemElexIngot16.name">Tantalum Ingot</entry>
+	<entry key="item.itemElexIngot17.name">Arsenic Ingot</entry>
+	<entry key="item.itemElexIngot18.name">Tellurium Ingot</entry>
+	<entry key="item.itemElexIngot19.name">Antimony Ingot</entry>
+	<entry key="item.itemElexIngot20.name">Bismuth Ingot</entry>
+	<entry key="item.itemElexIngot21.name">Lead Ingot</entry>
+	
 	<entry key="item.mercuryInjector.name">Mercury Injector</entry>
 </properties>
