@@ -7,14 +7,16 @@ import net.minecraft.block.Block;
 
 public class ModBlocks {
     public static Block centrifuge;
+    public static Block blockElExOre;
+    public static Block blockElExOre2;
     
     public static void init() {
         centrifuge = new BlockCentrifuge(BlockIds.CENTRIFUGE);
+        blockElExOre = new BlockElExOre(BlockIds.BLOCK_ELEX_ORE);
+        blockElExOre2 = new BlockElExOre2(BlockIds.BLOCK_ELEX_ORE_2);
         
         GameRegistry.registerBlock(centrifuge, "centrifugeElEx");
-    }
-    
-    public static void addNames() {
-        LanguageRegistry.addName(centrifuge, "Centrifuge");
+        GameRegistry.registerBlock(blockElExOre, ItemBlockElExOre.class, "blockElExOre");
+        GameRegistry.registerBlock(blockElExOre2, ItemBlockElExOre2.class, "blockElExOre2");
     }
 }

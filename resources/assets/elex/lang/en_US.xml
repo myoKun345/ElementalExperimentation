@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties version="1.0">
+	<comment>English (en_US) Localization File</comment>
+	<entry key="itemGroup.ElEx">Elemental Experimentation</entry>
+	
+	<entry key="tile.centrifuge.name">Centrifuge</entry>
+	<entry key="tile.elexOreBlock.0.name">Copper Ore</entry>
+	<entry key="tile.elexOreBlock.1.name">Silver Ore</entry>
+	<entry key="tile.elexOreBlock.2.name">Tin Ore</entry>
+	<entry key="tile.elexOreBlock.3.name">Chromium Ore</entry>
+	<entry key="tile.elexOreBlock.4.name">Osmium Ore</entry>
+	<entry key="tile.elexOreBlock.5.name">Ruthenium Ore</entry>
+	<entry key="tile.elexOreBlock.6.name">Rhodium Ore</entry>
+	<entry key="tile.elexOreBlock.7.name">Palladium Ore</entry>
+	<entry key="tile.elexOreBlock.8.name">Iridium Ore</entry>
+	<entry key="tile.elexOreBlock.9.name">Platinum Ore</entry>
+	<entry key="tile.elexOreBlock.10.name">Nickel Ore</entry>
+	<entry key="tile.elexOreBlock.11.name">Cobalt Ore</entry>
+	<entry key="tile.elexOreBlock.12.name">Cadmium Ore</entry>
+	<entry key="tile.elexOreBlock.13.name">Molybdenum Ore</entry>
+	<entry key="tile.elexOreBlock.14.name">Indium Ore</entry>
+	<entry key="tile.elexOreBlock.15.name">Aluminium Ore</entry>
+	<entry key="tile.elexOreBlock2.0.name">Tantalum Ore</entry>
+	<entry key="tile.elexOreBlock2.1.name">Arsenic Ore</entry>
+	<entry key="tile.elexOreBlock2.2.name">Tellurium Ore</entry>
+	<entry key="tile.elexOreBlock2.3.name">Antimony Ore</entry>
+	<entry key="tile.elexOreBlock2.4.name">Bismuth Ore</entry>
+	<entry key="tile.elexOreBlock2.5.name">Lead Ore</entry>
+	
+	<entry key="item.itemElexOre0.name">Aquamarine</entry>
+	<entry key="item.itemElexOre1.name">Borax</entry>
+	<entry key="item.itemElexOre2.name">Fluorite</entry>
+	<entry key="item.itemElexOre3.name">Forsterite</entry>
+	<entry key="item.itemElexOre4.name">Petalite</entry>
+	<entry key="item.itemElexOre5.name">Artificial Quartz</entry>
+	<entry key="item.itemElexOre6.name">Spodumene</entry>
+	<entry key="item.itemElexDust0.name">Aquamarine Dust</entry>
+	<entry key="item.itemElexDust1.name">Borax Dust</entry>
+	<entry key="item.itemElexDust2.name">Fluorite Dust</entry>
+	<entry key="item.itemElexDust3.name">Forsterite Dust</entry>
+	<entry key="item.itemElexDust4.name">Petalite Dust</entry>
+	<entry key="item.itemElexDust5.name">Artificial Quartz Dust</entry>
+	<entry key="item.itemElexDust6.name">Spodumene Dust</entry>
+	<entry key="item.itemElexDust7.name">Nether Quartz Dust</entry>
+	<entry key="item.mercuryInjector.name">Mercury Injector</entry>
+</properties>

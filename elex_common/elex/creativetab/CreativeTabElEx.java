@@ -6,7 +6,9 @@ import cpw.mods.fml.relauncher.SideOnly;
 import elex.block.ModBlocks;
 import elex.item.ModItems;
 import elex.lib.BlockIds;
+import elex.lib.ItemIds;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
 
 /**
  * Elemental Experimentation
@@ -22,8 +24,9 @@ public class CreativeTabElEx extends CreativeTabs {
         super(par1, par2Str);
     }
     
+    @Override
     @SideOnly(Side.CLIENT)
-    public int getTabIconIndex() {
-        return BlockIds.CENTRIFUGE;
+    public int getTabIconItemIndex() {
+        return ModBlocks.centrifuge.blockID;
     }
 }

@@ -24,13 +24,8 @@ public class ItemIds {
     public static final String[] ELEX_ORE_REAL_UNLOCALIZED_NAMES = { "aquamarine", "borax", "fluorite", "forsterite", "petalite", "quartzArtificial", "spodumene" };
     public static final String MERCURY_INJECTOR_UNLOCALIZED_NAME = "mercuryInjector";
     public static final String ELEX_DUST_UNLOCALIZED_NAME = "itemElexDust";
-    public static final String[] ELEX_DUST_REAL_UNLOCALIZED_NAMES = { "dustAquamarine", "dustBorax", "dustFluorite", "dustForsterite", "dustPetalite", "dustArtificialQuartz", "dustSpodumene" };
+    public static final String[] ELEX_DUST_REAL_UNLOCALIZED_NAMES = { "dustAquamarine", "dustBorax", "dustFluorite", "dustForsterite", "dustPetalite", "dustArtificialQuartz", "dustSpodumene", "dustNetherQuartz" };
     
     /* Molecule Strings */
-    public static final String[] ELEX_ITEM_ORES_MOLECULE_STRINGS = { "Be3 Al2 (Si O3)6", "Na2 B4 O7 (H2 O)10", "Ca F2", "Mg2 Si O4", "Li Al Si4 O10", "Si O2", "Li Al (Si O3)2" };
-    
-    /* Temporary Item English Names */
-    public static final String[] ELEX_ORE_ENGLISH_NAMES = { "Aquamarine", "Borax", "Fluorite", "Forsterite", "Petalite", "Artificial Quartz", "Spodumene" };
-    public static final String MERCURY_INJECTOR_ENGLISH_NAME = "Mercury Injector";
-    public static final String[] ELEX_DUST_ENGLISH_NAMES = { "Aquamarine Dust", "Borax Dust", "Fluorite Dust", "Forsterite Dust", "Petalite Dust", "Artificial Quartz Dust", "Spodumene Dust" };
+    public static final String[] ELEX_ITEM_ORES_MOLECULE_STRINGS = { "Be3Al2(SiO3)6", "Na2B4O7(H2O)10", "CaF2", "Mg2SiO4", "LiAlSi4O10", "SiO2", "LiAl(SiO3)2", "FeSiO2" };
 }

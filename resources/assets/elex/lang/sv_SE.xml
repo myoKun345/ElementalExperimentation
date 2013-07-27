@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties version="1.0">
+	<comment>Svenska (sv_SE) Localization File</comment>
+	<entry key="itemGroup.ElEx">Elemental Experimentation</entry>
+	
+	<entry key="tile.centrifuge.name">Centrifug</entry>
+	<entry key="tile.elexOreBlock.0.name">Kopparmalm</entry>
+	<entry key="tile.elexOreBlock.1.name">Silvermalm</entry>
+	<entry key="tile.elexOreBlock.2.name">Tennmalm</entry>
+	<entry key="tile.elexOreBlock.3.name">Krommalm</entry>
+	<entry key="tile.elexOreBlock.4.name">Osmiummalm</entry>
+	<entry key="tile.elexOreBlock.5.name">Ruteniummalm</entry>
+	<entry key="tile.elexOreBlock.6.name">Rodiummalm</entry>
+	<entry key="tile.elexOreBlock.7.name">Palladiummalm</entry>
+	<entry key="tile.elexOreBlock.8.name">Iridiummalm</entry>
+	<entry key="tile.elexOreBlock.9.name">Platinamalm</entry>
+	<entry key="tile.elexOreBlock.10.name">Nickelmalm</entry>
+	<entry key="tile.elexOreBlock.11.name">Koboltmalm</entry>
+	<entry key="tile.elexOreBlock.12.name">Kadmiummalm</entry>
+	<entry key="tile.elexOreBlock.13.name">Molybdenmalm</entry>
+	<entry key="tile.elexOreBlock.14.name">Indiummalm</entry>
+	<entry key="tile.elexOreBlock.15.name">Aluminiummalm</entry>
+	<entry key="tile.elexOreBlock2.0.name">Tantalmalm</entry>
+	<entry key="tile.elexOreBlock2.1.name">Selenmalm</entry>
+	<entry key="tile.elexOreBlock2.2.name">Tellurmalm</entry>
+	<entry key="tile.elexOreBlock2.3.name">Antimonmalm</entry>
+	<entry key="tile.elexOreBlock2.4.name">Vismutmalm</entry>
+	<entry key="tile.elexOreBlock2.5.name">Blymalm</entry>
+	
+	<entry key="item.itemElexOre0.name">Akvamarin</entry>
+	<entry key="item.itemElexOre1.name">Borax</entry>
+	<entry key="item.itemElexOre2.name">Fluorit</entry>
+	<entry key="item.itemElexOre3.name">Forsterit</entry>
+	<entry key="item.itemElexOre4.name">Petalit</entry>
+	<entry key="item.itemElexOre5.name">Syntetiskkvarts</entry>
+	<entry key="item.itemElexOre6.name">Spodumen</entry>
+	<entry key="item.itemElexDust0.name">Akvamarindamm</entry>
+	<entry key="item.itemElexDust1.name">Boraxdamm</entry>
+	<entry key="item.itemElexDust2.name">Fluoritdamm</entry>
+	<entry key="item.itemElexDust3.name">Forsteritdamm</entry>
+	<entry key="item.itemElexDust4.name">Petalitdamm</entry>
+	<entry key="item.itemElexDust5.name">Syntetiskkvartsdamm</entry>
+	<entry key="item.itemElexDust6.name">Spodumendamm</entry>
+	<entry key="item.itemElexDust7.name">Nederkvartsdamm</entry>
+	<entry key="item.mercuryInjector.name">Kvicksilverspruta</entry>
+</properties>

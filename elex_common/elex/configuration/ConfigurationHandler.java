@@ -25,6 +25,8 @@ public class ConfigurationHandler {
         String test2 = config.get("Used for Testing", "someTextHere", "apples").getString();
         
         BlockIds.ITEM_ELEX_ORE = config.getBlock(BlockIds.CATEGORY_BLOCK_IDS, BlockIds.ITEM_ELEX_ORE_KEY, BlockIds.ITEM_ELEX_ORE_DEFAULT).getInt();
+        BlockIds.BLOCK_ELEX_ORE = config.getBlock(BlockIds.CATEGORY_BLOCK_IDS, BlockIds.BLOCK_ELEX_ORE_KEY, BlockIds.BLOCK_ELEX_ORE_DEFAULT).getInt();
+        BlockIds.BLOCK_ELEX_ORE_2 = config.getBlock(BlockIds.CATEGORY_BLOCK_IDS, BlockIds.BLOCK_ELEX_ORE_2_KEY, BlockIds.BLOCK_ELEX_ORE_2_DEFAULT).getInt();
         BlockIds.CENTRIFUGE = config.getBlock(BlockIds.CATEGORY_BLOCK_IDS, BlockIds.CENTRIFUGE_KEY, BlockIds.CENTRIFUGE_DEFAULT).getInt();
         
         ItemIds.ELEX_ORE = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.ELEX_ORE_KEY, ItemIds.ELEX_ORE_DEFAULT).getInt();

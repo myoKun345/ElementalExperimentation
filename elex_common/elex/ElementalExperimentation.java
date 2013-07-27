@@ -15,9 +15,11 @@ import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import elex.block.ModBlocks;
 import elex.configuration.ConfigurationHandler;
+import elex.crafting.CraftingRecipes;
 import elex.creativetab.CreativeTabElEx;
 import elex.item.ModItems;
 import elex.lib.Reference;
+import elex.localization.LocalizationHandler;
 import elex.network.PacketHandler;
 import elex.proxy.CommonProxy;
 
@@ -42,6 +44,9 @@ public class ElementalExperimentation {
     
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
+        /* Localization */
+        LocalizationHandler.loadLanguages();
+        
         /* Config */
         ConfigurationHandler.init(new File(event.getModConfigurationDirectory().getAbsolutePath() + File.separator + Reference.CHANNEL + File.separator + Reference.MOD_ID + ".cfg"));
         
@@ -54,10 +59,7 @@ public class ElementalExperimentation {
     
     @EventHandler
     public void init(FMLInitializationEvent event) {
-        ModItems.addNames();
-        ModBlocks.addNames();
-        
-        //LanguageRegistry.addName(elexTab, "Elemental Experimentation");
+        CraftingRecipes.registerRecipes();
     }
     
     @EventHandler

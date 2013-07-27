@@ -23,12 +23,12 @@ import net.minecraft.util.Icon;
  * @author Myo-kun
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class BlockElExOre extends Block {
+public class BlockElExOre2 extends Block {
     
     @SideOnly(Side.CLIENT)
     private Icon[] icons;
     
-    public BlockElExOre(int id) {
+    public BlockElExOre2(int id) {
         super(id, Material.rock);
         setCreativeTab(ElementalExperimentation.elexTab);
     }
@@ -36,9 +36,9 @@ public class BlockElExOre extends Block {
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister register) {
-        icons = new Icon[BlockIds.BLOCK_ELEX_ORE_REAL_UNLOCALIZED_NAMES.length];
+        icons = new Icon[BlockIds.BLOCK_ELEX_ORE_2_REAL_UNLOCALIZED_NAMES.length];
         for (int i = 0; i < icons.length; i++) {
-            icons[i] = register.registerIcon(Reference.MOD_ID + ":" + BlockIds.BLOCK_ELEX_ORE_REAL_UNLOCALIZED_NAMES[i]);
+            icons[i] = register.registerIcon(Reference.MOD_ID + ":" + BlockIds.BLOCK_ELEX_ORE_2_REAL_UNLOCALIZED_NAMES[i]);
         }
     }
     
@@ -51,7 +51,7 @@ public class BlockElExOre extends Block {
     @Override
     @SideOnly(Side.CLIENT)
     public void getSubBlocks(int id, CreativeTabs tab, List list) {
-        for (int i = 0; i < BlockIds.BLOCK_ELEX_ORE_REAL_UNLOCALIZED_NAMES.length; i++) {
+        for (int i = 0; i < BlockIds.BLOCK_ELEX_ORE_2_REAL_UNLOCALIZED_NAMES.length; i++) {
             list.add(new ItemStack(id, 1, i));
         }
     }

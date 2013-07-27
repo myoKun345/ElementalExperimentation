@@ -6,18 +6,36 @@ public class BlockIds {
     
     /* Default Block IDs */
     public static final int ITEM_ELEX_ORE_DEFAULT = 3670;
+    public static final int BLOCK_ELEX_ORE_DEFAULT = 3671;
+    public static final int BLOCK_ELEX_ORE_2_DEFAULT = 3672;
     public static final int CENTRIFUGE_DEFAULT = 3675;
     
     /* Current Block IDs */
     public static int ITEM_ELEX_ORE;
+    public static int BLOCK_ELEX_ORE;
+    public static int BLOCK_ELEX_ORE_2;
     public static int CENTRIFUGE;
     
     /* Block Config Keys */
     public static final String ITEM_ELEX_ORE_KEY = "ITEMOREBLOCKS";
+    public static final String BLOCK_ELEX_ORE_KEY = "BLOCKORES";
+    public static final String BLOCK_ELEX_ORE_2_KEY = "BLOCKORES2";
     public static final String CENTRIFUGE_KEY = "CentrifugeID";
     
     /* Block Unlocalized Names */
     public static final String ITEM_ELEX_ORE_UNLOCALIZED_NAME = "itemElexOreBlock";
+    public static final String BLOCK_ELEX_ORE_UNLOCALIZED_NAME = "elexOreBlock";
+    public static final String[] BLOCK_ELEX_ORE_REAL_UNLOCALIZED_NAMES = 
+        { "oreCopper", "oreSilver", "oreTin",
+        "oreChromium", "oreOsmium", "oreRuthenium",
+        "oreRhodium", "orePalladium", "oreIridium",
+        "orePlatinum", "oreNickel", "oreCobalt",
+        "oreCadmium", "oreMolybdenum", "oreIndium",
+        "oreAluminium" };
+    public static final String BLOCK_ELEX_ORE_2_UNLOCALIZED_NAME = "elexOreBlock2";
+    public static final String[] BLOCK_ELEX_ORE_2_REAL_UNLOCALIZED_NAMES = 
+        { "oreTantalum", "oreArsenic", "oreTellurium", 
+        "oreAntimony", "oreBismuth", "oreLead" };
     public static final String CENTRIFUGE_UNLOCALIZED_NAME = "centrifuge";
     
     /* Machine Block Base Texture */

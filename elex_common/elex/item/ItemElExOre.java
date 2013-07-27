@@ -35,7 +35,7 @@ public class ItemElExOre extends Item {
     
     @Override
     public String getUnlocalizedName(ItemStack stack) {
-        return ItemIds.ELEX_ORE_UNLOCALIZED_NAME + stack.getItemDamage();
+        return "item." + ItemIds.ELEX_ORE_UNLOCALIZED_NAME + stack.getItemDamage();
     }
     
     @Override

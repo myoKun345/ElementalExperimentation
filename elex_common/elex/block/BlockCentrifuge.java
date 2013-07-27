@@ -1,7 +1,5 @@
 package elex.block;
 
-import ic2.api.Direction;
-import ic2.api.energy.tile.IEnergyAcceptor;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;

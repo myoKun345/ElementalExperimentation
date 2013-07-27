@@ -38,7 +38,7 @@ public class ItemElExDust extends Item {
     
     @Override
     public String getUnlocalizedName(ItemStack stack) {
-        return ItemIds.ELEX_DUST_UNLOCALIZED_NAME + stack.getItemDamage();
+        return "item." + ItemIds.ELEX_DUST_UNLOCALIZED_NAME + stack.getItemDamage();
     }
     
     @Override
@@ -68,13 +68,7 @@ public class ItemElExDust extends Item {
     @Override
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer player, List info, boolean useExtraInformation) {
-        for (int i = 0; i < ItemIds.ELEX_DUST_REAL_UNLOCALIZED_NAMES.length; i++) {
-            info.add(ItemIds.ELEX_ITEM_ORES_MOLECULE_STRINGS[i]);
-        }
-    }
-    
-    public void getMetadata(ItemStack stack) {
-        
+        info.add(ItemIds.ELEX_ITEM_ORES_MOLECULE_STRINGS[stack.getItemDamage()]);
     }
     
 }
