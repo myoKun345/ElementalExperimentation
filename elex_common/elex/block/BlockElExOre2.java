@@ -18,7 +18,7 @@ import net.minecraft.util.Icon;
 /**
  * Elemental Experimentation
  * 
- * BlockElExOre
+ * BlockElExOre2
  * 
  * @author Myo-kun
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
@@ -33,6 +33,7 @@ public class BlockElExOre2 extends Block {
         setHardness(3.0F);
         setResistance(5.0F);
         setCreativeTab(ElementalExperimentation.elexTab);
+        setStepSound(Block.soundStoneFootstep);
     }
     
     @Override
@@ -60,7 +61,7 @@ public class BlockElExOre2 extends Block {
     
     @Override
     public int damageDropped(int meta) {
-        return meta & 7;
+        return meta;
     }
 
 }

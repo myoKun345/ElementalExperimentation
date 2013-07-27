@@ -24,7 +24,10 @@ public class ItemIds {
     
     /* Item Unlocalized Names */
     public static final String ELEX_ORE_UNLOCALIZED_NAME = "itemElexOre";
-    public static final String[] ELEX_ORE_REAL_UNLOCALIZED_NAMES = { "aquamarine", "borax", "fluorite", "forsterite", "petalite", "quartzArtificial", "spodumene" };
+    public static final String[] ELEX_ORE_REAL_UNLOCALIZED_NAMES = 
+        { "aquamarine", "borax", "fluorite", 
+        "forsterite", "petalite", "quartzArtificial", 
+        "spodumene" };
     public static final String MERCURY_INJECTOR_UNLOCALIZED_NAME = "mercuryInjector";
     public static final String ELEX_DUST_UNLOCALIZED_NAME = "itemElexDust";
     public static final String[] ELEX_DUST_REAL_UNLOCALIZED_NAMES = 

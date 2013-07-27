@@ -33,6 +33,7 @@ public class BlockElExOre extends Block {
         setHardness(3.0F);
         setResistance(5.0F);
         setCreativeTab(ElementalExperimentation.elexTab);
+        setStepSound(Block.soundStoneFootstep);
     }
     
     @Override
@@ -60,7 +61,7 @@ public class BlockElExOre extends Block {
     
     @Override
     public int damageDropped(int meta) {
-        return meta & 17;
+        return meta;
     }
 
 }

@@ -23,6 +23,7 @@ import elex.localization.LocalizationHandler;
 import elex.network.PacketHandler;
 import elex.oredict.OreDictionaryHandler;
 import elex.proxy.CommonProxy;
+import elex.tileentity.ModTileEntities;
 
 /**
  * Elemental Experimentation
@@ -60,9 +61,14 @@ public class ElementalExperimentation {
     
     @EventHandler
     public void init(FMLInitializationEvent event) {
+        /* Crafting */
         CraftingRecipes.registerRecipes();
         
+        /* Ore Dictionary */
         OreDictionaryHandler.registerOres();
+        
+        /* Tile Entities */
+        ModTileEntities.init();
     }
     
     @EventHandler
