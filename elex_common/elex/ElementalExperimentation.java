@@ -21,6 +21,7 @@ import elex.item.ModItems;
 import elex.lib.Reference;
 import elex.localization.LocalizationHandler;
 import elex.network.PacketHandler;
+import elex.oredict.OreDictionaryHandler;
 import elex.proxy.CommonProxy;
 
 /**
@@ -60,6 +61,8 @@ public class ElementalExperimentation {
     @EventHandler
     public void init(FMLInitializationEvent event) {
         CraftingRecipes.registerRecipes();
+        
+        OreDictionaryHandler.registerOres();
     }
     
     @EventHandler
