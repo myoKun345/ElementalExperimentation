@@ -30,6 +30,8 @@ public class BlockElExOre2 extends Block {
     
     public BlockElExOre2(int id) {
         super(id, Material.rock);
+        setHardness(3.0F);
+        setResistance(5.0F);
         setCreativeTab(ElementalExperimentation.elexTab);
     }
     
@@ -54,6 +56,11 @@ public class BlockElExOre2 extends Block {
         for (int i = 0; i < BlockIds.BLOCK_ELEX_ORE_2_REAL_UNLOCALIZED_NAMES.length; i++) {
             list.add(new ItemStack(id, 1, i));
         }
+    }
+    
+    @Override
+    public int damageDropped(int meta) {
+        return meta & 7;
     }
 
 }
