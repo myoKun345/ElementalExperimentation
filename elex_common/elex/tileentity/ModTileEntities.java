@@ -14,5 +14,6 @@ public class ModTileEntities {
     
     public static void init() {
         GameRegistry.registerTileEntity(TileEntityGrinder.class, "grinderElEx");
+        GameRegistry.registerTileEntity(TileEntityCentrifuge.class, "centrifugeElEx");
     }
 }
