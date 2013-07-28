@@ -7,37 +7,37 @@ import net.minecraft.tileentity.TileEntity;
 /**
  * Elemental Experimentation
  * 
- * TileEntityGrinder
+ * TileEntityCentrifuge
  * 
  * @author Myo-kun
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class TileEntityGrinder extends TileEntity {
+public class TileEntityCentrifuge extends TileEntity {
     
-    public int grinderGrindTime;
+    public int centrifugeSpinTime;
     
-    public int currentItemGrindTime;
+    public int currentItemSpinTime;
     
-    public int grinderGroundTime;
+    public int centrifugeSpunTime;
     
     public EntityPlayer placedBy;
     
-    public boolean isGrinding() {
-        return grinderGrindTime > 0;
+    public boolean isSpinning() {
+        return centrifugeSpinTime > 0;
     }
     
     @Override
     public void writeToNBT(NBTTagCompound compound) {
         super.writeToNBT(compound);
-        compound.setShort("GrindTime", (short)this.grinderGrindTime);
-        compound.setShort("GroundTime", (short)this.grinderGroundTime);
+        compound.setShort("SpinTime", (short)this.centrifugeSpinTime);
+        compound.setShort("SpunTime", (short)this.centrifugeSpunTime);
     }
     
     @Override
     public void readFromNBT(NBTTagCompound compound) {
         super.readFromNBT(compound);
-        grinderGrindTime = compound.getShort("GrindTime");
-        grinderGroundTime = compound.getShort("GroundTime");
+        centrifugeSpinTime = compound.getShort("SpinTime");
+        centrifugeSpunTime = compound.getShort("SpunTime");
         
     }
     

@@ -5,6 +5,7 @@
 	<entry key="itemGroup.ElEx">Elemental Experimentation</entry>
 	
 	<entry key="tile.centrifuge.name">Centrifuge</entry>
+	<entry key="tile.grinder.name">Grinder</entry>
 	
 	<entry key="tile.elexOreBlock.0.name">Copper Ore</entry>
 	<entry key="tile.elexOreBlock.1.name">Silver Ore</entry>
