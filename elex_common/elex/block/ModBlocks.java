@@ -27,6 +27,7 @@ public class ModBlocks {
         
         GameRegistry.registerBlock(centrifuge, "centrifugeElEx");
         GameRegistry.registerBlock(grinder, "grinderElEx");
+        GameRegistry.registerBlock(blockElExItemOre, ItemBlockElExItemOre.class, "blockElExItemOre");
         GameRegistry.registerBlock(blockElExOre, ItemBlockElExOre.class, "blockElExOre");
         GameRegistry.registerBlock(blockElExOre2, ItemBlockElExOre2.class, "blockElExOre2");
         GameRegistry.registerBlock(blockElExItemOreStorage, ItemBlockElExItemOreStorage.class, "blockElExItemOreStorage");

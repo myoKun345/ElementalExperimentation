@@ -60,5 +60,15 @@ public class BlockElExItemOre extends Block {
             list.add(new ItemStack(id, 1, i));
         }
     }
+    
+    @Override
+    public int idDropped(int par1, Random par2Random, int par3) {
+        return ItemIds.ELEX_ORE;
+    }
+    
+    @Override
+    public int damageDropped(int meta) {
+        return meta;
+    }
 
 }

@@ -25,7 +25,7 @@ public class BlockIds {
     public static int GRINDER;
     
     /* Block Config Keys */
-    public static final String ITEM_ELEX_ORE_KEY = "ITEMOREBLOCKS";
+    public static final String ITEM_ELEX_ORE_KEY = "ITEMORES";
     public static final String BLOCK_ELEX_ORE_KEY = "BLOCKORES";
     public static final String BLOCK_ELEX_ORE_2_KEY = "BLOCKORES2";
     public static final String BLOCK_ELEX_ITEM_ORE_STORAGE_KEY = "ITEMORESTORAGEBLOCKS";
@@ -38,7 +38,8 @@ public class BlockIds {
     public static final String ITEM_ELEX_ORE_UNLOCALIZED_NAME = "itemElexOreBlock";
     public static final String[] ITEM_ELEX_ORE_REAL_UNLOCALIZED_NAMES = 
         { "oreAquamarine", "oreBorax", "oreFluorite",
-        "oreForsterite", "orePetalite", "oreSpodumene" };
+        "oreForsterite", "orePetalite", "oreArtificialQuartz",
+        "oreSpodumene" };
     public static final String BLOCK_ELEX_ORE_UNLOCALIZED_NAME = "elexOreBlock";
     public static final String[] BLOCK_ELEX_ORE_REAL_UNLOCALIZED_NAMES = 
         { "oreCopper", "oreSilver", "oreTin",

@@ -7,6 +7,14 @@
 	<entry key="tile.centrifuge.name">Centrifuge</entry>
 	<entry key="tile.grinder.name">Grinder</entry>
 	
+	<entry key="tile.itemElexOreBlock.0.name">Aquamarine Ore</entry>
+	<entry key="tile.itemElexOreBlock.1.name">Borax Ore</entry>
+	<entry key="tile.itemElexOreBlock.2.name">Fluorite Ore</entry>
+	<entry key="tile.itemElexOreBlock.3.name">Forsterite Ore</entry>
+	<entry key="tile.itemElexOreBlock.4.name">Petalite Ore</entry>
+	<entry key="tile.itemElexOreBlock.5.name">Pure Quartz Ore</entry>
+	<entry key="tile.itemElexOreBlock.6.name">Spodumene Ore</entry>
+	
 	<entry key="tile.elexOreBlock.0.name">Copper Ore</entry>
 	<entry key="tile.elexOreBlock.1.name">Silver Ore</entry>
 	<entry key="tile.elexOreBlock.2.name">Tin Ore</entry>
@@ -35,7 +43,7 @@
 	<entry key="tile.elexItemOreStorageBlock.2.name">Fluorite Block</entry>
 	<entry key="tile.elexItemOreStorageBlock.3.name">Forsterite Block</entry>
 	<entry key="tile.elexItemOreStorageBlock.4.name">Petalite Block</entry>
-	<entry key="tile.elexItemOreStorageBlock.5.name">Artificial Quartz Block</entry>
+	<entry key="tile.elexItemOreStorageBlock.5.name">Pure Quartz Block</entry>
 	<entry key="tile.elexItemOreStorageBlock.6.name">Spodumene Block</entry>
 	
 	<entry key="tile.elexMetalStorageBlock.0.name">Copper Block</entry>
@@ -66,7 +74,7 @@
 	<entry key="item.itemElexOre2.name">Fluorite</entry>
 	<entry key="item.itemElexOre3.name">Forsterite</entry>
 	<entry key="item.itemElexOre4.name">Petalite</entry>
-	<entry key="item.itemElexOre5.name">Artificial Quartz</entry>
+	<entry key="item.itemElexOre5.name">Pure Quartz</entry>
 	<entry key="item.itemElexOre6.name">Spodumene</entry>
 	
 	<entry key="item.itemElexCompoundDust.0.name">Aquamarine Dust</entry>
@@ -74,7 +82,7 @@
 	<entry key="item.itemElexCompoundDust.2.name">Fluorite Dust</entry>
 	<entry key="item.itemElexCompoundDust.3.name">Forsterite Dust</entry>
 	<entry key="item.itemElexCompoundDust.4.name">Petalite Dust</entry>
-	<entry key="item.itemElexCompoundDust.5.name">Artificial Quartz Dust</entry>
+	<entry key="item.itemElexCompoundDust.5.name">Pure Quartz Dust</entry>
 	<entry key="item.itemElexCompoundDust.6.name">Spodumene Dust</entry>
 	<entry key="item.itemElexCompoundDust.7.name">Nether Quartz Dust</entry>
 	<entry key="item.itemElexMetalDust.0.name">Copper Dust</entry>

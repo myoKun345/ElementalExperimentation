@@ -35,7 +35,7 @@
 	<entry key="item.itemElexOre2.name">Fluorit</entry>
 	<entry key="item.itemElexOre3.name">Forsterit</entry>
 	<entry key="item.itemElexOre4.name">Petalit</entry>
-	<entry key="item.itemElexOre5.name">Syntetiskkvarts</entry>
+	<entry key="item.itemElexOre5.name">Renakvarts</entry>
 	<entry key="item.itemElexOre6.name">Spodumen</entry>
 	
 	<entry key="item.itemElexCompoundDust.0.name">Akvamarindamm</entry>
@@ -43,7 +43,7 @@
 	<entry key="item.itemElexCompoundDust.2.name">Fluoritdamm</entry>
 	<entry key="item.itemElexCompoundDust.3.name">Forsteritdamm</entry>
 	<entry key="item.itemElexCompoundDust.4.name">Petalitdamm</entry>
-	<entry key="item.itemElexCompoundDust.5.name">Syntetiskkvartsdamm</entry>
+	<entry key="item.itemElexCompoundDust.5.name">Renakvartsdamm</entry>
 	<entry key="item.itemElexCompoundDust.6.name">Spodumendamm</entry>
 	<entry key="item.itemElexCompoundDust.7.name">Nederkvartsdamm</entry>
 	<entry key="item.itemElexMetalDust.0.name">Koppardamm</entry>
