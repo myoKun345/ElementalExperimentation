@@ -1,8 +1,9 @@
 package elex.compatibility.thermalexpansion;
 
-import thermalexpansion.api.crafting.CraftingHelpers;
+import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import thermalexpansion.api.crafting.CraftingHelpers;
 import elex.block.ModBlocks;
 import elex.item.ModItems;
 import elex.lib.BlockIds;
@@ -20,23 +21,23 @@ public class PulverizerRecipes {
     
     public static void addPulverizerRecipes() {
         for (int i = 0; i < BlockIds.BLOCK_ELEX_ORE_REAL_UNLOCALIZED_NAMES.length; i++) {
-            int j = i + 8;
-            
-            CraftingHelpers.addPulverizerOreToDustRecipe(new ItemStack(ModBlocks.blockElExOre, 1, i), new ItemStack(ModItems.itemElExDust, 2, j));
+            CraftingHelpers.addPulverizerOreToDustRecipe(new ItemStack(ModBlocks.blockElExOre, 1, i), new ItemStack(ModItems.itemElExMetalDust, 2, i));
         }
         for (int i = 0; i < BlockIds.BLOCK_ELEX_ORE_2_REAL_UNLOCALIZED_NAMES.length; i++) {
-            int j = i + 8 + 16;
+            int j = i + 16;
             
-            CraftingHelpers.addPulverizerOreToDustRecipe(new ItemStack(ModBlocks.blockElExOre2, 1, i), new ItemStack(ModItems.itemElExDust, 2, j));
+            CraftingHelpers.addPulverizerOreToDustRecipe(new ItemStack(ModBlocks.blockElExOre2, 1, i), new ItemStack(ModItems.itemElExMetalDust, 2, j));
         }
+        CraftingHelpers.addPulverizerOreToDustRecipe(new ItemStack(Block.oreIron), new ItemStack(ModItems.itemElExMetalDust, 2, 22));
+        CraftingHelpers.addPulverizerOreToDustRecipe(new ItemStack(Block.oreGold), new ItemStack(ModItems.itemElExMetalDust, 2, 23));
         for (int i = 0; i < ItemIds.ELEX_ORE_REAL_UNLOCALIZED_NAMES.length; i++) {
-            CraftingHelpers.addPulverizerIngotToDustRecipe(new ItemStack(ModItems.itemElExOre, 1, i), new ItemStack(ModItems.itemElExDust, 1, i));
+            CraftingHelpers.addPulverizerIngotToDustRecipe(new ItemStack(ModItems.itemElExOre, 1, i), new ItemStack(ModItems.itemElExCompoundDust, 1, i));
         }
-        CraftingHelpers.addPulverizerIngotToDustRecipe(new ItemStack(Item.netherQuartz), new ItemStack(ModItems.itemElExDust, 1, 7));
+        CraftingHelpers.addPulverizerIngotToDustRecipe(new ItemStack(Item.netherQuartz), new ItemStack(ModItems.itemElExCompoundDust, 1, 7));
         for (int i = 0; i < ItemIds.ELEX_INGOT_REAL_UNLOCALIZED_NAMES.length; i++) {
-            int j = 1 + 8;
-            
-            CraftingHelpers.addPulverizerIngotToDustRecipe(new ItemStack(ModItems.itemElExIngot, 1, i), new ItemStack(ModItems.itemElExDust, 1, j));
+            CraftingHelpers.addPulverizerIngotToDustRecipe(new ItemStack(ModItems.itemElExIngot, 1, i), new ItemStack(ModItems.itemElExMetalDust, 1, i));
         }
+        CraftingHelpers.addPulverizerIngotToDustRecipe(new ItemStack(Item.ingotIron), new ItemStack(ModItems.itemElExMetalDust, 1, 22));
+        CraftingHelpers.addPulverizerIngotToDustRecipe(new ItemStack(Item.ingotGold), new ItemStack(ModItems.itemElExMetalDust, 1, 23));
     }
 }

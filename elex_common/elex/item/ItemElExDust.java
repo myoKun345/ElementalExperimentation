@@ -25,26 +25,43 @@ import net.minecraft.util.Icon;
  */
 public class ItemElExDust extends Item {
     
+    private int dustType;
+    
     @SideOnly(Side.CLIENT)
     private Icon[] icons;
     
-    public ItemElExDust(int par1) {
+    public ItemElExDust(int par1, int par2) {
         super(par1 - Reference.SHIFTED_ID_RANGE_CORRECTION);
         setCreativeTab(ElementalExperimentation.elexTab);
         setHasSubtypes(true);
+        dustType = par2;
     }
     
     @Override
     public String getUnlocalizedName(ItemStack stack) {
-        return "item." + ItemIds.ELEX_DUST_UNLOCALIZED_NAME + stack.getItemDamage();
+        if (dustType == 0) {
+            return "item." + ItemIds.ELEX_COMPOUND_DUST_UNLOCALIZED_NAME + "." + stack.getItemDamage();
+        }
+        if (dustType == 1) {
+            return "item." + ItemIds.ELEX_METAL_DUST_UNLOCALIZED_NAME + "." + stack.getItemDamage();
+        }
+        return "something.went.wrong";
     }
     
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister register) {
-        icons = new Icon[ItemIds.ELEX_DUST_REAL_UNLOCALIZED_NAMES.length];
-        for (int i = 0; i < icons.length; i++) {
-            icons[i] = register.registerIcon(Reference.MOD_ID + ":" + ItemIds.ELEX_DUST_REAL_UNLOCALIZED_NAMES[i]);
+        if (dustType == 0) {
+            icons = new Icon[ItemIds.ELEX_COMPOUND_DUST_REAL_UNLOCALIZED_NAMES.length];
+            for (int i = 0; i < icons.length; i++) {
+                icons[i] = register.registerIcon(Reference.MOD_ID + ":" + ItemIds.ELEX_COMPOUND_DUST_REAL_UNLOCALIZED_NAMES[i]);
+            }
+        }
+        if (dustType == 1) {
+            icons = new Icon[ItemIds.ELEX_METAL_DUST_REAL_UNLOCALIZED_NAMES.length];
+            for (int i = 0; i < icons.length; i++) {
+                icons[i] = register.registerIcon(Reference.MOD_ID + ":" + ItemIds.ELEX_METAL_DUST_REAL_UNLOCALIZED_NAMES[i]);
+            }
         }
     }
     
@@ -57,16 +74,29 @@ public class ItemElExDust extends Item {
     @Override
     @SideOnly(Side.CLIENT)
     public void getSubItems(int id, CreativeTabs tab, List list) {
-        for (int i = 0; i < ItemIds.ELEX_DUST_REAL_UNLOCALIZED_NAMES.length; i++) {
-            ItemStack stack = new ItemStack(id, 1, i);
-            list.add(stack);
+        if (dustType == 0) {
+            for (int i = 0; i < ItemIds.ELEX_COMPOUND_DUST_REAL_UNLOCALIZED_NAMES.length; i++) {
+                ItemStack stack = new ItemStack(id, 1, i);
+                list.add(stack);
+            }
+        }
+        if (dustType == 1) {
+            for (int i = 0; i < ItemIds.ELEX_METAL_DUST_REAL_UNLOCALIZED_NAMES.length; i++) {
+                ItemStack stack = new ItemStack(id, 1, i);
+                list.add(stack);
+            }
         }
     }
     
     @Override
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer player, List info, boolean useExtraInformation) {
-        info.add(ItemIds.MOLECULE_STRINGS[stack.getItemDamage()]);
+        if (dustType == 0) {
+            info.add(ItemIds.ITEM_ORE_DUST_MOLECULE_STRINGS[stack.getItemDamage()]);
+        }
+        if (dustType == 1) {
+            info.add(ItemIds.METAL_DUST_MOLECULE_STRINGS[stack.getItemDamage()]);
+        }
     }
     
 }
