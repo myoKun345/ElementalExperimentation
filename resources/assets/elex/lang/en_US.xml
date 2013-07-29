@@ -30,6 +30,37 @@
 	<entry key="tile.elexOreBlock2.4.name">Bismuth Ore</entry>
 	<entry key="tile.elexOreBlock2.5.name">Lead Ore</entry>
 	
+	<entry key="tile.elexItemOreStorageBlock.0.name">Aquamarine Block</entry>
+	<entry key="tile.elexItemOreStorageBlock.1.name">Borax Block</entry>
+	<entry key="tile.elexItemOreStorageBlock.2.name">Fluorite Block</entry>
+	<entry key="tile.elexItemOreStorageBlock.3.name">Forsterite Block</entry>
+	<entry key="tile.elexItemOreStorageBlock.4.name">Petalite Block</entry>
+	<entry key="tile.elexItemOreStorageBlock.5.name">Artificial Quartz Block</entry>
+	<entry key="tile.elexItemOreStorageBlock.6.name">Spodumene Block</entry>
+	
+	<entry key="tile.elexMetalStorageBlock.0.name">Copper Block</entry>
+	<entry key="tile.elexMetalStorageBlock.1.name">Silver Block</entry>
+	<entry key="tile.elexMetalStorageBlock.2.name">Tin Block</entry>
+	<entry key="tile.elexMetalStorageBlock.3.name">Chromium Block</entry>
+	<entry key="tile.elexMetalStorageBlock.4.name">Osmium Block</entry>
+	<entry key="tile.elexMetalStorageBlock.5.name">Ruthenium Block</entry>
+	<entry key="tile.elexMetalStorageBlock.6.name">Rhodium Block</entry>
+	<entry key="tile.elexMetalStorageBlock.7.name">Palladium Block</entry>
+	<entry key="tile.elexMetalStorageBlock.8.name">Iridium Block</entry>
+	<entry key="tile.elexMetalStorageBlock.9.name">Platinum Block</entry>
+	<entry key="tile.elexMetalStorageBlock.10.name">Nickel Block</entry>
+	<entry key="tile.elexMetalStorageBlock.11.name">Cobalt Block</entry>
+	<entry key="tile.elexMetalStorageBlock.12.name">Cadmium Block</entry>
+	<entry key="tile.elexMetalStorageBlock.13.name">Molybdenum Block</entry>
+	<entry key="tile.elexMetalStorageBlock.14.name">Indium Block</entry>
+	<entry key="tile.elexMetalStorageBlock.15.name">Aluminium Block</entry>
+	<entry key="tile.elexMetalStorageBlock2.0.name">Tantalum Block</entry>
+	<entry key="tile.elexMetalStorageBlock2.1.name">Arsenic Block</entry>
+	<entry key="tile.elexMetalStorageBlock2.2.name">Tellurium Block</entry>
+	<entry key="tile.elexMetalStorageBlock2.3.name">Antimony Block</entry>
+	<entry key="tile.elexMetalStorageBlock2.4.name">Bismuth Block</entry>
+	<entry key="tile.elexMetalStorageBlock2.5.name">Lead Block</entry>
+	
 	<entry key="item.itemElexOre0.name">Aquamarine</entry>
 	<entry key="item.itemElexOre1.name">Borax</entry>
 	<entry key="item.itemElexOre2.name">Fluorite</entry>

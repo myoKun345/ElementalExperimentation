@@ -26,12 +26,14 @@ public class ConfigurationHandler {
         BlockIds.BLOCK_ELEX_ORE_2 = config.getBlock(BlockIds.CATEGORY_BLOCK_IDS, BlockIds.BLOCK_ELEX_ORE_2_KEY, BlockIds.BLOCK_ELEX_ORE_2_DEFAULT).getInt();
         BlockIds.BLOCK_ELEX_ITEM_ORE_STORAGE = config.getBlock(BlockIds.CATEGORY_BLOCK_IDS, BlockIds.BLOCK_ELEX_ITEM_ORE_STORAGE_KEY, BlockIds.BLOCK_ELEX_ITEM_ORE_STORAGE_DEFAULT).getInt();
         BlockIds.BLOCK_ELEX_METAL_STORAGE = config.getBlock(BlockIds.CATEGORY_BLOCK_IDS, BlockIds.BLOCK_ELEX_METAL_STORAGE_KEY, BlockIds.BLOCK_ELEX_METAL_STORAGE_DEFAULT).getInt();
+        BlockIds.BLOCK_ELEX_METAL_STORAGE_2 = config.getBlock(BlockIds.CATEGORY_BLOCK_IDS, BlockIds.BLOCK_ELEX_METAL_STORAGE_2_KEY, BlockIds.BLOCK_ELEX_METAL_STORAGE_2_DEFAULT).getInt();
         BlockIds.CENTRIFUGE = config.getBlock(BlockIds.CATEGORY_BLOCK_IDS, BlockIds.CENTRIFUGE_KEY, BlockIds.CENTRIFUGE_DEFAULT).getInt();
         BlockIds.GRINDER = config.getBlock(BlockIds.CATEGORY_BLOCK_IDS, BlockIds.GRINDER_KEY, BlockIds.GRINDER_DEFAULT).getInt();
         
         ItemIds.ELEX_ORE = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.ELEX_ORE_KEY, ItemIds.ELEX_ORE_DEFAULT).getInt();
         ItemIds.MERCURY_INJECTOR = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.MERCURY_INJECTOR_KEY, ItemIds.MERCURY_INJECTOR_DEFAULT).getInt();
-        ItemIds.ELEX_DUST = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.ELEX_DUST_KEY, ItemIds.ELEX_DUST_DEFAULT).getInt();
+        ItemIds.ELEX_COMPOUND_DUST = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.ELEX_COMPOUND_DUST_KEY, ItemIds.ELEX_COMPOUND_DUST_DEFAULT).getInt();
+        ItemIds.ELEX_METAL_DUST = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.ELEX_METAL_DUST_KEY, ItemIds.ELEX_METAL_DUST_DEFAULT).getInt();
         ItemIds.ELEX_INGOT = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.ELEX_INGOT_KEY, ItemIds.ELEX_INGOT_DEFAULT).getInt();
         
         config.save();

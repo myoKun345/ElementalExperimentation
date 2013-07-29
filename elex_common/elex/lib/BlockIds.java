@@ -10,8 +10,9 @@ public class BlockIds {
     public static final int BLOCK_ELEX_ORE_2_DEFAULT = 3672;
     public static final int BLOCK_ELEX_ITEM_ORE_STORAGE_DEFAULT = 3673;
     public static final int BLOCK_ELEX_METAL_STORAGE_DEFAULT = 3674;
-    public static final int CENTRIFUGE_DEFAULT = 3675;
-    public static final int GRINDER_DEFAULT = 3676;
+    public static final int BLOCK_ELEX_METAL_STORAGE_2_DEFAULT = 3675;
+    public static final int CENTRIFUGE_DEFAULT = 3676;
+    public static final int GRINDER_DEFAULT = 3677;
     
     /* Current Block IDs */
     public static int ITEM_ELEX_ORE;
@@ -19,6 +20,7 @@ public class BlockIds {
     public static int BLOCK_ELEX_ORE_2;
     public static int BLOCK_ELEX_ITEM_ORE_STORAGE;
     public static int BLOCK_ELEX_METAL_STORAGE;
+    public static int BLOCK_ELEX_METAL_STORAGE_2;
     public static int CENTRIFUGE;
     public static int GRINDER;
     
@@ -28,6 +30,7 @@ public class BlockIds {
     public static final String BLOCK_ELEX_ORE_2_KEY = "BLOCKORES2";
     public static final String BLOCK_ELEX_ITEM_ORE_STORAGE_KEY = "ITEMORESTORAGEBLOCKS";
     public static final String BLOCK_ELEX_METAL_STORAGE_KEY = "METALSTORAGEBLOCKS";
+    public static final String BLOCK_ELEX_METAL_STORAGE_2_KEY = "METALSTORAGEBLOCKS2";
     public static final String CENTRIFUGE_KEY = "CentrifugeID";
     public static final String GRINDER_KEY = "GrinderID";
     
@@ -53,7 +56,7 @@ public class BlockIds {
         { "blockAquamarine", "blockBorax", "blockFluorite",
         "blockForsterite", "blockPetalite", "blockArtificialQuartz",
         "blockSpodumene" };
-    public static final String BLOCK_ELEX_METAL_STORAGE_UNLOCALIZED_NAME = "elexItemMetalStorageBlock";
+    public static final String BLOCK_ELEX_METAL_STORAGE_UNLOCALIZED_NAME = "elexMetalStorageBlock";
     public static final String[] BLOCK_ELEX_METAL_STORAGE_REAL_UNLOCALIZED_NAMES = 
         { "blockCopper", "blockSilver", "blockTin",
         "blockChromium", "blockOsmium", "blockRuthenium",
@@ -61,6 +64,10 @@ public class BlockIds {
         "blockPlatinum", "blockNickel", "blockCobalt",
         "blockCadmium", "blockMolybdenum", "blockIndium",
         "blockAluminium" };
+    public static final String BLOCK_ELEX_METAL_STORAGE_2_UNLOCALIZED_NAME = "elexMetalStorageBlock2";
+    public static final String[] BLOCK_ELEX_METAL_STORAGE_2_REAL_UNLOCALIZED_NAMES = 
+        { "blockTantalum", "blockArsenic", "blockTellurium",
+        "blockAntimony", "blockBismuth", "blockLead" };
     public static final String CENTRIFUGE_UNLOCALIZED_NAME = "centrifuge";
     public static final String GRINDER_UNLOCALIZED_NAME = "grinder";
     
