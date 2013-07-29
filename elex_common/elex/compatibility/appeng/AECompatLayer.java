@@ -1,4 +1,4 @@
-package elex.compatibility.ae;
+package elex.compatibility.appeng;
 
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.Loader;
@@ -17,13 +17,13 @@ import elex.lib.Reference;
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
 
-@Mod(modid = Reference.MOD_ID + "|CompatAE", name = Reference.MOD_ID + " Compat: AE", version = Reference.VERSION, dependencies = "after:ElEx;after:AppEng")
+@Mod(modid = Reference.MOD_ID + "|CompatAE", name = Reference.MOD_ID + " Compat: AE", version = Reference.VERSION, dependencies = "after:ElEx;after:AppliedEnergistics")
 @NetworkMod(clientSideRequired = false, serverSideRequired = false)
 public class AECompatLayer {
     
     @EventHandler
     public static void init(FMLInitializationEvent event) {
-        if(!Loader.isModLoaded("AppEng")) {
+        if(!Loader.isModLoaded("AppliedEnergistics")) {
             
             FMLLog.warning("Applied Energistics missing - ElEx AppEng Compat not loading");
             return;
