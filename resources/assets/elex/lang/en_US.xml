@@ -84,7 +84,7 @@
 	<entry key="item.itemElexCompoundDust.4.name">Petalite Dust</entry>
 	<entry key="item.itemElexCompoundDust.5.name">Pure Quartz Dust</entry>
 	<entry key="item.itemElexCompoundDust.6.name">Spodumene Dust</entry>
-	<entry key="item.itemElexCompoundDust.7.name">Nether Quartz Dust</entry>
+	
 	<entry key="item.itemElexMetalDust.0.name">Copper Dust</entry>
 	<entry key="item.itemElexMetalDust.1.name">Silver Dust</entry>
 	<entry key="item.itemElexMetalDust.2.name">Tin Dust</entry>
@@ -107,8 +107,10 @@
 	<entry key="item.itemElexMetalDust.19.name">Antimony Dust</entry>
 	<entry key="item.itemElexMetalDust.20.name">Bismuth Dust</entry>
 	<entry key="item.itemElexMetalDust.21.name">Lead Dust</entry>
-	<entry key="item.itemElexMetalDust.22.name">Iron Dust</entry>
-	<entry key="item.itemElexMetalDust.23.name">Gold Dust</entry>
+	
+	<entry key="item.itemVanillaDust.0.name">Nether Quartz Dust</entry>
+	<entry key="item.itemVanillaDust.1.name">Iron Dust</entry>
+	<entry key="item.itemVanillaDust.2.name">Gold Dust</entry>
 	
 	<entry key="item.itemElexIngot0.name">Copper Ingot</entry>
 	<entry key="item.itemElexIngot1.name">Silver Ingot</entry>

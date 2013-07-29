@@ -36,6 +36,12 @@ public class OreDictionaryHandler {
         for (int i = 0; i < BlockIds.BLOCK_ELEX_ORE_2_REAL_UNLOCALIZED_NAMES.length; i++) {
             OreDictionary.registerOre(BlockIds.BLOCK_ELEX_ORE_2_REAL_UNLOCALIZED_NAMES[i], new ItemStack(ModBlocks.blockElExOre2, 1, i));
         }
+        for (int i = 0; i < ItemIds.VANILLA_DUST_REAL_UNLOCALIZED_NAMES.length; i++) {
+            OreDictionary.registerOre(ItemIds.VANILLA_DUST_REAL_UNLOCALIZED_NAMES[i], new ItemStack(ModItems.itemVanillaDust, 1, i));
+        }
+        for (int i = 0; i < ItemIds.ELEX_PURE_NONMETAL_DUST_REAL_UNLOCALIZED_NAMES.length; i++) {
+            OreDictionary.registerOre(ItemIds.ELEX_PURE_NONMETAL_DUST_REAL_UNLOCALIZED_NAMES[i], new ItemStack(ModItems.itemElExPureNonmetalDust, 1, i));
+        }
     }
     
 }

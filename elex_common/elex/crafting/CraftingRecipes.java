@@ -39,12 +39,12 @@ public class CraftingRecipes {
         for (int i = 0; i < ItemIds.ELEX_ORE_REAL_UNLOCALIZED_NAMES.length; i++) {
             FurnaceRecipes.smelting().addSmelting(ItemIds.ELEX_COMPOUND_DUST, i, new ItemStack(ModItems.itemElExOre, 1, i), 5F);
         }
-        FurnaceRecipes.smelting().addSmelting(ItemIds.ELEX_COMPOUND_DUST, 7, new ItemStack(Item.netherQuartz, 1), 5F);
+        FurnaceRecipes.smelting().addSmelting(ItemIds.VANILLA_DUST, 0, new ItemStack(Item.netherQuartz, 1), 5F);
         for (int i = 0; i < ItemIds.ELEX_INGOT_REAL_UNLOCALIZED_NAMES.length; i++) {
             FurnaceRecipes.smelting().addSmelting(ItemIds.ELEX_METAL_DUST, i, new ItemStack(ModItems.itemElExIngot, 1, i), 5F);
         }
-        FurnaceRecipes.smelting().addSmelting(ItemIds.ELEX_METAL_DUST, 30, new ItemStack(Item.ingotIron, 1), 5F);
-        FurnaceRecipes.smelting().addSmelting(ItemIds.ELEX_METAL_DUST, 31, new ItemStack(Item.ingotGold, 1), 5F);
+        FurnaceRecipes.smelting().addSmelting(ItemIds.VANILLA_DUST, 1, new ItemStack(Item.ingotIron, 1), 5F);
+        FurnaceRecipes.smelting().addSmelting(ItemIds.VANILLA_DUST, 2, new ItemStack(Item.ingotGold, 1), 5F);
         for (int i = 0; i < BlockIds.BLOCK_ELEX_ORE_REAL_UNLOCALIZED_NAMES.length; i++) {
             FurnaceRecipes.smelting().addSmelting(BlockIds.BLOCK_ELEX_ORE, i, new ItemStack(ModItems.itemElExIngot, 1, i), 5F);
         }

@@ -11,6 +11,8 @@ public class ModItems {
     public static Item itemElExCompoundDust;
     public static Item itemElExMetalDust;
     public static Item itemElExIngot;
+    public static Item itemElExPureNonmetalDust;
+    public static Item itemVanillaDust;
     
     public static void init() {
         itemElExOre = new ItemElExOre(ItemIds.ELEX_ORE);
@@ -18,5 +20,7 @@ public class ModItems {
         itemElExCompoundDust = new ItemElExDust(ItemIds.ELEX_COMPOUND_DUST, 0);
         itemElExMetalDust = new ItemElExDust(ItemIds.ELEX_METAL_DUST, 1);
         itemElExIngot = new ItemElExIngot(ItemIds.ELEX_INGOT);
+        itemElExPureNonmetalDust = new ItemElExDust(ItemIds.ELEX_PURE_NONMETAL_DUST, 2);
+        itemVanillaDust = new ItemElExDust(ItemIds.VANILLA_DUST, 3);
     }
 }

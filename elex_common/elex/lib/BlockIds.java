@@ -39,7 +39,7 @@ public class BlockIds {
     public static final String[] ITEM_ELEX_ORE_REAL_UNLOCALIZED_NAMES = 
         { "oreAquamarine", "oreBorax", "oreFluorite",
         "oreForsterite", "orePetalite", "oreArtificialQuartz",
-        "oreSpodumene" };
+        "oreSpodumene", "oreHalite" };
     public static final String BLOCK_ELEX_ORE_UNLOCALIZED_NAME = "elexOreBlock";
     public static final String[] BLOCK_ELEX_ORE_REAL_UNLOCALIZED_NAMES = 
         { "oreCopper", "oreSilver", "oreTin",
@@ -56,7 +56,7 @@ public class BlockIds {
     public static final String[] BLOCK_ELEX_ITEM_ORE_STORAGE_REAL_UNLOCALIZED_NAMES = 
         { "blockAquamarine", "blockBorax", "blockFluorite",
         "blockForsterite", "blockPetalite", "blockArtificialQuartz",
-        "blockSpodumene" };
+        "blockSpodumene", "blockHalite" };
     public static final String BLOCK_ELEX_METAL_STORAGE_UNLOCALIZED_NAME = "elexMetalStorageBlock";
     public static final String[] BLOCK_ELEX_METAL_STORAGE_REAL_UNLOCALIZED_NAMES = 
         { "blockCopper", "blockSilver", "blockTin",

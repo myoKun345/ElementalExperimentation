@@ -84,7 +84,7 @@
 	<entry key="item.itemElexCompoundDust.4.name">Petalitdamm</entry>
 	<entry key="item.itemElexCompoundDust.5.name">Renakvartsdamm</entry>
 	<entry key="item.itemElexCompoundDust.6.name">Spodumendamm</entry>
-	<entry key="item.itemElexCompoundDust.7.name">Nederkvartsdamm</entry>
+	
 	<entry key="item.itemElexMetalDust.0.name">Koppardamm</entry>
 	<entry key="item.itemElexMetalDust.1.name">Silverdamm</entry>
 	<entry key="item.itemElexMetalDust.2.name">Tenndamm</entry>
@@ -107,8 +107,10 @@
 	<entry key="item.itemElexMetalDust.19.name">Antimondamm</entry>
 	<entry key="item.itemElexMetalDust.20.name">Vismutdamm</entry>
 	<entry key="item.itemElexMetalDust.21.name">Blydamm</entry>
-	<entry key="item.itemElexMetalDust.22.name">Järndamm</entry>
-	<entry key="item.itemElexMetalDust.23.name">Gulddamm</entry>
+	
+	<entry key="item.itemVanillaDust.0.name">Nederkvartsdamm</entry>
+	<entry key="item.itemVanillaDust.1.name">Järndamm</entry>
+	<entry key="item.itemVanillaDust.2.name">Gulddamm</entry>
 	
 	<entry key="item.itemElexIngot0.name">Koppartacka</entry>
 	<entry key="item.itemElexIngot1.name">Silvertacka</entry>

@@ -45,6 +45,12 @@ public class ItemElExDust extends Item {
         if (dustType == 1) {
             return "item." + ItemIds.ELEX_METAL_DUST_UNLOCALIZED_NAME + "." + stack.getItemDamage();
         }
+        if (dustType == 2) {
+            return "item." + ItemIds.ELEX_PURE_NONMETAL_DUST_UNLOCALIZED_NAME + "." + stack.getItemDamage();
+        }
+        if (dustType == 3) {
+            return "item." + ItemIds.VANILLA_DUST_UNLOCALIZED_NAME + "." + stack.getItemDamage();
+        }
         return "something.went.wrong";
     }
     
@@ -61,6 +67,18 @@ public class ItemElExDust extends Item {
             icons = new Icon[ItemIds.ELEX_METAL_DUST_REAL_UNLOCALIZED_NAMES.length];
             for (int i = 0; i < icons.length; i++) {
                 icons[i] = register.registerIcon(Reference.MOD_ID + ":" + ItemIds.ELEX_METAL_DUST_REAL_UNLOCALIZED_NAMES[i]);
+            }
+        }
+        if (dustType == 2) {
+            icons = new Icon[ItemIds.ELEX_PURE_NONMETAL_DUST_REAL_UNLOCALIZED_NAMES.length];
+            for (int i = 0; i < icons.length; i++) {
+                icons[i] = register.registerIcon(Reference.MOD_ID + ":" + ItemIds.ELEX_PURE_NONMETAL_DUST_REAL_UNLOCALIZED_NAMES[i]);
+            }
+        }
+        if (dustType == 3) {
+            icons = new Icon[ItemIds.VANILLA_DUST_REAL_UNLOCALIZED_NAMES.length];
+            for (int i = 0; i < icons.length; i++) {
+                icons[i] = register.registerIcon(Reference.MOD_ID + ":" + ItemIds.VANILLA_DUST_REAL_UNLOCALIZED_NAMES[i]);
             }
         }
     }
@@ -86,16 +104,34 @@ public class ItemElExDust extends Item {
                 list.add(stack);
             }
         }
+        if (dustType == 2) {
+            for (int i = 0; i < ItemIds.ELEX_PURE_NONMETAL_DUST_REAL_UNLOCALIZED_NAMES.length; i++) {
+                ItemStack stack = new ItemStack(id, 1, i);
+                list.add(stack);
+            }
+        }
+        if (dustType == 3) {
+            for (int i = 0; i < ItemIds.VANILLA_DUST_REAL_UNLOCALIZED_NAMES.length; i++) {
+                ItemStack stack = new ItemStack(id, 1, i);
+                list.add(stack);
+            }
+        }
     }
     
     @Override
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer player, List info, boolean useExtraInformation) {
         if (dustType == 0) {
-            info.add(ItemIds.ITEM_ORE_DUST_MOLECULE_STRINGS[stack.getItemDamage()]);
+            info.add(ItemIds.COMPOUND_DUST_MOLECULE_STRINGS[stack.getItemDamage()]);
         }
         if (dustType == 1) {
             info.add(ItemIds.METAL_DUST_MOLECULE_STRINGS[stack.getItemDamage()]);
+        }
+        if (dustType == 2) {
+            info.add(ItemIds.PURE_NONMETAL_DUST_MOLECULE_STRINGS[stack.getItemDamage()]);
+        }
+        if (dustType == 3) {
+            info.add(ItemIds.VANILLA_DUST_MOLECULE_STRINGS[stack.getItemDamage()]);
         }
     }
     

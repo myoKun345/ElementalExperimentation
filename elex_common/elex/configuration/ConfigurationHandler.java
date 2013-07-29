@@ -35,6 +35,8 @@ public class ConfigurationHandler {
         ItemIds.ELEX_COMPOUND_DUST = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.ELEX_COMPOUND_DUST_KEY, ItemIds.ELEX_COMPOUND_DUST_DEFAULT).getInt();
         ItemIds.ELEX_METAL_DUST = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.ELEX_METAL_DUST_KEY, ItemIds.ELEX_METAL_DUST_DEFAULT).getInt();
         ItemIds.ELEX_INGOT = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.ELEX_INGOT_KEY, ItemIds.ELEX_INGOT_DEFAULT).getInt();
+        ItemIds.ELEX_PURE_NONMETAL_DUST = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.ELEX_PURE_NONMETAL_DUST_KEY, ItemIds.ELEX_PURE_NONMETAL_DUST_DEFAULT).getInt();
+        ItemIds.VANILLA_DUST = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.VANILLA_DUST_KEY, ItemIds.VANILLA_DUST_DEFAULT).getInt();
         
         config.save();
     }
