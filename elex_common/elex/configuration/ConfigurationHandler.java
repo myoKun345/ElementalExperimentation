@@ -2,10 +2,9 @@ package elex.configuration;
 
 import java.io.File;
 
+import net.minecraftforge.common.Configuration;
 import elex.lib.BlockIds;
 import elex.lib.ItemIds;
-
-import net.minecraftforge.common.Configuration;
 
 /**
  * Elemental Experimentation

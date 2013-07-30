@@ -3,6 +3,7 @@ package elex.item;
 import java.io.File;
 import java.util.List;
 
+import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import elex.ElementalExperimentation;
@@ -81,9 +82,9 @@ public class ItemMercuryInjector extends Item {
         int zero = 0;
         
         if (0 == stack.getItemDamage()) {
-            info.add("1000 mB left");
+            info.add("1000 mB " + LanguageRegistry.instance().getStringLocalization("string.millibuckets.remaining"));
         }else{
-            info.add(milliBuckets + " mB left");
+            info.add(milliBuckets + " mB " + LanguageRegistry.instance().getStringLocalization("string.millibuckets.remaining"));
         }
     }
 }

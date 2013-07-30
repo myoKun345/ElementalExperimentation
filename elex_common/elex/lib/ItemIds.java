@@ -90,4 +90,7 @@ public class ItemIds {
         "Se", "At" };
     public static final String[] VANILLA_DUST_MOLECULE_STRINGS =
         { "FeSiO2", "Fe", "Au" };
+    
+    /* Other Information Strings */
+    public static final String RADIOACTIVE_UNLOCALIZED = "string.element.radioactive";
 }

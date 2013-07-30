@@ -2,6 +2,7 @@ package elex.item;
 
 import java.util.List;
 
+import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import elex.ElementalExperimentation;
@@ -23,7 +24,7 @@ import net.minecraft.util.Icon;
  * @author Myo-kun
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class ItemElExDust extends Item {
+public class ItemElExDust extends ItemElemental {
     
     private int dustType;
     

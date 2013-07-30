@@ -84,6 +84,7 @@
 	<entry key="item.itemElexCompoundDust.4.name">Petalite Dust</entry>
 	<entry key="item.itemElexCompoundDust.5.name">Pure Quartz Dust</entry>
 	<entry key="item.itemElexCompoundDust.6.name">Spodumene Dust</entry>
+	<entry key="item.itemElexCompoundDust.7.name">Halite Dust</entry>
 	
 	<entry key="item.itemElexMetalDust.0.name">Copper Dust</entry>
 	<entry key="item.itemElexMetalDust.1.name">Silver Dust</entry>
@@ -107,6 +108,12 @@
 	<entry key="item.itemElexMetalDust.19.name">Antimony Dust</entry>
 	<entry key="item.itemElexMetalDust.20.name">Bismuth Dust</entry>
 	<entry key="item.itemElexMetalDust.21.name">Lead Dust</entry>
+	
+	<entry key="item.itemElexPureNonmetalDust.0.name">Carbon Dust</entry>
+	<entry key="item.itemElexPureNonmetalDust.1.name">Phosphorus Dust</entry>
+	<entry key="item.itemElexPureNonmetalDust.2.name">Sulfur Dust</entry>
+	<entry key="item.itemElexPureNonmetalDust.3.name">Selenium Dust</entry>
+	<entry key="item.itemElexPureNonmetalDust.4.name">Astatine Dust</entry>
 	
 	<entry key="item.itemVanillaDust.0.name">Nether Quartz Dust</entry>
 	<entry key="item.itemVanillaDust.1.name">Iron Dust</entry>
@@ -136,4 +143,9 @@
 	<entry key="item.itemElexIngot21.name">Lead Ingot</entry>
 	
 	<entry key="item.mercuryInjector.name">Mercury Injector</entry>
+	
+	<entry key="element.tungsten.name">Tungsten</entry>
+	
+	<entry key="string.millibuckets.remaining">left</entry>
+	<entry key="string.element.radioactive">Caution: Radioactive!</entry>
 </properties>

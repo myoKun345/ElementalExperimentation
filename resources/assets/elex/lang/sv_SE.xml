@@ -84,6 +84,7 @@
 	<entry key="item.itemElexCompoundDust.4.name">Petalitdamm</entry>
 	<entry key="item.itemElexCompoundDust.5.name">Renakvartsdamm</entry>
 	<entry key="item.itemElexCompoundDust.6.name">Spodumendamm</entry>
+	<entry key="item.itemElexCompoundDust.7.name">Halitdamm</entry>
 	
 	<entry key="item.itemElexMetalDust.0.name">Koppardamm</entry>
 	<entry key="item.itemElexMetalDust.1.name">Silverdamm</entry>
@@ -107,6 +108,12 @@
 	<entry key="item.itemElexMetalDust.19.name">Antimondamm</entry>
 	<entry key="item.itemElexMetalDust.20.name">Vismutdamm</entry>
 	<entry key="item.itemElexMetalDust.21.name">Blydamm</entry>
+	
+	<entry key="item.itemElexPureNonmetalDust.0.name">Karbondamm</entry>
+	<entry key="item.itemElexPureNonmetalDust.1.name">Fosfordamm</entry>
+	<entry key="item.itemElexPureNonmetalDust.2.name">Svaveldamm</entry>
+	<entry key="item.itemElexPureNonmetalDust.3.name">Selendamm</entry>
+	<entry key="item.itemElexPureNonmetalDust.4.name">Astatdamm</entry>
 	
 	<entry key="item.itemVanillaDust.0.name">Nederkvartsdamm</entry>
 	<entry key="item.itemVanillaDust.1.name">Järndamm</entry>
@@ -136,4 +143,9 @@
 	<entry key="item.itemElexIngot21.name">Blytacka</entry>
 	
 	<entry key="item.mercuryInjector.name">Kvicksilverspruta</entry>
+	
+	<entry key="element.tungsten.name">Volfram</entry>
+	
+	<entry key="string.millibuckets.remaining">kvar</entry>
+	<entry key="string.element.radioactive">Varning: Radioaktivt!</entry>
 </properties>
