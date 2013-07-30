@@ -18,7 +18,7 @@ import net.minecraftforge.oredict.OreDictionary;
 public class OreDictionaryHandler {
     
     public static void registerOres() {
-        for (int i = 0; i < ItemIds.ELEX_INGOT_REAL_UNLOCALIZED_NAMES.length; i++) {
+        /*for (int i = 0; i < ItemIds.ELEX_INGOT_REAL_UNLOCALIZED_NAMES.length; i++) {
             OreDictionary.registerOre(ItemIds.ELEX_INGOT_REAL_UNLOCALIZED_NAMES[i], new ItemStack(ModItems.itemElExIngot, 1, i));
         }
         for (int i = 0; i < ItemIds.ELEX_ORE_REAL_UNLOCALIZED_NAMES.length; i++) {
@@ -41,7 +41,7 @@ public class OreDictionaryHandler {
         }
         for (int i = 0; i < ItemIds.ELEX_PURE_NONMETAL_DUST_REAL_UNLOCALIZED_NAMES.length; i++) {
             OreDictionary.registerOre(ItemIds.ELEX_PURE_NONMETAL_DUST_REAL_UNLOCALIZED_NAMES[i], new ItemStack(ModItems.itemElExPureNonmetalDust, 1, i));
-        }
+        }*/
     }
     
 }

@@ -20,7 +20,7 @@ import elex.lib.ItemIds;
 public class PulverizerRecipes {
     
     public static void addPulverizerRecipes() {
-        for (int i = 0; i < BlockIds.BLOCK_ELEX_ORE_REAL_UNLOCALIZED_NAMES.length; i++) {
+        /*for (int i = 0; i < BlockIds.BLOCK_ELEX_ORE_REAL_UNLOCALIZED_NAMES.length; i++) {
             CraftingHelpers.addPulverizerOreToDustRecipe(new ItemStack(ModBlocks.blockElExOre, 1, i), new ItemStack(ModItems.itemElExMetalDust, 2, i));
         }
         for (int i = 0; i < BlockIds.BLOCK_ELEX_ORE_2_REAL_UNLOCALIZED_NAMES.length; i++) {
@@ -39,6 +39,6 @@ public class PulverizerRecipes {
             CraftingHelpers.addPulverizerIngotToDustRecipe(new ItemStack(ModItems.itemElExIngot, 1, i), new ItemStack(ModItems.itemElExMetalDust, 1, i));
         }
         CraftingHelpers.addPulverizerIngotToDustRecipe(new ItemStack(Item.ingotIron), new ItemStack(ModItems.itemVanillaDust, 1, 1));
-        CraftingHelpers.addPulverizerIngotToDustRecipe(new ItemStack(Item.ingotGold), new ItemStack(ModItems.itemVanillaDust, 1, 2));
+        CraftingHelpers.addPulverizerIngotToDustRecipe(new ItemStack(Item.ingotGold), new ItemStack(ModItems.itemVanillaDust, 1, 2));*/
     }
 }

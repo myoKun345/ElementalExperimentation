@@ -40,9 +40,9 @@ public class ItemElExIngot extends Item {
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister register) {
-        icons = new Icon[ItemIds.ELEX_INGOT_REAL_UNLOCALIZED_NAMES.length];
+        icons = new Icon[ItemIds.ELEX_INGOT_REAL_UNLOCALIZED_NAMES.size()];
         for (int i = 0; i < icons.length; i++) {
-            icons[i] = register.registerIcon(Reference.MOD_ID + ":" + ItemIds.ELEX_INGOT_REAL_UNLOCALIZED_NAMES[i]);
+            icons[i] = register.registerIcon(Reference.MOD_ID + ":" + ItemIds.ELEX_INGOT_REAL_UNLOCALIZED_NAMES.get(i));
         }
     }
     
@@ -55,7 +55,7 @@ public class ItemElExIngot extends Item {
     @Override
     @SideOnly(Side.CLIENT)
     public void getSubItems(int id, CreativeTabs tab, List list) {
-        for (int i = 0; i < ItemIds.ELEX_INGOT_REAL_UNLOCALIZED_NAMES.length; i++) {
+        for (int i = 0; i < ItemIds.ELEX_INGOT_REAL_UNLOCALIZED_NAMES.size(); i++) {
             ItemStack stack = new ItemStack(id, 1, i);
             list.add(stack);
         }

@@ -3,6 +3,7 @@ package elex.configuration;
 import java.io.File;
 
 import net.minecraftforge.common.Configuration;
+import elex.element.Element;
 import elex.lib.BlockIds;
 import elex.lib.ItemIds;
 
@@ -36,6 +37,8 @@ public class ConfigurationHandler {
         ItemIds.ELEX_INGOT = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.ELEX_INGOT_KEY, ItemIds.ELEX_INGOT_DEFAULT).getInt();
         ItemIds.ELEX_PURE_NONMETAL_DUST = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.ELEX_PURE_NONMETAL_DUST_KEY, ItemIds.ELEX_PURE_NONMETAL_DUST_DEFAULT).getInt();
         ItemIds.VANILLA_DUST = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.VANILLA_DUST_KEY, ItemIds.VANILLA_DUST_DEFAULT).getInt();
+        
+        System.out.println("dust" + Element.elementList[74].getName());
         
         config.save();
     }

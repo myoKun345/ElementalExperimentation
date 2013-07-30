@@ -1,5 +1,6 @@
 package elex.element;
 
+import elex.lib.ItemIds;
 import net.minecraft.item.Item;
 
 public class Element {
@@ -22,6 +23,8 @@ public class Element {
     private String phase;
     
     private String name;
+    
+    private boolean hasVanillaIngot;
     
     public static final Element[] elementList = new Element[128];
 
@@ -53,6 +56,7 @@ public class Element {
     public Element setVanillaIngot(Item item)
     {
         this.vanillaIngot = item;
+        setHasVanillaIngot(true);
         return this;
     }
     
@@ -69,6 +73,10 @@ public class Element {
     public Element setName(String name) {
         this.name = name;
         return this;
+    }
+    
+    public void setHasVanillaIngot(boolean hasVanillaIngot) {
+        this.hasVanillaIngot = hasVanillaIngot;
     }
     
     public static final Element hydrogen = 
@@ -738,10 +746,255 @@ public class Element {
             .setPhase("solid")
             .setName("Tungsten"));
     
+    public static final Element rhenium = 
+            (new Element(75)
+            .setCharacteristic(3459F, 5869F)
+            .setSymbol("Re")
+            .isMetal(true)
+            .isRadioactive(false)
+            .setPhase("solid")
+            .setName("Rhenium"));
+    
+    public static final Element osmium = 
+            (new Element(76)
+            .setCharacteristic(3306F, 5285F)
+            .setSymbol("Os")
+            .isMetal(true)
+            .isRadioactive(false)
+            .setPhase("solid")
+            .setName("Osmium"));
+    
+    public static final Element iridium = 
+            (new Element(77)
+            .setCharacteristic(2739F, 4701F)
+            .setSymbol("Ir")
+            .isMetal(true)
+            .isRadioactive(false)
+            .setPhase("solid")
+            .setName("Iridium"));
+    
+    public static final Element platinum = 
+            (new Element(78)
+            .setCharacteristic(2041.4F, 4098F)
+            .setSymbol("Pt")
+            .isMetal(true)
+            .isRadioactive(false)
+            .setPhase("solid")
+            .setName("Platinum"));
+    
+    public static final Element gold = 
+            (new Element(79)
+            .setCharacteristic(1337.33F, 3129F)
+            .setSymbol("Au")
+            .setVanillaIngot(Item.ingotGold)
+            .isMetal(true)
+            .isRadioactive(false)
+            .setPhase("solid")
+            .setName("Gold"));
+    
+    public static final Element mercury = 
+            (new Element(80)
+            .setCharacteristic(234.3210F, 629.88F)
+            .setSymbol("Hg")
+            .isMetal(true)
+            .isRadioactive(false)
+            .setPhase("liquid")
+            .setName("Mercury"));
+    
+    public static final Element thallium = 
+            (new Element(81)
+            .setCharacteristic(577F, 1746F)
+            .setSymbol("Tl")
+            .isMetal(true)
+            .isRadioactive(false)
+            .setPhase("solid")
+            .setName("Thallium"));
+    
+    public static final Element lead = 
+            (new Element(82)
+            .setCharacteristic(600.61F, 2022F)
+            .setSymbol("Pb")
+            .isMetal(true)
+            .isRadioactive(false)
+            .setPhase("solid")
+            .setName("Lead"));
+    
+    public static Element bismuth = 
+            (new Element(83)
+            .setCharacteristic(544.7F, 1837F)
+            .setSymbol("Bi")
+            .isMetal(true)
+            .isRadioactive(true)
+            .setPhase("solid")
+            .setName("Bismuth"));
+    
+    public static Element polonium = 
+            (new Element(84)
+            .setCharacteristic(527F, 1235F)
+            .setSymbol("Po")
+            .isMetal(true)
+            .isRadioactive(true)
+            .setPhase("solid")
+            .setName("Polonium"));
+    
+    public static Element astatine = 
+            (new Element(85)
+            .setCharacteristic(575F, 610F)
+            .setSymbol("At")
+            .isMetal(false)
+            .isRadioactive(true)
+            .setPhase("solid")
+            .setName("Astatine"));
+    
+    public static Element radon = 
+            (new Element(86)
+            .setCharacteristic(202F, 211.3F)
+            .setSymbol("Rn")
+            .isMetal(false)
+            .isRadioactive(true)
+            .setPhase("gas")
+            .setName("Radon"));
+    
+    public static Element francium = 
+            (new Element(87)
+            .setCharacteristic(300F, 950F)
+            .setSymbol("Fr")
+            .isMetal(true)
+            .isRadioactive(true)
+            .setPhase("solid")
+            .setName("Francium"));
+    
+    public static Element radium = 
+            (new Element(88)
+            .setCharacteristic(973F, 2010F)
+            .setSymbol("Ra")
+            .isMetal(true)
+            .isRadioactive(true)
+            .setPhase("solid")
+            .setName("Radium"));
+    
+    public static Element actinium = 
+            (new Element(89)
+            .setCharacteristic(1323F, 3471F)
+            .setSymbol("Ac")
+            .isMetal(true)
+            .isRadioactive(true)
+            .setPhase("solid")
+            .setName("Actinium"));
+    
+    public static Element thorium = 
+            (new Element(90)
+            .setCharacteristic(2115F, 5061F)
+            .setSymbol("Th")
+            .isMetal(true)
+            .isRadioactive(true)
+            .setPhase("solid")
+            .setName("Thorium"));
+    
+    public static Element protactinium = 
+            (new Element(91)
+            .setCharacteristic(1841F, 4300F)
+            .setSymbol("Pa")
+            .isMetal(true)
+            .isRadioactive(true)
+            .setPhase("solid")
+            .setName("Protactinium"));
+    
+    public static Element uranium = 
+            (new Element(92)
+            .setCharacteristic(1405.3F, 4404F)
+            .setSymbol("U")
+            .isMetal(true)
+            .isRadioactive(true)
+            .setPhase("solid")
+            .setName("Uranium"));
+    
+    public static Element neptunium = 
+            (new Element(93)
+            .setCharacteristic(910F, 4273F)
+            .setSymbol("Np")
+            .isMetal(true)
+            .isRadioactive(true)
+            .setPhase("solid")
+            .setName("Neptunium"));
+    
+    public static Element plutonium = 
+            (new Element(94)
+            .setCharacteristic(912.5F, 3505F)
+            .setSymbol("Pu")
+            .isMetal(true)
+            .isRadioactive(true)
+            .setPhase("solid")
+            .setName("Plutonium"));
+    
+    public static Element americium = 
+            (new Element(95)
+            .setCharacteristic(1449F, 2880F)
+            .setSymbol("Am")
+            .isMetal(true)
+            .isRadioactive(true)
+            .setPhase("solid")
+            .setName("Americium"));
+    
+    public static Element curium = 
+            (new Element(96)
+            .setCharacteristic(1613F, 3383F)
+            .setSymbol("Cm")
+            .isMetal(true)
+            .isRadioactive(true)
+            .setPhase("solid")
+            .setName("Curium"));
+    
+    public static Element berkelium = 
+            (new Element(97)
+            .setCharacteristic(1259F, 3100F)
+            .setSymbol("Bk")
+            .isMetal(true)
+            .isRadioactive(true)
+            .setPhase("solid")
+            .setName("Berkelium"));
+    
+    public static Element californium = 
+            (new Element(98)
+            .setCharacteristic(1173F, 1470F)
+            .setSymbol("Cf")
+            .isMetal(true)
+            .isRadioactive(true)
+            .setPhase("solid")
+            .setName("Californium"));
+    
+    public static Element einsteinium = 
+            (new Element(99)
+            .setCharacteristic(1133F, 1450F)
+            .setSymbol("Es")
+            .isMetal(true)
+            .isRadioactive(true)
+            .setPhase("solid")
+            .setName("Einsteinium"));
+    
+    public static Element fermium = 
+            (new Element(100)
+            .setCharacteristic(1800F, 2150F)
+            .setSymbol("Fm")
+            .isMetal(true)
+            .isRadioactive(true)
+            .setPhase("solid")
+            .setName("Fermium"));
+    
+    public static Element mendelevium = 
+            (new Element(101)
+            .setCharacteristic(1100F, 1450F)
+            .setSymbol("Md")
+            .isMetal(true)
+            .isRadioactive(true)
+            .setPhase("solid")
+            .setName("Mendelevium"));
+    
     public Element(int num)
     {
-        elementID = num;
+        this.elementID = num;
         elementList[num] = this;
+        addStuff(num);
     }
     
     public int getID() {
@@ -786,5 +1039,21 @@ public class Element {
     
     public static String getUnlocalizedName(int id) {
         return "element." + elementList[id].getName().toLowerCase() + ".name";
+    }
+    
+    public boolean isHasVanillaIngot() {
+        return hasVanillaIngot;
+    }
+    
+    public static void addStuff(int id) {
+        if (elementList[id].getIsMetal() == true & elementList[id].getPhase() == "solid" & elementList[id].isHasVanillaIngot() == false) {
+            ItemIds.ELEX_METAL_DUST_REAL_UNLOCALIZED_NAMES.push("dust" + elementList[id].getName());
+            ItemIds.METAL_DUST_MOLECULE_STRINGS.push(elementList[id].getSymbol());
+            ItemIds.ELEX_INGOT_REAL_UNLOCALIZED_NAMES.push("ingot" + elementList[id].getName());
+        }
+        if (elementList[id].getIsMetal() == false & elementList[id].getPhase() == "solid") {
+            ItemIds.ELEX_PURE_NONMETAL_DUST_REAL_UNLOCALIZED_NAMES.push("dust" + elementList[id].getName());
+            ItemIds.PURE_NONMETAL_DUST_MOLECULE_STRINGS.push(elementList[id].getSymbol());
+        }
     }
 }

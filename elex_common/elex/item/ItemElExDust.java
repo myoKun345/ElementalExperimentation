@@ -65,15 +65,15 @@ public class ItemElExDust extends ItemElemental {
             }
         }
         if (dustType == 1) {
-            icons = new Icon[ItemIds.ELEX_METAL_DUST_REAL_UNLOCALIZED_NAMES.length];
+            icons = new Icon[ItemIds.ELEX_METAL_DUST_REAL_UNLOCALIZED_NAMES.size()];
             for (int i = 0; i < icons.length; i++) {
-                icons[i] = register.registerIcon(Reference.MOD_ID + ":" + ItemIds.ELEX_METAL_DUST_REAL_UNLOCALIZED_NAMES[i]);
+                icons[i] = register.registerIcon(Reference.MOD_ID + ":" + ItemIds.ELEX_METAL_DUST_REAL_UNLOCALIZED_NAMES.get(i));
             }
         }
         if (dustType == 2) {
-            icons = new Icon[ItemIds.ELEX_PURE_NONMETAL_DUST_REAL_UNLOCALIZED_NAMES.length];
+            icons = new Icon[ItemIds.ELEX_PURE_NONMETAL_DUST_REAL_UNLOCALIZED_NAMES.size()];
             for (int i = 0; i < icons.length; i++) {
-                icons[i] = register.registerIcon(Reference.MOD_ID + ":" + ItemIds.ELEX_PURE_NONMETAL_DUST_REAL_UNLOCALIZED_NAMES[i]);
+                icons[i] = register.registerIcon(Reference.MOD_ID + ":" + ItemIds.ELEX_PURE_NONMETAL_DUST_REAL_UNLOCALIZED_NAMES.get(i));
             }
         }
         if (dustType == 3) {
@@ -100,13 +100,13 @@ public class ItemElExDust extends ItemElemental {
             }
         }
         if (dustType == 1) {
-            for (int i = 0; i < ItemIds.ELEX_METAL_DUST_REAL_UNLOCALIZED_NAMES.length; i++) {
+            for (int i = 0; i < ItemIds.ELEX_METAL_DUST_REAL_UNLOCALIZED_NAMES.size(); i++) {
                 ItemStack stack = new ItemStack(id, 1, i);
                 list.add(stack);
             }
         }
         if (dustType == 2) {
-            for (int i = 0; i < ItemIds.ELEX_PURE_NONMETAL_DUST_REAL_UNLOCALIZED_NAMES.length; i++) {
+            for (int i = 0; i < ItemIds.ELEX_PURE_NONMETAL_DUST_REAL_UNLOCALIZED_NAMES.size(); i++) {
                 ItemStack stack = new ItemStack(id, 1, i);
                 list.add(stack);
             }
@@ -126,10 +126,10 @@ public class ItemElExDust extends ItemElemental {
             info.add(ItemIds.COMPOUND_DUST_MOLECULE_STRINGS[stack.getItemDamage()]);
         }
         if (dustType == 1) {
-            info.add(ItemIds.METAL_DUST_MOLECULE_STRINGS[stack.getItemDamage()]);
+            info.add(ItemIds.METAL_DUST_MOLECULE_STRINGS.get(stack.getItemDamage()));
         }
         if (dustType == 2) {
-            info.add(ItemIds.PURE_NONMETAL_DUST_MOLECULE_STRINGS[stack.getItemDamage()]);
+            info.add(ItemIds.PURE_NONMETAL_DUST_MOLECULE_STRINGS.get(stack.getItemDamage()));
         }
         if (dustType == 3) {
             info.add(ItemIds.VANILLA_DUST_MOLECULE_STRINGS[stack.getItemDamage()]);

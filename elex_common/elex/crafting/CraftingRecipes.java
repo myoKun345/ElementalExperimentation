@@ -21,7 +21,7 @@ public class CraftingRecipes {
     public static void registerRecipes() {
         GameRegistry.addRecipe(new ItemStack(ModItems.mercuryInjector, 1), new Object[] { "X", "Z", "Y", 'X', Item.ingotIron, 'Z', Item.slimeBall, 'Y', Item.stick });
         //GameRegistry.addRecipe(new ItemStack(ModItems.mercuryInjector, 1), new Object[] { "X", "Z", "Y", 'X', Item.ingotIron, 'Z', "molecule_1hg", 'Y', Item.stick });
-        for (int i = 0; i < ItemIds.ELEX_ORE_REAL_UNLOCALIZED_NAMES.length; i++) {
+        /*for (int i = 0; i < ItemIds.ELEX_ORE_REAL_UNLOCALIZED_NAMES.length; i++) {
             GameRegistry.addRecipe(new ItemStack(ModBlocks.blockElExItemOreStorage, 1, i), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(ModItems.itemElExOre, 1, i) });
             //GameRegistry.addRecipe(new ItemStack(ModBlocks.blockElExItemOreStorage, 1, i), new Object[] { "XXX", "XXX", "XXX", 'X', ItemIds.ELEX_ORE_REAL_UNLOCALIZED_NAMES[i] });
         }
@@ -51,6 +51,6 @@ public class CraftingRecipes {
         for (int i = 0; i < BlockIds.BLOCK_ELEX_ORE_2_REAL_UNLOCALIZED_NAMES.length; i++) {
             int j = i + BlockIds.BLOCK_ELEX_ORE_REAL_UNLOCALIZED_NAMES.length;
             FurnaceRecipes.smelting().addSmelting(BlockIds.BLOCK_ELEX_ORE_2, i, new ItemStack(ModItems.itemElExIngot, 1, j), 5F);
-        }
+        }*/
     }
 }
