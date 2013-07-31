@@ -1,6 +1,10 @@
 package elex.lib;
 
-import java.util.Stack;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.logging.Level;
+
+import elex.log.LogHelper;
 
 public class ItemIds {
     /* Config Category */
@@ -46,11 +50,11 @@ public class ItemIds {
         "dustForsterite", "dustPetalite", "dustArtificialQuartz", 
         "dustSpodumene", "dustHalite" }; 
     public static final String ELEX_METAL_DUST_UNLOCALIZED_NAME = "itemElexMetalDust";
-    public static final Stack<String> ELEX_METAL_DUST_REAL_UNLOCALIZED_NAMES = new Stack<String>();
+    public static final LinkedList<String> ELEX_METAL_DUST_REAL_UNLOCALIZED_NAMES = new LinkedList<String>();
     public static final String ELEX_INGOT_UNLOCALIZED_NAME = "itemElexIngot";
-    public static final Stack<String> ELEX_INGOT_REAL_UNLOCALIZED_NAMES = new Stack<String>();
+    public static final LinkedList<String> ELEX_INGOT_REAL_UNLOCALIZED_NAMES = new LinkedList<String>();
     public static final String ELEX_PURE_NONMETAL_DUST_UNLOCALIZED_NAME = "itemElexPureNonmetalDust";
-    public static final Stack<String> ELEX_PURE_NONMETAL_DUST_REAL_UNLOCALIZED_NAMES = new Stack<String>();
+    public static final LinkedList<String> ELEX_PURE_NONMETAL_DUST_REAL_UNLOCALIZED_NAMES = new LinkedList<String>();
     public static final String VANILLA_DUST_UNLOCALIZED_NAME = "itemVanillaDust";
     public static final String[] VANILLA_DUST_REAL_UNLOCALIZED_NAMES = 
         { "dustNetherQuartz", "dustIron", "dustGold" };
@@ -60,8 +64,8 @@ public class ItemIds {
         { "Be3Al2(SiO3)6", "Na2B4O7(H2O)10", "CaF2", 
         "Mg2SiO4", "LiAlSi4O10", "SiO2", 
         "LiAl(SiO3)2", "NaCl" };
-    public static final Stack<String> METAL_DUST_MOLECULE_STRINGS = new Stack<String>();
-    public static final Stack<String> PURE_NONMETAL_DUST_MOLECULE_STRINGS = new Stack<String>();
+    public static final LinkedList<String> METAL_DUST_MOLECULE_STRINGS = new LinkedList<String>();
+    public static final LinkedList<String> PURE_NONMETAL_DUST_MOLECULE_STRINGS = new LinkedList<String>();
     public static final String[] VANILLA_DUST_MOLECULE_STRINGS =
         { "FeSiO2", "Fe", "Au" };
     

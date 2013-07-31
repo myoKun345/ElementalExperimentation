@@ -1,11 +1,13 @@
 package elex.configuration;
 
 import java.io.File;
+import java.util.logging.Level;
 
 import net.minecraftforge.common.Configuration;
 import elex.element.Element;
 import elex.lib.BlockIds;
 import elex.lib.ItemIds;
+import elex.log.LogHelper;
 
 /**
  * Elemental Experimentation
@@ -38,7 +40,7 @@ public class ConfigurationHandler {
         ItemIds.ELEX_PURE_NONMETAL_DUST = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.ELEX_PURE_NONMETAL_DUST_KEY, ItemIds.ELEX_PURE_NONMETAL_DUST_DEFAULT).getInt();
         ItemIds.VANILLA_DUST = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.VANILLA_DUST_KEY, ItemIds.VANILLA_DUST_DEFAULT).getInt();
         
-        System.out.println("dust" + Element.elementList[74].getName());
+        LogHelper.log(Level.INFO, Element.elementList[6].getName());
         
         config.save();
     }

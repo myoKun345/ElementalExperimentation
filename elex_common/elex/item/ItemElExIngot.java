@@ -34,7 +34,7 @@ public class ItemElExIngot extends Item {
     
     @Override
     public String getUnlocalizedName(ItemStack stack) {
-        return "item." + ItemIds.ELEX_INGOT_UNLOCALIZED_NAME + stack.getItemDamage();
+        return "item." + ItemIds.ELEX_INGOT_REAL_UNLOCALIZED_NAMES.get(stack.getItemDamage());
     }
     
     @Override

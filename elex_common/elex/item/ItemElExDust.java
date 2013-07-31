@@ -41,16 +41,16 @@ public class ItemElExDust extends ItemElemental {
     @Override
     public String getUnlocalizedName(ItemStack stack) {
         if (dustType == 0) {
-            return "item." + ItemIds.ELEX_COMPOUND_DUST_UNLOCALIZED_NAME + "." + stack.getItemDamage();
+            return "item." + ItemIds.ELEX_COMPOUND_DUST_REAL_UNLOCALIZED_NAMES[stack.getItemDamage()];
         }
         if (dustType == 1) {
-            return "item." + ItemIds.ELEX_METAL_DUST_UNLOCALIZED_NAME + "." + stack.getItemDamage();
+            return "item." + ItemIds.ELEX_METAL_DUST_REAL_UNLOCALIZED_NAMES.get(stack.getItemDamage());
         }
         if (dustType == 2) {
-            return "item." + ItemIds.ELEX_PURE_NONMETAL_DUST_UNLOCALIZED_NAME + "." + stack.getItemDamage();
+            return "item." + ItemIds.ELEX_PURE_NONMETAL_DUST_REAL_UNLOCALIZED_NAMES.get(stack.getItemDamage());
         }
         if (dustType == 3) {
-            return "item." + ItemIds.VANILLA_DUST_UNLOCALIZED_NAME + "." + stack.getItemDamage();
+            return "item." + ItemIds.VANILLA_DUST_REAL_UNLOCALIZED_NAMES[stack.getItemDamage()];
         }
         return "something.went.wrong";
     }

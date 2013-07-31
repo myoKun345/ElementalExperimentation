@@ -17,8 +17,10 @@ import elex.configuration.ConfigurationHandler;
 import elex.crafting.CraftingRecipes;
 import elex.creativetab.CreativeTabElEx;
 import elex.item.ModItems;
+import elex.lib.ItemIds;
 import elex.lib.Reference;
 import elex.localization.LocalizationHandler;
+import elex.log.LogHelper;
 import elex.network.PacketHandler;
 import elex.oredict.OreDictionaryHandler;
 import elex.proxy.CommonProxy;
@@ -46,6 +48,9 @@ public class ElementalExperimentation {
     
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
+        /* Log Helper */
+        LogHelper.init();
+        
         /* Localization */
         LocalizationHandler.loadLanguages();
         
