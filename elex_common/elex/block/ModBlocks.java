@@ -1,9 +1,8 @@
 package elex.block;
 
-import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.common.registry.LanguageRegistry;
-import elex.lib.BlockIds;
 import net.minecraft.block.Block;
+import cpw.mods.fml.common.registry.GameRegistry;
+import elex.lib.BlockIds;
 
 public class ModBlocks {
     public static Block centrifuge;
@@ -14,6 +13,9 @@ public class ModBlocks {
     public static Block blockElExItemOreStorage;
     public static Block blockElExMetalStorage;
     public static Block blockElExMetalStorage2;
+    public static Block blockElExMetalStorage3;
+    public static Block blockElExMetalStorage4;
+    public static Block blockElExMetalStorage5;
     
     public static void init() {
         centrifuge = new BlockCentrifuge(BlockIds.CENTRIFUGE);
@@ -22,8 +24,11 @@ public class ModBlocks {
         blockElExOre2 = new BlockElExOre2(BlockIds.BLOCK_ELEX_ORE_2);
         blockElExItemOre = new BlockElExItemOre(BlockIds.ITEM_ELEX_ORE);
         blockElExItemOreStorage = new BlockElExItemOreStorage(BlockIds.BLOCK_ELEX_ITEM_ORE_STORAGE);
-        blockElExMetalStorage = new BlockElExMetalStorage(BlockIds.BLOCK_ELEX_METAL_STORAGE);
-        blockElExMetalStorage2 = new BlockElExMetalStorage2(BlockIds.BLOCK_ELEX_METAL_STORAGE_2);
+        blockElExMetalStorage = new BlockElExMetalStorage(BlockIds.BLOCK_ELEX_METAL_STORAGE, 0);
+        blockElExMetalStorage2 = new BlockElExMetalStorage(BlockIds.BLOCK_ELEX_METAL_STORAGE_2, 1);
+        blockElExMetalStorage3 = new BlockElExMetalStorage(BlockIds.BLOCK_ELEX_METAL_STORAGE_3, 2);
+        blockElExMetalStorage4 = new BlockElExMetalStorage(BlockIds.BLOCK_ELEX_METAL_STORAGE_4, 3);
+        blockElExMetalStorage5 = new BlockElExMetalStorage(BlockIds.BLOCK_ELEX_METAL_STORAGE_5, 4);
         
         GameRegistry.registerBlock(centrifuge, "centrifugeElEx");
         GameRegistry.registerBlock(grinder, "grinderElEx");
@@ -33,5 +38,8 @@ public class ModBlocks {
         GameRegistry.registerBlock(blockElExItemOreStorage, ItemBlockElExItemOreStorage.class, "blockElExItemOreStorage");
         GameRegistry.registerBlock(blockElExMetalStorage, ItemBlockElExMetalStorage.class, "blockElExMetalStorage");
         GameRegistry.registerBlock(blockElExMetalStorage2, ItemBlockElExMetalStorage2.class, "blockElExMetalStorage2");
+        GameRegistry.registerBlock(blockElExMetalStorage3, ItemBlockElExMetalStorage3.class, "blockElExMetalStorage3");
+        GameRegistry.registerBlock(blockElExMetalStorage4, ItemBlockElExMetalStorage4.class, "blockElExMetalStorage4");
+        GameRegistry.registerBlock(blockElExMetalStorage5, ItemBlockElExMetalStorage5.class, "blockElExMetalStorage5");
     }
 }

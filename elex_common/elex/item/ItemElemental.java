@@ -1,6 +1,5 @@
 package elex.item;
 
-import elex.element.Element;
 import net.minecraft.item.Item;
 
 /**

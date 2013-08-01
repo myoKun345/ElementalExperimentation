@@ -1,8 +1,7 @@
 package elex.item;
 
-import elex.lib.Reference;
-import net.minecraft.item.Item;
 import net.minecraftforge.fluids.ItemFluidContainer;
+import elex.lib.Reference;
 
 /**
  * Elemental Experimentation

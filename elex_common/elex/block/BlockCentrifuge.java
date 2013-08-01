@@ -19,7 +19,6 @@ import elex.lib.Reference;
 import elex.player.Position;
 import elex.render.RenderUtilities;
 import elex.tileentity.TileEntityCentrifuge;
-import elex.tileentity.TileEntityGrinder;
 
 /**
  * Elemental Experimentation

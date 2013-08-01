@@ -25,11 +25,14 @@ import elex.lib.Reference;
  */
 public class BlockElExMetalStorage extends Block {
     
+    public int blockListNumber;
+    
     @SideOnly(Side.CLIENT)
     private Icon[] icons;
     
-    public BlockElExMetalStorage(int par1) {
+    public BlockElExMetalStorage(int par1, int blockList) {
         super(par1, Material.iron);
+        this.blockListNumber = blockList;
         setHardness(5.0F);
         setResistance(10.0F);
         setCreativeTab(ElementalExperimentation.elexTab);
@@ -39,9 +42,35 @@ public class BlockElExMetalStorage extends Block {
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister register) {
-        icons = new Icon[BlockIds.BLOCK_ELEX_METAL_STORAGE_REAL_UNLOCALIZED_NAMES.length];
-        for (int i = 0; i < icons.length; i++) {
-            icons[i] = register.registerIcon(Reference.MOD_ID + ":" + BlockIds.BLOCK_ELEX_METAL_STORAGE_REAL_UNLOCALIZED_NAMES[i]);
+        if (blockListNumber == 0) {
+            icons = new Icon[BlockIds.BLOCK_ELEX_METAL_STORAGE_REAL_UNLOCALIZED_NAMES.size()];
+            for (int i = 0; i < icons.length; i++) {
+                icons[i] = register.registerIcon(Reference.MOD_ID + ":" + BlockIds.BLOCK_ELEX_METAL_STORAGE_REAL_UNLOCALIZED_NAMES.get(i));
+            }
+        }
+        if (blockListNumber == 1) {
+            icons = new Icon[BlockIds.BLOCK_ELEX_METAL_STORAGE_2_REAL_UNLOCALIZED_NAMES.size()];
+            for (int i = 0; i < icons.length; i++) {
+                icons[i] = register.registerIcon(Reference.MOD_ID + ":" + BlockIds.BLOCK_ELEX_METAL_STORAGE_2_REAL_UNLOCALIZED_NAMES.get(i));
+            }
+        }
+        if (blockListNumber == 2) {
+            icons = new Icon[BlockIds.BLOCK_ELEX_METAL_STORAGE_3_REAL_UNLOCALIZED_NAMES.size()];
+            for (int i = 0; i < icons.length; i++) {
+                icons[i] = register.registerIcon(Reference.MOD_ID + ":" + BlockIds.BLOCK_ELEX_METAL_STORAGE_3_REAL_UNLOCALIZED_NAMES.get(i));
+            }
+        }
+        if (blockListNumber == 3) {
+            icons = new Icon[BlockIds.BLOCK_ELEX_METAL_STORAGE_4_REAL_UNLOCALIZED_NAMES.size()];
+            for (int i = 0; i < icons.length; i++) {
+                icons[i] = register.registerIcon(Reference.MOD_ID + ":" + BlockIds.BLOCK_ELEX_METAL_STORAGE_4_REAL_UNLOCALIZED_NAMES.get(i));
+            }
+        }
+        if (blockListNumber == 4) {
+            icons = new Icon[BlockIds.BLOCK_ELEX_METAL_STORAGE_5_REAL_UNLOCALIZED_NAMES.size()];
+            for (int i = 0; i < icons.length; i++) {
+                icons[i] = register.registerIcon(Reference.MOD_ID + ":" + BlockIds.BLOCK_ELEX_METAL_STORAGE_5_REAL_UNLOCALIZED_NAMES.get(i));
+            }
         }
     }
     
@@ -54,8 +83,35 @@ public class BlockElExMetalStorage extends Block {
     @Override
     @SideOnly(Side.CLIENT)
     public void getSubBlocks(int id, CreativeTabs tab, List list) {
-        for (int i = 0; i < BlockIds.BLOCK_ELEX_METAL_STORAGE_REAL_UNLOCALIZED_NAMES.length; i++) {
-            list.add(new ItemStack(id, 1, i));
+        if (blockListNumber == 0) {
+            for (int i = 0; i < BlockIds.BLOCK_ELEX_METAL_STORAGE_REAL_UNLOCALIZED_NAMES
+                    .size(); i++) {
+                list.add(new ItemStack(id, 1, i));
+            }
+        }
+        if (blockListNumber == 1) {
+            for (int i = 0; i < BlockIds.BLOCK_ELEX_METAL_STORAGE_2_REAL_UNLOCALIZED_NAMES
+                    .size(); i++) {
+                list.add(new ItemStack(id, 1, i));
+            }
+        }
+        if (blockListNumber == 2) {
+            for (int i = 0; i < BlockIds.BLOCK_ELEX_METAL_STORAGE_3_REAL_UNLOCALIZED_NAMES
+                    .size(); i++) {
+                list.add(new ItemStack(id, 1, i));
+            }
+        }
+        if (blockListNumber == 3) {
+            for (int i = 0; i < BlockIds.BLOCK_ELEX_METAL_STORAGE_4_REAL_UNLOCALIZED_NAMES
+                    .size(); i++) {
+                list.add(new ItemStack(id, 1, i));
+            }
+        }
+        if (blockListNumber == 4) {
+            for (int i = 0; i < BlockIds.BLOCK_ELEX_METAL_STORAGE_5_REAL_UNLOCALIZED_NAMES
+                    .size(); i++) {
+                list.add(new ItemStack(id, 1, i));
+            }
         }
     }
     

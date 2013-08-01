@@ -2,17 +2,16 @@ package elex.item;
 
 import java.util.List;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-import elex.ElementalExperimentation;
-import elex.lib.ItemIds;
-import elex.lib.Reference;
-import elex.element.Element;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import elex.ElementalExperimentation;
+import elex.lib.ItemIds;
+import elex.lib.Reference;
 
 /**
  * Elemental Experimentation
@@ -35,7 +34,7 @@ public class ItemElExOre extends Item {
     
     @Override
     public String getUnlocalizedName(ItemStack stack) {
-        return "item." + ItemIds.ELEX_ORE_UNLOCALIZED_NAME + stack.getItemDamage();
+        return "item." + ItemIds.ELEX_ORE_REAL_UNLOCALIZED_NAMES[stack.getItemDamage()];
     }
     
     @Override

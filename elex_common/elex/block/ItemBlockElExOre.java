@@ -21,7 +21,7 @@ public class ItemBlockElExOre extends ItemBlock {
     
     @Override
     public String getUnlocalizedName(ItemStack stack) {
-        return "tile." + BlockIds.BLOCK_ELEX_ORE_UNLOCALIZED_NAME + "." + stack.getItemDamage();
+        return "tile." + BlockIds.BLOCK_ELEX_ORE_REAL_UNLOCALIZED_NAMES[stack.getItemDamage()];
     }
     
     @Override

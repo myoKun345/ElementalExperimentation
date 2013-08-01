@@ -21,7 +21,7 @@ public class ItemBlockElExMetalStorage extends ItemBlock {
     
     @Override
     public String getUnlocalizedName(ItemStack stack) {
-        return "tile." + BlockIds.BLOCK_ELEX_METAL_STORAGE_UNLOCALIZED_NAME + "." + stack.getItemDamage();
+        return "tile." + BlockIds.BLOCK_ELEX_METAL_STORAGE_REAL_UNLOCALIZED_NAMES.get(stack.getItemDamage());
     }
     
     @Override

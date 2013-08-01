@@ -1,10 +1,6 @@
 package elex.lib;
 
-import java.util.Arrays;
 import java.util.LinkedList;
-import java.util.logging.Level;
-
-import elex.log.LogHelper;
 
 public class ItemIds {
     /* Config Category */
@@ -42,13 +38,21 @@ public class ItemIds {
     public static final String[] ELEX_ORE_REAL_UNLOCALIZED_NAMES = 
         { "aquamarine", "borax", "fluorite", 
         "forsterite", "petalite", "quartzArtificial", 
-        "spodumene", "halite" };
+        "spodumene", "halite", "ruby",
+        "sapphire", "uvarovite", "tsavorite",
+        "turquoise", "galena", "sylvite",
+        "gypsum", "thortveitite", "anatase",
+        "brookite" };
     public static final String MERCURY_INJECTOR_UNLOCALIZED_NAME = "mercuryInjector";
     public static final String ELEX_COMPOUND_DUST_UNLOCALIZED_NAME = "itemElexCompoundDust";
     public static final String[] ELEX_COMPOUND_DUST_REAL_UNLOCALIZED_NAMES = 
         { "dustAquamarine", "dustBorax", "dustFluorite", 
         "dustForsterite", "dustPetalite", "dustArtificialQuartz", 
-        "dustSpodumene", "dustHalite" }; 
+        "dustSpodumene", "dustHalite", "dustRuby", 
+        "dustSapphire", "dustUvarovite", "dustTsavorite",
+        "dustTurquoise", "dustGalena", "dustSylvite",
+        "dustGypsum", "dustThortveitite", "dustAnatase", 
+        "dustBrookite" }; 
     public static final String ELEX_METAL_DUST_UNLOCALIZED_NAME = "itemElexMetalDust";
     public static final LinkedList<String> ELEX_METAL_DUST_REAL_UNLOCALIZED_NAMES = new LinkedList<String>();
     public static final String ELEX_INGOT_UNLOCALIZED_NAME = "itemElexIngot";
@@ -57,18 +61,26 @@ public class ItemIds {
     public static final LinkedList<String> ELEX_PURE_NONMETAL_DUST_REAL_UNLOCALIZED_NAMES = new LinkedList<String>();
     public static final String VANILLA_DUST_UNLOCALIZED_NAME = "itemVanillaDust";
     public static final String[] VANILLA_DUST_REAL_UNLOCALIZED_NAMES = 
-        { "dustNetherQuartz", "dustIron", "dustGold" };
+        { "dustNetherQuartz", "dustIron", "dustGold", "dustEmerald" };
     
     /* Molecule Strings */
     public static final String[] COMPOUND_DUST_MOLECULE_STRINGS = 
         { "Be3Al2(SiO3)6", "Na2B4O7(H2O)10", "CaF2", 
         "Mg2SiO4", "LiAlSi4O10", "SiO2", 
-        "LiAl(SiO3)2", "NaCl" };
+        "LiAl(SiO3)2", "NaCl", "Al2O3Cr",
+        "Al2O3", "Ca3Cr2(SiO4)3", "Ca3Al2(SiO4)3",
+        "CuAl6(PO4)4(OH)8(H2O)4", "PbS", "KCl",
+        "CaSO4(H2O)2", "Sc2Si2O7", "TiO2",
+        "TiO2" };
     public static final LinkedList<String> METAL_DUST_MOLECULE_STRINGS = new LinkedList<String>();
     public static final LinkedList<String> PURE_NONMETAL_DUST_MOLECULE_STRINGS = new LinkedList<String>();
     public static final String[] VANILLA_DUST_MOLECULE_STRINGS =
-        { "FeSiO2", "Fe", "Au" };
+        { "FeSiO2", "Fe", "Au",
+        "Be3Al2(SiO3)6" };
     
     /* Other Information Strings */
     public static final String RADIOACTIVE_UNLOCALIZED = "string.element.radioactive";
+    
+    /* Native Metal Ore Element ID Array */
+    public static final LinkedList<Integer> METAL_ORE_ELEMENT_IDS = new LinkedList<Integer>();
 }

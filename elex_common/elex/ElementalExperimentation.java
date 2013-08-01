@@ -17,7 +17,6 @@ import elex.configuration.ConfigurationHandler;
 import elex.crafting.CraftingRecipes;
 import elex.creativetab.CreativeTabElEx;
 import elex.item.ModItems;
-import elex.lib.ItemIds;
 import elex.lib.Reference;
 import elex.localization.LocalizationHandler;
 import elex.log.LogHelper;

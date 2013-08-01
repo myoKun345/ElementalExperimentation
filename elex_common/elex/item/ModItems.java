@@ -1,9 +1,7 @@
 package elex.item;
 
-import cpw.mods.fml.common.registry.LanguageRegistry;
-import elex.lib.ItemIds;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
+import elex.lib.ItemIds;
 
 public class ModItems {
     public static Item itemElExOre;

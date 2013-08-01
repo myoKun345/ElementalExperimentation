@@ -29,6 +29,9 @@ public class ConfigurationHandler {
         BlockIds.BLOCK_ELEX_ITEM_ORE_STORAGE = config.getBlock(BlockIds.CATEGORY_BLOCK_IDS, BlockIds.BLOCK_ELEX_ITEM_ORE_STORAGE_KEY, BlockIds.BLOCK_ELEX_ITEM_ORE_STORAGE_DEFAULT).getInt();
         BlockIds.BLOCK_ELEX_METAL_STORAGE = config.getBlock(BlockIds.CATEGORY_BLOCK_IDS, BlockIds.BLOCK_ELEX_METAL_STORAGE_KEY, BlockIds.BLOCK_ELEX_METAL_STORAGE_DEFAULT).getInt();
         BlockIds.BLOCK_ELEX_METAL_STORAGE_2 = config.getBlock(BlockIds.CATEGORY_BLOCK_IDS, BlockIds.BLOCK_ELEX_METAL_STORAGE_2_KEY, BlockIds.BLOCK_ELEX_METAL_STORAGE_2_DEFAULT).getInt();
+        BlockIds.BLOCK_ELEX_METAL_STORAGE_3 = config.getBlock(BlockIds.CATEGORY_BLOCK_IDS, BlockIds.BLOCK_ELEX_METAL_STORAGE_3_KEY, BlockIds.BLOCK_ELEX_METAL_STORAGE_3_DEFAULT).getInt();
+        BlockIds.BLOCK_ELEX_METAL_STORAGE_4 = config.getBlock(BlockIds.CATEGORY_BLOCK_IDS, BlockIds.BLOCK_ELEX_METAL_STORAGE_4_KEY, BlockIds.BLOCK_ELEX_METAL_STORAGE_4_DEFAULT).getInt();
+        BlockIds.BLOCK_ELEX_METAL_STORAGE_5 = config.getBlock(BlockIds.CATEGORY_BLOCK_IDS, BlockIds.BLOCK_ELEX_METAL_STORAGE_5_KEY, BlockIds.BLOCK_ELEX_METAL_STORAGE_5_DEFAULT).getInt();
         BlockIds.CENTRIFUGE = config.getBlock(BlockIds.CATEGORY_BLOCK_IDS, BlockIds.CENTRIFUGE_KEY, BlockIds.CENTRIFUGE_DEFAULT).getInt();
         BlockIds.GRINDER = config.getBlock(BlockIds.CATEGORY_BLOCK_IDS, BlockIds.GRINDER_KEY, BlockIds.GRINDER_DEFAULT).getInt();
         
@@ -40,7 +43,8 @@ public class ConfigurationHandler {
         ItemIds.ELEX_PURE_NONMETAL_DUST = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.ELEX_PURE_NONMETAL_DUST_KEY, ItemIds.ELEX_PURE_NONMETAL_DUST_DEFAULT).getInt();
         ItemIds.VANILLA_DUST = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.VANILLA_DUST_KEY, ItemIds.VANILLA_DUST_DEFAULT).getInt();
         
-        LogHelper.log(Level.INFO, Element.elementList[6].getName());
+        LogHelper.log(Level.OFF, Element.elementList[5].getName());
+        LogHelper.log(Level.INFO, "Desu " + ItemIds.ELEX_INGOT_REAL_UNLOCALIZED_NAMES.size());
         
         config.save();
     }
@@ -163,6 +167,45 @@ public class ConfigurationHandler {
         ConfigurationSettings.LEAD_BPV = config.get(ConfigurationSettings.ORE_GEN_CATEGORY, ConfigurationSettings.LEAD_BPV_KEY, 6).getInt();
         ConfigurationSettings.LEAD_TOPY = config.get(ConfigurationSettings.ORE_GEN_CATEGORY, ConfigurationSettings.LEAD_TOPY_KEY, 32).getInt();
         
+        ConfigurationSettings.AQUAMARINE_GEN = config.get(ConfigurationSettings.ORE_GEN_CATEGORY, ConfigurationSettings.AQUAMARINE_GEN_KEY, true, "Aquamarine Ore Configuration").getBoolean(true);
+        ConfigurationSettings.AQUAMARINE_VPC = config.get(ConfigurationSettings.ORE_GEN_CATEGORY, ConfigurationSettings.AQUAMARINE_VPC_KEY, 6).getInt();
+        ConfigurationSettings.AQUAMARINE_BPV = config.get(ConfigurationSettings.ORE_GEN_CATEGORY, ConfigurationSettings.AQUAMARINE_BPV_KEY, 5).getInt();
+        ConfigurationSettings.AQUAMARINE_TOPY = config.get(ConfigurationSettings.ORE_GEN_CATEGORY, ConfigurationSettings.AQUAMARINE_TOPY_KEY, 64).getInt();
+        
+        ConfigurationSettings.BORAX_GEN = config.get(ConfigurationSettings.ORE_GEN_CATEGORY, ConfigurationSettings.BORAX_GEN_KEY, true, "Borax Ore Configuration").getBoolean(true);
+        ConfigurationSettings.BORAX_VPC = config.get(ConfigurationSettings.ORE_GEN_CATEGORY, ConfigurationSettings.BORAX_VPC_KEY, 4).getInt();
+        ConfigurationSettings.BORAX_BPV = config.get(ConfigurationSettings.ORE_GEN_CATEGORY, ConfigurationSettings.BORAX_BPV_KEY, 5).getInt();
+        ConfigurationSettings.BORAX_TOPY = config.get(ConfigurationSettings.ORE_GEN_CATEGORY, ConfigurationSettings.BORAX_TOPY_KEY, 32).getInt();
+        
+        ConfigurationSettings.FLUORITE_GEN = config.get(ConfigurationSettings.ORE_GEN_CATEGORY, ConfigurationSettings.FLUORITE_GEN_KEY, true, "Fluorite Ore Configuration").getBoolean(true);
+        ConfigurationSettings.FLUORITE_VPC = config.get(ConfigurationSettings.ORE_GEN_CATEGORY, ConfigurationSettings.FLUORITE_VPC_KEY, 4).getInt();
+        ConfigurationSettings.FLUORITE_BPV = config.get(ConfigurationSettings.ORE_GEN_CATEGORY, ConfigurationSettings.FLUORITE_BPV_KEY, 4).getInt();
+        ConfigurationSettings.FLUORITE_TOPY = config.get(ConfigurationSettings.ORE_GEN_CATEGORY, ConfigurationSettings.FLUORITE_TOPY_KEY, 48).getInt();
+        
+        ConfigurationSettings.FORSTERITE_GEN = config.get(ConfigurationSettings.ORE_GEN_CATEGORY, ConfigurationSettings.FORSTERITE_GEN_KEY, true, "Forsterite Ore Configuration").getBoolean(true);
+        ConfigurationSettings.FORSTERITE_VPC = config.get(ConfigurationSettings.ORE_GEN_CATEGORY, ConfigurationSettings.FORSTERITE_VPC_KEY, 4).getInt();
+        ConfigurationSettings.FORSTERITE_BPV = config.get(ConfigurationSettings.ORE_GEN_CATEGORY, ConfigurationSettings.FORSTERITE_BPV_KEY, 4).getInt();
+        ConfigurationSettings.FORSTERITE_TOPY = config.get(ConfigurationSettings.ORE_GEN_CATEGORY, ConfigurationSettings.FORSTERITE_TOPY_KEY, 32).getInt();
+        
+        ConfigurationSettings.PETALITE_GEN = config.get(ConfigurationSettings.ORE_GEN_CATEGORY, ConfigurationSettings.PETALITE_GEN_KEY, true, "Petalite Ore Configuration").getBoolean(true);
+        ConfigurationSettings.PETALITE_VPC = config.get(ConfigurationSettings.ORE_GEN_CATEGORY, ConfigurationSettings.PETALITE_VPC_KEY, 4).getInt();
+        ConfigurationSettings.PETALITE_BPV = config.get(ConfigurationSettings.ORE_GEN_CATEGORY, ConfigurationSettings.PETALITE_BPV_KEY, 4).getInt();
+        ConfigurationSettings.PETALITE_TOPY = config.get(ConfigurationSettings.ORE_GEN_CATEGORY, ConfigurationSettings.PETALITE_TOPY_KEY, 48).getInt();
+        
+        ConfigurationSettings.PURE_QUARTZ_GEN = config.get(ConfigurationSettings.ORE_GEN_CATEGORY, ConfigurationSettings.PURE_QUARTZ_GEN_KEY, true, "Pure Quartz Ore Configuration").getBoolean(true);
+        ConfigurationSettings.PURE_QUARTZ_VPC = config.get(ConfigurationSettings.ORE_GEN_CATEGORY, ConfigurationSettings.PURE_QUARTZ_VPC_KEY, 5).getInt();
+        ConfigurationSettings.PURE_QUARTZ_BPV = config.get(ConfigurationSettings.ORE_GEN_CATEGORY, ConfigurationSettings.PURE_QUARTZ_BPV_KEY, 4).getInt();
+        ConfigurationSettings.PURE_QUARTZ_TOPY = config.get(ConfigurationSettings.ORE_GEN_CATEGORY, ConfigurationSettings.PURE_QUARTZ_TOPY_KEY, 16).getInt();
+        
+        ConfigurationSettings.SPODUMENE_GEN = config.get(ConfigurationSettings.ORE_GEN_CATEGORY, ConfigurationSettings.SPODUMENE_GEN_KEY, true, "Spodumene Ore Configuration").getBoolean(true);
+        ConfigurationSettings.SPODUMENE_VPC = config.get(ConfigurationSettings.ORE_GEN_CATEGORY, ConfigurationSettings.SPODUMENE_VPC_KEY, 6).getInt();
+        ConfigurationSettings.SPODUMENE_BPV = config.get(ConfigurationSettings.ORE_GEN_CATEGORY, ConfigurationSettings.SPODUMENE_BPV_KEY, 4).getInt();
+        ConfigurationSettings.SPODUMENE_TOPY = config.get(ConfigurationSettings.ORE_GEN_CATEGORY, ConfigurationSettings.SPODUMENE_TOPY_KEY, 32).getInt();
+        
+        ConfigurationSettings.HALITE_GEN = config.get(ConfigurationSettings.ORE_GEN_CATEGORY, ConfigurationSettings.HALITE_GEN_KEY, true, "Halite Ore Configuration").getBoolean(true);
+        ConfigurationSettings.HALITE_VPC = config.get(ConfigurationSettings.ORE_GEN_CATEGORY, ConfigurationSettings.HALITE_VPC_KEY, 5).getInt();
+        ConfigurationSettings.HALITE_BPV = config.get(ConfigurationSettings.ORE_GEN_CATEGORY, ConfigurationSettings.HALITE_BPV_KEY, 5).getInt();
+        ConfigurationSettings.HALITE_TOPY = config.get(ConfigurationSettings.ORE_GEN_CATEGORY, ConfigurationSettings.HALITE_TOPY_KEY, 64).getInt();
         
         config.save();
     }

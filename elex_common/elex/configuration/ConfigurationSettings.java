@@ -27,6 +27,7 @@ public class ConfigurationSettings {
     public static int CHROMIUM_BPV;
     public static int CHROMIUM_TOPY;
     public static int CHROMIUM_BOTY;
+    public static int CHROMIUM_RAND = CHROMIUM_TOPY - CHROMIUM_BOTY;
     
     public static boolean OSMIUM_GEN;
     public static int OSMIUM_VPC;
@@ -117,6 +118,46 @@ public class ConfigurationSettings {
     public static int LEAD_VPC;
     public static int LEAD_BPV;
     public static int LEAD_TOPY;
+    
+    public static boolean AQUAMARINE_GEN;
+    public static int AQUAMARINE_VPC;
+    public static int AQUAMARINE_BPV;
+    public static int AQUAMARINE_TOPY;
+    
+    public static boolean BORAX_GEN;
+    public static int BORAX_VPC;
+    public static int BORAX_BPV;
+    public static int BORAX_TOPY;
+    
+    public static boolean FLUORITE_GEN;
+    public static int FLUORITE_VPC;
+    public static int FLUORITE_BPV;
+    public static int FLUORITE_TOPY;
+    
+    public static boolean FORSTERITE_GEN;
+    public static int FORSTERITE_VPC;
+    public static int FORSTERITE_BPV;
+    public static int FORSTERITE_TOPY;
+    
+    public static boolean PETALITE_GEN;
+    public static int PETALITE_VPC;
+    public static int PETALITE_BPV;
+    public static int PETALITE_TOPY;
+    
+    public static boolean PURE_QUARTZ_GEN;
+    public static int PURE_QUARTZ_VPC;
+    public static int PURE_QUARTZ_BPV;
+    public static int PURE_QUARTZ_TOPY;
+    
+    public static boolean SPODUMENE_GEN;
+    public static int SPODUMENE_VPC;
+    public static int SPODUMENE_BPV;
+    public static int SPODUMENE_TOPY;
+    
+    public static boolean HALITE_GEN;
+    public static int HALITE_VPC;
+    public static int HALITE_BPV;
+    public static int HALITE_TOPY;
     
     /* Ore EnableGeneration Config Keys */
     public static String ORE_GEN_MASTER_KEY = "*MasterOreEnableGenerationSwitch";
@@ -231,5 +272,45 @@ public class ConfigurationSettings {
     public static String LEAD_VPC_KEY = "LeadNumberOfVeinsPerChunk";
     public static String LEAD_BPV_KEY = "LeadNumberOfBlocksPerVein";
     public static String LEAD_TOPY_KEY = "LeadMaxYValue";
+    
+    public static String AQUAMARINE_GEN_KEY = "AquamarineEnableGeneration";
+    public static String AQUAMARINE_VPC_KEY = "AquamarineNumberOfVeinsPerChunk";
+    public static String AQUAMARINE_BPV_KEY = "AquamarineNumberOfBlocksPerVein";
+    public static String AQUAMARINE_TOPY_KEY = "AquamarineMaxYValue";
+    
+    public static String BORAX_GEN_KEY = "BoraxEnableGeneration";
+    public static String BORAX_VPC_KEY = "BoraxNumberOfVeinsPerChunk";
+    public static String BORAX_BPV_KEY = "BoraxNumberOfBlocksPerVein";
+    public static String BORAX_TOPY_KEY = "BoraxMaxYValue";
+    
+    public static String FLUORITE_GEN_KEY = "FluoriteEnableGeneration";
+    public static String FLUORITE_VPC_KEY = "FluoriteNumberOfVeinsPerChunk";
+    public static String FLUORITE_BPV_KEY = "FluoriteNumberOfBlocksPerVein";
+    public static String FLUORITE_TOPY_KEY = "FluoriteMaxYValue";
+    
+    public static String FORSTERITE_GEN_KEY = "ForsteriteEnableGeneration";
+    public static String FORSTERITE_VPC_KEY = "ForsteriteNumberOfVeinsPerChunk";
+    public static String FORSTERITE_BPV_KEY = "ForsteriteNumberOfBlocksPerVein";
+    public static String FORSTERITE_TOPY_KEY = "ForsteriteMaxYValue";
+    
+    public static String PETALITE_GEN_KEY = "PetaliteEnableGeneration";
+    public static String PETALITE_VPC_KEY = "PetaliteNumberOfVeinsPerChunk";
+    public static String PETALITE_BPV_KEY = "PetaliteNumberOfBlocksPerVein";
+    public static String PETALITE_TOPY_KEY = "PetaliteMaxYValue";
+    
+    public static String PURE_QUARTZ_GEN_KEY = "PureQuartzEnableGeneration";
+    public static String PURE_QUARTZ_VPC_KEY = "PureQuartzNumberOfVeinsPerChunk";
+    public static String PURE_QUARTZ_BPV_KEY = "PureQuartzNumberOfBlocksPerVein";
+    public static String PURE_QUARTZ_TOPY_KEY = "PureQuartzMaxYValue";
+    
+    public static String SPODUMENE_GEN_KEY = "SpodumeneEnableGeneration";
+    public static String SPODUMENE_VPC_KEY = "SpodumeneNumberOfVeinsPerChunk";
+    public static String SPODUMENE_BPV_KEY = "SpodumeneNumerOfBlocksPerVein";
+    public static String SPODUMENE_TOPY_KEY = "SpodumeneMaxYValue";
+    
+    public static String HALITE_GEN_KEY = "HaliteEnableGeneration";
+    public static String HALITE_VPC_KEY = "HaliteNumberOfVeinsPerChunk";
+    public static String HALITE_BPV_KEY = "HaliteNumberOfBlocksPerVein";
+    public static String HALITE_TOPY_KEY = "HaliteMaxYValue";
     
 }
