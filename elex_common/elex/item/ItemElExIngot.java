@@ -23,26 +23,45 @@ import net.minecraft.util.Icon;
  */
 public class ItemElExIngot extends Item {
     
+    private int ingotType;
+    
     @SideOnly(Side.CLIENT)
     private Icon[] icons;
     
-    public ItemElExIngot(int id) {
+    public ItemElExIngot(int id, int type) {
         super(id - Reference.SHIFTED_ID_RANGE_CORRECTION);
         setCreativeTab(ElementalExperimentation.elexTab);
         setHasSubtypes(true);
+        this.ingotType = type;
     }
     
     @Override
     public String getUnlocalizedName(ItemStack stack) {
-        return "item." + ItemIds.ELEX_INGOT_REAL_UNLOCALIZED_NAMES.get(stack.getItemDamage());
+        if (ingotType == 0) {
+            return "item." + ItemIds.ELEX_INGOT_REAL_UNLOCALIZED_NAMES.get(stack.getItemDamage());
+        }
+        if (ingotType == 1) {
+            return "item." + ItemIds.ALLOY_INGOT_REAL_UNLOCALIZED_NAMES[stack.getItemDamage()];
+        }
+        return "something.went.wrong";
     }
     
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister register) {
-        icons = new Icon[ItemIds.ELEX_INGOT_REAL_UNLOCALIZED_NAMES.size()];
-        for (int i = 0; i < icons.length; i++) {
-            icons[i] = register.registerIcon(Reference.MOD_ID + ":" + ItemIds.ELEX_INGOT_REAL_UNLOCALIZED_NAMES.get(i));
+        if (ingotType == 0) {
+            icons = new Icon[ItemIds.ELEX_INGOT_REAL_UNLOCALIZED_NAMES.size()];
+            for (int i = 0; i < icons.length; i++) {
+                icons[i] = register.registerIcon(Reference.MOD_ID + ":"
+                        + ItemIds.ELEX_INGOT_REAL_UNLOCALIZED_NAMES.get(i));
+            }
+        }
+        if (ingotType == 1) {
+            icons = new Icon[ItemIds.ALLOY_INGOT_REAL_UNLOCALIZED_NAMES.length];
+            for (int i = 0; i < icons.length; i++) {
+                icons[i] = register.registerIcon(Reference.MOD_ID + ":"
+                        + ItemIds.ALLOY_INGOT_REAL_UNLOCALIZED_NAMES[i]);
+            }
         }
     }
     
@@ -55,9 +74,19 @@ public class ItemElExIngot extends Item {
     @Override
     @SideOnly(Side.CLIENT)
     public void getSubItems(int id, CreativeTabs tab, List list) {
-        for (int i = 0; i < ItemIds.ELEX_INGOT_REAL_UNLOCALIZED_NAMES.size(); i++) {
-            ItemStack stack = new ItemStack(id, 1, i);
-            list.add(stack);
+        if (ingotType == 0) {
+            for (int i = 0; i < ItemIds.ELEX_INGOT_REAL_UNLOCALIZED_NAMES
+                    .size(); i++) {
+                ItemStack stack = new ItemStack(id, 1, i);
+                list.add(stack);
+            }
+        }
+        if (ingotType == 1) {
+            for (int i = 0; i < ItemIds.ALLOY_INGOT_REAL_UNLOCALIZED_NAMES
+                    .length; i++) {
+                ItemStack stack = new ItemStack(id, 1, i);
+                list.add(stack);
+            }
         }
     }
     

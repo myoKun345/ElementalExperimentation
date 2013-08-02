@@ -16,6 +16,7 @@ import elex.block.ModBlocks;
 import elex.configuration.ConfigurationHandler;
 import elex.crafting.CraftingRecipes;
 import elex.creativetab.CreativeTabElEx;
+import elex.fluids.ModFluids;
 import elex.item.ModItems;
 import elex.lib.Reference;
 import elex.localization.LocalizationHandler;
@@ -24,7 +25,9 @@ import elex.network.PacketHandler;
 import elex.oredict.OreDictionaryHandler;
 import elex.proxy.CommonProxy;
 import elex.tileentity.ModTileEntities;
+import elex.worldgen.ElExSurfaceWorldGen;
 import elex.worldgen.WorldGenElExOres;
+import elex.worldgen.biome.Biomes;
 
 /**
  * Elemental Experimentation
@@ -62,6 +65,12 @@ public class ElementalExperimentation {
         
         /* Item Init */
         ModItems.init();
+        
+        /* Fluid Init */
+        ModFluids.init();
+        
+        /* Biome Init */
+        Biomes.init();
     }
     
     @EventHandler
@@ -76,6 +85,8 @@ public class ElementalExperimentation {
         ModTileEntities.init();
         
         GameRegistry.registerWorldGenerator(new WorldGenElExOres());
+        
+        GameRegistry.registerWorldGenerator(new ElExSurfaceWorldGen());
     }
     
     @EventHandler

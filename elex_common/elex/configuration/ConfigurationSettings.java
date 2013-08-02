@@ -2,10 +2,12 @@ package elex.configuration;
 
 public class ConfigurationSettings {
     /* Ore EnableGeneration Config Category */
-    public static String ORE_GEN_CATEGORY = "Ore EnableGeneration";
+    public static String ORE_GEN_CATEGORY = "Ore Gen Configuration";
     
     /* Ore EnableGeneration Config Variables */
     public static boolean ORE_GEN_MASTER_SWITCH;
+    
+    public static int EVAPORITE_RARITY;
     
     public static boolean COPPER_GEN;
     public static int COPPER_VPC;
@@ -160,7 +162,9 @@ public class ConfigurationSettings {
     public static int HALITE_TOPY;
     
     /* Ore EnableGeneration Config Keys */
-    public static String ORE_GEN_MASTER_KEY = "*MasterOreEnableGenerationSwitch";
+    public static String ORE_GEN_MASTER_KEY = "*MasterOreGenToggleSwitch";
+    
+    public static String EVAPORITE_RARITY_KEY = "EvaporiteRarity";
     
     public static String COPPER_GEN_KEY = "CopperEnableGeneration";
     public static String COPPER_VPC_KEY = "CopperNumberOfVeinsPerChunk";
@@ -312,5 +316,31 @@ public class ConfigurationSettings {
     public static String HALITE_VPC_KEY = "HaliteNumberOfVeinsPerChunk";
     public static String HALITE_BPV_KEY = "HaliteNumberOfBlocksPerVein";
     public static String HALITE_TOPY_KEY = "HaliteMaxYValue";
+    
+    /* Surface Gen Config Category */
+    public static String SURFACE_GEN_CATEGORY = "Surface Gen Configuration";
+    
+    /* Surface Gen Config Variables */
+    public static boolean SURFACE_GEN_MASTER_SWITCH;
+    
+    public static boolean SALT_LAKES_GEN;
+    public static int SALT_LAKES_RARITY;
+    
+    public static String SURFACE_GEN_MASTER_KEY = "*MasterSurfaceGenToggleSwitch";
+    
+    public static String SALT_LAKES_GEN_KEY = "SaltLakesEnableGeneration";
+    public static String SALT_LAKES_RARITY_KEY = "SaltLakesRarity";
+    
+    /* Biome Config Category */
+    public static String BIOME_CATEGORY = "Biome Configuration";
+    
+    /* Biome Config Variables */
+    public static boolean EVAPORITE_PLAINS_GEN;
+    public static int EVAPORITE_PLAINS_ID;
+    
+    public static int EVAPORITE_PLAINS_DEFAULT = 150;
+    
+    public static String EVAPORITE_PLAINS_GEN_KEY = "EvaporitePlainsEnable";
+    public static String EVAPORITE_PLAINS_ID_KEY = "EvaporitePlainsID";
     
 }

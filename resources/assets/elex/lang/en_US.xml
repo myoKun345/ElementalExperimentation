@@ -71,6 +71,8 @@
 	<entry key="tile.blockBismuth.name">Bismuth Block</entry>
 	<entry key="tile.blockLead.name">Lead Block</entry>
 	
+	<entry key="tile.blockSaltWater.name">Salt Water</entry>
+	
 	<entry key="item.aquamarine.name">Aquamarine</entry>
 	<entry key="item.borax.name">Borax</entry>
 	<entry key="item.fluorite.name">Fluorite</entry>
@@ -148,6 +150,8 @@
 	<entry key="item.ingotLead.name">Lead Ingot</entry>
 	
 	<entry key="item.mercuryInjector.name">Mercury Injector</entry>
+	
+	<entry key="fluid.saltwater.name">Salt Water</entry>
 	
 	<entry key="element.tungsten.name">Tungsten</entry>
 	

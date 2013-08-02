@@ -574,6 +574,8 @@ public class Element {
     
     static int metalNumber = 0;
     
+    static int nonmetalNumber = 0;
+    
     public static void addStuff(int id) {
         if (elementList[id].hasVanillaIngot == false && elementList[id].metal == true && elementList[id].phase == "solid") {
             ItemIds.ELEX_METAL_DUST_REAL_UNLOCALIZED_NAMES.add("dust" + elementList[id].name);
@@ -607,8 +609,12 @@ public class Element {
             LogHelper.log(Level.INFO, "Element " + elementList[id].name + " added to solid non-vanilla metals at position " + metalNumber + ".");
         }
         if (elementList[id].metal == false && elementList[id].phase == "solid") {
+            int[] ALLOTROPES = { 0, 12, 10, 4, 8, 8, 2, 2 };
+            
+            nonmetalNumber++;
+            
             ItemIds.ELEX_PURE_NONMETAL_DUST_REAL_UNLOCALIZED_NAMES.add("dust" + elementList[id].name);
-            ItemIds.PURE_NONMETAL_DUST_MOLECULE_STRINGS.add(elementList[id].symbol);
+            ItemIds.PURE_NONMETAL_DUST_MOLECULE_STRINGS.add(elementList[id].symbol + ALLOTROPES[nonmetalNumber]);
             LogHelper.log(Level.INFO, "Element " + elementList[id].name + " added to solid non-vanilla non-metals.");
         }
         /*LogHelper.log(Level.INFO, "Element " + elementList[id].atomicNumber + ": it is metal: " + elementList[id].metal);

@@ -14,6 +14,8 @@ public class ItemIds {
     public static final int ELEX_INGOT_DEFAULT = 16235;
     public static final int ELEX_PURE_NONMETAL_DUST_DEFAULT = 16236;
     public static final int VANILLA_DUST_DEFAULT = 16237;
+    public static final int ALLOY_DUST_DEFAULT = 16238;
+    public static final int ALLOY_INGOT_DEFAULT = 16239;
     
     /* Current Item IDs */
     public static int ELEX_ORE;
@@ -23,6 +25,8 @@ public class ItemIds {
     public static int ELEX_INGOT;
     public static int ELEX_PURE_NONMETAL_DUST;
     public static int VANILLA_DUST;
+    public static int ALLOY_DUST;
+    public static int ALLOY_INGOT;
     
     /* Item Config Keys */
     public static final String ELEX_ORE_KEY = "ITEMORES";
@@ -32,6 +36,8 @@ public class ItemIds {
     public static final String ELEX_INGOT_KEY = "INGOTS";
     public static final String ELEX_PURE_NONMETAL_DUST_KEY = "PURENONMETALDUSTS";
     public static final String VANILLA_DUST_KEY = "VANILLADUSTS";
+    public static final String ALLOY_DUST_KEY = "ALLOYDUSTS";
+    public static final String ALLOY_INGOT_KEY = "ALLOYINGOTS";
     
     /* Item Unlocalized Names */
     public static final String ELEX_ORE_UNLOCALIZED_NAME = "itemElexOre";
@@ -44,7 +50,6 @@ public class ItemIds {
         "gypsum", "thortveitite", "anatase",
         "brookite" };
     public static final String MERCURY_INJECTOR_UNLOCALIZED_NAME = "mercuryInjector";
-    public static final String ELEX_COMPOUND_DUST_UNLOCALIZED_NAME = "itemElexCompoundDust";
     public static final String[] ELEX_COMPOUND_DUST_REAL_UNLOCALIZED_NAMES = 
         { "dustAquamarine", "dustBorax", "dustFluorite", 
         "dustForsterite", "dustPetalite", "dustArtificialQuartz", 
@@ -52,16 +57,19 @@ public class ItemIds {
         "dustSapphire", "dustUvarovite", "dustTsavorite",
         "dustTurquoise", "dustGalena", "dustSylvite",
         "dustGypsum", "dustThortveitite", "dustAnatase", 
-        "dustBrookite" }; 
-    public static final String ELEX_METAL_DUST_UNLOCALIZED_NAME = "itemElexMetalDust";
+        "dustBrookite" };
     public static final LinkedList<String> ELEX_METAL_DUST_REAL_UNLOCALIZED_NAMES = new LinkedList<String>();
-    public static final String ELEX_INGOT_UNLOCALIZED_NAME = "itemElexIngot";
     public static final LinkedList<String> ELEX_INGOT_REAL_UNLOCALIZED_NAMES = new LinkedList<String>();
-    public static final String ELEX_PURE_NONMETAL_DUST_UNLOCALIZED_NAME = "itemElexPureNonmetalDust";
     public static final LinkedList<String> ELEX_PURE_NONMETAL_DUST_REAL_UNLOCALIZED_NAMES = new LinkedList<String>();
-    public static final String VANILLA_DUST_UNLOCALIZED_NAME = "itemVanillaDust";
     public static final String[] VANILLA_DUST_REAL_UNLOCALIZED_NAMES = 
-        { "dustNetherQuartz", "dustIron", "dustGold", "dustEmerald" };
+        { "dustNetherQuartz", "dustIron", "dustGold", 
+        "dustEmerald" };
+    public static final String[] ALLOY_DUST_REAL_UNLOCALIZED_NAMES = 
+        { "dustCarbonSteel", "dustVanadiumSteel", "dustBronze", 
+        "dustElectrum", "dustScandinium", "dustOsmiridium" };
+    public static final String[] ALLOY_INGOT_REAL_UNLOCALIZED_NAMES = 
+        { "ingotCarbonSteel", "ingotVanadiumSteel", "ingotBronze",
+        "ingotElectrum", "ingotScandinium", "ingotOsmiridium" };
     
     /* Molecule Strings */
     public static final String[] COMPOUND_DUST_MOLECULE_STRINGS = 
@@ -77,6 +85,9 @@ public class ItemIds {
     public static final String[] VANILLA_DUST_MOLECULE_STRINGS =
         { "FeSiO2", "Fe", "Au",
         "Be3Al2(SiO3)6" };
+    public static final String[] ALLOY_DUST_MOLECULE_STRINGS = 
+        { "Fe-C", "Fe-V", "Cu-Sn",
+        "Au-Ag", "Al-Sc", "Os-Ir" };
     
     /* Other Information Strings */
     public static final String RADIOACTIVE_UNLOCALIZED = "string.element.radioactive";

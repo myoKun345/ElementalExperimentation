@@ -6,6 +6,7 @@ import java.util.logging.Level;
 import net.minecraftforge.common.Configuration;
 import elex.element.Element;
 import elex.lib.BlockIds;
+import elex.lib.FluidIds;
 import elex.lib.ItemIds;
 import elex.log.LogHelper;
 
@@ -35,6 +36,8 @@ public class ConfigurationHandler {
         BlockIds.CENTRIFUGE = config.getBlock(BlockIds.CATEGORY_BLOCK_IDS, BlockIds.CENTRIFUGE_KEY, BlockIds.CENTRIFUGE_DEFAULT).getInt();
         BlockIds.GRINDER = config.getBlock(BlockIds.CATEGORY_BLOCK_IDS, BlockIds.GRINDER_KEY, BlockIds.GRINDER_DEFAULT).getInt();
         
+        FluidIds.SALT_WATER_BLOCK = config.getBlock(FluidIds.CATEGORY_FLUID_IDS, FluidIds.SALT_WATER_BLOCK_KEY, FluidIds.SALT_WATER_BLOCK_DEFAULT).getInt();
+        
         ItemIds.ELEX_ORE = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.ELEX_ORE_KEY, ItemIds.ELEX_ORE_DEFAULT).getInt();
         ItemIds.MERCURY_INJECTOR = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.MERCURY_INJECTOR_KEY, ItemIds.MERCURY_INJECTOR_DEFAULT).getInt();
         ItemIds.ELEX_COMPOUND_DUST = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.ELEX_COMPOUND_DUST_KEY, ItemIds.ELEX_COMPOUND_DUST_DEFAULT).getInt();
@@ -42,6 +45,8 @@ public class ConfigurationHandler {
         ItemIds.ELEX_INGOT = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.ELEX_INGOT_KEY, ItemIds.ELEX_INGOT_DEFAULT).getInt();
         ItemIds.ELEX_PURE_NONMETAL_DUST = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.ELEX_PURE_NONMETAL_DUST_KEY, ItemIds.ELEX_PURE_NONMETAL_DUST_DEFAULT).getInt();
         ItemIds.VANILLA_DUST = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.VANILLA_DUST_KEY, ItemIds.VANILLA_DUST_DEFAULT).getInt();
+        ItemIds.ALLOY_DUST = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.ALLOY_DUST_KEY, ItemIds.ALLOY_DUST_DEFAULT).getInt();
+        ItemIds.ALLOY_INGOT = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.ALLOY_INGOT_KEY, ItemIds.ALLOY_INGOT_DEFAULT).getInt();
         
         LogHelper.log(Level.OFF, Element.elementList[5].getName());
         LogHelper.log(Level.INFO, "Desu " + ItemIds.ELEX_INGOT_REAL_UNLOCALIZED_NAMES.size());
@@ -172,7 +177,7 @@ public class ConfigurationHandler {
         ConfigurationSettings.AQUAMARINE_BPV = config.get(ConfigurationSettings.ORE_GEN_CATEGORY, ConfigurationSettings.AQUAMARINE_BPV_KEY, 5).getInt();
         ConfigurationSettings.AQUAMARINE_TOPY = config.get(ConfigurationSettings.ORE_GEN_CATEGORY, ConfigurationSettings.AQUAMARINE_TOPY_KEY, 64).getInt();
         
-        ConfigurationSettings.BORAX_GEN = config.get(ConfigurationSettings.ORE_GEN_CATEGORY, ConfigurationSettings.BORAX_GEN_KEY, true, "Borax Ore Configuration").getBoolean(true);
+        ConfigurationSettings.BORAX_GEN = config.get(ConfigurationSettings.ORE_GEN_CATEGORY, ConfigurationSettings.BORAX_GEN_KEY, false, "Borax Ore Configuration").getBoolean(true);
         ConfigurationSettings.BORAX_VPC = config.get(ConfigurationSettings.ORE_GEN_CATEGORY, ConfigurationSettings.BORAX_VPC_KEY, 4).getInt();
         ConfigurationSettings.BORAX_BPV = config.get(ConfigurationSettings.ORE_GEN_CATEGORY, ConfigurationSettings.BORAX_BPV_KEY, 5).getInt();
         ConfigurationSettings.BORAX_TOPY = config.get(ConfigurationSettings.ORE_GEN_CATEGORY, ConfigurationSettings.BORAX_TOPY_KEY, 32).getInt();
@@ -202,10 +207,20 @@ public class ConfigurationHandler {
         ConfigurationSettings.SPODUMENE_BPV = config.get(ConfigurationSettings.ORE_GEN_CATEGORY, ConfigurationSettings.SPODUMENE_BPV_KEY, 4).getInt();
         ConfigurationSettings.SPODUMENE_TOPY = config.get(ConfigurationSettings.ORE_GEN_CATEGORY, ConfigurationSettings.SPODUMENE_TOPY_KEY, 32).getInt();
         
-        ConfigurationSettings.HALITE_GEN = config.get(ConfigurationSettings.ORE_GEN_CATEGORY, ConfigurationSettings.HALITE_GEN_KEY, true, "Halite Ore Configuration").getBoolean(true);
+        ConfigurationSettings.HALITE_GEN = config.get(ConfigurationSettings.ORE_GEN_CATEGORY, ConfigurationSettings.HALITE_GEN_KEY, false, "Halite Ore Configuration").getBoolean(true);
         ConfigurationSettings.HALITE_VPC = config.get(ConfigurationSettings.ORE_GEN_CATEGORY, ConfigurationSettings.HALITE_VPC_KEY, 5).getInt();
         ConfigurationSettings.HALITE_BPV = config.get(ConfigurationSettings.ORE_GEN_CATEGORY, ConfigurationSettings.HALITE_BPV_KEY, 5).getInt();
         ConfigurationSettings.HALITE_TOPY = config.get(ConfigurationSettings.ORE_GEN_CATEGORY, ConfigurationSettings.HALITE_TOPY_KEY, 64).getInt();
+        
+        ConfigurationSettings.EVAPORITE_RARITY = config.get(ConfigurationSettings.ORE_GEN_CATEGORY, ConfigurationSettings.EVAPORITE_RARITY_KEY, 4, "Evaporite Rarity").getInt();
+        
+        ConfigurationSettings.SURFACE_GEN_MASTER_SWITCH = config.get(ConfigurationSettings.SURFACE_GEN_CATEGORY, ConfigurationSettings.SURFACE_GEN_MASTER_KEY, true, "This will disable ALL surface world gen in the mod").getBoolean(true);
+        
+        ConfigurationSettings.SALT_LAKES_GEN = config.get(ConfigurationSettings.SURFACE_GEN_CATEGORY, ConfigurationSettings.SALT_LAKES_GEN_KEY, true, "Salt Lakes Configuraion").getBoolean(true);
+        ConfigurationSettings.SALT_LAKES_RARITY = config.get(ConfigurationSettings.SURFACE_GEN_CATEGORY, ConfigurationSettings.SALT_LAKES_RARITY_KEY, 2).getInt();
+        
+        ConfigurationSettings.EVAPORITE_PLAINS_GEN = config.get(ConfigurationSettings.BIOME_CATEGORY, ConfigurationSettings.EVAPORITE_PLAINS_GEN_KEY, true, "Evaporite Plains Configuration").getBoolean(true);
+        ConfigurationSettings.EVAPORITE_PLAINS_ID = config.get(ConfigurationSettings.BIOME_CATEGORY, ConfigurationSettings.EVAPORITE_PLAINS_ID_KEY, ConfigurationSettings.EVAPORITE_PLAINS_DEFAULT).getInt();
         
         config.save();
     }

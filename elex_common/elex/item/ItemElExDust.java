@@ -49,6 +49,9 @@ public class ItemElExDust extends ItemElemental {
         if (dustType == 3) {
             return "item." + ItemIds.VANILLA_DUST_REAL_UNLOCALIZED_NAMES[stack.getItemDamage()];
         }
+        if (dustType == 4) {
+            return "item." + ItemIds.ALLOY_DUST_REAL_UNLOCALIZED_NAMES[stack.getItemDamage()];
+        }
         return "something.went.wrong";
     }
     
@@ -77,6 +80,12 @@ public class ItemElExDust extends ItemElemental {
             icons = new Icon[ItemIds.VANILLA_DUST_REAL_UNLOCALIZED_NAMES.length];
             for (int i = 0; i < icons.length; i++) {
                 icons[i] = register.registerIcon(Reference.MOD_ID + ":" + ItemIds.VANILLA_DUST_REAL_UNLOCALIZED_NAMES[i]);
+            }
+        }
+        if (dustType == 4) {
+            icons = new Icon[ItemIds.ALLOY_DUST_REAL_UNLOCALIZED_NAMES.length];
+            for (int i = 0; i < icons.length; i++) {
+                icons[i] = register.registerIcon(Reference.MOD_ID + ":" + ItemIds.ALLOY_DUST_REAL_UNLOCALIZED_NAMES[i]);
             }
         }
     }
@@ -114,6 +123,12 @@ public class ItemElExDust extends ItemElemental {
                 list.add(stack);
             }
         }
+        if (dustType == 4) {
+            for (int i = 0; i < ItemIds.ALLOY_DUST_REAL_UNLOCALIZED_NAMES.length; i++) {
+                ItemStack stack = new ItemStack(id, 1, i);
+                list.add(stack);
+            }
+        }
     }
     
     @Override
@@ -130,6 +145,9 @@ public class ItemElExDust extends ItemElemental {
         }
         if (dustType == 3) {
             info.add(ItemIds.VANILLA_DUST_MOLECULE_STRINGS[stack.getItemDamage()]);
+        }
+        if (dustType == 4) {
+            info.add(ItemIds.ALLOY_DUST_MOLECULE_STRINGS[stack.getItemDamage()]);
         }
     }
     

@@ -71,6 +71,8 @@
 	<entry key="tile.blockBismuth.name">Vismutblock</entry>
 	<entry key="tile.blockLead.name">Blyblock</entry>
 	
+	<entry key="tile.blockSaltWater.name">Saltvatten</entry>
+	
 	<entry key="item.aquamarine.name">Akvamarin</entry>
 	<entry key="item.borax.name">Borax</entry>
 	<entry key="item.fluorite.name">Fluorit</entry>
@@ -148,6 +150,8 @@
 	<entry key="item.ingotLead.name">Blytacka</entry>
 	
 	<entry key="item.mercuryInjector.name">Kvicksilverspruta</entry>
+	
+	<entry key="fluid.saltwater.name">Saltvatten</entry>
 	
 	<entry key="element.tungsten.name">Volfram</entry>
 	
