@@ -103,10 +103,10 @@ public class BlockElExItemOre extends Block {
             return meta;
         }
         if (blockListNumber == 1) {
-            return meta + 15;
+            return meta + 16;
         }
         if (blockListNumber == 2) {
-            return meta + 31;
+            return meta + 32;
         }
         else {
             return 0;
