@@ -48,6 +48,10 @@ public class CraftingRecipes {
             
             GameRegistry.addRecipe(new ItemStack(ModBlocks.blockElExMetalStorage5, 1, i), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(ModItems.itemElExIngot, 1, j) });
         }
+        GameRegistry.addRecipe(new ItemStack(ModBlocks.blockMachineCase, 1, 0), new Object[] { "XXX", "X X", "XXX", 'X', new ItemStack(ModItems.itemAlloyIngot, 1, 0)});
+        GameRegistry.addRecipe(new ItemStack(ModBlocks.blockMachineCase, 1, 1), new Object[] { "XXX", "X X", "XXX", 'X', new ItemStack(ModItems.itemAlloyIngot, 1, 4)});
+        GameRegistry.addRecipe(new ItemStack(ModBlocks.blockMachineCase, 1, 2), new Object[] { "XXX", "X X", "XXX", 'X', new ItemStack(ModItems.itemAlloyIngot, 1, 5)});
+        GameRegistry.addRecipe(new ItemStack(ModBlocks.blockMachineCase, 1, 3), new Object[] { "XXX", "X X", "XXX", 'X', new ItemStack(ModItems.itemElExIngot, 1, 61)});
         
         for (int i = 0; i < ItemIds.ELEX_ORE_REAL_UNLOCALIZED_NAMES.length; i++) {
             FurnaceRecipes.smelting().addSmelting(ItemIds.ELEX_COMPOUND_DUST, i, new ItemStack(ModItems.itemElExOre, 1, i), 5F);

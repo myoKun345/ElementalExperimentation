@@ -25,6 +25,8 @@ public class ConfigurationHandler {
         config.load();
         
         BlockIds.ITEM_ELEX_ORE = config.getBlock(BlockIds.CATEGORY_BLOCK_IDS, BlockIds.ITEM_ELEX_ORE_KEY, BlockIds.ITEM_ELEX_ORE_DEFAULT).getInt();
+        BlockIds.ITEM_ELEX_ORE_2 = config.getBlock(BlockIds.CATEGORY_BLOCK_IDS, BlockIds.ITEM_ELEX_ORE_2_KEY, BlockIds.ITEM_ELEX_ORE_2_DEFAULT).getInt();
+        BlockIds.ITEM_ELEX_ORE_3 = config.getBlock(BlockIds.CATEGORY_BLOCK_IDS, BlockIds.ITEM_ELEX_ORE_3_KEY, BlockIds.ITEM_ELEX_ORE_3_DEFAULT).getInt();
         BlockIds.BLOCK_ELEX_ORE = config.getBlock(BlockIds.CATEGORY_BLOCK_IDS, BlockIds.BLOCK_ELEX_ORE_KEY, BlockIds.BLOCK_ELEX_ORE_DEFAULT).getInt();
         BlockIds.BLOCK_ELEX_ORE_2 = config.getBlock(BlockIds.CATEGORY_BLOCK_IDS, BlockIds.BLOCK_ELEX_ORE_2_KEY, BlockIds.BLOCK_ELEX_ORE_2_DEFAULT).getInt();
         BlockIds.BLOCK_ELEX_ITEM_ORE_STORAGE = config.getBlock(BlockIds.CATEGORY_BLOCK_IDS, BlockIds.BLOCK_ELEX_ITEM_ORE_STORAGE_KEY, BlockIds.BLOCK_ELEX_ITEM_ORE_STORAGE_DEFAULT).getInt();
@@ -33,6 +35,7 @@ public class ConfigurationHandler {
         BlockIds.BLOCK_ELEX_METAL_STORAGE_3 = config.getBlock(BlockIds.CATEGORY_BLOCK_IDS, BlockIds.BLOCK_ELEX_METAL_STORAGE_3_KEY, BlockIds.BLOCK_ELEX_METAL_STORAGE_3_DEFAULT).getInt();
         BlockIds.BLOCK_ELEX_METAL_STORAGE_4 = config.getBlock(BlockIds.CATEGORY_BLOCK_IDS, BlockIds.BLOCK_ELEX_METAL_STORAGE_4_KEY, BlockIds.BLOCK_ELEX_METAL_STORAGE_4_DEFAULT).getInt();
         BlockIds.BLOCK_ELEX_METAL_STORAGE_5 = config.getBlock(BlockIds.CATEGORY_BLOCK_IDS, BlockIds.BLOCK_ELEX_METAL_STORAGE_5_KEY, BlockIds.BLOCK_ELEX_METAL_STORAGE_5_DEFAULT).getInt();
+        BlockIds.BLOCK_MACHINE_CASE = config.getBlock(BlockIds.CATEGORY_BLOCK_IDS, BlockIds.BLOCK_MACHINE_CASE_KEY, BlockIds.BLOCK_MACHINE_CASE_DEFAULT).getInt();
         BlockIds.CENTRIFUGE = config.getBlock(BlockIds.CATEGORY_BLOCK_IDS, BlockIds.CENTRIFUGE_KEY, BlockIds.CENTRIFUGE_DEFAULT).getInt();
         BlockIds.GRINDER = config.getBlock(BlockIds.CATEGORY_BLOCK_IDS, BlockIds.GRINDER_KEY, BlockIds.GRINDER_DEFAULT).getInt();
         

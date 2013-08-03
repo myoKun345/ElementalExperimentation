@@ -13,6 +13,7 @@ public class ModItems {
     public static Item itemVanillaDust;
     public static Item itemAlloyDust;
     public static Item itemAlloyIngot;
+    public static Item itemMachinePart;
     
     public static void init() {
         itemElExOre = new ItemElExOre(ItemIds.ELEX_ORE);

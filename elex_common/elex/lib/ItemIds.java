@@ -16,6 +16,7 @@ public class ItemIds {
     public static final int VANILLA_DUST_DEFAULT = 16237;
     public static final int ALLOY_DUST_DEFAULT = 16238;
     public static final int ALLOY_INGOT_DEFAULT = 16239;
+    public static final int MACHINE_PART_DEFAULT = 16240;
     
     /* Current Item IDs */
     public static int ELEX_ORE;
@@ -27,6 +28,7 @@ public class ItemIds {
     public static int VANILLA_DUST;
     public static int ALLOY_DUST;
     public static int ALLOY_INGOT;
+    public static int MACHINE_PART;
     
     /* Item Config Keys */
     public static final String ELEX_ORE_KEY = "ITEMORES";
@@ -38,6 +40,7 @@ public class ItemIds {
     public static final String VANILLA_DUST_KEY = "VANILLADUSTS";
     public static final String ALLOY_DUST_KEY = "ALLOYDUSTS";
     public static final String ALLOY_INGOT_KEY = "ALLOYINGOTS";
+    public static final String MACHINE_PART_KEY = "MACHINEPARTS";
     
     /* Item Unlocalized Names */
     public static final String ELEX_ORE_UNLOCALIZED_NAME = "itemElexOre";
@@ -48,7 +51,11 @@ public class ItemIds {
         "sapphire", "uvarovite", "tsavorite",
         "turquoise", "galena", "sylvite",
         "gypsum", "thortveitite", "anatase",
-        "brookite" };
+        "brookite", "vanadinite", "pyrolusite",
+        "erythrite", "sphalerite", "gallite",
+        "germanite", "marthozite", "bromite",
+        "celestine", "xenotime", "baddeleyite",
+        "columbite", "pezzottaite", "benitoite" };
     public static final String MERCURY_INJECTOR_UNLOCALIZED_NAME = "mercuryInjector";
     public static final String[] ELEX_COMPOUND_DUST_REAL_UNLOCALIZED_NAMES = 
         { "dustAquamarine", "dustBorax", "dustFluorite", 
@@ -57,19 +64,25 @@ public class ItemIds {
         "dustSapphire", "dustUvarovite", "dustTsavorite",
         "dustTurquoise", "dustGalena", "dustSylvite",
         "dustGypsum", "dustThortveitite", "dustAnatase", 
-        "dustBrookite" };
+        "dustBrookite", "dustVanadinite", "dustPyrolusite",
+        "dustErythrite", "dustSphalerite", "dustGallite",
+        "dustGermanite", "dustMarthozite", "dustBromite",
+        "dustCelestine", "dustXenotime", "dustBaddeleyite",
+        "dustColumbite", "dustPezzottaite", "dustBenitoite" };
     public static final LinkedList<String> ELEX_METAL_DUST_REAL_UNLOCALIZED_NAMES = new LinkedList<String>();
     public static final LinkedList<String> ELEX_INGOT_REAL_UNLOCALIZED_NAMES = new LinkedList<String>();
     public static final LinkedList<String> ELEX_PURE_NONMETAL_DUST_REAL_UNLOCALIZED_NAMES = new LinkedList<String>();
     public static final String[] VANILLA_DUST_REAL_UNLOCALIZED_NAMES = 
         { "dustNetherQuartz", "dustIron", "dustGold", 
-        "dustEmerald" };
+        "dustEmerald", "dustCoal", "dustCharcoal" };
     public static final String[] ALLOY_DUST_REAL_UNLOCALIZED_NAMES = 
         { "dustCarbonSteel", "dustVanadiumSteel", "dustBronze", 
         "dustElectrum", "dustScandinium", "dustOsmiridium" };
     public static final String[] ALLOY_INGOT_REAL_UNLOCALIZED_NAMES = 
         { "ingotCarbonSteel", "ingotVanadiumSteel", "ingotBronze",
         "ingotElectrum", "ingotScandinium", "ingotOsmiridium" };
+    public static final String[] MACHINE_PART_REAL_UNLOCALIZED_NAMES = 
+        { "partSpinRotor", "partHighSpeedMotor", "partGrindStone" };
     
     /* Molecule Strings */
     public static final String[] COMPOUND_DUST_MOLECULE_STRINGS = 
@@ -79,12 +92,16 @@ public class ItemIds {
         "Al2O3", "Ca3Cr2(SiO4)3", "Ca3Al2(SiO4)3",
         "CuAl6(PO4)4(OH)8(H2O)4", "PbS", "KCl",
         "CaSO4(H2O)2", "Sc2Si2O7", "TiO2",
-        "TiO2" };
+        "TiO2", "Pb5(VO4)3Cl", "MnO2",
+        "Co3(AsO4)2(H2O)8", "ZnS", "CuGaS2",
+        "Cu26Fe4Ge4S32", "Cu(UO2)3(SeO3)3(OH)2(H2O)7", "HBrO2",
+        "SrSO4", "YPO4", "ZrO2",
+        "FeNb2O6", "Cs(Be2Li)Al2Si6O18", "BaTiSi3O9" };
     public static final LinkedList<String> METAL_DUST_MOLECULE_STRINGS = new LinkedList<String>();
     public static final LinkedList<String> PURE_NONMETAL_DUST_MOLECULE_STRINGS = new LinkedList<String>();
     public static final String[] VANILLA_DUST_MOLECULE_STRINGS =
         { "FeSiO2", "Fe", "Au",
-        "Be3Al2(SiO3)6" };
+        "Be3Al2(SiO3)6", "C2", "C7H4O" };
     public static final String[] ALLOY_DUST_MOLECULE_STRINGS = 
         { "Fe-C", "Fe-V", "Cu-Sn",
         "Au-Ag", "Al-Sc", "Os-Ir" };

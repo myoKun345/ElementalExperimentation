@@ -26,11 +26,14 @@ import elex.lib.Reference;
  */
 public class BlockElExItemOre extends Block {
     
+    private int blockListNumber;
+    
     @SideOnly(Side.CLIENT)
     private Icon[] icons;
     
-    public BlockElExItemOre(int id) {
+    public BlockElExItemOre(int id, int type) {
         super(id, Material.rock);
+        this.blockListNumber = type;
         setHardness(3.0F);
         setResistance(5.0F);
         setCreativeTab(ElementalExperimentation.elexTab);
@@ -40,9 +43,26 @@ public class BlockElExItemOre extends Block {
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister register) {
-        icons = new Icon[BlockIds.ITEM_ELEX_ORE_REAL_UNLOCALIZED_NAMES.length];
-        for (int i = 0; i < icons.length; i++) {
-            icons[i] = register.registerIcon(Reference.MOD_ID + ":" + BlockIds.ITEM_ELEX_ORE_REAL_UNLOCALIZED_NAMES[i]);
+        if (blockListNumber == 0) {
+            icons = new Icon[BlockIds.ITEM_ELEX_ORE_REAL_UNLOCALIZED_NAMES.length];
+            for (int i = 0; i < icons.length; i++) {
+                icons[i] = register.registerIcon(Reference.MOD_ID + ":"
+                        + BlockIds.ITEM_ELEX_ORE_REAL_UNLOCALIZED_NAMES[i]);
+            }
+        }
+        if (blockListNumber == 1) {
+            icons = new Icon[BlockIds.ITEM_ELEX_ORE_2_REAL_UNLOCALIZED_NAMES.length];
+            for (int i = 0; i < icons.length; i++) {
+                icons[i] = register.registerIcon(Reference.MOD_ID + ":"
+                        + BlockIds.ITEM_ELEX_ORE_2_REAL_UNLOCALIZED_NAMES[i]);
+            }
+        }
+        if (blockListNumber == 2) {
+            icons = new Icon[BlockIds.ITEM_ELEX_ORE_3_REAL_UNLOCALIZED_NAMES.length];
+            for (int i = 0; i < icons.length; i++) {
+                icons[i] = register.registerIcon(Reference.MOD_ID + ":"
+                        + BlockIds.ITEM_ELEX_ORE_3_REAL_UNLOCALIZED_NAMES[i]);
+            }
         }
     }
     
@@ -55,8 +75,20 @@ public class BlockElExItemOre extends Block {
     @Override
     @SideOnly(Side.CLIENT)
     public void getSubBlocks(int id, CreativeTabs tab, List list) {
-        for (int i = 0; i < BlockIds.ITEM_ELEX_ORE_REAL_UNLOCALIZED_NAMES.length; i++) {
-            list.add(new ItemStack(id, 1, i));
+        if (blockListNumber == 0) {
+            for (int i = 0; i < BlockIds.ITEM_ELEX_ORE_REAL_UNLOCALIZED_NAMES.length; i++) {
+                list.add(new ItemStack(id, 1, i));
+            }
+        }
+        if (blockListNumber == 1) {
+            for (int i = 0; i < BlockIds.ITEM_ELEX_ORE_2_REAL_UNLOCALIZED_NAMES.length; i++) {
+                list.add(new ItemStack(id, 1, i));
+            }
+        }
+        if (blockListNumber == 2) {
+            for (int i = 0; i < BlockIds.ITEM_ELEX_ORE_3_REAL_UNLOCALIZED_NAMES.length; i++) {
+                list.add(new ItemStack(id, 1, i));
+            }
         }
     }
     
@@ -67,7 +99,18 @@ public class BlockElExItemOre extends Block {
     
     @Override
     public int damageDropped(int meta) {
-        return meta;
+        if (blockListNumber == 0) {
+            return meta;
+        }
+        if (blockListNumber == 1) {
+            return meta + 15;
+        }
+        if (blockListNumber == 2) {
+            return meta + 31;
+        }
+        else {
+            return 0;
+        }
     }
 
 }

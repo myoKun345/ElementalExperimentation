@@ -7,7 +7,6 @@ public class BlockIds {
     public static final String CATEGORY_BLOCK_IDS = "Block IDs";
     
     /* Default Block IDs */
-    public static final int ITEM_ELEX_ORE_DEFAULT = 3670;
     public static final int BLOCK_ELEX_ORE_DEFAULT = 3671;
     public static final int BLOCK_ELEX_ORE_2_DEFAULT = 3672;
     public static final int BLOCK_ELEX_ITEM_ORE_STORAGE_DEFAULT = 3673;
@@ -16,11 +15,17 @@ public class BlockIds {
     public static final int BLOCK_ELEX_METAL_STORAGE_3_DEFAULT = 3676;
     public static final int BLOCK_ELEX_METAL_STORAGE_4_DEFAULT = 3677;
     public static final int BLOCK_ELEX_METAL_STORAGE_5_DEFAULT = 3678;
+    public static final int BLOCK_MACHINE_CASE_DEFAULT = 3679;
+    public static final int ITEM_ELEX_ORE_DEFAULT = 3680;
+    public static final int ITEM_ELEX_ORE_2_DEFAULT = 3681;
+    public static final int ITEM_ELEX_ORE_3_DEFAULT = 3682;
     public static final int CENTRIFUGE_DEFAULT = 3750;
     public static final int GRINDER_DEFAULT = 3751;
     
     /* Current Block IDs */
     public static int ITEM_ELEX_ORE;
+    public static int ITEM_ELEX_ORE_2;
+    public static int ITEM_ELEX_ORE_3;
     public static int BLOCK_ELEX_ORE;
     public static int BLOCK_ELEX_ORE_2;
     public static int BLOCK_ELEX_ITEM_ORE_STORAGE;
@@ -29,11 +34,14 @@ public class BlockIds {
     public static int BLOCK_ELEX_METAL_STORAGE_3;
     public static int BLOCK_ELEX_METAL_STORAGE_4;
     public static int BLOCK_ELEX_METAL_STORAGE_5;
+    public static int BLOCK_MACHINE_CASE;
     public static int CENTRIFUGE;
     public static int GRINDER;
     
     /* Block Config Keys */
     public static final String ITEM_ELEX_ORE_KEY = "ITEMORES";
+    public static final String ITEM_ELEX_ORE_2_KEY = "ITEMORES2";
+    public static final String ITEM_ELEX_ORE_3_KEY = "ITEMORES3";
     public static final String BLOCK_ELEX_ORE_KEY = "BLOCKORES";
     public static final String BLOCK_ELEX_ORE_2_KEY = "BLOCKORES2";
     public static final String BLOCK_ELEX_ITEM_ORE_STORAGE_KEY = "ITEMORESTORAGEBLOCKS";
@@ -42,6 +50,7 @@ public class BlockIds {
     public static final String BLOCK_ELEX_METAL_STORAGE_3_KEY = "METALSTORAGEBLOCKS3";
     public static final String BLOCK_ELEX_METAL_STORAGE_4_KEY = "METALSTORAGEBLOCKS4";
     public static final String BLOCK_ELEX_METAL_STORAGE_5_KEY = "METALSTORAGEBLOCKS5";
+    public static final String BLOCK_MACHINE_CASE_KEY = "MACHINECASES";
     public static final String CENTRIFUGE_KEY = "CentrifugeID";
     public static final String GRINDER_KEY = "GrinderID";
     
@@ -50,7 +59,19 @@ public class BlockIds {
     public static final String[] ITEM_ELEX_ORE_REAL_UNLOCALIZED_NAMES = 
         { "oreAquamarine", "oreBorax", "oreFluorite",
         "oreForsterite", "orePetalite", "oreArtificialQuartz",
-        "oreSpodumene", "oreHalite" };
+        "oreSpodumene", "oreHalite", "oreRuby", 
+        "oreSapphire", "oreUvarovite", "oreTsavorite", 
+        "oreTurquoise", "oreGalena", "oreSylvite",
+        "oreGypsum" };
+    public static final String[] ITEM_ELEX_ORE_2_REAL_UNLOCALIZED_NAMES = 
+        { "oreThortveitite", "oreAnatase", "oreBrookite",
+        "oreVanadinite", "orePyrolusite", "oreErythrite",
+        "oreSphalerite", "oreGallite", "oreGermanite", 
+        "oreMarthozite", "oreBromite", "oreCelestine",
+        "oreXenotime", "oreBaddeleyite", "oreColumbite",
+        "orePezzottaite" };
+    public static final String[] ITEM_ELEX_ORE_3_REAL_UNLOCALIZED_NAMES = 
+        { "oreBenitoite" };
     public static final String BLOCK_ELEX_ORE_UNLOCALIZED_NAME = "elexOreBlock";
     public static final String[] BLOCK_ELEX_ORE_REAL_UNLOCALIZED_NAMES = 
         { "oreAluminium", "oreChromium", "oreCobalt",
@@ -75,6 +96,9 @@ public class BlockIds {
     public static final LinkedList<String> BLOCK_ELEX_METAL_STORAGE_3_REAL_UNLOCALIZED_NAMES = new LinkedList<String>();
     public static final LinkedList<String> BLOCK_ELEX_METAL_STORAGE_4_REAL_UNLOCALIZED_NAMES = new LinkedList<String>();
     public static final LinkedList<String> BLOCK_ELEX_METAL_STORAGE_5_REAL_UNLOCALIZED_NAMES = new LinkedList<String>();
+    public static final String[] BLOCK_MACHINE_CASE_REAL_UNLOCALIZED_NAMES = 
+        { "caseCarbonSteel", "caseScandinium", "caseOsmiridium",
+        "caseLead" };
     public static final String CENTRIFUGE_UNLOCALIZED_NAME = "centrifuge";
     public static final String GRINDER_UNLOCALIZED_NAME = "grinder";
     
