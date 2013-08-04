@@ -2,6 +2,8 @@ Elemental Experimentation
 ============
 A Technical Mod for Minecraft
 
+Builds: http://ci.austin-jones.info:8080/job/ElementalExperimentation/
+
 This mod will recreate the entire periodic table of elements in Minecraft and allow the player to break down items into their component elements for use in further mixing and compounding to make stronger and more useful materials. This mod, by the nature of how it will denote elements and characteristics, will be easily compatible with the many other technical mods that are available for Minecraft.
 
 NBT Data Saved per Item Stack (some of the following may be removed):
