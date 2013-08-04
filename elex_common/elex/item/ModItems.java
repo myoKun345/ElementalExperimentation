@@ -25,5 +25,6 @@ public class ModItems {
         itemVanillaDust = new ItemElExDust(ItemIds.VANILLA_DUST, 3);
         itemAlloyDust = new ItemElExDust(ItemIds.ALLOY_DUST, 4);
         itemAlloyIngot = new ItemElExIngot(ItemIds.ALLOY_INGOT, 1);
+        itemMachinePart = new ItemMachinePart(ItemIds.MACHINE_PART);
     }
 }
