@@ -88,7 +88,7 @@
 	<entry key="tile.blockGallium.name">Gallium Block</entry>
 	<entry key="tile.blockGermanium.name">Germanium Block</entry>
 	<entry key="tile.blockRubidium.name">Rubidium Block</entry>
-	<entry key="tile.blockStrontion.name">Strontium Block</entry>
+	<entry key="tile.blockStrontium.name">Strontium Block</entry>
 	<entry key="tile.blockYttrium.name">Yttrium Block</entry>
 	<entry key="tile.blockZirconium.name">Zirconium Block</entry>
 	<entry key="tile.blockNiobium.name">Niobium Block</entry>
@@ -242,7 +242,7 @@
 	<entry key="item.dustGallium.name">Gallium Dust</entry>
 	<entry key="item.dustGermanium.name">Germanium Dust</entry>
 	<entry key="item.dustRubidium.name">Rubidium Dust</entry>
-	<entry key="item.dustStrontion.name">Strontium Dust</entry>
+	<entry key="item.dustStrontium.name">Strontium Dust</entry>
 	<entry key="item.dustYttrium.name">Yttrium Dust</entry>
 	<entry key="item.dustZirconium.name">Zirconium Dust</entry>
 	<entry key="item.dustNiobium.name">Niobium Dust</entry>
@@ -340,7 +340,7 @@
 	<entry key="item.ingotGallium.name">Gallium Ingot</entry>
 	<entry key="item.ingotGermanium.name">Germanium Ingot</entry>
 	<entry key="item.ingotRubidium.name">Rubidium Ingot</entry>
-	<entry key="item.ingotStrontion.name">Strontium Ingot</entry>
+	<entry key="item.ingotStrontium.name">Strontium Ingot</entry>
 	<entry key="item.ingotYttrium.name">Yttrium Ingot</entry>
 	<entry key="item.ingotZirconium.name">Zirconium Ingot</entry>
 	<entry key="item.ingotNiobium.name">Niobium Ingot</entry>

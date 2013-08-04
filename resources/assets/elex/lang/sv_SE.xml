@@ -88,7 +88,7 @@
 	<entry key="tile.blockGallium.name">Galliumblock</entry>
 	<entry key="tile.blockGermanium.name">Germaniumblock</entry>
 	<entry key="tile.blockRubidium.name">Rubidiumblock</entry>
-	<entry key="tile.blockStrontion.name">Strontiumblock</entry>
+	<entry key="tile.blockStrontium.name">Strontiumblock</entry>
 	<entry key="tile.blockYttrium.name">Yttriumblock</entry>
 	<entry key="tile.blockZirconium.name">Zirkoniumblock</entry>
 	<entry key="tile.blockNiobium.name">Niobblock</entry>
@@ -242,7 +242,7 @@
 	<entry key="item.dustGallium.name">Galliumdamm</entry>
 	<entry key="item.dustGermanium.name">Germaniumdamm</entry>
 	<entry key="item.dustRubidium.name">Rubidiumdamm</entry>
-	<entry key="item.dustStrontion.name">Strontiumdamm</entry>
+	<entry key="item.dustStrontium.name">Strontiumdamm</entry>
 	<entry key="item.dustYttrium.name">Yttriumdamm</entry>
 	<entry key="item.dustZirconium.name">Zirkoniumdamm</entry>
 	<entry key="item.dustNiobium.name">Niobdamm</entry>
@@ -340,7 +340,7 @@
 	<entry key="item.ingotGallium.name">Galliumtacka</entry>
 	<entry key="item.ingotGermanium.name">Germaniumtacka</entry>
 	<entry key="item.ingotRubidium.name">Rubidiumtacka</entry>
-	<entry key="item.ingotStrontion.name">Strontiumtacka</entry>
+	<entry key="item.ingotStrontium.name">Strontiumtacka</entry>
 	<entry key="item.ingotYttrium.name">Yttriumtacka</entry>
 	<entry key="item.ingotZirconium.name">Zirkoniumtacka</entry>
 	<entry key="item.ingotNiobium.name">Niobtacka</entry>
