@@ -38,7 +38,7 @@
 	<entry key="tile.oreXenotime.name">Xenotime Ore</entry>
 	<entry key="tile.oreBaddeleyite.name">Baddeleyite Ore</entry>
 	<entry key="tile.oreColumbite.name">Columbite Ore</entry>
-	<entry key="tile.orePezzotaite.name">Pezzotaite Ore</entry>
+	<entry key="tile.orePezzottaite.name">Pezzotaite Ore</entry>
 	<entry key="tile.oreBenitoite.name">Benitoite Ore</entry>
 	
 	<entry key="tile.oreCopper.name">Copper Ore</entry>
@@ -306,6 +306,7 @@
 	<entry key="item.dustBismuth.name">Bismuth Dust</entry>
 	<entry key="item.dustLead.name">Lead Dust</entry>
 	
+	<entry key="item.dustBoron.name">Boron Dust </entry>
 	<entry key="item.dustCarbon.name">Carbon Dust</entry>
 	<entry key="item.dustPhosphorus.name">Phosphorus Dust</entry>
 	<entry key="item.dustSulfur.name">Sulfur Dust</entry>
@@ -410,6 +411,10 @@
 	<entry key="item.ingotElectrum.name">Electrum Ingot</entry>
 	<entry key="item.ingotScandinium.name">Scandinium Ingot</entry>
 	<entry key="item.ingotOsmiridium.name">Osmiridium Ingot</entry>
+	
+	<entry key="item.partSpinRotor.name">Spin Rotor Machine Component</entry>
+	<entry key="item.partHighSpeedMotor.name">High Speed Motor Machine Component</entry>
+	<entry key="item.partGrindStone.name">Grind Stone Machine Component</entry>
 	
 	<entry key="item.mercuryInjector.name">Mercury Injector</entry>
 	

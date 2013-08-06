@@ -52,6 +52,13 @@ public class CraftingRecipes {
         GameRegistry.addRecipe(new ItemStack(ModBlocks.blockMachineCase, 1, 1), new Object[] { "XXX", "X X", "XXX", 'X', new ItemStack(ModItems.itemAlloyIngot, 1, 4)});
         GameRegistry.addRecipe(new ItemStack(ModBlocks.blockMachineCase, 1, 2), new Object[] { "XXX", "X X", "XXX", 'X', new ItemStack(ModItems.itemAlloyIngot, 1, 5)});
         GameRegistry.addRecipe(new ItemStack(ModBlocks.blockMachineCase, 1, 3), new Object[] { "XXX", "X X", "XXX", 'X', new ItemStack(ModItems.itemElExIngot, 1, 61)});
+        // Temporary Alloy Dust Recipes
+        GameRegistry.addShapelessRecipe(new ItemStack(ModItems.itemAlloyDust, 4, 0), new ItemStack(ModItems.itemVanillaDust, 1, 1), new ItemStack(ModItems.itemVanillaDust, 1, 1), new ItemStack(ModItems.itemVanillaDust, 1, 1), new ItemStack(ModItems.itemVanillaDust, 1, 5));
+        GameRegistry.addShapelessRecipe(new ItemStack(ModItems.itemAlloyDust, 4, 1), new ItemStack(ModItems.itemVanillaDust, 1, 1), new ItemStack(ModItems.itemVanillaDust, 1, 1), new ItemStack(ModItems.itemElExMetalDust, 1, 10), new ItemStack(ModItems.itemVanillaDust, 1, 5));
+        GameRegistry.addShapelessRecipe(new ItemStack(ModItems.itemAlloyDust, 4, 2), new ItemStack(ModItems.itemElExMetalDust, 1, 15), new ItemStack(ModItems.itemElExMetalDust, 1, 15), new ItemStack(ModItems.itemElExMetalDust, 1, 15), new ItemStack(ModItems.itemElExMetalDust, 1, 33));
+        GameRegistry.addShapelessRecipe(new ItemStack(ModItems.itemAlloyDust, 4, 3), new ItemStack(ModItems.itemVanillaDust, 1, 2), new ItemStack(ModItems.itemVanillaDust, 1, 2), new ItemStack(ModItems.itemElExMetalDust, 1, 30), new ItemStack(ModItems.itemElExMetalDust, 1, 30));
+        GameRegistry.addShapelessRecipe(new ItemStack(ModItems.itemAlloyDust, 4, 4), new ItemStack(ModItems.itemElExMetalDust, 1, 4), new ItemStack(ModItems.itemElExMetalDust, 1, 4), new ItemStack(ModItems.itemElExMetalDust, 1, 4), new ItemStack(ModItems.itemElExMetalDust, 1, 8));
+        GameRegistry.addShapelessRecipe(new ItemStack(ModItems.itemAlloyDust, 4, 5), new ItemStack(ModItems.itemElExMetalDust, 1, 57), new ItemStack(ModItems.itemElExMetalDust, 1, 57), new ItemStack(ModItems.itemElExMetalDust, 1, 57), new ItemStack(ModItems.itemElExMetalDust, 1, 58));
         
         for (int i = 0; i < ItemIds.ELEX_ORE_REAL_UNLOCALIZED_NAMES.length; i++) {
             FurnaceRecipes.smelting().addSmelting(ItemIds.ELEX_COMPOUND_DUST, i, new ItemStack(ModItems.itemElExOre, 1, i), 5F);
@@ -60,6 +67,9 @@ public class CraftingRecipes {
         FurnaceRecipes.smelting().addSmelting(ItemIds.VANILLA_DUST, 3, new ItemStack(Item.emerald, 1), 5F);
         for (int i = 0; i < ItemIds.ELEX_INGOT_REAL_UNLOCALIZED_NAMES.size(); i++) {
             FurnaceRecipes.smelting().addSmelting(ItemIds.ELEX_METAL_DUST, i, new ItemStack(ModItems.itemElExIngot, 1, i), 5F);
+        }
+        for (int i = 0; i < ItemIds.ALLOY_INGOT_REAL_UNLOCALIZED_NAMES.length; i++) {
+            FurnaceRecipes.smelting().addSmelting(ItemIds.ALLOY_DUST, i, new ItemStack(ModItems.itemAlloyIngot, 1, i), 5F);
         }
         FurnaceRecipes.smelting().addSmelting(ItemIds.VANILLA_DUST, 1, new ItemStack(Item.ingotIron, 1), 5F);
         FurnaceRecipes.smelting().addSmelting(ItemIds.VANILLA_DUST, 2, new ItemStack(Item.ingotGold, 1), 5F);
