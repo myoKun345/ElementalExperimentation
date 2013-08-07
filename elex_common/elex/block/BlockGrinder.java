@@ -1,5 +1,7 @@
 package elex.block;
 
+import java.util.Random;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
@@ -31,6 +33,12 @@ import elex.tileentity.TileEntityGrinder;
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
 public class BlockGrinder extends BlockContainer {
+    
+    private final Random grinderRandom = new Random();
+    
+    private boolean isActive;
+    
+    private static boolean keepFurnaceInventory;
     
     @SideOnly(Side.CLIENT)
     private Icon baseIcon;
