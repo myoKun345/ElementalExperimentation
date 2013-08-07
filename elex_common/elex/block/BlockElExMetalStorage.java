@@ -72,6 +72,12 @@ public class BlockElExMetalStorage extends Block {
                 icons[i] = register.registerIcon(Reference.MOD_ID + ":" + BlockIds.BLOCK_ELEX_METAL_STORAGE_5_REAL_UNLOCALIZED_NAMES.get(i));
             }
         }
+        if (blockListNumber == 5) {
+            icons = new Icon[BlockIds.BLOCK_ALLOY_STORAGE_REAL_UNLOCALIZED_NAMES.length];
+            for (int i = 0; i < icons.length; i++) {
+                icons[i] = register.registerIcon(Reference.MOD_ID + ":" + BlockIds.BLOCK_ALLOY_STORAGE_REAL_UNLOCALIZED_NAMES[i]);
+            }
+        }
     }
     
     @Override
@@ -110,6 +116,12 @@ public class BlockElExMetalStorage extends Block {
         if (blockListNumber == 4) {
             for (int i = 0; i < BlockIds.BLOCK_ELEX_METAL_STORAGE_5_REAL_UNLOCALIZED_NAMES
                     .size(); i++) {
+                list.add(new ItemStack(id, 1, i));
+            }
+        }
+        if (blockListNumber == 4) {
+            for (int i = 0; i < BlockIds.BLOCK_ALLOY_STORAGE_REAL_UNLOCALIZED_NAMES
+                    .length; i++) {
                 list.add(new ItemStack(id, 1, i));
             }
         }

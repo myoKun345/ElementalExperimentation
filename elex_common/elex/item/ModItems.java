@@ -14,6 +14,9 @@ public class ModItems {
     public static Item itemAlloyDust;
     public static Item itemAlloyIngot;
     public static Item itemMachinePart;
+    public static Item itemMetalNugget;
+    public static Item itemAlloyNugget;
+    public static Item itemIronNugget;
     
     public static void init() {
         itemElExOre = new ItemElExOre(ItemIds.ELEX_ORE);
@@ -26,5 +29,8 @@ public class ModItems {
         itemAlloyDust = new ItemElExDust(ItemIds.ALLOY_DUST, 4);
         itemAlloyIngot = new ItemElExIngot(ItemIds.ALLOY_INGOT, 1);
         itemMachinePart = new ItemMachinePart(ItemIds.MACHINE_PART);
+        itemMetalNugget = new ItemElExNugget(ItemIds.METAL_NUGGET, 0);
+        itemAlloyNugget = new ItemElExNugget(ItemIds.ALLOY_NUGGET, 1);
+        itemIronNugget = new ItemElExNugget(ItemIds.IRON_NUGGET, 2);
     }
 }

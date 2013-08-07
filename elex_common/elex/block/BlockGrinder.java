@@ -11,6 +11,7 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Icon;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeDirection;
+import cpw.mods.fml.common.network.FMLNetworkHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import elex.ElementalExperimentation;
@@ -87,6 +88,15 @@ public class BlockGrinder extends BlockContainer {
         default:
             return baseIcon;
         }
+    }
+    
+    @Override
+    public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ) {
+        if (!world.isRemote) {
+            FMLNetworkHandler.openGui(player, ElementalExperimentation.instance, 0, world, x, y, z);
+        }
+        
+        return true;
     }
     
     @Override

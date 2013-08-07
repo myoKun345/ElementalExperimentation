@@ -51,6 +51,9 @@ public class ConfigurationHandler {
         ItemIds.ALLOY_DUST = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.ALLOY_DUST_KEY, ItemIds.ALLOY_DUST_DEFAULT).getInt();
         ItemIds.ALLOY_INGOT = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.ALLOY_INGOT_KEY, ItemIds.ALLOY_INGOT_DEFAULT).getInt();
         ItemIds.MACHINE_PART = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.MACHINE_PART_KEY, ItemIds.MACHINE_PART_DEFAULT).getInt();
+        ItemIds.METAL_NUGGET = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.METAL_NUGGET_KEY, ItemIds.METAL_NUGGET_DEFAULT).getInt();
+        ItemIds.ALLOY_NUGGET = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.ALLOY_NUGGET_KEY, ItemIds.ALLOY_NUGGET_DEFAULT).getInt();
+        ItemIds.IRON_NUGGET = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.IRON_NUGGET_KEY, ItemIds.IRON_NUGGET_DEFAULT).getInt();
         
         LogHelper.log(Level.OFF, Element.elementList[5].getName());
         LogHelper.log(Level.INFO, "Desu " + ItemIds.ELEX_INGOT_REAL_UNLOCALIZED_NAMES.size());

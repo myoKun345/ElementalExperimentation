@@ -584,6 +584,8 @@ public class Element {
             
             ItemIds.ELEX_INGOT_REAL_UNLOCALIZED_NAMES.add("ingot" + elementList[id].name);
             
+            ItemIds.METAL_NUGGET_REAL_UNLOCALIZED_NAMES.add("nugget" + elementList[id].name);
+            
             if (BlockIds.BLOCK_ELEX_METAL_STORAGE_REAL_UNLOCALIZED_NAMES.size() < 16) {
                 BlockIds.BLOCK_ELEX_METAL_STORAGE_REAL_UNLOCALIZED_NAMES.add("block" + elementList[id].name);
             }else

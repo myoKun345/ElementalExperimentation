@@ -17,6 +17,9 @@ public class ItemIds {
     public static final int ALLOY_DUST_DEFAULT = 16238;
     public static final int ALLOY_INGOT_DEFAULT = 16239;
     public static final int MACHINE_PART_DEFAULT = 16240;
+    public static final int METAL_NUGGET_DEFAULT = 16241;
+    public static final int ALLOY_NUGGET_DEFAULT = 16242;
+    public static final int IRON_NUGGET_DEFAULT = 16243;
     
     /* Current Item IDs */
     public static int ELEX_ORE;
@@ -29,6 +32,9 @@ public class ItemIds {
     public static int ALLOY_DUST;
     public static int ALLOY_INGOT;
     public static int MACHINE_PART;
+    public static int METAL_NUGGET;
+    public static int ALLOY_NUGGET;
+    public static int IRON_NUGGET;
     
     /* Item Config Keys */
     public static final String ELEX_ORE_KEY = "ITEMORES";
@@ -41,6 +47,9 @@ public class ItemIds {
     public static final String ALLOY_DUST_KEY = "ALLOYDUSTS";
     public static final String ALLOY_INGOT_KEY = "ALLOYINGOTS";
     public static final String MACHINE_PART_KEY = "MACHINEPARTS";
+    public static final String METAL_NUGGET_KEY = "METALNUGGETS";
+    public static final String ALLOY_NUGGET_KEY = "ALLOYNUGGETS";
+    public static final String IRON_NUGGET_KEY = "IronNuggetID";
     
     /* Item Unlocalized Names */
     public static final String ELEX_ORE_UNLOCALIZED_NAME = "itemElexOre";
@@ -83,6 +92,11 @@ public class ItemIds {
         "ingotElectrum", "ingotScandinium", "ingotOsmiridium" };
     public static final String[] MACHINE_PART_REAL_UNLOCALIZED_NAMES = 
         { "partSpinRotor", "partHighSpeedMotor", "partGrindStone" };
+    public static final LinkedList<String> METAL_NUGGET_REAL_UNLOCALIZED_NAMES = new LinkedList<String>();
+    public static final String[] ALLOY_NUGGET_REAL_UNLOCALIZED_NAMES = 
+        { "nuggetCarbonSteel", "nuggetVanadiumSteel", "nuggetBronze",
+        "nuggetElectrum", "nuggetScandinium", "nuggetOsmiridium" };
+    public static final String IRON_NUGGET_UNLOCALIZED_NAME = "nuggetIron";
     
     /* Molecule Strings */
     public static final String[] COMPOUND_DUST_MOLECULE_STRINGS = 

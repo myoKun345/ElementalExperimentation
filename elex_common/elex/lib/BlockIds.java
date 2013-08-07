@@ -19,6 +19,7 @@ public class BlockIds {
     public static final int ITEM_ELEX_ORE_DEFAULT = 3680;
     public static final int ITEM_ELEX_ORE_2_DEFAULT = 3681;
     public static final int ITEM_ELEX_ORE_3_DEFAULT = 3682;
+    public static final int BLOCK_ALLOY_STORAGE_DEFAULT = 3683;
     public static final int CENTRIFUGE_DEFAULT = 3750;
     public static final int GRINDER_DEFAULT = 3751;
     
@@ -35,6 +36,7 @@ public class BlockIds {
     public static int BLOCK_ELEX_METAL_STORAGE_4;
     public static int BLOCK_ELEX_METAL_STORAGE_5;
     public static int BLOCK_MACHINE_CASE;
+    public static int BLOCK_ALLOY_STORAGE;
     public static int CENTRIFUGE;
     public static int GRINDER;
     
@@ -51,6 +53,7 @@ public class BlockIds {
     public static final String BLOCK_ELEX_METAL_STORAGE_4_KEY = "METALSTORAGEBLOCKS4";
     public static final String BLOCK_ELEX_METAL_STORAGE_5_KEY = "METALSTORAGEBLOCKS5";
     public static final String BLOCK_MACHINE_CASE_KEY = "MACHINECASES";
+    public static final String BLOCK_ALLOY_STORAGE_KEY = "ALLOYSTORAGEBLOCKS";
     public static final String CENTRIFUGE_KEY = "CentrifugeID";
     public static final String GRINDER_KEY = "GrinderID";
     
@@ -99,6 +102,9 @@ public class BlockIds {
     public static final String[] BLOCK_MACHINE_CASE_REAL_UNLOCALIZED_NAMES = 
         { "caseCarbonSteel", "caseScandinium", "caseOsmiridium",
         "caseLead" };
+    public static final String[] BLOCK_ALLOY_STORAGE_REAL_UNLOCALIZED_NAMES = 
+        { "blockCarbonSteel", "blockVanadiumSteel", "BlockBronze", 
+        "blockElectrum", "blockScandinium", "blockOsmiridium" };
     public static final String CENTRIFUGE_UNLOCALIZED_NAME = "centrifuge";
     public static final String GRINDER_UNLOCALIZED_NAME = "grinder";
     

@@ -27,7 +27,7 @@ public class ItemMachinePart extends Item {
     private Icon[] icons;
     
     public ItemMachinePart(int par1) {
-        super(par1);
+        super(par1 - Reference.SHIFTED_ID_RANGE_CORRECTION);
         setCreativeTab(ElementalExperimentation.elexTab);
         setHasSubtypes(true);
     }

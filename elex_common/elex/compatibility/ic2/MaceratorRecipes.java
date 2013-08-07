@@ -31,6 +31,20 @@ public class MaceratorRecipes {
         Recipes.macerator.addRecipe(new ItemStack(Block.oreIron), new ItemStack(ModItems.itemVanillaDust, 2, 1));
         Recipes.macerator.addRecipe(new ItemStack(Block.oreGold), new ItemStack(ModItems.itemVanillaDust, 2, 2));
         Recipes.macerator.addRecipe(new ItemStack(Block.oreEmerald), new ItemStack(ModItems.itemVanillaDust, 2, 3));
+        // Macerator Recipes for Compound Ores
+        for (int i = 0; i < BlockIds.ITEM_ELEX_ORE_REAL_UNLOCALIZED_NAMES.length; i++) {
+            Recipes.macerator.addRecipe(new ItemStack(ModBlocks.blockElExItemOre, 1, i), new ItemStack(ModItems.itemElExCompoundDust, 2, i));
+        }
+        for (int i = 0; i < BlockIds.ITEM_ELEX_ORE_2_REAL_UNLOCALIZED_NAMES.length; i++) {
+            int j = i + BlockIds.ITEM_ELEX_ORE_REAL_UNLOCALIZED_NAMES.length;
+            
+            Recipes.macerator.addRecipe(new ItemStack(ModBlocks.blockElExItemOre2, 1, i), new ItemStack(ModItems.itemElExCompoundDust, 2, j));
+        }
+        for (int i = 0; i < BlockIds.ITEM_ELEX_ORE_3_REAL_UNLOCALIZED_NAMES.length; i++) {
+            int j = i + BlockIds.ITEM_ELEX_ORE_REAL_UNLOCALIZED_NAMES.length + BlockIds.ITEM_ELEX_ORE_2_REAL_UNLOCALIZED_NAMES.length;
+            
+            Recipes.macerator.addRecipe(new ItemStack(ModBlocks.blockElExItemOre3, 1, i), new ItemStack(ModItems.itemElExCompoundDust, 2, j));
+        }
         
         for (int i = 0; i < ItemIds.ELEX_ORE_REAL_UNLOCALIZED_NAMES.length; i++) {
             Recipes.macerator.addRecipe(new ItemStack(ModItems.itemElExOre, 1, i), new ItemStack(ModItems.itemElExCompoundDust, 1, i));

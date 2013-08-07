@@ -19,6 +19,7 @@ public class ModBlocks {
     public static Block blockElExMetalStorage4;
     public static Block blockElExMetalStorage5;
     public static Block blockMachineCase;
+    public static Block blockAlloyStorage;
     
     public static void init() {
         centrifuge = new BlockCentrifuge(BlockIds.CENTRIFUGE);
@@ -35,6 +36,7 @@ public class ModBlocks {
         blockElExMetalStorage4 = new BlockElExMetalStorage(BlockIds.BLOCK_ELEX_METAL_STORAGE_4, 3);
         blockElExMetalStorage5 = new BlockElExMetalStorage(BlockIds.BLOCK_ELEX_METAL_STORAGE_5, 4);
         blockMachineCase = new BlockMachineCase(BlockIds.BLOCK_MACHINE_CASE);
+        blockAlloyStorage = new BlockElExMetalStorage(BlockIds.BLOCK_ALLOY_STORAGE, 5);
         
         GameRegistry.registerBlock(centrifuge, "centrifugeElEx");
         GameRegistry.registerBlock(grinder, "grinderElEx");
@@ -50,5 +52,6 @@ public class ModBlocks {
         GameRegistry.registerBlock(blockElExMetalStorage4, ItemBlockElExMetalStorage4.class, "blockElExMetalStorage4");
         GameRegistry.registerBlock(blockElExMetalStorage5, ItemBlockElExMetalStorage5.class, "blockElExMetalStorage5");
         GameRegistry.registerBlock(blockMachineCase, ItemBlockMachineCase.class, "blockMachineCase");
+        GameRegistry.registerBlock(blockAlloyStorage, ItemBlockAlloyStorage.class, "blockAlloyStorage");
     }
 }

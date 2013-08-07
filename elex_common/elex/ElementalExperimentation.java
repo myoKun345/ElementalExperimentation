@@ -5,7 +5,6 @@ import java.io.File;
 import net.minecraft.creativetab.CreativeTabs;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
-import cpw.mods.fml.common.Mod.IMCCallback;
 import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -15,6 +14,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
 import elex.block.ModBlocks;
+import elex.client.gui.GUIHandler;
 import elex.configuration.ConfigurationHandler;
 import elex.crafting.CraftingRecipes;
 import elex.creativetab.CreativeTabElEx;
@@ -90,6 +90,8 @@ public class ElementalExperimentation {
         GameRegistry.registerWorldGenerator(new WorldGenElExOres());
         
         GameRegistry.registerWorldGenerator(new ElExSurfaceWorldGen());
+        
+        new GUIHandler();
         
         for (int i = 0; i < BlockIds.BLOCK_ELEX_METAL_STORAGE_REAL_UNLOCALIZED_NAMES.size(); i++) {
             FMLInterModComms.sendMessage("BuildCraft|Transport", "add-facade", BlockIds.BLOCK_ELEX_METAL_STORAGE + "@" + i);
