@@ -38,6 +38,7 @@ public class ConfigurationHandler {
         BlockIds.BLOCK_MACHINE_CASE = config.getBlock(BlockIds.CATEGORY_BLOCK_IDS, BlockIds.BLOCK_MACHINE_CASE_KEY, BlockIds.BLOCK_MACHINE_CASE_DEFAULT).getInt();
         BlockIds.CENTRIFUGE = config.getBlock(BlockIds.CATEGORY_BLOCK_IDS, BlockIds.CENTRIFUGE_KEY, BlockIds.CENTRIFUGE_DEFAULT).getInt();
         BlockIds.GRINDER = config.getBlock(BlockIds.CATEGORY_BLOCK_IDS, BlockIds.GRINDER_KEY, BlockIds.GRINDER_DEFAULT).getInt();
+        BlockIds.BLOCK_ALLOY_STORAGE = config.getBlock(BlockIds.CATEGORY_BLOCK_IDS, BlockIds.BLOCK_ALLOY_STORAGE_KEY, BlockIds.BLOCK_ALLOY_STORAGE_DEFAULT).getInt();
         
         FluidIds.SALT_WATER_BLOCK = config.getBlock(FluidIds.CATEGORY_FLUID_IDS, FluidIds.SALT_WATER_BLOCK_KEY, FluidIds.SALT_WATER_BLOCK_DEFAULT).getInt();
         

@@ -119,7 +119,7 @@ public class BlockElExMetalStorage extends Block {
                 list.add(new ItemStack(id, 1, i));
             }
         }
-        if (blockListNumber == 4) {
+        if (blockListNumber == 5) {
             for (int i = 0; i < BlockIds.BLOCK_ALLOY_STORAGE_REAL_UNLOCALIZED_NAMES
                     .length; i++) {
                 list.add(new ItemStack(id, 1, i));

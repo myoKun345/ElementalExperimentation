@@ -31,7 +31,7 @@ public class GUIGrinder extends GuiContainer {
         ySize = 183;
     }
     
-    private static final ResourceLocation texture = new ResourceLocation(Reference.MOD_ID, "textures/gui/grinder.png");
+    private static final ResourceLocation texture = new ResourceLocation(Reference.MOD_ID.toLowerCase(), "textures/gui/grinder.png");
     
     @Override
     protected void drawGuiContainerBackgroundLayer(float f, int i, int j) {
