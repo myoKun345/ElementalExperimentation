@@ -7,7 +7,9 @@ import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Icon;
@@ -105,6 +107,34 @@ public class BlockGrinder extends BlockContainer {
         }
         
         return true;
+    }
+    
+    @Override
+    public void breakBlock(World world, int x, int y, int z, int id, int meta) {
+        TileEntity entity = world.getBlockTileEntity(x, y, z);
+        if (entity != null && entity instanceof IInventory) {
+            IInventory inventory = (IInventory)entity;
+            
+            for (int i = 0; i < inventory.getSizeInventory(); i++) {
+                ItemStack stack = inventory.getStackInSlotOnClosing(i);
+                
+                if (stack != null) {
+                    float spawnX = x + world.rand.nextFloat();
+                    float spawnY = y + world.rand.nextFloat();
+                    float spawnZ = z + world.rand.nextFloat();
+                    
+                    EntityItem droppedItem = new EntityItem(world, spawnX, spawnY, spawnZ, stack);
+                    
+                    droppedItem.motionX = world.rand.nextFloat() * 0.05F;
+                    droppedItem.motionY = world.rand.nextFloat() * 0.05F;
+                    droppedItem.motionZ = world.rand.nextFloat() * 0.05F;
+                    
+                    world.spawnEntityInWorld(droppedItem);
+                }
+            }
+        }
+        
+        super.breakBlock(world, x, y, z, id, meta);
     }
     
     @Override

@@ -4,6 +4,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
 
 /**
@@ -35,14 +36,40 @@ public class TileEntityGrinder extends TileEntity implements ISidedInventory {
         super.writeToNBT(compound);
         compound.setShort("GrindTime", (short)this.grinderGrindTime);
         compound.setShort("GroundTime", (short)this.grinderGroundTime);
+        
+        NBTTagList items = new NBTTagList();
+        
+        for (int i = 0; i < this.grinderItemStacks.length; ++i)
+        {
+            if (this.grinderItemStacks[i] != null)
+            {
+                NBTTagCompound compoundStacks = new NBTTagCompound();
+                compoundStacks.setByte("Slot", (byte)i);
+                this.grinderItemStacks[i].writeToNBT(compoundStacks);
+                items.appendTag(compoundStacks);
+            }
+        }
+        
+        compound.setTag("Items", items);
     }
     
     @Override
     public void readFromNBT(NBTTagCompound compound) {
         super.readFromNBT(compound);
-        grinderGrindTime = compound.getShort("GrindTime");
-        grinderGroundTime = compound.getShort("GroundTime");
+        NBTTagList items = compound.getTagList("Items");
+        this.grinderGrindTime = compound.getShort("GrindTime");
+        this.grinderGroundTime = compound.getShort("GroundTime");
         
+        for (int i = 0; i < items.tagCount(); ++i)
+        {
+            NBTTagCompound compoundStacks = (NBTTagCompound)items.tagAt(i);
+            byte b0 = compoundStacks.getByte("Slot");
+
+            if (b0 >= 0 && b0 < this.grinderItemStacks.length)
+            {
+                this.grinderItemStacks[b0] = ItemStack.loadItemStackFromNBT(compoundStacks);
+            }
+        }
     }
     
     @Override
@@ -94,7 +121,7 @@ public class TileEntityGrinder extends TileEntity implements ISidedInventory {
     
     @Override
     public int getInventoryStackLimit() {
-        return 0;
+        return 64;
     }
     
     @Override
