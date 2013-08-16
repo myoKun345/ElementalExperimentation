@@ -12,7 +12,7 @@ public class Reference {
     /* Generic Mod Constants */
     public static final String MOD_ID = "ElEx";
     public static final String MOD_NAME = "Elemental Experimentation";
-    public static final String VERSION = "0.0.01.001";
+    public static final String VERSION = "0.0.01.$BUILD_NUMBER";
     public static final String CHANNEL = "elex";
     public static final int SHIFTED_ID_RANGE_CORRECTION = 256;
 }
