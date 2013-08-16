@@ -7,6 +7,7 @@ import net.minecraft.util.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
 
+import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import elex.inventory.ContainerGrinder;
@@ -40,5 +41,9 @@ public class GUIGrinder extends GuiContainer {
         Minecraft.getMinecraft().func_110434_K().func_110577_a(texture);
         drawTexturedModalRect(guiLeft, guiTop, 0, 0, xSize, ySize);
     }
-
+    
+    @Override
+    protected void drawGuiContainerForegroundLayer(int x, int y) {
+        fontRenderer.drawString(LanguageRegistry.instance().getStringLocalization("container.grinder.name"), 8, 6, 0x404040);
+    }
 }

@@ -4,6 +4,9 @@
 	<comment>English (en_US) Localization File</comment>
 	<entry key="itemGroup.ElEx">Elemental Experimentation</entry>
 	
+	<entry key="container.centrifuge.name">Centrifuge</entry>
+	<entry key="container.grinder.name">Grinder</entry>
+	
 	<entry key="tile.centrifuge.name">Centrifuge</entry>
 	<entry key="tile.grinder.name">Grinder</entry>
 	

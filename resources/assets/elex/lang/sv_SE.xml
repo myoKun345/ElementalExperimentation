@@ -4,6 +4,9 @@
 	<comment>Svenska (sv_SE) Localization File</comment>
 	<entry key="itemGroup.ElEx">Elemental Experimentation</entry>
 	
+	<entry key="container.centrifuge.name">Centrifug</entry>
+	<entry key="container.grinder.name">Slipare</entry>
+	
 	<entry key="tile.centrifuge.name">Centrifug</entry>
 	<entry key="tile.grinder.name">Slipare</entry>
 	
