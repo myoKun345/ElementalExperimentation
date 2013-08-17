@@ -55,9 +55,9 @@ public class ConfigurationHandler {
         ItemIds.METAL_NUGGET = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.METAL_NUGGET_KEY, ItemIds.METAL_NUGGET_DEFAULT).getInt();
         ItemIds.ALLOY_NUGGET = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.ALLOY_NUGGET_KEY, ItemIds.ALLOY_NUGGET_DEFAULT).getInt();
         ItemIds.IRON_NUGGET = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.IRON_NUGGET_KEY, ItemIds.IRON_NUGGET_DEFAULT).getInt();
+        ItemIds.RESEARCH_BINDER = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.RESEARCH_BINDER_KEY, ItemIds.RESEARCH_BINDER_DEFAULT).getInt();
         
-        LogHelper.log(Level.OFF, Element.elementList[5].getName());
-        LogHelper.log(Level.INFO, "Desu " + ItemIds.ELEX_INGOT_REAL_UNLOCALIZED_NAMES.size());
+        Element.initialize();
         
         config.save();
     }

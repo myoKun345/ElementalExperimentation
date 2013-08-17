@@ -76,7 +76,6 @@ public class ItemMercuryInjector extends Item {
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer player, List info, boolean useExtraInformation) {
         milliBuckets = (125 - stack.getItemDamage()) * 8;
-        int zero = 0;
         
         if (0 == stack.getItemDamage()) {
             info.add("1000 mB " + LanguageRegistry.instance().getStringLocalization("string.millibuckets.remaining"));

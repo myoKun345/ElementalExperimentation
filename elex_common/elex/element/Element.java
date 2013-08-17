@@ -491,6 +491,11 @@ public class Element {
              1800F, 2150F, "Fm", false, true,
              true, false, "solid", "Fermium"));
     
+    // method that does nothing that is required because Java is weird and won't run this class otherwise
+    public static void initialize() {
+        
+    }
+    
     public Element(int id, float melt, float boil, String sym, boolean vanillaIngot, boolean metal, boolean rad, boolean hasNative, String phase, String name)
     {
         this.elementID = id;

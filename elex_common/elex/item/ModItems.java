@@ -17,6 +17,7 @@ public class ModItems {
     public static Item itemMetalNugget;
     public static Item itemAlloyNugget;
     public static Item itemIronNugget;
+    public static Item itemResearchBinder;
     
     public static void init() {
         itemElExOre = new ItemElExOre(ItemIds.ELEX_ORE);
@@ -32,5 +33,6 @@ public class ModItems {
         itemMetalNugget = new ItemElExNugget(ItemIds.METAL_NUGGET, 0);
         itemAlloyNugget = new ItemElExNugget(ItemIds.ALLOY_NUGGET, 1);
         itemIronNugget = new ItemElExNugget(ItemIds.IRON_NUGGET, 2);
+        itemResearchBinder = new ItemResearchBinder(ItemIds.RESEARCH_BINDER);
     }
 }
