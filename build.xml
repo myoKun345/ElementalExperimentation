@@ -26,8 +26,6 @@
 
 		</copy>
 
-		<jar jarfile="jars/ElementalExperimentation-0.0.01.${build.build_number}.jar" dir="../../jobs/ElementalExperimentation/toJar"/>
-
 	</target>
 
 </project>

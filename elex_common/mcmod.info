@@ -3,7 +3,7 @@
   "modid": "ElEx",
   "name": "Elemental Experimentation",
   "description": "All of the elements recreated in Minecraft.",
-  "version": "0.0.01.$BUILD_NUMBER",
+  "version": "0.0.01.ANT:BUILD",
   "url": "www.github.com/myoKun345/ElementalExperimentation/",
   "updateUrl": "",
   "authorList": [
