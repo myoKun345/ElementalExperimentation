@@ -4,7 +4,7 @@
 
 	<target name="build">
 	
-	  <propertyfile file="build.properties">
+	  <propertyfile file="../../jobs/ElementalExperimentation/build.properties">
 			<entry key="build_number" type="int" operation="+" default="1"/>
 		</propertyfile>
 		
