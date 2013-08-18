@@ -41,7 +41,7 @@
 	<entry key="tile.oreXenotime.name">Xenotimmalm</entry>
 	<entry key="tile.oreBaddeleyite.name">Baddeleyitmalm</entry>
 	<entry key="tile.oreColumbite.name">Kolumbitmalm</entry>
-	<entry key="tile.orePezzotaite.name">Pezzotaitmalm</entry>
+	<entry key="tile.orePezzotaite.name">Pezzottaitmalm</entry>
 	<entry key="tile.oreBenitoite.name">Benitoitmalm</entry>
 	
 	<entry key="tile.oreCopper.name">Kopparmalm</entry>
@@ -193,7 +193,7 @@
 	<entry key="item.xenotime.name">Xenotim</entry>
 	<entry key="item.baddeleyite.name">Baddeleyit</entry>
 	<entry key="item.columbite.name">Kolumbit</entry>
-	<entry key="item.pezzottaite.name">Pezzotait</entry>
+	<entry key="item.pezzottaite.name">Pezzottait</entry>
 	<entry key="item.benitoite.name">Benitoit</entry>
 	
 	<entry key="item.dustAquamarine.name">Akvamarindamm</entry>
@@ -227,7 +227,7 @@
 	<entry key="item.dustXenotime.name">Xenotimdamm</entry>
 	<entry key="item.dustBaddeleyite.name">Baddeleyitdamm</entry>
 	<entry key="item.dustColumbite.name">Kolumbitdamm</entry>
-	<entry key="item.dustPezzottaite.name">Pezzotaitdamm</entry>
+	<entry key="item.dustPezzottaite.name">Pezzottaitdamm</entry>
 	<entry key="item.dustBenitoite.name">Benitoitdamm</entry>
 	
 	<entry key="item.dustLithium.name">Litiumdamm</entry>

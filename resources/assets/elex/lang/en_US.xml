@@ -41,7 +41,7 @@
 	<entry key="tile.oreXenotime.name">Xenotime Ore</entry>
 	<entry key="tile.oreBaddeleyite.name">Baddeleyite Ore</entry>
 	<entry key="tile.oreColumbite.name">Columbite Ore</entry>
-	<entry key="tile.orePezzottaite.name">Pezzotaite Ore</entry>
+	<entry key="tile.orePezzottaite.name">Pezzottaite Ore</entry>
 	<entry key="tile.oreBenitoite.name">Benitoite Ore</entry>
 	
 	<entry key="tile.oreCopper.name">Copper Ore</entry>
@@ -187,13 +187,13 @@
 	<entry key="item.sphalerite.name">Sphalerite</entry>
 	<entry key="item.gallite.name">Gallite</entry>
 	<entry key="item.germanite.name">Germanite</entry>
-	<entry key="item.marthozite.name">Martozite</entry>
+	<entry key="item.marthozite.name">Marthozite</entry>
 	<entry key="item.bromite.name">Bromite</entry>
 	<entry key="item.celestine.name">Celestine</entry>
 	<entry key="item.xenotime.name">Xenotime</entry>
 	<entry key="item.baddeleyite.name">Baddeleyite</entry>
 	<entry key="item.columbite.name">Columbite</entry>
-	<entry key="item.pezzottaite.name">Pezzotaite</entry>
+	<entry key="item.pezzottaite.name">Pezzottaite</entry>
 	<entry key="item.benitoite.name">Benitoite</entry>
 	
 	<entry key="item.dustAquamarine.name">Aquamarine Dust</entry>
@@ -221,13 +221,13 @@
 	<entry key="item.dustSphalerite.name">Sphalerite Dust</entry>
 	<entry key="item.dustGallite.name">Gallite Dust</entry>
 	<entry key="item.dustGermanite.name">Germanite Dust</entry>
-	<entry key="item.dustMarthozite.name">Martozite Dust</entry>
+	<entry key="item.dustMarthozite.name">Marthozite Dust</entry>
 	<entry key="item.dustBromite.name">Bromite Dust</entry>
 	<entry key="item.dustCelestine.name">Celestine Dust</entry>
 	<entry key="item.dustXenotime.name">Xenotime Dust</entry>
 	<entry key="item.dustBaddeleyite.name">Baddeleyite Dust</entry>
 	<entry key="item.dustColumbite.name">Columbite Dust</entry>
-	<entry key="item.dustPezzottaite.name">Pezzotaite Dust</entry>
+	<entry key="item.dustPezzottaite.name">Pezzottaite Dust</entry>
 	<entry key="item.dustBenitoite.name">Benitoite Dust</entry>
 	
 	<entry key="item.dustLithium.name">Lithium Dust</entry>
