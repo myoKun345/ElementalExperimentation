@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<project name="ElementalExperimentation" default="build">
+
+	<target name="build">
+	
+	  <propertyfile file="build.properties">
+			<entry key="build_number" type="int" operation="+" default="1"/>
+		</propertyfile>
+		
+		<replace token="ANT:BUILD" value="${build.build_number}" />
+
+		<exec executable="../Forge/forge/mcp/recompile.sh" dir="mcp" resolveexecutable="true" osfamily="unix"></exec>
+
+		<exec executable="../Forge/forge/mcp/reobfuscate_srg.sh" dir="mcp" resolveexecutable="true" osfamily="unix"></exec>
+		
+		<delete dir="../../jobs/ElementalExperimentation/toJar" />
+		<mkdir dir="../../jobs/ElementalExperimentation/toJar" />
+		
+		<delete dir="jars" />
+		<mkdir dir="jars" />
+
+		<copy todir="../../jobs/ElementalExperimentation/toJar/elex">
+
+			<fileset dir="../Forge/forge/mcp/reobf/minecraft/elex" />
+
+		</copy>
+
+		<jar jarfile="jars/ElementalExperimentation-0.0.01.${build.build_number}.jar" dir="../../jobs/ElementalExperimentation/toJar"/>
+
+	</target>
+
+</project>
