@@ -2,6 +2,7 @@ package elex.block;
 
 import java.util.List;
 import java.util.Random;
+import java.util.logging.Level;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -15,6 +16,7 @@ import elex.ElementalExperimentation;
 import elex.lib.BlockIds;
 import elex.lib.ItemIds;
 import elex.lib.Reference;
+import elex.log.LogHelper;
 
 /**
  * Elemental Experimentation
@@ -104,20 +106,18 @@ public class BlockElExItemOre extends Block {
     }
     
     @Override
-    public int quantityDroppedWithBonus(int bonus, Random par2Random)
-    {
-        if (bonus > 0 && blockID != this.idDropped(0, par2Random, bonus))
-        {
-            int rnd = par2Random.nextInt(bonus + 2) - 1;
+    public int quantityDroppedWithBonus(int bonus, Random par2Random) {
+            int rnd = par2Random.nextInt(bonus) - 1;
 
             if (rnd < 0) {
                 rnd = 0;
             }
-
-            return (1 + par2Random.nextInt(5)) * (rnd + 1);
-        }
-        else
-            return (1 + par2Random.nextInt(5));
+            
+            if (rnd > 8) {
+                rnd = 8;
+            }
+            
+            return rnd;
     }
     
     @Override
