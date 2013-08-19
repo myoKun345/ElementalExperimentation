@@ -491,6 +491,74 @@ public class Element {
              1800F, 2150F, "Fm", false, true,
              true, false, "solid", "Fermium"));
     
+    public static Element mendelevium = (new Element(100, 
+             1100F, 1450F, "Md", false, true, 
+             true, false, "solid", "Mendelevium"));
+    
+    public static Element nobelium = (new Element(101,
+             1100F, 1450F, "No", false, true,
+             true, false, "solid", "Nobelium"));
+    
+    public static Element lawrencium = (new Element(102,
+            1100F, 1450F, "Lr", false, true,
+            true, false, "solid", "Lawrencium"));
+    
+    public static Element rutherfordium = (new Element(103,
+            2400F, 5800F, "Rf", false, true,
+            true, false, "solid", "Rutherfordium"));
+    
+    public static Element dubnium = (new Element(104,
+            0F, 0F, "Db", false, true,
+            true, false, "solid", "Dubnium"));
+    
+    public static Element seaborgium = (new Element(105,
+            0F, 0F, "Sg", false, true,
+            true, false, "solid", "Seaborgium"));
+    
+    public static Element bohrium = (new Element(106,
+            0F, 0F, "Bh", false, true,
+            true, false, "solid", "Bohrium"));
+    
+    public static Element hassium = (new Element(107,
+            0F, 0F, "Hs", false, true,
+            true, false, "solid", "Hassium"));
+    
+    public static Element meitnerium = (new Element(108,
+            0F, 0F, "Mt", false, true,
+            true, false, "solid", "Meitnerium"));
+    
+    public static Element darmstadtium = (new Element(109,
+            0F, 0F, "Ds", false, true,
+            true, false, "solid", "Darmstadtium"));
+    
+    public static Element roentgenium = (new Element(110,
+            0F, 0F, "Rg", false, true,
+            true, false, "solid", "Roentgenium"));
+    
+    public static Element copernicium = (new Element(111,
+            0F, 0F, "Cn", false, true,
+            true, false, "solid", "Copernicium"));
+    
+    public static Element myobium = (new Element(112,
+            3200F, 5800F, "Mb", false, true,
+            true, false, "solid", "Myobium"));
+    
+    public static Element pyrodaemium = (new Element(113,
+            3100F, 5600F, "Py", false, true,
+            true, false, "solid", "Pyrodaemium"));
+    
+    public static Element galaisium = (new Element(114,
+            3000F, 5200F, "Gl", false, true,
+            true, false, "solid", "Galaisium"));
+    
+    public static Element aottium = (new Element(115,
+            2800F, 4800F, "Ao", false, true,
+            true, false, "solid", "Aottium"));
+    
+    public static Element pascebestialum = (new Element(116,
+            2700F, 4600F, "Ftb", false, true,
+            true, false, "solid", "Pascebestialum"));
+    
     // method that does nothing that is required because Java is weird and won't run this class otherwise
     public static void initialize() {
         
