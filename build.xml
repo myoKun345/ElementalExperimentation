@@ -9,7 +9,7 @@
 		</propertyfile>
 		
 		<replace file="elex_common/mcmod.info" token="ANT:BUILD" value="${build.build_number}" />
-		<replace file="elex_common/lib/Reference.java" token="ANT:BUILD" value="${build.build_number}" />
+		<replace file="elex_common/elex/lib/Reference.java" token="ANT:BUILD" value="${build.build_number}" />
 
 		<exec executable="../Forge/forge/mcp/recompile.sh" dir="../Forge/forge/mcp" resolveexecutable="true" osfamily="unix"></exec>
 
