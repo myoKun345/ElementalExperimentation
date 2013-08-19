@@ -1,6 +1,7 @@
 package elex.item;
 
 import net.minecraft.item.Item;
+import elex.ElementalExperimentation;
 import elex.lib.ItemIds;
 
 public class ModItems {
@@ -18,6 +19,10 @@ public class ModItems {
     public static Item itemAlloyNugget;
     public static Item itemIronNugget;
     public static Item itemResearchBinder;
+    public static Item itemCarbonHelmet;
+    public static Item itemCarbonPlate;
+    public static Item itemCarbonPants;
+    public static Item itemCarbonBoots;
     
     public static void init() {
         itemElExOre = new ItemElExOre(ItemIds.ELEX_ORE);
@@ -34,5 +39,9 @@ public class ModItems {
         itemAlloyNugget = new ItemElExNugget(ItemIds.ALLOY_NUGGET, 1);
         itemIronNugget = new ItemElExNugget(ItemIds.IRON_NUGGET, 2);
         itemResearchBinder = new ItemResearchBinder(ItemIds.RESEARCH_BINDER);
+        itemCarbonHelmet = new ItemElExArmor(ItemIds.ELEX_ARMOR[0], ElementalExperimentation.carbonArmorMat, 0, 0, "carbon");
+        itemCarbonPlate = new ItemElExArmor(ItemIds.ELEX_ARMOR[1], ElementalExperimentation.carbonArmorMat, 0, 1, "carbon");
+        itemCarbonPants = new ItemElExArmor(ItemIds.ELEX_ARMOR[2], ElementalExperimentation.carbonArmorMat, 1, 2, "carbon");
+        itemCarbonBoots = new ItemElExArmor(ItemIds.ELEX_ARMOR[3], ElementalExperimentation.carbonArmorMat, 0, 3, "carbon");
     }
 }

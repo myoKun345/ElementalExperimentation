@@ -3,6 +3,8 @@ package elex;
 import java.io.File;
 
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.EnumArmorMaterial;
+import net.minecraftforge.common.EnumHelper;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -51,6 +53,8 @@ public class ElementalExperimentation {
     
     public static CreativeTabs elexTab = new CreativeTabElEx(CreativeTabs.getNextID(), Reference.MOD_ID);
     
+    public static EnumArmorMaterial carbonArmorMat = EnumHelper.addArmorMaterial("CARBON", 16000, new int[]{7, 12, 9, 7}, 5);
+    
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         /* Log Helper */
@@ -74,6 +78,8 @@ public class ElementalExperimentation {
         
         /* Biome Init */
         Biomes.init();
+        
+        // carbonArmorMat.customCraftingMaterial
     }
     
     @EventHandler

@@ -56,6 +56,10 @@ public class ConfigurationHandler {
         ItemIds.ALLOY_NUGGET = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.ALLOY_NUGGET_KEY, ItemIds.ALLOY_NUGGET_DEFAULT).getInt();
         ItemIds.IRON_NUGGET = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.IRON_NUGGET_KEY, ItemIds.IRON_NUGGET_DEFAULT).getInt();
         ItemIds.RESEARCH_BINDER = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.RESEARCH_BINDER_KEY, ItemIds.RESEARCH_BINDER_DEFAULT).getInt();
+        ItemIds.ELEX_ARMOR[0] = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.ELEX_ARMOR_KEYS[0], ItemIds.ELEX_ARMOR_DEFAULT[0]).getInt();
+        ItemIds.ELEX_ARMOR[1] = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.ELEX_ARMOR_KEYS[1], ItemIds.ELEX_ARMOR_DEFAULT[1]).getInt();
+        ItemIds.ELEX_ARMOR[2] = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.ELEX_ARMOR_KEYS[2], ItemIds.ELEX_ARMOR_DEFAULT[2]).getInt();
+        ItemIds.ELEX_ARMOR[3] = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.ELEX_ARMOR_KEYS[3], ItemIds.ELEX_ARMOR_DEFAULT[3]).getInt();
         
         Element.initialize();
         

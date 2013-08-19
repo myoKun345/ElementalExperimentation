@@ -21,6 +21,8 @@ public class ItemIds {
     public static final int ALLOY_NUGGET_DEFAULT = 16242;
     public static final int IRON_NUGGET_DEFAULT = 16243;
     public static final int RESEARCH_BINDER_DEFAULT = 16260;
+    public static final int[] ELEX_ARMOR_DEFAULT = 
+        { 16280, 16281, 16282, 16283 };
     
     /* Current Item IDs */
     public static int ELEX_ORE;
@@ -37,6 +39,7 @@ public class ItemIds {
     public static int ALLOY_NUGGET;
     public static int IRON_NUGGET;
     public static int RESEARCH_BINDER;
+    public static int[] ELEX_ARMOR = new int[4];
     
     /* Item Config Keys */
     public static final String ELEX_ORE_KEY = "ITEMORES";
@@ -53,6 +56,8 @@ public class ItemIds {
     public static final String ALLOY_NUGGET_KEY = "ALLOYNUGGETS";
     public static final String IRON_NUGGET_KEY = "IronNuggetID";
     public static final String RESEARCH_BINDER_KEY = "ResearchBinderID";
+    public static final String[] ELEX_ARMOR_KEYS = 
+        { "CarbonHelmetID", "CarbonChestplateID", "CarbonPantsID", "CarbonBootsID" };
     
     /* Item Unlocalized Names */
     public static final String ELEX_ORE_UNLOCALIZED_NAME = "itemElexOre";
@@ -101,6 +106,8 @@ public class ItemIds {
         "nuggetElectrum", "nuggetScandinium", "nuggetOsmiridium" };
     public static final String IRON_NUGGET_UNLOCALIZED_NAME = "nuggetIron";
     public static final String RESEARCH_BINDER_UNLOCALIZED_NAME = "researchBinder";
+    public static final String[] ELEX_ARMOR_REAL_UNLOCALIZED_NAMES = 
+        { "helmetCarbon", "plateCarbon", "pantsCarbon", "bootsCarbon" }; 
     
     /* Molecule Strings */
     public static final String[] COMPOUND_DUST_MOLECULE_STRINGS = 
