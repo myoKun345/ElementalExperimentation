@@ -8,7 +8,7 @@
 			<entry key="build_number" type="int" operation="+" default="1"/>
 		</propertyfile>
 		
-		<property name="build_number" file="../../jobs/ElementalExperimentation/build.properties" refid="build_number" />
+		<property name="build_number" file="../../jobs/ElementalExperimentation/build.properties" refid="${build_number}" />
 		
 		<replace file="elex_common/mcmod.info" token="@@BUILD@@" value="${build_number}" />
 		<replace file="elex_common/elex/lib/Reference.java" token="@@BUILD@@" value="${build_number}" />
