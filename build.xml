@@ -3,24 +3,44 @@
 <project name="ElementalExperimentation" default="build">
 
 	<target name="build">
+		<delete dir="../Forge/forge/mcp/src/minecraft/elex" />
+		<mkdir dir="../Forge/forge/mcp/src/minecraft/elex" />
+		
+		<delete dir="../../jobs/ElementalExperimentation/toJar" />
+		<mkdir dir="../../jobs/ElementalExperimentation/toJar" />
+		
+		<delete dir="jars" />
+		<mkdir dir="jars" />
 		
 		<replace file="elex_common/mcmod.info" token="@@BUILD@@" value="${build_number}" />
 		<replace file="elex_common/elex/lib/Reference.java" token="@@BUILD@@" value="${build_number}" />
-		<echo>${build.build_number}</echo>
 		<echo>${build_number}</echo>
+		
+		<copy todir="../Forge/forge/mcp/src/minecraft">
+			
+			<fileset dir="elex_common/" />
+			
+		</copy>
+		
+		<copy todir="../../jobs/ElementalExperimentation/toJar" file="elex_common/mcmod.info" />
+		
+		<copy todir="../../jobs/ElementalExperimentation/toJar">
+			
+			<fileset dir="resources/" />
+			
+		</copy>
 
 		<exec executable="../Forge/forge/mcp/recompile.sh" dir="../Forge/forge/mcp" resolveexecutable="true" osfamily="unix"></exec>
 
 		<exec executable="../Forge/forge/mcp/reobfuscate_srg.sh" dir="../Forge/forge/mcp" resolveexecutable="true" osfamily="unix"></exec>
-		
-		<delete dir="jars" />
-		<mkdir dir="jars" />
 
 		<copy todir="../../jobs/ElementalExperimentation/toJar/elex">
 
 			<fileset dir="../Forge/forge/mcp/reobf/minecraft/elex" />
 
 		</copy>
+		
+		<jar destfile="jars/ElementalExperimentation-0.0.01.${build_number}.jar" dir="../../jobs/ElementalExperimentation/toJar" />
 
 	</target>
 
