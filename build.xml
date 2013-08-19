@@ -3,13 +3,9 @@
 <project name="ElementalExperimentation" default="build">
 
 	<target name="build">
-	
-		<propertyfile file="../../jobs/ElementalExperimentation/build.properties">
-			<entry key="build_number" type="int" operation="+" default="1"/>
-		</propertyfile>
 		
-		<replace file="elex_common/mcmod.info" token="@@BUILD@@" value="${build.build_number}" />
-		<replace file="elex_common/elex/lib/Reference.java" token="@@BUILD@@" value="${build.build_number}" />
+		<replace file="elex_common/mcmod.info" token="@@BUILD@@" value="${build_number}" />
+		<replace file="elex_common/elex/lib/Reference.java" token="@@BUILD@@" value="${build_number}" />
 		<echo>${build.build_number}</echo>
 		<echo>${build_number}</echo>
 
