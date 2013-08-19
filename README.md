@@ -9,4 +9,4 @@ This mod will recreate the entire periodic table of elements in Minecraft and al
 Building it yourself
 ============
 
-You can *try* to build it yourself with the ant script, but you would probably have to extensively change your workspace and/or the build script to fit. I claim **NO RESPONSIBILITY** for any potential errors or quirks that may arise. There really isn't that much of a need for you to build it yourself because the provided link up above gets them straight from Jenkins.
+You can *try* to build it yourself with the ant script, but you would probably have to extensively change your workspace and/or the build script to fit. I claim **NO RESPONSIBILITY** for any potential errors or quirks that may arise. There really isn't that much of a need for you to build it yourself because the provided [link](http://mods.austin-jones.info/builds/elex/) up above gets them straight from Jenkins.
