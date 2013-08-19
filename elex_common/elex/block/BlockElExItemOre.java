@@ -98,6 +98,29 @@ public class BlockElExItemOre extends Block {
     }
     
     @Override
+    public int quantityDropped(int meta, int fortune, Random random)
+    {
+        return quantityDroppedWithBonus(fortune, random);
+    }
+    
+    @Override
+    public int quantityDroppedWithBonus(int bonus, Random par2Random)
+    {
+        if (bonus > 0 && blockID != this.idDropped(0, par2Random, bonus))
+        {
+            int rnd = par2Random.nextInt(bonus + 2) - 1;
+
+            if (rnd < 0) {
+                rnd = 0;
+            }
+
+            return (1 + par2Random.nextInt(5)) * (rnd + 1);
+        }
+        else
+            return (1 + par2Random.nextInt(5));
+    }
+    
+    @Override
     public int damageDropped(int meta) {
         if (blockListNumber == 0) {
             return meta;
