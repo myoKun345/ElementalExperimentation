@@ -186,6 +186,11 @@ public class WorldGenSaltLakes extends WorldGenLakes {
                                         world.setBlock(x + i1, y + i2, z + j2,
                                                 BlockIds.ITEM_ELEX_ORE, 7, 2);
                                     }
+                                    else if (random
+                                            .nextInt(ConfigurationSettings.EVAPORITE_RARITY) == 0) {
+                                        world.setBlock(x + i1, y + i2, z + j2,
+                                                BlockIds.ITEM_ELEX_ORE, 10, 2);
+                                    }
                                 }
                             }
                         }
