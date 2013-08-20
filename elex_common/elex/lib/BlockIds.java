@@ -15,11 +15,12 @@ public class BlockIds {
     public static final int BLOCK_ELEX_METAL_STORAGE_3_DEFAULT = 3676;
     public static final int BLOCK_ELEX_METAL_STORAGE_4_DEFAULT = 3677;
     public static final int BLOCK_ELEX_METAL_STORAGE_5_DEFAULT = 3678;
-    public static final int BLOCK_MACHINE_CASE_DEFAULT = 3679;
-    public static final int ITEM_ELEX_ORE_DEFAULT = 3680;
-    public static final int ITEM_ELEX_ORE_2_DEFAULT = 3681;
-    public static final int ITEM_ELEX_ORE_3_DEFAULT = 3682;
-    public static final int BLOCK_ALLOY_STORAGE_DEFAULT = 3683;
+    public static final int BLOCK_ELEX_METAL_STORAGE_6_DEFAULT = 3679;
+    public static final int BLOCK_ALLOY_STORAGE_DEFAULT = 3680;
+    public static final int BLOCK_MACHINE_CASE_DEFAULT = 3681;
+    public static final int ITEM_ELEX_ORE_DEFAULT = 3682;
+    public static final int ITEM_ELEX_ORE_2_DEFAULT = 3683;
+    public static final int ITEM_ELEX_ORE_3_DEFAULT = 3684;
     public static final int CENTRIFUGE_DEFAULT = 3750;
     public static final int GRINDER_DEFAULT = 3751;
     
@@ -35,6 +36,7 @@ public class BlockIds {
     public static int BLOCK_ELEX_METAL_STORAGE_3;
     public static int BLOCK_ELEX_METAL_STORAGE_4;
     public static int BLOCK_ELEX_METAL_STORAGE_5;
+    public static int BLOCK_ELEX_METAL_STORAGE_6;
     public static int BLOCK_MACHINE_CASE;
     public static int BLOCK_ALLOY_STORAGE;
     public static int CENTRIFUGE;
@@ -52,6 +54,7 @@ public class BlockIds {
     public static final String BLOCK_ELEX_METAL_STORAGE_3_KEY = "METALSTORAGEBLOCKS3";
     public static final String BLOCK_ELEX_METAL_STORAGE_4_KEY = "METALSTORAGEBLOCKS4";
     public static final String BLOCK_ELEX_METAL_STORAGE_5_KEY = "METALSTORAGEBLOCKS5";
+    public static final String BLOCK_ELEX_METAL_STORAGE_6_KEY = "METALSTORAGEBLOCKS6";
     public static final String BLOCK_MACHINE_CASE_KEY = "MACHINECASES";
     public static final String BLOCK_ALLOY_STORAGE_KEY = "ALLOYSTORAGEBLOCKS";
     public static final String CENTRIFUGE_KEY = "CentrifugeID";
@@ -99,6 +102,7 @@ public class BlockIds {
     public static final LinkedList<String> BLOCK_ELEX_METAL_STORAGE_3_REAL_UNLOCALIZED_NAMES = new LinkedList<String>();
     public static final LinkedList<String> BLOCK_ELEX_METAL_STORAGE_4_REAL_UNLOCALIZED_NAMES = new LinkedList<String>();
     public static final LinkedList<String> BLOCK_ELEX_METAL_STORAGE_5_REAL_UNLOCALIZED_NAMES = new LinkedList<String>();
+    public static final LinkedList<String> BLOCK_ELEX_METAL_STORAGE_6_REAL_UNLOCALIZED_NAMES = new LinkedList<String>();
     public static final String[] BLOCK_MACHINE_CASE_REAL_UNLOCALIZED_NAMES = 
         { "caseCarbonSteel", "caseScandinium", "caseOsmiridium",
         "caseLead" };

@@ -508,35 +508,35 @@ public class Element {
             true, false, "solid", "Rutherfordium"));
     
     public static Element dubnium = (new Element(104,
-            0F, 0F, "Db", false, true,
+            2425F, 5800F, "Db", false, true,
             true, false, "solid", "Dubnium"));
     
     public static Element seaborgium = (new Element(105,
-            0F, 0F, "Sg", false, true,
+            2425F, 5825F, "Sg", false, true,
             true, false, "solid", "Seaborgium"));
     
     public static Element bohrium = (new Element(106,
-            0F, 0F, "Bh", false, true,
+            2475F, 5825F, "Bh", false, true,
             true, false, "solid", "Bohrium"));
     
     public static Element hassium = (new Element(107,
-            0F, 0F, "Hs", false, true,
+            2525F, 5800F, "Hs", false, true,
             true, false, "solid", "Hassium"));
     
     public static Element meitnerium = (new Element(108,
-            0F, 0F, "Mt", false, true,
+            2600F, 5700F, "Mt", false, true,
             true, false, "solid", "Meitnerium"));
     
     public static Element darmstadtium = (new Element(109,
-            0F, 0F, "Ds", false, true,
+            2800F, 5700F, "Ds", false, true,
             true, false, "solid", "Darmstadtium"));
     
     public static Element roentgenium = (new Element(110,
-            0F, 0F, "Rg", false, true,
+            3000F, 5700F, "Rg", false, true,
             true, false, "solid", "Roentgenium"));
     
     public static Element copernicium = (new Element(111,
-            0F, 0F, "Cn", false, true,
+            3100F, 5800F, "Cn", false, true,
             true, false, "solid", "Copernicium"));
     
     public static Element myobium = (new Element(112,
@@ -559,6 +559,10 @@ public class Element {
             2700F, 4600F, "Ftb", false, true,
             true, false, "solid", "Pascebestialum"));
     
+    public static Element nederon = (new Element(117,
+            202F, 220F, "Nr", false, false,
+            true, false, "gas", "Nederon"));
+    
     // method that does nothing that is required because Java is weird and won't run this class otherwise
     public static void initialize() {
         
@@ -580,7 +584,7 @@ public class Element {
         
         elementList[id] = this;
         addStuff(id);
-        if (id == 99) {
+        if (id == 117) {
             LogHelper.log(Level.INFO, "Elements finished loading.");
         }
     }
@@ -673,6 +677,9 @@ public class Element {
             }else
             if (BlockIds.BLOCK_ELEX_METAL_STORAGE_5_REAL_UNLOCALIZED_NAMES.size() < 16) {
                 BlockIds.BLOCK_ELEX_METAL_STORAGE_5_REAL_UNLOCALIZED_NAMES.add("block" + elementList[id].name);
+            }else
+            if (BlockIds.BLOCK_ELEX_METAL_STORAGE_6_REAL_UNLOCALIZED_NAMES.size() < 16) {
+                BlockIds.BLOCK_ELEX_METAL_STORAGE_6_REAL_UNLOCALIZED_NAMES.add("block" + elementList[id].name);
             }
             
             metalNumber++;

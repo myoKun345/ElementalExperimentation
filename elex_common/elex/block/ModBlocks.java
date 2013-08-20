@@ -18,6 +18,7 @@ public class ModBlocks {
     public static Block blockElExMetalStorage3;
     public static Block blockElExMetalStorage4;
     public static Block blockElExMetalStorage5;
+    public static Block blockElExMetalStorage6;
     public static Block blockMachineCase;
     public static Block blockAlloyStorage;
     
@@ -35,6 +36,7 @@ public class ModBlocks {
         blockElExMetalStorage3 = new BlockElExMetalStorage(BlockIds.BLOCK_ELEX_METAL_STORAGE_3, 2);
         blockElExMetalStorage4 = new BlockElExMetalStorage(BlockIds.BLOCK_ELEX_METAL_STORAGE_4, 3);
         blockElExMetalStorage5 = new BlockElExMetalStorage(BlockIds.BLOCK_ELEX_METAL_STORAGE_5, 4);
+        blockElExMetalStorage6 = new BlockElExMetalStorage(BlockIds.BLOCK_ELEX_METAL_STORAGE_6, 5);
         blockMachineCase = new BlockMachineCase(BlockIds.BLOCK_MACHINE_CASE);
         blockAlloyStorage = new BlockElExMetalStorage(BlockIds.BLOCK_ALLOY_STORAGE, 5);
         
@@ -51,6 +53,7 @@ public class ModBlocks {
         GameRegistry.registerBlock(blockElExMetalStorage3, ItemBlockElExMetalStorage3.class, "blockElExMetalStorage3");
         GameRegistry.registerBlock(blockElExMetalStorage4, ItemBlockElExMetalStorage4.class, "blockElExMetalStorage4");
         GameRegistry.registerBlock(blockElExMetalStorage5, ItemBlockElExMetalStorage5.class, "blockElExMetalStorage5");
+        GameRegistry.registerBlock(blockElExMetalStorage6, ItemBlockElExMetalStorage6.class, "blockElExMetalStorage6");
         GameRegistry.registerBlock(blockMachineCase, ItemBlockMachineCase.class, "blockMachineCase");
         GameRegistry.registerBlock(blockAlloyStorage, ItemBlockAlloyStorage.class, "blockAlloyStorage");
     }
