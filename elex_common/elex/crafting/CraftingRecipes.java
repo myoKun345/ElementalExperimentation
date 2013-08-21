@@ -5,6 +5,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
 import cpw.mods.fml.common.registry.GameRegistry;
 import elex.block.ModBlocks;
+import elex.core.Loop;
 import elex.item.ModItems;
 import elex.lib.BlockIds;
 import elex.lib.ItemIds;
@@ -65,16 +66,12 @@ public class CraftingRecipes {
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.itemResearchBinder, 1), new ItemStack(Item.leather, 1), new ItemStack(ModItems.itemIronNugget, 1), new ItemStack(Item.paper, 1), new ItemStack(Item.dyePowder, 1, 0));
         
         // Smelting Recipes for Compound Ore Dusts
-        for (int i = 0; i < ItemIds.ELEX_ORE_REAL_UNLOCALIZED_NAMES.length; i++) {
-            FurnaceRecipes.smelting().addSmelting(ItemIds.ELEX_COMPOUND_DUST, i, new ItemStack(ModItems.itemElExOre, 1, i), 5F);
-        }
+        Loop.loopFurnaceItem(ItemIds.ELEX_ORE_REAL_UNLOCALIZED_NAMES, ItemIds.ELEX_COMPOUND_DUST, ModItems.itemElExOre, 0.7F);
         // Smelting Recipes for Emerald and Nether Quartz Dust
         FurnaceRecipes.smelting().addSmelting(ItemIds.VANILLA_DUST, 0, new ItemStack(Item.netherQuartz, 1), 5F);
         FurnaceRecipes.smelting().addSmelting(ItemIds.VANILLA_DUST, 3, new ItemStack(Item.emerald, 1), 5F);
         // Smelting Recipes for Metal Dusts
-        for (int i = 0; i < ItemIds.ELEX_INGOT_REAL_UNLOCALIZED_NAMES.size(); i++) {
-            FurnaceRecipes.smelting().addSmelting(ItemIds.ELEX_METAL_DUST, i, new ItemStack(ModItems.itemElExIngot, 1, i), 5F);
-        }
+        Loop.loopFurnaceItemList(ItemIds.ELEX_INGOT_REAL_UNLOCALIZED_NAMES, ItemIds.ELEX_METAL_DUST, ModItems.itemElExIngot, 0.8F);
         // Smelting Recipes for Alloy Dusts
         for (int i = 0; i < ItemIds.ALLOY_INGOT_REAL_UNLOCALIZED_NAMES.length; i++) {
             FurnaceRecipes.smelting().addSmelting(ItemIds.ALLOY_DUST, i, new ItemStack(ModItems.itemAlloyIngot, 1, i), 5F);

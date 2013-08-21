@@ -20,31 +20,19 @@ public class OreDictionaryHandler {
     
     public static void registerOres() {
         // Pure Ingots
-        for (int i = 0; i < ItemIds.ELEX_INGOT_REAL_UNLOCALIZED_NAMES.size(); i++) {
-            OreDictionary.registerOre(ItemIds.ELEX_INGOT_REAL_UNLOCALIZED_NAMES.get(i), new ItemStack(ModItems.itemElExIngot, 1, i));
-        }
+        Loop.loopOreDictItemList(ItemIds.ELEX_INGOT_REAL_UNLOCALIZED_NAMES, ModItems.itemElExIngot);
         // Compound Ores
-        for (int i = 0; i < ItemIds.ELEX_ORE_REAL_UNLOCALIZED_NAMES.length; i++) {
-            OreDictionary.registerOre(ItemIds.ELEX_ORE_REAL_UNLOCALIZED_NAMES[i], new ItemStack(ModItems.itemElExOre, 1, i));
-        }
+        Loop.loopOreDictItem(ItemIds.ELEX_ORE_REAL_UNLOCALIZED_NAMES, ModItems.itemElExOre);
         OreDictionary.registerOre("peridot", new ItemStack(ModItems.itemElExOre, 1, 4));
         OreDictionary.registerOre("olivine", new ItemStack(ModItems.itemElExOre, 1, 4));
         // Compound Dusts
-        for (int i = 0; i < ItemIds.ELEX_COMPOUND_DUST_REAL_UNLOCALIZED_NAMES.length; i++) {
-            OreDictionary.registerOre(ItemIds.ELEX_COMPOUND_DUST_REAL_UNLOCALIZED_NAMES[i], new ItemStack(ModItems.itemElExCompoundDust, 1, i));
-        }
+        Loop.loopOreDictItem(ItemIds.ELEX_COMPOUND_DUST_REAL_UNLOCALIZED_NAMES, ModItems.itemElExCompoundDust);
         // Pure Metal Dusts
-        for (int i = 0; i < ItemIds.ELEX_METAL_DUST_REAL_UNLOCALIZED_NAMES.size(); i++) {
-            OreDictionary.registerOre(ItemIds.ELEX_METAL_DUST_REAL_UNLOCALIZED_NAMES.get(i), new ItemStack(ModItems.itemElExMetalDust, 1, i));
-        }
+        Loop.loopOreDictItemList(ItemIds.ELEX_METAL_DUST_REAL_UNLOCALIZED_NAMES, ModItems.itemElExMetalDust);
         // Vanilla Dusts
-        for (int i = 0; i < ItemIds.VANILLA_DUST_REAL_UNLOCALIZED_NAMES.length; i++) {
-            OreDictionary.registerOre(ItemIds.VANILLA_DUST_REAL_UNLOCALIZED_NAMES[i], new ItemStack(ModItems.itemVanillaDust, 1, i));
-        }
+        Loop.loopOreDictItem(ItemIds.VANILLA_DUST_REAL_UNLOCALIZED_NAMES, ModItems.itemVanillaDust);
         // Pure Non-metal Dusts
-        for (int i = 0; i < ItemIds.ELEX_PURE_NONMETAL_DUST_REAL_UNLOCALIZED_NAMES.size(); i++) {
-            OreDictionary.registerOre(ItemIds.ELEX_PURE_NONMETAL_DUST_REAL_UNLOCALIZED_NAMES.get(i), new ItemStack(ModItems.itemElExPureNonmetalDust, 1, i));
-        }
+        Loop.loopOreDictItemList(ItemIds.ELEX_PURE_NONMETAL_DUST_REAL_UNLOCALIZED_NAMES, ModItems.itemElExPureNonmetalDust);
         // Alloy Dusts
         Loop.loopOreDictItem(ItemIds.ALLOY_DUST_REAL_UNLOCALIZED_NAMES, ModItems.itemAlloyDust);
         // Alloy Ingots
@@ -58,12 +46,8 @@ public class OreDictionaryHandler {
         OreDictionary.registerOre(ItemIds.IRON_NUGGET_UNLOCALIZED_NAME, ModItems.itemIronNugget);
         
         // Native Metal Ores
-        for (int i = 0; i < BlockIds.BLOCK_ELEX_ORE_REAL_UNLOCALIZED_NAMES.length; i++) {
-            OreDictionary.registerOre(BlockIds.BLOCK_ELEX_ORE_REAL_UNLOCALIZED_NAMES[i], new ItemStack(ModBlocks.blockElExOre, 1, i));
-        }
-        for (int i = 0; i < BlockIds.BLOCK_ELEX_ORE_2_REAL_UNLOCALIZED_NAMES.length; i++) {
-            OreDictionary.registerOre(BlockIds.BLOCK_ELEX_ORE_2_REAL_UNLOCALIZED_NAMES[i], new ItemStack(ModBlocks.blockElExOre2, 1, i));
-        }
+        Loop.loopOreDictBlock(BlockIds.BLOCK_ELEX_ORE_REAL_UNLOCALIZED_NAMES, ModBlocks.blockElExOre);
+        Loop.loopOreDictBlock(BlockIds.BLOCK_ELEX_ORE_2_REAL_UNLOCALIZED_NAMES, ModBlocks.blockElExOre2);
         // Compound Ore Storage Blocks
         Loop.loopOreDictBlock(BlockIds.BLOCK_ELEX_ITEM_ORE_STORAGE_REAL_UNLOCALIZED_NAMES, ModBlocks.blockElExItemOreStorage);
         // Pure Metal Storage Blocks

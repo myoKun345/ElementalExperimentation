@@ -5,6 +5,7 @@ import java.util.LinkedList;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraftforge.oredict.OreDictionary;
 
 /**
@@ -29,15 +30,63 @@ public class Loop {
         }
     }
     
-    public static void loopOreDictBlockList(LinkedList<String> blockElexMetalStorageRealUnlocalizedNames, Block block) {
-        for (int i = 0; i < blockElexMetalStorageRealUnlocalizedNames.size(); i++) {
-            OreDictionary.registerOre(blockElexMetalStorageRealUnlocalizedNames.get(i), new ItemStack(block, 1, i));
+    public static void loopOreDictBlockList(LinkedList<String> loopThrough, Block block) {
+        for (int i = 0; i < loopThrough.size(); i++) {
+            OreDictionary.registerOre(loopThrough.get(i), new ItemStack(block, 1, i));
         }
     }
     
-    public static void loopOreDictItemList(LinkedList<String> metalNuggetRealUnlocalizedNames, Item item) {
-        for (int i = 0; i < metalNuggetRealUnlocalizedNames.size(); i++) {
-            OreDictionary.registerOre(metalNuggetRealUnlocalizedNames.get(i), new ItemStack(item, 1, i));
+    public static void loopOreDictItemList(LinkedList<String> loopThrough, Item item) {
+        for (int i = 0; i < loopThrough.size(); i++) {
+            OreDictionary.registerOre(loopThrough.get(i), new ItemStack(item, 1, i));
+        }
+    }
+    
+    public static void loopFurnaceBlock(String[] loopThrough, int inputID, Block output, float XP) {
+        for (int i = 0; i < loopThrough.length; i++) {
+            FurnaceRecipes.smelting().addSmelting(inputID, i, new ItemStack(output, 1, i), XP);
+        }
+    }
+    
+    public static void loopFurnaceItem(String[] loopThrough, int inputID, Item output, float XP) {
+        for (int i = 0; i < loopThrough.length; i++) {
+            FurnaceRecipes.smelting().addSmelting(inputID, i, new ItemStack(output, 1, i), XP);
+        }
+    }
+    
+    public static void loopFurnaceBlockList(LinkedList<String> loopThrough, int inputID, Block output, float XP) {
+        for (int i = 0; i < loopThrough.size(); i++) {
+            FurnaceRecipes.smelting().addSmelting(inputID, i, new ItemStack(output, 1, i), XP);
+        }
+    }
+    
+    public static void loopFurnaceItemList(LinkedList<String> loopThrough, int inputID, Item output, float XP) {
+        for (int i = 0; i < loopThrough.size(); i++) {
+            FurnaceRecipes.smelting().addSmelting(inputID, i, new ItemStack(output, 1, i), XP);
+        }
+    }
+    
+    public static void loopFurnaceBlockShifted(String[] loopThrough, int inputID, Block output, float XP, int shiftMetaBy) {
+        for (int i = 0; i < loopThrough.length; i++) {
+            FurnaceRecipes.smelting().addSmelting(inputID, i, new ItemStack(output, 1, i + shiftMetaBy), XP);
+        }
+    }
+    
+    public static void loopFurnaceItemShifted(String[] loopThrough, int inputID, Item output, float XP, int shiftMetaBy) {
+        for (int i = 0; i < loopThrough.length; i++) {
+            FurnaceRecipes.smelting().addSmelting(inputID, i, new ItemStack(output, 1, i + shiftMetaBy), XP);
+        }
+    }
+    
+    public static void loopFurnaceBlockListShifted(LinkedList<String> loopThrough, int inputID, Block output, float XP, int shiftMetaBy) {
+        for (int i = 0; i < loopThrough.size(); i++) {
+            FurnaceRecipes.smelting().addSmelting(inputID, i, new ItemStack(output, 1, i + shiftMetaBy), XP);
+        }
+    }
+    
+    public static void loopFurnaceItemListShifted(LinkedList<String> loopThrough, int inputID, Item output, float XP, int shiftMetaBy) {
+        for (int i = 0; i < loopThrough.size(); i++) {
+            FurnaceRecipes.smelting().addSmelting(inputID, i, new ItemStack(output, 1, i + shiftMetaBy), XP);
         }
     }
 

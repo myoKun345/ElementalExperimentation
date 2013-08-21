@@ -699,10 +699,5 @@ public class Element {
             ItemIds.PURE_NONMETAL_DUST_MOLECULE_STRINGS.add(elementList[id].symbol + ALLOTROPES[nonmetalNumber]);
             LogHelper.log(Level.INFO, "Element " + elementList[id].name + " added to solid non-vanilla non-metals.");
         }
-        /*LogHelper.log(Level.INFO, "Element " + elementList[id].atomicNumber + ": it is metal: " + elementList[id].metal);
-        LogHelper.log(Level.INFO, "It is phase: " + elementList[id].phase);
-        LogHelper.log(Level.INFO, "It has an ingot in vanilla: " + elementList[id].hasVanillaIngot);
-        LogHelper.log(Level.INFO, "It has the name: " + Block.blocksList[15].getItemIconName());*/
-        //LogHelper.log(Level.INFO, "It is unlocalized: " + getUnlocalizedName(id));
     }
 }
