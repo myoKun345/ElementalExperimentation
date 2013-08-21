@@ -50,6 +50,11 @@ public class CraftingRecipes {
             
             GameRegistry.addRecipe(new ItemStack(ModBlocks.blockElExMetalStorage5, 1, i), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(ModItems.itemElExIngot, 1, j) });
         }
+        for (int i = 0; i < BlockIds.BLOCK_ELEX_METAL_STORAGE_6_REAL_UNLOCALIZED_NAMES.size(); i++) {
+            int j = i + BlockIds.BLOCK_ELEX_METAL_STORAGE_REAL_UNLOCALIZED_NAMES.size() + BlockIds.BLOCK_ELEX_METAL_STORAGE_2_REAL_UNLOCALIZED_NAMES.size() + BlockIds.BLOCK_ELEX_METAL_STORAGE_3_REAL_UNLOCALIZED_NAMES.size() + BlockIds.BLOCK_ELEX_METAL_STORAGE_4_REAL_UNLOCALIZED_NAMES.size() + BlockIds.BLOCK_ELEX_METAL_STORAGE_5_REAL_UNLOCALIZED_NAMES.size();
+            
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.blockElExMetalStorage6, 1, i), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(ModItems.itemElExIngot, 1, j) });
+        }
         // Machine Case Recipes
         GameRegistry.addRecipe(new ItemStack(ModBlocks.blockMachineCase, 1, 0), new Object[] { "XXX", "X X", "XXX", 'X', new ItemStack(ModItems.itemAlloyIngot, 1, 0)});
         GameRegistry.addRecipe(new ItemStack(ModBlocks.blockMachineCase, 1, 1), new Object[] { "XXX", "X X", "XXX", 'X', new ItemStack(ModItems.itemAlloyIngot, 1, 4)});

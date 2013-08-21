@@ -38,7 +38,7 @@ public class ModBlocks {
         blockElExMetalStorage5 = new BlockElExMetalStorage(BlockIds.BLOCK_ELEX_METAL_STORAGE_5, 4);
         blockElExMetalStorage6 = new BlockElExMetalStorage(BlockIds.BLOCK_ELEX_METAL_STORAGE_6, 5);
         blockMachineCase = new BlockMachineCase(BlockIds.BLOCK_MACHINE_CASE);
-        blockAlloyStorage = new BlockElExMetalStorage(BlockIds.BLOCK_ALLOY_STORAGE, 5);
+        blockAlloyStorage = new BlockElExMetalStorage(BlockIds.BLOCK_ALLOY_STORAGE, 6);
         
         GameRegistry.registerBlock(centrifuge, "centrifugeElEx");
         GameRegistry.registerBlock(grinder, "grinderElEx");

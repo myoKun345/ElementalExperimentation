@@ -680,6 +680,7 @@ public class Element {
             }else
             if (BlockIds.BLOCK_ELEX_METAL_STORAGE_6_REAL_UNLOCALIZED_NAMES.size() < 16) {
                 BlockIds.BLOCK_ELEX_METAL_STORAGE_6_REAL_UNLOCALIZED_NAMES.add("block" + elementList[id].name);
+                LogHelper.log(Level.INFO, elementList[id].name + " Block added to List 6");
             }
             
             metalNumber++;
