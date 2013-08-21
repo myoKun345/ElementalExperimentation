@@ -9,12 +9,17 @@
 		<delete dir="../../jobs/ElementalExperimentation/toJar" />
 		<mkdir dir="../../jobs/ElementalExperimentation/toJar" />
 		
+		<delete dir="../../jobs/ElementalExperimentation/toDeobf" />
+		<mkdir dir="../../jobs/ElementalExperimentation/toDeobf" />
+		
 		<delete dir="jars" />
 		<mkdir dir="jars" />
 		
+		<delete dir="deobf" />
+		<mkdir dir="deobf" />
+		
 		<replace file="elex_common/mcmod.info" token="@@BUILD@@" value="${build_number}" />
 		<replace file="elex_common/elex/lib/Reference.java" token="@@BUILD@@" value="${build_number}" />
-		<echo>${build_number}</echo>
 		
 		<copy todir="../Forge/forge/mcp/src/minecraft">
 			
@@ -25,6 +30,14 @@
 		<copy todir="../../jobs/ElementalExperimentation/toJar" file="elex_common/mcmod.info" />
 		
 		<copy todir="../../jobs/ElementalExperimentation/toJar">
+			
+			<fileset dir="resources/" />
+			
+		</copy>
+		
+		<copy todir="../../jobs/ElementalExperimentation/toDeobf" file="elex_common/mcmod.info" />
+		
+		<copy todir="../../jobs/ElementalExperimentation/toDeobf">
 			
 			<fileset dir="resources/" />
 			
@@ -40,7 +53,14 @@
 
 		</copy>
 		
+		<copy todir="../../jobs/ElementalExperimentation/toDeobf/elex">
+
+			<fileset dir="../Forge/forge/mcp/bin/minecraft/elex" />
+
+		</copy>
+		
 		<jar destfile="jars/ElementalExperimentation-0.0.01.${build_number}.jar" basedir="../../jobs/ElementalExperimentation/toJar" />
+		<jar destfile="deobf/ElementalExperimentation-deobf-0.0.01.${build_number}.jar" basedir="../../jobs/ElementalExperimentation/toDeobf" />
 
 	</target>
 
