@@ -1,5 +1,7 @@
 package elex.lib;
 
+import java.util.LinkedList;
+
 /**
  * Elemental Experimentation
  * 
@@ -24,4 +26,5 @@ public class FluidIds {
     /* Fluid Unlocalized Names */
     public static final String SALT_WATER_BLOCK_UNLOCALIZED_NAME = "blockSaltWater";
     public static final String SALT_WATER_UNLOCALIZED_NAME = "saltwater";
+    public static final LinkedList<String> ELEMENTAL_GAS_UNLOCALIZED_NAMES = new LinkedList<String>();
 }

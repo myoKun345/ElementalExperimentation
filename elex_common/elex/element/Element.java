@@ -4,6 +4,7 @@ import java.util.logging.Level;
 
 import net.minecraft.item.Item;
 import elex.lib.BlockIds;
+import elex.lib.FluidIds;
 import elex.lib.ItemIds;
 import elex.log.LogHelper;
 
@@ -653,6 +654,10 @@ public class Element {
     
     static int nonmetalNumber = 0;
     
+    static int gasNumber = 0;
+    
+    static int liquidNumber = 0;
+    
     public static void addStuff(int id) {
         if (elementList[id].hasVanillaIngot == false && elementList[id].metal == true && elementList[id].phase == "solid") {
             ItemIds.ELEX_METAL_DUST_REAL_UNLOCALIZED_NAMES.add("dust" + elementList[id].name);
@@ -680,7 +685,6 @@ public class Element {
             }else
             if (BlockIds.BLOCK_ELEX_METAL_STORAGE_6_REAL_UNLOCALIZED_NAMES.size() < 16) {
                 BlockIds.BLOCK_ELEX_METAL_STORAGE_6_REAL_UNLOCALIZED_NAMES.add("block" + elementList[id].name);
-                LogHelper.log(Level.INFO, elementList[id].name + " Block added to List 6");
             }
             
             metalNumber++;
@@ -689,7 +693,7 @@ public class Element {
                 ItemIds.METAL_ORE_ELEMENT_IDS.add(metalNumber);
             }
             
-            LogHelper.log(Level.INFO, "Element " + elementList[id].name + " added to solid non-vanilla metals at position " + metalNumber + ".");
+            LogHelper.log(Level.INFO, "Element " + elementList[id].name + " (" + elementList[id].atomicNumber + ")" + " added to solid non-vanilla metals at position " + metalNumber + ".");
         }
         if (elementList[id].metal == false && elementList[id].phase == "solid") {
             int[] ALLOTROPES = { 0, 12, 10, 4, 8, 8, 2, 2 };
@@ -698,7 +702,18 @@ public class Element {
             
             ItemIds.ELEX_PURE_NONMETAL_DUST_REAL_UNLOCALIZED_NAMES.add("dust" + elementList[id].name);
             ItemIds.PURE_NONMETAL_DUST_MOLECULE_STRINGS.add(elementList[id].symbol + ALLOTROPES[nonmetalNumber]);
-            LogHelper.log(Level.INFO, "Element " + elementList[id].name + " added to solid non-vanilla non-metals.");
+            LogHelper.log(Level.INFO, "Element " + elementList[id].name + " (" + elementList[id].atomicNumber + ")" + " added to solid non-vanilla non-metals at position " + nonmetalNumber + ".");
+        }
+        if (elementList[id].phase == "gas") {
+            gasNumber++;
+            
+            FluidIds.ELEMENTAL_GAS_UNLOCALIZED_NAMES.add("fluid" + elementList[id].name);
+            LogHelper.log(Level.INFO, "Element " + elementList[id].name + " (" + elementList[id].atomicNumber + ")" + " added to gases at position " + gasNumber + ".");
+        }
+        if (elementList[id].phase == "liquid") {
+            liquidNumber++;
+            
+            LogHelper.log(Level.INFO, "Element " + elementList[id].name + " (" + elementList[id].atomicNumber + ")" + " added to liquids at position " + liquidNumber + ".");
         }
     }
 }
