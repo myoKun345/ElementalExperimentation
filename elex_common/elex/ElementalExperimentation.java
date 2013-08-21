@@ -20,6 +20,7 @@ import elex.client.gui.GUIHandler;
 import elex.configuration.ConfigurationHandler;
 import elex.crafting.CraftingRecipes;
 import elex.creativetab.CreativeTabElEx;
+import elex.element.Element;
 import elex.fluids.ModFluids;
 import elex.item.ModItems;
 import elex.lib.BlockIds;
@@ -59,6 +60,9 @@ public class ElementalExperimentation {
     public void preInit(FMLPreInitializationEvent event) {
         /* Log Helper */
         LogHelper.init();
+        
+        /* Element Init */
+        Element.initialize();
         
         /* Localization */
         LocalizationHandler.loadLanguages();

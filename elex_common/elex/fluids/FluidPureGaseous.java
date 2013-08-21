@@ -1,6 +1,7 @@
 package elex.fluids;
 
 import elex.lib.FluidIds;
+import elex.lib.Reference;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.util.Icon;
 import net.minecraftforge.fluids.Fluid;
@@ -17,8 +18,6 @@ import net.minecraftforge.fluids.FluidRegistry;
 public class FluidPureGaseous extends Fluid {
     
     private IconRegister register;
-    private Icon flowIcon;
-    private Icon stillIcon;
     private int id;
     
     public FluidPureGaseous(String fluidName, int id) {
@@ -36,12 +35,12 @@ public class FluidPureGaseous extends Fluid {
     
     @Override
     public Icon getFlowingIcon() {
-        return flowIcon;
+        return register.registerIcon(Reference.MOD_ID + ":" + this.fluidName + "_flow");
     }
     
     @Override
     public Icon getStillIcon() {
-        return stillIcon;
+        return register.registerIcon(Reference.MOD_ID + ":" + this.fluidName + "_still");
     }
     
 }

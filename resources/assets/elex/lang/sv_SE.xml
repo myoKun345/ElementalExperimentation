@@ -174,6 +174,13 @@
 	
 	<entry key="tile.blockSaltWater.name">Saltvatten</entry>
 	
+	<entry key="tile.blockCarbonSteel.name">Karbonstålblock</entry>
+	<entry key="tile.blockVanadiumSteel.name">Vanadinstålblock</entry>
+	<entry key="tile.blockBronze.name">Bronsblock</entry>
+	<entry key="tile.blockElectrum.name">Electrumblock</entry>
+	<entry key="tile.blockScandinium.name">Scandiniumblock</entry>
+	<entry key="tile.blockOsmiridium.name">Osmiridiumblock</entry>
+	
 	<entry key="tile.caseCarbonSteel.name">Karbonstålmaskinkåpa</entry>
 	<entry key="tile.caseScandinium.name">Scandiniummaskinkåpa</entry>
 	<entry key="tile.caseOsmiridium.name">Osmiridiummaskinkåpa</entry>
@@ -464,6 +471,17 @@
 	<entry key="item.ingotElectrum.name">Elektrumtacka</entry>
 	<entry key="item.ingotScandinium.name">Scandiniumtacka</entry>
 	<entry key="item.ingotOsmiridium.name">Osmiridiumtacka</entry>
+	
+	<entry key="item.partSpinRotor.name">Snurrarotorn maskindel</entry>
+	<entry key="item.partHighSpeedMotor.name">Hög-hastighetsmotor maskindel</entry>
+	<entry key="item.partGrindStone.name">Slipsten maskindel</entry>
+	
+	<entry key="item.helmetCarbon.name">Kolfiberhjälm</entry>
+	<entry key="item.plateCarbon.name">Kolfibertunika</entry>
+	<entry key="item.pantsCarbon.name">Kolfiberbyxor</entry>
+	<entry key="item.bootsCarbon.name">Kolfiberstövlar</entry>
+	
+	<entry key="item.researchBinder.name">Forskninganteckningsbok</entry>
 	
 	<entry key="item.mercuryInjector.name">Kvicksilverspruta</entry>
 	

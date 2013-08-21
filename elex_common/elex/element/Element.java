@@ -3,6 +3,7 @@ package elex.element;
 import java.util.logging.Level;
 
 import net.minecraft.item.Item;
+import elex.fluids.ModFluids;
 import elex.lib.BlockIds;
 import elex.lib.FluidIds;
 import elex.lib.ItemIds;
@@ -708,6 +709,7 @@ public class Element {
             gasNumber++;
             
             FluidIds.ELEMENTAL_GAS_UNLOCALIZED_NAMES.add("fluid" + elementList[id].name);
+            ModFluids.addPureGas("fluid" + elementList[id].name, gasNumber);
             LogHelper.log(Level.INFO, "Element " + elementList[id].name + " (" + elementList[id].atomicNumber + ")" + " added to gases at position " + gasNumber + ".");
         }
         if (elementList[id].phase == "liquid") {

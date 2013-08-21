@@ -62,8 +62,6 @@ public class ConfigurationHandler {
         ItemIds.ELEX_ARMOR[2] = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.ELEX_ARMOR_KEYS[2], ItemIds.ELEX_ARMOR_DEFAULT[2]).getInt();
         ItemIds.ELEX_ARMOR[3] = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.ELEX_ARMOR_KEYS[3], ItemIds.ELEX_ARMOR_DEFAULT[3]).getInt();
         
-        Element.initialize();
-        
         config.save();
     }
     
