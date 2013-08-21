@@ -32,8 +32,8 @@ public class ItemElExArmor extends ItemArmor {
     @SideOnly(Side.CLIENT)
     private Icon[] icons;
     
-    public ItemElExArmor(int id, EnumArmorMaterial material, int slot, int render, String type) {
-        super(id - Reference.SHIFTED_ID_RANGE_CORRECTION, material, slot, render);
+    public ItemElExArmor(int id, EnumArmorMaterial material, int render, int slot, String type) {
+        super(id - Reference.SHIFTED_ID_RANGE_CORRECTION, material, render, slot);
         setCreativeTab(ElementalExperimentation.elexTab);
         setMaxStackSize(1);
         
