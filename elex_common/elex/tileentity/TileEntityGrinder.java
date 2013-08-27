@@ -1,11 +1,20 @@
 package elex.tileentity;
 
+import universalelectricity.core.block.IElectrical;
+import universalelectricity.core.electricity.ElectricityPack;
+import ic2.api.Direction;
+import ic2.api.energy.tile.IEnergyAcceptor;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.world.World;
+import net.minecraftforge.common.ForgeDirection;
+import buildcraft.api.power.IPowerReceptor;
+import buildcraft.api.power.PowerHandler;
+import buildcraft.api.power.PowerHandler.PowerReceiver;
 
 /**
  * Elemental Experimentation
@@ -15,7 +24,7 @@ import net.minecraft.tileentity.TileEntity;
  * @author Myo-kun
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class TileEntityGrinder extends TileEntity implements ISidedInventory {
+public class TileEntityGrinder extends TileEntity implements ISidedInventory, IEnergyAcceptor, IPowerReceptor, IElectrical {
     
     public ItemStack[] grinderItemStacks = new ItemStack[4];
     
@@ -157,6 +166,63 @@ public class TileEntityGrinder extends TileEntity implements ISidedInventory {
     @Override
     public boolean canExtractItem(int i, ItemStack itemstack, int j) {
         return false;
+    }
+    
+    @Override
+    public boolean isAddedToEnergyNet() {
+        return false;
+    }
+    
+    @Override
+    public boolean acceptsEnergyFrom(TileEntity emitter, Direction direction) {
+        return true;
+    }
+    
+    @Override
+    public PowerReceiver getPowerReceiver(ForgeDirection side) {
+        return null;
+    }
+    
+    @Override
+    public void doWork(PowerHandler workProvider) {
+        
+    }
+    
+    @Override
+    public World getWorld() {
+        return null;
+    }
+    
+    @Override
+    public boolean canConnect(ForgeDirection direction) {
+        return true;
+    }
+    
+    @Override
+    public float receiveElectricity(ForgeDirection from,
+            ElectricityPack receive, boolean doReceive) {
+        return 0;
+    }
+    
+    @Override
+    public ElectricityPack provideElectricity(ForgeDirection from,
+            ElectricityPack request, boolean doProvide) {
+        return null;
+    }
+    
+    @Override
+    public float getRequest(ForgeDirection direction) {
+        return 0;
+    }
+    
+    @Override
+    public float getProvide(ForgeDirection direction) {
+        return 0;
+    }
+    
+    @Override
+    public float getVoltage() {
+        return 0;
     }
     
 }
