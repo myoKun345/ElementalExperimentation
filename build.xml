@@ -47,9 +47,33 @@
 
 		<exec executable="../Forge/forge/mcp/reobfuscate_srg.sh" dir="../Forge/forge/mcp" resolveexecutable="true" osfamily="unix"></exec>
 
-		<copy todir="../../jobs/ElementalExperimentation/toJar">
+		<copy todir="../../jobs/ElementalExperimentation/toJar/elex">
 
-			<fileset dir="../Forge/forge/mcp/reobf/minecraft" />
+			<fileset dir="../Forge/forge/mcp/reobf/minecraft/elex" />
+
+		</copy>
+		
+		<copy todir="../../jobs/ElementalExperimentation/toJar/buildcraft">
+
+			<fileset dir="../Forge/forge/mcp/reobf/minecraft/buildcraft" />
+
+		</copy>
+		
+		<copy todir="../../jobs/ElementalExperimentation/toJar/ic2">
+
+			<fileset dir="../Forge/forge/mcp/reobf/minecraft/ic2" />
+
+		</copy>
+		
+		<copy todir="../../jobs/ElementalExperimentation/toJar/thermalexpansion">
+
+			<fileset dir="../Forge/forge/mcp/reobf/minecraft/thermalexpansion" />
+
+		</copy>
+		
+		<copy todir="../../jobs/ElementalExperimentation/toJar/universalelectricity">
+
+			<fileset dir="../Forge/forge/mcp/reobf/minecraft/universalelectricity" />
 
 		</copy>
 		
