@@ -6,11 +6,17 @@
 		<delete dir="../Forge/forge/mcp/src/minecraft/elex" />
 		<mkdir dir="../Forge/forge/mcp/src/minecraft/elex" />
 		
+		<delete dir="../../jobs/ElementalExperimentation/toAPI" />
+		<mkdir dir="../../jobs/ElementalExperimentation/toAPI" />
+		
 		<delete dir="../../jobs/ElementalExperimentation/toJar" />
 		<mkdir dir="../../jobs/ElementalExperimentation/toJar" />
 		
 		<delete dir="../../jobs/ElementalExperimentation/toDeobf" />
 		<mkdir dir="../../jobs/ElementalExperimentation/toDeobf" />
+		
+		<delete dir="API" />
+		<mkdir dir="API" />
 		
 		<delete dir="jars" />
 		<mkdir dir="jars" />
@@ -24,6 +30,12 @@
 		<copy todir="../Forge/forge/mcp/src/minecraft">
 			
 			<fileset dir="elex_common/" />
+			
+		</copy>
+		
+		<copy todir="../../jobs/ElementalExperimentation/toAPI">
+			
+			<fileset dir="elex_common/api/" />
 			
 		</copy>
 		
@@ -107,6 +119,7 @@
 
 		</copy>
 		
+		<zip destfile="API/ElementalExperimentation-API-0.0.01.${build_number}.zip" basedir="../../jobs/ElementalExperimentation/toAPI" />
 		<jar destfile="jars/ElementalExperimentation-0.0.01.${build_number}.jar" basedir="../../jobs/ElementalExperimentation/toJar" />
 		<jar destfile="deobf/ElementalExperimentation-deobf-0.0.01.${build_number}.jar" basedir="../../jobs/ElementalExperimentation/toDeobf" />
 
