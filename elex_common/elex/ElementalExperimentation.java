@@ -66,6 +66,7 @@ public class ElementalExperimentation {
         /* Log Helper */
         LogHelper.init();
         
+        /* Element Init */
         ModElements.addElements();
         
         /* Localization */

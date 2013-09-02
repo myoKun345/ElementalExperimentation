@@ -19,6 +19,11 @@ import elex.log.LogHelper;
  */
 public class ElexAPI {
     
+    /**
+     * Adds an element to your element table.
+     * @param element - The variable where you defined the properties of your element.
+     * @param table - The element table you are registering to.
+     */
     public static void addElement(Element element, ElementTable table) {
         if (element.elementID <= table.tableLength - 1) {
             table.elementList.add(element);
@@ -48,24 +53,7 @@ public class ElexAPI {
             
             table.tableMetalNuggetUnlocalizedList.add("nugget" + element.name);
             
-            if (BlockIds.BLOCK_ELEX_METAL_STORAGE_REAL_UNLOCALIZED_NAMES.size() < 16) {
-                BlockIds.BLOCK_ELEX_METAL_STORAGE_REAL_UNLOCALIZED_NAMES.add("block" + element.name);
-            }else
-            if (BlockIds.BLOCK_ELEX_METAL_STORAGE_2_REAL_UNLOCALIZED_NAMES.size() < 16) {
-                BlockIds.BLOCK_ELEX_METAL_STORAGE_2_REAL_UNLOCALIZED_NAMES.add("block" + element.name);
-            }else
-            if (BlockIds.BLOCK_ELEX_METAL_STORAGE_3_REAL_UNLOCALIZED_NAMES.size() < 16) {
-                BlockIds.BLOCK_ELEX_METAL_STORAGE_3_REAL_UNLOCALIZED_NAMES.add("block" + element.name);
-            }else
-            if (BlockIds.BLOCK_ELEX_METAL_STORAGE_4_REAL_UNLOCALIZED_NAMES.size() < 16) {
-                BlockIds.BLOCK_ELEX_METAL_STORAGE_4_REAL_UNLOCALIZED_NAMES.add("block" + element.name);
-            }else
-            if (BlockIds.BLOCK_ELEX_METAL_STORAGE_5_REAL_UNLOCALIZED_NAMES.size() < 16) {
-                BlockIds.BLOCK_ELEX_METAL_STORAGE_5_REAL_UNLOCALIZED_NAMES.add("block" + element.name);
-            }else
-            if (BlockIds.BLOCK_ELEX_METAL_STORAGE_6_REAL_UNLOCALIZED_NAMES.size() < 16) {
-                BlockIds.BLOCK_ELEX_METAL_STORAGE_6_REAL_UNLOCALIZED_NAMES.add("block" + element.name);
-            }
+            table.tableMetalStorageBlockListHandler.addStorageBlocks(element);
             
             metalNumber++;
             

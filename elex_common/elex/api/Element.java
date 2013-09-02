@@ -37,6 +37,19 @@ public class Element {
 
     public boolean hasNativeOre;
     
+    /**
+     * Create variable instances of this class to add elements.
+     * @param id - The id of the element.
+     * @param melt - The melting point, in Kelvin, as a floating point number.
+     * @param boil - The boiling point, in Kelvin, as a floating point number.
+     * @param sym - The molecular symbol, for use in tooltips and so on.
+     * @param vanillaIngot - Does this element already have an ingot in vanilla Minecraft?
+     * @param metal - Is this element a metal?
+     * @param rad - Is this element radioactive?
+     * @param hasNative - Does this element have a native ore block?
+     * @param phase - The phase of this element at room temperature.
+     * @param name - The name of this element.
+     */
     public Element(int id, float melt, float boil, String sym, boolean vanillaIngot, boolean metal, boolean rad, boolean hasNative, String phase, String name)
     {
         this.elementID = id;
