@@ -15,12 +15,15 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
+import elex.api.Element;
+import elex.api.ElementTable;
 import elex.block.ModBlocks;
 import elex.client.gui.GUIHandler;
 import elex.configuration.ConfigurationHandler;
+import elex.core.ModElements;
+import elex.core.VanillaElementTable;
 import elex.crafting.CraftingRecipes;
 import elex.creativetab.CreativeTabElEx;
-import elex.element.Element;
 import elex.fluids.ModFluids;
 import elex.item.ModItems;
 import elex.lib.BlockIds;
@@ -54,6 +57,8 @@ public class ElementalExperimentation {
     
     public static CreativeTabs elexTab = new CreativeTabElEx(CreativeTabs.getNextID(), Reference.MOD_ID);
     
+    public static ElementTable vanillaElementTable = new VanillaElementTable("Elemental Experimentation Default", Reference.MOD_ID);
+    
     public static EnumArmorMaterial carbonArmorMat = EnumHelper.addArmorMaterial("CARBON", 16000, new int[]{7, 12, 9, 7}, 5);
     
     @EventHandler
@@ -61,8 +66,7 @@ public class ElementalExperimentation {
         /* Log Helper */
         LogHelper.init();
         
-        /* Element Init */
-        Element.initialize();
+        ModElements.addElements();
         
         /* Localization */
         LocalizationHandler.loadLanguages();

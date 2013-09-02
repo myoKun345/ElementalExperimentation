@@ -4,7 +4,7 @@ import java.io.File;
 import java.util.logging.Level;
 
 import net.minecraftforge.common.Configuration;
-import elex.element.Element;
+import elex.api.Element;
 import elex.lib.BlockIds;
 import elex.lib.FluidIds;
 import elex.lib.ItemIds;
