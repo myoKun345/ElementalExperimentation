@@ -8,8 +8,7 @@ import net.minecraftforge.common.BiomeDictionary.Type;
 import com.google.common.base.Optional;
 
 import cpw.mods.fml.common.registry.GameRegistry;
-
-import elex.configuration.ConfigurationSettings;
+import elex.core.ConfigurationSettings;
 
 /**
  * Elemental Experimentation

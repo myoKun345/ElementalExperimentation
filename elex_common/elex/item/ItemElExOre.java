@@ -10,7 +10,7 @@ import net.minecraft.util.Icon;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import elex.ElementalExperimentation;
-import elex.lib.ItemIds;
+import elex.lib.ElexIDs;
 import elex.lib.Reference;
 
 /**
@@ -34,15 +34,15 @@ public class ItemElExOre extends Item {
     
     @Override
     public String getUnlocalizedName(ItemStack stack) {
-        return "item." + ItemIds.ELEX_ORE_REAL_UNLOCALIZED_NAMES[stack.getItemDamage()];
+        return "item." + ElexIDs.ELEX_ORE_REAL_UNLOCALIZED_NAMES[stack.getItemDamage()];
     }
     
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister register) {
-        icons = new Icon[ItemIds.ELEX_ORE_REAL_UNLOCALIZED_NAMES.length];
+        icons = new Icon[ElexIDs.ELEX_ORE_REAL_UNLOCALIZED_NAMES.length];
         for (int i = 0; i < icons.length; i++) {
-            icons[i] = register.registerIcon(Reference.MOD_ID + ":" + ItemIds.ELEX_ORE_REAL_UNLOCALIZED_NAMES[i]);
+            icons[i] = register.registerIcon(Reference.MOD_ID + ":" + ElexIDs.ELEX_ORE_REAL_UNLOCALIZED_NAMES[i]);
         }
     }
     
@@ -55,7 +55,7 @@ public class ItemElExOre extends Item {
     @Override
     @SideOnly(Side.CLIENT)
     public void getSubItems(int id, CreativeTabs tab, List list) {
-        for (int i = 0; i < ItemIds.ELEX_ORE_REAL_UNLOCALIZED_NAMES.length; i++) {
+        for (int i = 0; i < ElexIDs.ELEX_ORE_REAL_UNLOCALIZED_NAMES.length; i++) {
             ItemStack stack = new ItemStack(id, 1, i);
             list.add(stack);
         }

@@ -6,7 +6,8 @@ import net.minecraft.util.Icon;
 import net.minecraftforge.fluids.BlockFluidClassic;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import elex.lib.FluidIds;
+import elex.core.ModFluids;
+import elex.lib.ElexIDs;
 import elex.lib.Reference;
 
 /**
@@ -40,13 +41,13 @@ public class BlockFluidSaltWater extends BlockFluidClassic {
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister register) {
-        iconStill = register.registerIcon(Reference.MOD_ID + ":" + FluidIds.SALT_WATER_UNLOCALIZED_NAME + "_still");
-        iconFlow = register.registerIcon(Reference.MOD_ID + ":" + FluidIds.SALT_WATER_UNLOCALIZED_NAME + "_flow");
+        iconStill = register.registerIcon(Reference.MOD_ID + ":" + ElexIDs.SALT_WATER_UNLOCALIZED_NAME + "_still");
+        iconFlow = register.registerIcon(Reference.MOD_ID + ":" + ElexIDs.SALT_WATER_UNLOCALIZED_NAME + "_flow");
     }
     
     @Override
     public String getUnlocalizedName() {
-        return "tile." + FluidIds.SALT_WATER_BLOCK_UNLOCALIZED_NAME;
+        return "tile." + ElexIDs.SALT_WATER_BLOCK_UNLOCALIZED_NAME;
     }
 
 }

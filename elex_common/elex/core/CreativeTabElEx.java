@@ -1,12 +1,10 @@
-package elex.creativetab;
+package elex.core;
 
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import elex.block.ModBlocks;
-import elex.item.ModItems;
-import elex.lib.BlockIds;
-import elex.lib.ItemIds;
+import elex.lib.ElexIDs;
+import elex.lib.ElexIDs;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 

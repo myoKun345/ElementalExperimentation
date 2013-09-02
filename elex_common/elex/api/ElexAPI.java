@@ -1,13 +1,10 @@
 package elex.api;
 
-import java.util.LinkedList;
 import java.util.logging.Level;
 
-import elex.fluids.ModFluids;
-import elex.lib.BlockIds;
-import elex.lib.FluidIds;
-import elex.lib.ItemIds;
-import elex.log.LogHelper;
+import net.minecraftforge.common.EnumHelper;
+import elex.core.LogHelper;
+import elex.core.ModFluids;
 
 /**
  * Elemental Experimentation
@@ -36,6 +33,11 @@ public class ElexAPI {
         if (element.elementID == table.tableLength - 1) {
             LogHelper.log(Level.INFO, "Finished loading " + table.tableName + "'s elements.");
         }
+    }
+    
+    public static void addAlloy(Alloy alloy, int harvestLevel, int durability, int[] armorPieceValues, float efficiency, float damage, int enchantability) {
+        alloy.armorMaterialStorage.put(alloy.alloyName, EnumHelper.addArmorMaterial(alloy.alloyName.toUpperCase(), durability, armorPieceValues, enchantability));
+        alloy.toolMaterialStorage.put(alloy.alloyName, EnumHelper.addToolMaterial(alloy.alloyName.toUpperCase(), harvestLevel, durability, efficiency, damage, enchantability));
     }
     
     static int metalNumber;

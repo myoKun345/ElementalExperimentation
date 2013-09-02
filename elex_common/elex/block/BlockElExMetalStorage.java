@@ -12,7 +12,7 @@ import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import elex.ElementalExperimentation;
-import elex.lib.BlockIds;
+import elex.lib.ElexIDs;
 import elex.lib.Reference;
 
 /**
@@ -43,45 +43,45 @@ public class BlockElExMetalStorage extends Block {
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister register) {
         if (blockListNumber == 0) {
-            icons = new Icon[BlockIds.BLOCK_ELEX_METAL_STORAGE_REAL_UNLOCALIZED_NAMES.size()];
+            icons = new Icon[ElexIDs.BLOCK_ELEX_METAL_STORAGE_REAL_UNLOCALIZED_NAMES.size()];
             for (int i = 0; i < icons.length; i++) {
-                icons[i] = register.registerIcon(Reference.MOD_ID + ":" + BlockIds.BLOCK_ELEX_METAL_STORAGE_REAL_UNLOCALIZED_NAMES.get(i));
+                icons[i] = register.registerIcon(Reference.MOD_ID + ":" + ElexIDs.BLOCK_ELEX_METAL_STORAGE_REAL_UNLOCALIZED_NAMES.get(i));
             }
         }
         if (blockListNumber == 1) {
-            icons = new Icon[BlockIds.BLOCK_ELEX_METAL_STORAGE_2_REAL_UNLOCALIZED_NAMES.size()];
+            icons = new Icon[ElexIDs.BLOCK_ELEX_METAL_STORAGE_2_REAL_UNLOCALIZED_NAMES.size()];
             for (int i = 0; i < icons.length; i++) {
-                icons[i] = register.registerIcon(Reference.MOD_ID + ":" + BlockIds.BLOCK_ELEX_METAL_STORAGE_2_REAL_UNLOCALIZED_NAMES.get(i));
+                icons[i] = register.registerIcon(Reference.MOD_ID + ":" + ElexIDs.BLOCK_ELEX_METAL_STORAGE_2_REAL_UNLOCALIZED_NAMES.get(i));
             }
         }
         if (blockListNumber == 2) {
-            icons = new Icon[BlockIds.BLOCK_ELEX_METAL_STORAGE_3_REAL_UNLOCALIZED_NAMES.size()];
+            icons = new Icon[ElexIDs.BLOCK_ELEX_METAL_STORAGE_3_REAL_UNLOCALIZED_NAMES.size()];
             for (int i = 0; i < icons.length; i++) {
-                icons[i] = register.registerIcon(Reference.MOD_ID + ":" + BlockIds.BLOCK_ELEX_METAL_STORAGE_3_REAL_UNLOCALIZED_NAMES.get(i));
+                icons[i] = register.registerIcon(Reference.MOD_ID + ":" + ElexIDs.BLOCK_ELEX_METAL_STORAGE_3_REAL_UNLOCALIZED_NAMES.get(i));
             }
         }
         if (blockListNumber == 3) {
-            icons = new Icon[BlockIds.BLOCK_ELEX_METAL_STORAGE_4_REAL_UNLOCALIZED_NAMES.size()];
+            icons = new Icon[ElexIDs.BLOCK_ELEX_METAL_STORAGE_4_REAL_UNLOCALIZED_NAMES.size()];
             for (int i = 0; i < icons.length; i++) {
-                icons[i] = register.registerIcon(Reference.MOD_ID + ":" + BlockIds.BLOCK_ELEX_METAL_STORAGE_4_REAL_UNLOCALIZED_NAMES.get(i));
+                icons[i] = register.registerIcon(Reference.MOD_ID + ":" + ElexIDs.BLOCK_ELEX_METAL_STORAGE_4_REAL_UNLOCALIZED_NAMES.get(i));
             }
         }
         if (blockListNumber == 4) {
-            icons = new Icon[BlockIds.BLOCK_ELEX_METAL_STORAGE_5_REAL_UNLOCALIZED_NAMES.size()];
+            icons = new Icon[ElexIDs.BLOCK_ELEX_METAL_STORAGE_5_REAL_UNLOCALIZED_NAMES.size()];
             for (int i = 0; i < icons.length; i++) {
-                icons[i] = register.registerIcon(Reference.MOD_ID + ":" + BlockIds.BLOCK_ELEX_METAL_STORAGE_5_REAL_UNLOCALIZED_NAMES.get(i));
+                icons[i] = register.registerIcon(Reference.MOD_ID + ":" + ElexIDs.BLOCK_ELEX_METAL_STORAGE_5_REAL_UNLOCALIZED_NAMES.get(i));
             }
         }
         if (blockListNumber == 5) {
-            icons = new Icon[BlockIds.BLOCK_ELEX_METAL_STORAGE_6_REAL_UNLOCALIZED_NAMES.size()];
+            icons = new Icon[ElexIDs.BLOCK_ELEX_METAL_STORAGE_6_REAL_UNLOCALIZED_NAMES.size()];
             for (int i = 0; i < icons.length; i++) {
-                icons[i] = register.registerIcon(Reference.MOD_ID + ":" + BlockIds.BLOCK_ELEX_METAL_STORAGE_6_REAL_UNLOCALIZED_NAMES.get(i));
+                icons[i] = register.registerIcon(Reference.MOD_ID + ":" + ElexIDs.BLOCK_ELEX_METAL_STORAGE_6_REAL_UNLOCALIZED_NAMES.get(i));
             }
         }
         if (blockListNumber == 6) {
-            icons = new Icon[BlockIds.BLOCK_ALLOY_STORAGE_REAL_UNLOCALIZED_NAMES.length];
+            icons = new Icon[ElexIDs.BLOCK_ALLOY_STORAGE_REAL_UNLOCALIZED_NAMES.length];
             for (int i = 0; i < icons.length; i++) {
-                icons[i] = register.registerIcon(Reference.MOD_ID + ":" + BlockIds.BLOCK_ALLOY_STORAGE_REAL_UNLOCALIZED_NAMES[i]);
+                icons[i] = register.registerIcon(Reference.MOD_ID + ":" + ElexIDs.BLOCK_ALLOY_STORAGE_REAL_UNLOCALIZED_NAMES[i]);
             }
         }
     }
@@ -96,43 +96,43 @@ public class BlockElExMetalStorage extends Block {
     @SideOnly(Side.CLIENT)
     public void getSubBlocks(int id, CreativeTabs tab, List list) {
         if (blockListNumber == 0) {
-            for (int i = 0; i < BlockIds.BLOCK_ELEX_METAL_STORAGE_REAL_UNLOCALIZED_NAMES
+            for (int i = 0; i < ElexIDs.BLOCK_ELEX_METAL_STORAGE_REAL_UNLOCALIZED_NAMES
                     .size(); i++) {
                 list.add(new ItemStack(id, 1, i));
             }
         }
         if (blockListNumber == 1) {
-            for (int i = 0; i < BlockIds.BLOCK_ELEX_METAL_STORAGE_2_REAL_UNLOCALIZED_NAMES
+            for (int i = 0; i < ElexIDs.BLOCK_ELEX_METAL_STORAGE_2_REAL_UNLOCALIZED_NAMES
                     .size(); i++) {
                 list.add(new ItemStack(id, 1, i));
             }
         }
         if (blockListNumber == 2) {
-            for (int i = 0; i < BlockIds.BLOCK_ELEX_METAL_STORAGE_3_REAL_UNLOCALIZED_NAMES
+            for (int i = 0; i < ElexIDs.BLOCK_ELEX_METAL_STORAGE_3_REAL_UNLOCALIZED_NAMES
                     .size(); i++) {
                 list.add(new ItemStack(id, 1, i));
             }
         }
         if (blockListNumber == 3) {
-            for (int i = 0; i < BlockIds.BLOCK_ELEX_METAL_STORAGE_4_REAL_UNLOCALIZED_NAMES
+            for (int i = 0; i < ElexIDs.BLOCK_ELEX_METAL_STORAGE_4_REAL_UNLOCALIZED_NAMES
                     .size(); i++) {
                 list.add(new ItemStack(id, 1, i));
             }
         }
         if (blockListNumber == 4) {
-            for (int i = 0; i < BlockIds.BLOCK_ELEX_METAL_STORAGE_5_REAL_UNLOCALIZED_NAMES
+            for (int i = 0; i < ElexIDs.BLOCK_ELEX_METAL_STORAGE_5_REAL_UNLOCALIZED_NAMES
                     .size(); i++) {
                 list.add(new ItemStack(id, 1, i));
             }
         }
         if (blockListNumber == 5) {
-            for (int i = 0; i < BlockIds.BLOCK_ELEX_METAL_STORAGE_6_REAL_UNLOCALIZED_NAMES
+            for (int i = 0; i < ElexIDs.BLOCK_ELEX_METAL_STORAGE_6_REAL_UNLOCALIZED_NAMES
                     .size(); i++) {
                 list.add(new ItemStack(id, 1, i));
             }
         }
         if (blockListNumber == 6) {
-            for (int i = 0; i < BlockIds.BLOCK_ALLOY_STORAGE_REAL_UNLOCALIZED_NAMES
+            for (int i = 0; i < ElexIDs.BLOCK_ALLOY_STORAGE_REAL_UNLOCALIZED_NAMES
                     .length; i++) {
                 list.add(new ItemStack(id, 1, i));
             }

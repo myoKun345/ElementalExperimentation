@@ -5,7 +5,7 @@ import java.util.List;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import elex.ElementalExperimentation;
-import elex.lib.ItemIds;
+import elex.lib.ElexIDs;
 import elex.lib.Reference;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.player.EntityPlayer;
@@ -32,13 +32,13 @@ public class ItemResearchBinder extends Item {
     
     @Override
     public String getUnlocalizedName(ItemStack stack) {
-        return "item." + ItemIds.RESEARCH_BINDER_UNLOCALIZED_NAME;
+        return "item." + ElexIDs.RESEARCH_BINDER_UNLOCALIZED_NAME;
     }
     
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister register) {
-        itemIcon = register.registerIcon(Reference.MOD_ID + ":" + ItemIds.RESEARCH_BINDER_UNLOCALIZED_NAME);
+        itemIcon = register.registerIcon(Reference.MOD_ID + ":" + ElexIDs.RESEARCH_BINDER_UNLOCALIZED_NAME);
     }
     
     @Override

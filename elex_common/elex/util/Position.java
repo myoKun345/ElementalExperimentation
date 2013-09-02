@@ -1,4 +1,4 @@
-package elex.player;
+package elex.util;
 
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;

@@ -1,13 +1,6 @@
 package elex.api;
 
-import java.util.logging.Level;
-
 import net.minecraft.item.Item;
-import elex.fluids.ModFluids;
-import elex.lib.BlockIds;
-import elex.lib.FluidIds;
-import elex.lib.ItemIds;
-import elex.log.LogHelper;
 
 public class Element {
     

@@ -13,7 +13,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import elex.ElementalExperimentation;
-import elex.lib.ItemIds;
+import elex.lib.ElexIDs;
 import elex.lib.Reference;
 
 /**
@@ -39,7 +39,7 @@ public class ItemMercuryInjector extends Item {
         super(par1 - Reference.SHIFTED_ID_RANGE_CORRECTION);
         setCreativeTab(ElementalExperimentation.elexTab);
         setMaxStackSize(1);
-        setUnlocalizedName(ItemIds.MERCURY_INJECTOR_UNLOCALIZED_NAME);
+        setUnlocalizedName(ElexIDs.MERCURY_INJECTOR_UNLOCALIZED_NAME);
         setMaxDamage(125);
     }
     
@@ -55,9 +55,9 @@ public class ItemMercuryInjector extends Item {
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister register) {
-        itemIcon = register.registerIcon(Reference.MOD_ID.toLowerCase() + ":" + ItemIds.MERCURY_INJECTOR_UNLOCALIZED_NAME);
-        emptyIcon = register.registerIcon(Reference.MOD_ID.toLowerCase() + ":" + ItemIds.MERCURY_INJECTOR_UNLOCALIZED_NAME + "_empty");
-        halfIcon = register.registerIcon(Reference.MOD_ID.toLowerCase() + ":" + ItemIds.MERCURY_INJECTOR_UNLOCALIZED_NAME + "_half");
+        itemIcon = register.registerIcon(Reference.MOD_ID.toLowerCase() + ":" + ElexIDs.MERCURY_INJECTOR_UNLOCALIZED_NAME);
+        emptyIcon = register.registerIcon(Reference.MOD_ID.toLowerCase() + ":" + ElexIDs.MERCURY_INJECTOR_UNLOCALIZED_NAME + "_empty");
+        halfIcon = register.registerIcon(Reference.MOD_ID.toLowerCase() + ":" + ElexIDs.MERCURY_INJECTOR_UNLOCALIZED_NAME + "_half");
     }
     
     @Override

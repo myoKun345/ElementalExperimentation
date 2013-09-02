@@ -10,7 +10,7 @@ import net.minecraft.util.Icon;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import elex.ElementalExperimentation;
-import elex.lib.ItemIds;
+import elex.lib.ElexIDs;
 import elex.lib.Reference;
 
 /**
@@ -38,19 +38,19 @@ public class ItemElExDust extends ItemElemental {
     @Override
     public String getUnlocalizedName(ItemStack stack) {
         if (dustType == 0) {
-            return "item." + ItemIds.ELEX_COMPOUND_DUST_REAL_UNLOCALIZED_NAMES[stack.getItemDamage()];
+            return "item." + ElexIDs.ELEX_COMPOUND_DUST_REAL_UNLOCALIZED_NAMES[stack.getItemDamage()];
         }
         if (dustType == 1) {
-            return "item." + ItemIds.ELEX_METAL_DUST_REAL_UNLOCALIZED_NAMES.get(stack.getItemDamage());
+            return "item." + ElexIDs.ELEX_METAL_DUST_REAL_UNLOCALIZED_NAMES.get(stack.getItemDamage());
         }
         if (dustType == 2) {
-            return "item." + ItemIds.ELEX_PURE_NONMETAL_DUST_REAL_UNLOCALIZED_NAMES.get(stack.getItemDamage());
+            return "item." + ElexIDs.ELEX_PURE_NONMETAL_DUST_REAL_UNLOCALIZED_NAMES.get(stack.getItemDamage());
         }
         if (dustType == 3) {
-            return "item." + ItemIds.VANILLA_DUST_REAL_UNLOCALIZED_NAMES[stack.getItemDamage()];
+            return "item." + ElexIDs.VANILLA_DUST_REAL_UNLOCALIZED_NAMES[stack.getItemDamage()];
         }
         if (dustType == 4) {
-            return "item." + ItemIds.ALLOY_DUST_REAL_UNLOCALIZED_NAMES[stack.getItemDamage()];
+            return "item." + ElexIDs.ALLOY_DUST_REAL_UNLOCALIZED_NAMES[stack.getItemDamage()];
         }
         return "something.went.wrong";
     }
@@ -59,33 +59,33 @@ public class ItemElExDust extends ItemElemental {
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister register) {
         if (dustType == 0) {
-            icons = new Icon[ItemIds.ELEX_COMPOUND_DUST_REAL_UNLOCALIZED_NAMES.length];
+            icons = new Icon[ElexIDs.ELEX_COMPOUND_DUST_REAL_UNLOCALIZED_NAMES.length];
             for (int i = 0; i < icons.length; i++) {
-                icons[i] = register.registerIcon(Reference.MOD_ID + ":" + ItemIds.ELEX_COMPOUND_DUST_REAL_UNLOCALIZED_NAMES[i]);
+                icons[i] = register.registerIcon(Reference.MOD_ID + ":" + ElexIDs.ELEX_COMPOUND_DUST_REAL_UNLOCALIZED_NAMES[i]);
             }
         }
         if (dustType == 1) {
-            icons = new Icon[ItemIds.ELEX_METAL_DUST_REAL_UNLOCALIZED_NAMES.size()];
+            icons = new Icon[ElexIDs.ELEX_METAL_DUST_REAL_UNLOCALIZED_NAMES.size()];
             for (int i = 0; i < icons.length; i++) {
-                icons[i] = register.registerIcon(Reference.MOD_ID + ":" + ItemIds.ELEX_METAL_DUST_REAL_UNLOCALIZED_NAMES.get(i));
+                icons[i] = register.registerIcon(Reference.MOD_ID + ":" + ElexIDs.ELEX_METAL_DUST_REAL_UNLOCALIZED_NAMES.get(i));
             }
         }
         if (dustType == 2) {
-            icons = new Icon[ItemIds.ELEX_PURE_NONMETAL_DUST_REAL_UNLOCALIZED_NAMES.size()];
+            icons = new Icon[ElexIDs.ELEX_PURE_NONMETAL_DUST_REAL_UNLOCALIZED_NAMES.size()];
             for (int i = 0; i < icons.length; i++) {
-                icons[i] = register.registerIcon(Reference.MOD_ID + ":" + ItemIds.ELEX_PURE_NONMETAL_DUST_REAL_UNLOCALIZED_NAMES.get(i));
+                icons[i] = register.registerIcon(Reference.MOD_ID + ":" + ElexIDs.ELEX_PURE_NONMETAL_DUST_REAL_UNLOCALIZED_NAMES.get(i));
             }
         }
         if (dustType == 3) {
-            icons = new Icon[ItemIds.VANILLA_DUST_REAL_UNLOCALIZED_NAMES.length];
+            icons = new Icon[ElexIDs.VANILLA_DUST_REAL_UNLOCALIZED_NAMES.length];
             for (int i = 0; i < icons.length; i++) {
-                icons[i] = register.registerIcon(Reference.MOD_ID + ":" + ItemIds.VANILLA_DUST_REAL_UNLOCALIZED_NAMES[i]);
+                icons[i] = register.registerIcon(Reference.MOD_ID + ":" + ElexIDs.VANILLA_DUST_REAL_UNLOCALIZED_NAMES[i]);
             }
         }
         if (dustType == 4) {
-            icons = new Icon[ItemIds.ALLOY_DUST_REAL_UNLOCALIZED_NAMES.length];
+            icons = new Icon[ElexIDs.ALLOY_DUST_REAL_UNLOCALIZED_NAMES.length];
             for (int i = 0; i < icons.length; i++) {
-                icons[i] = register.registerIcon(Reference.MOD_ID + ":" + ItemIds.ALLOY_DUST_REAL_UNLOCALIZED_NAMES[i]);
+                icons[i] = register.registerIcon(Reference.MOD_ID + ":" + ElexIDs.ALLOY_DUST_REAL_UNLOCALIZED_NAMES[i]);
             }
         }
     }
@@ -100,31 +100,31 @@ public class ItemElExDust extends ItemElemental {
     @SideOnly(Side.CLIENT)
     public void getSubItems(int id, CreativeTabs tab, List list) {
         if (dustType == 0) {
-            for (int i = 0; i < ItemIds.ELEX_COMPOUND_DUST_REAL_UNLOCALIZED_NAMES.length; i++) {
+            for (int i = 0; i < ElexIDs.ELEX_COMPOUND_DUST_REAL_UNLOCALIZED_NAMES.length; i++) {
                 ItemStack stack = new ItemStack(id, 1, i);
                 list.add(stack);
             }
         }
         if (dustType == 1) {
-            for (int i = 0; i < ItemIds.ELEX_METAL_DUST_REAL_UNLOCALIZED_NAMES.size(); i++) {
+            for (int i = 0; i < ElexIDs.ELEX_METAL_DUST_REAL_UNLOCALIZED_NAMES.size(); i++) {
                 ItemStack stack = new ItemStack(id, 1, i);
                 list.add(stack);
             }
         }
         if (dustType == 2) {
-            for (int i = 0; i < ItemIds.ELEX_PURE_NONMETAL_DUST_REAL_UNLOCALIZED_NAMES.size(); i++) {
+            for (int i = 0; i < ElexIDs.ELEX_PURE_NONMETAL_DUST_REAL_UNLOCALIZED_NAMES.size(); i++) {
                 ItemStack stack = new ItemStack(id, 1, i);
                 list.add(stack);
             }
         }
         if (dustType == 3) {
-            for (int i = 0; i < ItemIds.VANILLA_DUST_REAL_UNLOCALIZED_NAMES.length; i++) {
+            for (int i = 0; i < ElexIDs.VANILLA_DUST_REAL_UNLOCALIZED_NAMES.length; i++) {
                 ItemStack stack = new ItemStack(id, 1, i);
                 list.add(stack);
             }
         }
         if (dustType == 4) {
-            for (int i = 0; i < ItemIds.ALLOY_DUST_REAL_UNLOCALIZED_NAMES.length; i++) {
+            for (int i = 0; i < ElexIDs.ALLOY_DUST_REAL_UNLOCALIZED_NAMES.length; i++) {
                 ItemStack stack = new ItemStack(id, 1, i);
                 list.add(stack);
             }
@@ -135,19 +135,19 @@ public class ItemElExDust extends ItemElemental {
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer player, List info, boolean useExtraInformation) {
         if (dustType == 0) {
-            info.add(ItemIds.COMPOUND_DUST_MOLECULE_STRINGS[stack.getItemDamage()]);
+            info.add(ElexIDs.COMPOUND_DUST_MOLECULE_STRINGS[stack.getItemDamage()]);
         }
         if (dustType == 1) {
-            info.add(ItemIds.METAL_DUST_MOLECULE_STRINGS.get(stack.getItemDamage()));
+            info.add(ElexIDs.METAL_DUST_MOLECULE_STRINGS.get(stack.getItemDamage()));
         }
         if (dustType == 2) {
-            info.add(ItemIds.PURE_NONMETAL_DUST_MOLECULE_STRINGS.get(stack.getItemDamage()));
+            info.add(ElexIDs.PURE_NONMETAL_DUST_MOLECULE_STRINGS.get(stack.getItemDamage()));
         }
         if (dustType == 3) {
-            info.add(ItemIds.VANILLA_DUST_MOLECULE_STRINGS[stack.getItemDamage()]);
+            info.add(ElexIDs.VANILLA_DUST_MOLECULE_STRINGS[stack.getItemDamage()]);
         }
         if (dustType == 4) {
-            info.add(ItemIds.ALLOY_DUST_MOLECULE_STRINGS[stack.getItemDamage()]);
+            info.add(ElexIDs.ALLOY_DUST_MOLECULE_STRINGS[stack.getItemDamage()]);
         }
     }
     

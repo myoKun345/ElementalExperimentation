@@ -1,6 +1,6 @@
 package elex.block;
 
-import elex.lib.BlockIds;
+import elex.lib.ElexIDs;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
@@ -21,7 +21,7 @@ public class ItemBlockElExItemOre2 extends ItemBlock {
     
     @Override
     public String getUnlocalizedName(ItemStack stack) {
-        return "tile." + BlockIds.ITEM_ELEX_ORE_2_REAL_UNLOCALIZED_NAMES[stack.getItemDamage()];
+        return "tile." + ElexIDs.ITEM_ELEX_ORE_2_REAL_UNLOCALIZED_NAMES[stack.getItemDamage()];
     }
     
     @Override

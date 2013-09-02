@@ -1,4 +1,4 @@
-package elex.configuration;
+package elex.core;
 
 public class ConfigurationSettings {
     /* Ore EnableGeneration Config Category */

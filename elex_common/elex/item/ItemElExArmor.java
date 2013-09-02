@@ -12,7 +12,7 @@ import net.minecraft.util.Icon;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import elex.ElementalExperimentation;
-import elex.lib.ItemIds;
+import elex.lib.ElexIDs;
 import elex.lib.Reference;
 
 /**
@@ -44,15 +44,15 @@ public class ItemElExArmor extends ItemArmor {
     
     @Override
     public String getUnlocalizedName(ItemStack stack) {
-        return "item." + ItemIds.ELEX_ARMOR_REAL_UNLOCALIZED_NAMES[armorSlot];
+        return "item." + ElexIDs.ELEX_ARMOR_REAL_UNLOCALIZED_NAMES[armorSlot];
     }
     
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister register) {
-        icons = new Icon[ItemIds.ELEX_ARMOR_REAL_UNLOCALIZED_NAMES.length];
+        icons = new Icon[ElexIDs.ELEX_ARMOR_REAL_UNLOCALIZED_NAMES.length];
         for (int i = 0; i < icons.length; i++) {
-            icons[i] = register.registerIcon(Reference.MOD_ID + ":" + ItemIds.ELEX_ARMOR_REAL_UNLOCALIZED_NAMES[i]);
+            icons[i] = register.registerIcon(Reference.MOD_ID + ":" + ElexIDs.ELEX_ARMOR_REAL_UNLOCALIZED_NAMES[i]);
         }
     }
     

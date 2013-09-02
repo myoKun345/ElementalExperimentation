@@ -1,6 +1,6 @@
 package elex.fluids;
 
-import elex.lib.FluidIds;
+import elex.lib.ElexIDs;
 import elex.lib.Reference;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.util.Icon;
@@ -30,7 +30,7 @@ public class FluidPureGaseous extends Fluid {
     
     @Override
     public String getUnlocalizedName() {
-        return "fluid." + FluidIds.ELEMENTAL_GAS_UNLOCALIZED_NAMES.get(this.id);
+        return "fluid." + ElexIDs.ELEMENTAL_GAS_UNLOCALIZED_NAMES.get(this.id);
     }
     
     @Override

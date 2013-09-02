@@ -1,11 +1,14 @@
-package elex.fluids;
+package elex.core;
 
 import java.util.LinkedList;
 
 import net.minecraft.block.Block;
 import net.minecraftforge.fluids.Fluid;
 import cpw.mods.fml.common.registry.GameRegistry;
-import elex.lib.FluidIds;
+import elex.fluids.BlockFluidSaltWater;
+import elex.fluids.FluidPureGaseous;
+import elex.fluids.FluidSaltWater;
+import elex.lib.ElexIDs;
 
 /**
  * Elemental Experimentation
@@ -22,7 +25,7 @@ public class ModFluids {
     
     public static void init() {
         fluidSaltWater = new FluidSaltWater("fluidSaltWater");
-        blockSaltWater = new BlockFluidSaltWater(FluidIds.SALT_WATER_BLOCK);
+        blockSaltWater = new BlockFluidSaltWater(ElexIDs.SALT_WATER_BLOCK);
         
         GameRegistry.registerBlock(blockSaltWater, "blockSaltWater");
     }

@@ -1,14 +1,13 @@
-package elex.configuration;
+package elex.core;
 
 import java.io.File;
 import java.util.logging.Level;
 
 import net.minecraftforge.common.Configuration;
 import elex.api.Element;
-import elex.lib.BlockIds;
-import elex.lib.FluidIds;
-import elex.lib.ItemIds;
-import elex.log.LogHelper;
+import elex.lib.ElexIDs;
+import elex.lib.ElexIDs;
+import elex.lib.ElexIDs;
 
 /**
  * Elemental Experimentation
@@ -24,43 +23,42 @@ public class ConfigurationHandler {
         
         config.load();
         
-        BlockIds.ITEM_ELEX_ORE = config.getBlock(BlockIds.CATEGORY_BLOCK_IDS, BlockIds.ITEM_ELEX_ORE_KEY, BlockIds.ITEM_ELEX_ORE_DEFAULT).getInt();
-        BlockIds.ITEM_ELEX_ORE_2 = config.getBlock(BlockIds.CATEGORY_BLOCK_IDS, BlockIds.ITEM_ELEX_ORE_2_KEY, BlockIds.ITEM_ELEX_ORE_2_DEFAULT).getInt();
-        BlockIds.ITEM_ELEX_ORE_3 = config.getBlock(BlockIds.CATEGORY_BLOCK_IDS, BlockIds.ITEM_ELEX_ORE_3_KEY, BlockIds.ITEM_ELEX_ORE_3_DEFAULT).getInt();
-        BlockIds.BLOCK_ELEX_ORE = config.getBlock(BlockIds.CATEGORY_BLOCK_IDS, BlockIds.BLOCK_ELEX_ORE_KEY, BlockIds.BLOCK_ELEX_ORE_DEFAULT).getInt();
-        BlockIds.BLOCK_ELEX_ORE_2 = config.getBlock(BlockIds.CATEGORY_BLOCK_IDS, BlockIds.BLOCK_ELEX_ORE_2_KEY, BlockIds.BLOCK_ELEX_ORE_2_DEFAULT).getInt();
-        BlockIds.BLOCK_ELEX_ITEM_ORE_STORAGE = config.getBlock(BlockIds.CATEGORY_BLOCK_IDS, BlockIds.BLOCK_ELEX_ITEM_ORE_STORAGE_KEY, BlockIds.BLOCK_ELEX_ITEM_ORE_STORAGE_DEFAULT).getInt();
-        BlockIds.BLOCK_ELEX_METAL_STORAGE = config.getBlock(BlockIds.CATEGORY_BLOCK_IDS, BlockIds.BLOCK_ELEX_METAL_STORAGE_KEY, BlockIds.BLOCK_ELEX_METAL_STORAGE_DEFAULT).getInt();
-        BlockIds.BLOCK_ELEX_METAL_STORAGE_2 = config.getBlock(BlockIds.CATEGORY_BLOCK_IDS, BlockIds.BLOCK_ELEX_METAL_STORAGE_2_KEY, BlockIds.BLOCK_ELEX_METAL_STORAGE_2_DEFAULT).getInt();
-        BlockIds.BLOCK_ELEX_METAL_STORAGE_3 = config.getBlock(BlockIds.CATEGORY_BLOCK_IDS, BlockIds.BLOCK_ELEX_METAL_STORAGE_3_KEY, BlockIds.BLOCK_ELEX_METAL_STORAGE_3_DEFAULT).getInt();
-        BlockIds.BLOCK_ELEX_METAL_STORAGE_4 = config.getBlock(BlockIds.CATEGORY_BLOCK_IDS, BlockIds.BLOCK_ELEX_METAL_STORAGE_4_KEY, BlockIds.BLOCK_ELEX_METAL_STORAGE_4_DEFAULT).getInt();
-        BlockIds.BLOCK_ELEX_METAL_STORAGE_5 = config.getBlock(BlockIds.CATEGORY_BLOCK_IDS, BlockIds.BLOCK_ELEX_METAL_STORAGE_5_KEY, BlockIds.BLOCK_ELEX_METAL_STORAGE_5_DEFAULT).getInt();
-        BlockIds.BLOCK_ELEX_METAL_STORAGE_6 = config.getBlock(BlockIds.CATEGORY_BLOCK_IDS, BlockIds.BLOCK_ELEX_METAL_STORAGE_6_KEY, BlockIds.BLOCK_ELEX_METAL_STORAGE_6_DEFAULT).getInt();
-        BlockIds.BLOCK_MACHINE_CASE = config.getBlock(BlockIds.CATEGORY_BLOCK_IDS, BlockIds.BLOCK_MACHINE_CASE_KEY, BlockIds.BLOCK_MACHINE_CASE_DEFAULT).getInt();
-        BlockIds.CENTRIFUGE = config.getBlock(BlockIds.CATEGORY_BLOCK_IDS, BlockIds.CENTRIFUGE_KEY, BlockIds.CENTRIFUGE_DEFAULT).getInt();
-        BlockIds.GRINDER = config.getBlock(BlockIds.CATEGORY_BLOCK_IDS, BlockIds.GRINDER_KEY, BlockIds.GRINDER_DEFAULT).getInt();
-        BlockIds.BLOCK_ALLOY_STORAGE = config.getBlock(BlockIds.CATEGORY_BLOCK_IDS, BlockIds.BLOCK_ALLOY_STORAGE_KEY, BlockIds.BLOCK_ALLOY_STORAGE_DEFAULT).getInt();
+        ElexIDs.ITEM_ELEX_ORE = config.getBlock(ElexIDs.CATEGORY_BLOCK_IDS, ElexIDs.ITEM_ELEX_ORE_KEY, ElexIDs.ITEM_ELEX_ORE_DEFAULT).getInt();
+        ElexIDs.ITEM_ELEX_ORE_2 = config.getBlock(ElexIDs.CATEGORY_BLOCK_IDS, ElexIDs.ITEM_ELEX_ORE_2_KEY, ElexIDs.ITEM_ELEX_ORE_2_DEFAULT).getInt();
+        ElexIDs.ITEM_ELEX_ORE_3 = config.getBlock(ElexIDs.CATEGORY_BLOCK_IDS, ElexIDs.ITEM_ELEX_ORE_3_KEY, ElexIDs.ITEM_ELEX_ORE_3_DEFAULT).getInt();
+        ElexIDs.BLOCK_ELEX_ORE = config.getBlock(ElexIDs.CATEGORY_BLOCK_IDS, ElexIDs.BLOCK_ELEX_ORE_KEY, ElexIDs.BLOCK_ELEX_ORE_DEFAULT).getInt();
+        ElexIDs.BLOCK_ELEX_ORE_2 = config.getBlock(ElexIDs.CATEGORY_BLOCK_IDS, ElexIDs.BLOCK_ELEX_ORE_2_KEY, ElexIDs.BLOCK_ELEX_ORE_2_DEFAULT).getInt();
+        ElexIDs.BLOCK_ELEX_ITEM_ORE_STORAGE = config.getBlock(ElexIDs.CATEGORY_BLOCK_IDS, ElexIDs.BLOCK_ELEX_ITEM_ORE_STORAGE_KEY, ElexIDs.BLOCK_ELEX_ITEM_ORE_STORAGE_DEFAULT).getInt();
+        ElexIDs.BLOCK_ELEX_METAL_STORAGE = config.getBlock(ElexIDs.CATEGORY_BLOCK_IDS, ElexIDs.BLOCK_ELEX_METAL_STORAGE_KEY, ElexIDs.BLOCK_ELEX_METAL_STORAGE_DEFAULT).getInt();
+        ElexIDs.BLOCK_ELEX_METAL_STORAGE_2 = config.getBlock(ElexIDs.CATEGORY_BLOCK_IDS, ElexIDs.BLOCK_ELEX_METAL_STORAGE_2_KEY, ElexIDs.BLOCK_ELEX_METAL_STORAGE_2_DEFAULT).getInt();
+        ElexIDs.BLOCK_ELEX_METAL_STORAGE_3 = config.getBlock(ElexIDs.CATEGORY_BLOCK_IDS, ElexIDs.BLOCK_ELEX_METAL_STORAGE_3_KEY, ElexIDs.BLOCK_ELEX_METAL_STORAGE_3_DEFAULT).getInt();
+        ElexIDs.BLOCK_ELEX_METAL_STORAGE_4 = config.getBlock(ElexIDs.CATEGORY_BLOCK_IDS, ElexIDs.BLOCK_ELEX_METAL_STORAGE_4_KEY, ElexIDs.BLOCK_ELEX_METAL_STORAGE_4_DEFAULT).getInt();
+        ElexIDs.BLOCK_ELEX_METAL_STORAGE_5 = config.getBlock(ElexIDs.CATEGORY_BLOCK_IDS, ElexIDs.BLOCK_ELEX_METAL_STORAGE_5_KEY, ElexIDs.BLOCK_ELEX_METAL_STORAGE_5_DEFAULT).getInt();
+        ElexIDs.BLOCK_ELEX_METAL_STORAGE_6 = config.getBlock(ElexIDs.CATEGORY_BLOCK_IDS, ElexIDs.BLOCK_ELEX_METAL_STORAGE_6_KEY, ElexIDs.BLOCK_ELEX_METAL_STORAGE_6_DEFAULT).getInt();
+        ElexIDs.BLOCK_MACHINE_CASE = config.getBlock(ElexIDs.CATEGORY_BLOCK_IDS, ElexIDs.BLOCK_MACHINE_CASE_KEY, ElexIDs.BLOCK_MACHINE_CASE_DEFAULT).getInt();
+        ElexIDs.CENTRIFUGE = config.getBlock(ElexIDs.CATEGORY_BLOCK_IDS, ElexIDs.CENTRIFUGE_KEY, ElexIDs.CENTRIFUGE_DEFAULT).getInt();
+        ElexIDs.GRINDER = config.getBlock(ElexIDs.CATEGORY_BLOCK_IDS, ElexIDs.GRINDER_KEY, ElexIDs.GRINDER_DEFAULT).getInt();
+        ElexIDs.BLOCK_ALLOY_STORAGE = config.getBlock(ElexIDs.CATEGORY_BLOCK_IDS, ElexIDs.BLOCK_ALLOY_STORAGE_KEY, ElexIDs.BLOCK_ALLOY_STORAGE_DEFAULT).getInt();
+        ElexIDs.SALT_WATER_BLOCK = config.getBlock(ElexIDs.CATEGORY_BLOCK_IDS, ElexIDs.SALT_WATER_BLOCK_KEY, ElexIDs.SALT_WATER_BLOCK_DEFAULT).getInt();
         
-        FluidIds.SALT_WATER_BLOCK = config.getBlock(FluidIds.CATEGORY_FLUID_IDS, FluidIds.SALT_WATER_BLOCK_KEY, FluidIds.SALT_WATER_BLOCK_DEFAULT).getInt();
-        
-        ItemIds.ELEX_ORE = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.ELEX_ORE_KEY, ItemIds.ELEX_ORE_DEFAULT).getInt();
-        ItemIds.MERCURY_INJECTOR = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.MERCURY_INJECTOR_KEY, ItemIds.MERCURY_INJECTOR_DEFAULT).getInt();
-        ItemIds.ELEX_COMPOUND_DUST = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.ELEX_COMPOUND_DUST_KEY, ItemIds.ELEX_COMPOUND_DUST_DEFAULT).getInt();
-        ItemIds.ELEX_METAL_DUST = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.ELEX_METAL_DUST_KEY, ItemIds.ELEX_METAL_DUST_DEFAULT).getInt();
-        ItemIds.ELEX_INGOT = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.ELEX_INGOT_KEY, ItemIds.ELEX_INGOT_DEFAULT).getInt();
-        ItemIds.ELEX_PURE_NONMETAL_DUST = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.ELEX_PURE_NONMETAL_DUST_KEY, ItemIds.ELEX_PURE_NONMETAL_DUST_DEFAULT).getInt();
-        ItemIds.VANILLA_DUST = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.VANILLA_DUST_KEY, ItemIds.VANILLA_DUST_DEFAULT).getInt();
-        ItemIds.ALLOY_DUST = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.ALLOY_DUST_KEY, ItemIds.ALLOY_DUST_DEFAULT).getInt();
-        ItemIds.ALLOY_INGOT = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.ALLOY_INGOT_KEY, ItemIds.ALLOY_INGOT_DEFAULT).getInt();
-        ItemIds.MACHINE_PART = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.MACHINE_PART_KEY, ItemIds.MACHINE_PART_DEFAULT).getInt();
-        ItemIds.METAL_NUGGET = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.METAL_NUGGET_KEY, ItemIds.METAL_NUGGET_DEFAULT).getInt();
-        ItemIds.ALLOY_NUGGET = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.ALLOY_NUGGET_KEY, ItemIds.ALLOY_NUGGET_DEFAULT).getInt();
-        ItemIds.IRON_NUGGET = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.IRON_NUGGET_KEY, ItemIds.IRON_NUGGET_DEFAULT).getInt();
-        ItemIds.RESEARCH_BINDER = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.RESEARCH_BINDER_KEY, ItemIds.RESEARCH_BINDER_DEFAULT).getInt();
-        ItemIds.ELEX_ARMOR[0] = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.ELEX_ARMOR_KEYS[0], ItemIds.ELEX_ARMOR_DEFAULT[0]).getInt();
-        ItemIds.ELEX_ARMOR[1] = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.ELEX_ARMOR_KEYS[1], ItemIds.ELEX_ARMOR_DEFAULT[1]).getInt();
-        ItemIds.ELEX_ARMOR[2] = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.ELEX_ARMOR_KEYS[2], ItemIds.ELEX_ARMOR_DEFAULT[2]).getInt();
-        ItemIds.ELEX_ARMOR[3] = config.getItem(ItemIds.CATEGORY_ITEM_IDS, ItemIds.ELEX_ARMOR_KEYS[3], ItemIds.ELEX_ARMOR_DEFAULT[3]).getInt();
+        ElexIDs.ELEX_ORE = config.getItem(ElexIDs.CATEGORY_ITEM_IDS, ElexIDs.ELEX_ORE_KEY, ElexIDs.ELEX_ORE_DEFAULT).getInt();
+        ElexIDs.MERCURY_INJECTOR = config.getItem(ElexIDs.CATEGORY_ITEM_IDS, ElexIDs.MERCURY_INJECTOR_KEY, ElexIDs.MERCURY_INJECTOR_DEFAULT).getInt();
+        ElexIDs.ELEX_COMPOUND_DUST = config.getItem(ElexIDs.CATEGORY_ITEM_IDS, ElexIDs.ELEX_COMPOUND_DUST_KEY, ElexIDs.ELEX_COMPOUND_DUST_DEFAULT).getInt();
+        ElexIDs.ELEX_METAL_DUST = config.getItem(ElexIDs.CATEGORY_ITEM_IDS, ElexIDs.ELEX_METAL_DUST_KEY, ElexIDs.ELEX_METAL_DUST_DEFAULT).getInt();
+        ElexIDs.ELEX_INGOT = config.getItem(ElexIDs.CATEGORY_ITEM_IDS, ElexIDs.ELEX_INGOT_KEY, ElexIDs.ELEX_INGOT_DEFAULT).getInt();
+        ElexIDs.ELEX_PURE_NONMETAL_DUST = config.getItem(ElexIDs.CATEGORY_ITEM_IDS, ElexIDs.ELEX_PURE_NONMETAL_DUST_KEY, ElexIDs.ELEX_PURE_NONMETAL_DUST_DEFAULT).getInt();
+        ElexIDs.VANILLA_DUST = config.getItem(ElexIDs.CATEGORY_ITEM_IDS, ElexIDs.VANILLA_DUST_KEY, ElexIDs.VANILLA_DUST_DEFAULT).getInt();
+        ElexIDs.ALLOY_DUST = config.getItem(ElexIDs.CATEGORY_ITEM_IDS, ElexIDs.ALLOY_DUST_KEY, ElexIDs.ALLOY_DUST_DEFAULT).getInt();
+        ElexIDs.ALLOY_INGOT = config.getItem(ElexIDs.CATEGORY_ITEM_IDS, ElexIDs.ALLOY_INGOT_KEY, ElexIDs.ALLOY_INGOT_DEFAULT).getInt();
+        ElexIDs.MACHINE_PART = config.getItem(ElexIDs.CATEGORY_ITEM_IDS, ElexIDs.MACHINE_PART_KEY, ElexIDs.MACHINE_PART_DEFAULT).getInt();
+        ElexIDs.METAL_NUGGET = config.getItem(ElexIDs.CATEGORY_ITEM_IDS, ElexIDs.METAL_NUGGET_KEY, ElexIDs.METAL_NUGGET_DEFAULT).getInt();
+        ElexIDs.ALLOY_NUGGET = config.getItem(ElexIDs.CATEGORY_ITEM_IDS, ElexIDs.ALLOY_NUGGET_KEY, ElexIDs.ALLOY_NUGGET_DEFAULT).getInt();
+        ElexIDs.IRON_NUGGET = config.getItem(ElexIDs.CATEGORY_ITEM_IDS, ElexIDs.IRON_NUGGET_KEY, ElexIDs.IRON_NUGGET_DEFAULT).getInt();
+        ElexIDs.RESEARCH_BINDER = config.getItem(ElexIDs.CATEGORY_ITEM_IDS, ElexIDs.RESEARCH_BINDER_KEY, ElexIDs.RESEARCH_BINDER_DEFAULT).getInt();
+        ElexIDs.ELEX_ARMOR[0] = config.getItem(ElexIDs.CATEGORY_ITEM_IDS, ElexIDs.ELEX_ARMOR_KEYS[0], ElexIDs.ELEX_ARMOR_DEFAULT[0]).getInt();
+        ElexIDs.ELEX_ARMOR[1] = config.getItem(ElexIDs.CATEGORY_ITEM_IDS, ElexIDs.ELEX_ARMOR_KEYS[1], ElexIDs.ELEX_ARMOR_DEFAULT[1]).getInt();
+        ElexIDs.ELEX_ARMOR[2] = config.getItem(ElexIDs.CATEGORY_ITEM_IDS, ElexIDs.ELEX_ARMOR_KEYS[2], ElexIDs.ELEX_ARMOR_DEFAULT[2]).getInt();
+        ElexIDs.ELEX_ARMOR[3] = config.getItem(ElexIDs.CATEGORY_ITEM_IDS, ElexIDs.ELEX_ARMOR_KEYS[3], ElexIDs.ELEX_ARMOR_DEFAULT[3]).getInt();
         
         config.save();
     }

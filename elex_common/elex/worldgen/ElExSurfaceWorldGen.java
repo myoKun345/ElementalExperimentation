@@ -6,7 +6,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.IChunkProvider;
 import cpw.mods.fml.common.IWorldGenerator;
-import elex.configuration.ConfigurationSettings;
+import elex.core.ConfigurationSettings;
 
 /**
  * Elemental Experimentation

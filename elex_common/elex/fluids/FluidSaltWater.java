@@ -3,7 +3,7 @@ package elex.fluids;
 import net.minecraft.util.Icon;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
-import elex.lib.FluidIds;
+import elex.lib.ElexIDs;
 
 /**
  * Elemental Experimentation
@@ -19,13 +19,13 @@ public class FluidSaltWater extends Fluid {
         super(fluidName);
         setViscosity(1050);
         setDensity(1020);
-        setBlockID(FluidIds.SALT_WATER_BLOCK);
+        setBlockID(ElexIDs.SALT_WATER_BLOCK);
         FluidRegistry.registerFluid(this);
     }
     
     @Override
     public String getUnlocalizedName() {
-        return "fluid." + FluidIds.SALT_WATER_UNLOCALIZED_NAME;
+        return "fluid." + ElexIDs.SALT_WATER_UNLOCALIZED_NAME;
     }
     
     @Override

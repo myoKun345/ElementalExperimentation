@@ -8,9 +8,9 @@ import net.minecraft.world.EnumSkyBlock;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.feature.WorldGenLakes;
-import elex.configuration.ConfigurationSettings;
-import elex.lib.BlockIds;
-import elex.lib.FluidIds;
+import elex.core.ConfigurationSettings;
+import elex.lib.ElexIDs;
+import elex.lib.ElexIDs;
 
 /**
  * Elemental Experimentation
@@ -25,8 +25,8 @@ public class WorldGenSaltLakes extends WorldGenLakes {
     private int blockIndex;
     
     public WorldGenSaltLakes() {
-        super(FluidIds.SALT_WATER_BLOCK);
-        this.blockIndex = FluidIds.SALT_WATER_BLOCK;
+        super(ElexIDs.SALT_WATER_BLOCK);
+        this.blockIndex = ElexIDs.SALT_WATER_BLOCK;
     }
     
     @Override
@@ -179,17 +179,17 @@ public class WorldGenSaltLakes extends WorldGenLakes {
                                     if (random
                                             .nextInt(ConfigurationSettings.EVAPORITE_RARITY) == 0) {
                                         world.setBlock(x + i1, y + i2, z + j2,
-                                                BlockIds.ITEM_ELEX_ORE, 1, 2);
+                                                ElexIDs.ITEM_ELEX_ORE, 1, 2);
                                     }
                                     else if (random
                                             .nextInt(ConfigurationSettings.EVAPORITE_RARITY) == 0) {
                                         world.setBlock(x + i1, y + i2, z + j2,
-                                                BlockIds.ITEM_ELEX_ORE, 7, 2);
+                                                ElexIDs.ITEM_ELEX_ORE, 7, 2);
                                     }
                                     else if (random
                                             .nextInt(ConfigurationSettings.EVAPORITE_RARITY) == 0) {
                                         world.setBlock(x + i1, y + i2, z + j2,
-                                                BlockIds.ITEM_ELEX_ORE_2, 10, 2);
+                                                ElexIDs.ITEM_ELEX_ORE_2, 10, 2);
                                     }
                                 }
                             }

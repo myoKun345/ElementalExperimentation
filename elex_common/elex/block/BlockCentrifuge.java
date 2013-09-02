@@ -14,11 +14,11 @@ import net.minecraftforge.common.ForgeDirection;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import elex.ElementalExperimentation;
-import elex.lib.BlockIds;
+import elex.lib.ElexIDs;
 import elex.lib.Reference;
-import elex.player.Position;
-import elex.render.RenderUtilities;
 import elex.tileentity.TileEntityCentrifuge;
+import elex.util.Position;
+import elex.util.RenderUtilities;
 
 /**
  * Elemental Experimentation
@@ -44,15 +44,15 @@ public class BlockCentrifuge extends BlockContainer {
         setCreativeTab(ElementalExperimentation.elexTab);
         setHardness(5F);
         setStepSound(Block.soundMetalFootstep);
-        setUnlocalizedName(BlockIds.CENTRIFUGE_UNLOCALIZED_NAME);
+        setUnlocalizedName(ElexIDs.CENTRIFUGE_UNLOCALIZED_NAME);
     }
     
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister register) {
-        baseIcon = register.registerIcon(Reference.MOD_ID + ":" + BlockIds.MACHINE_BLOCK_BASE);
-        frontIcon = register.registerIcon(Reference.MOD_ID + ":" + BlockIds.CENTRIFUGE_UNLOCALIZED_NAME + "_front");
-        topIcon = register.registerIcon(Reference.MOD_ID + ":" + BlockIds.CENTRIFUGE_UNLOCALIZED_NAME + "_top");
+        baseIcon = register.registerIcon(Reference.MOD_ID + ":" + ElexIDs.MACHINE_BLOCK_BASE);
+        frontIcon = register.registerIcon(Reference.MOD_ID + ":" + ElexIDs.CENTRIFUGE_UNLOCALIZED_NAME + "_front");
+        topIcon = register.registerIcon(Reference.MOD_ID + ":" + ElexIDs.CENTRIFUGE_UNLOCALIZED_NAME + "_top");
     }
     
     @Override

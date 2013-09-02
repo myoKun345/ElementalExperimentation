@@ -2,7 +2,6 @@ package elex.block;
 
 import java.util.List;
 import java.util.Random;
-import java.util.logging.Level;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -13,10 +12,8 @@ import net.minecraft.util.Icon;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import elex.ElementalExperimentation;
-import elex.lib.BlockIds;
-import elex.lib.ItemIds;
+import elex.lib.ElexIDs;
 import elex.lib.Reference;
-import elex.log.LogHelper;
 
 /**
  * Elemental Experimentation
@@ -46,24 +43,24 @@ public class BlockElExItemOre extends Block {
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister register) {
         if (blockListNumber == 0) {
-            icons = new Icon[BlockIds.ITEM_ELEX_ORE_REAL_UNLOCALIZED_NAMES.length];
+            icons = new Icon[ElexIDs.ITEM_ELEX_ORE_REAL_UNLOCALIZED_NAMES.length];
             for (int i = 0; i < icons.length; i++) {
                 icons[i] = register.registerIcon(Reference.MOD_ID + ":"
-                        + BlockIds.ITEM_ELEX_ORE_REAL_UNLOCALIZED_NAMES[i]);
+                        + ElexIDs.ITEM_ELEX_ORE_REAL_UNLOCALIZED_NAMES[i]);
             }
         }
         if (blockListNumber == 1) {
-            icons = new Icon[BlockIds.ITEM_ELEX_ORE_2_REAL_UNLOCALIZED_NAMES.length];
+            icons = new Icon[ElexIDs.ITEM_ELEX_ORE_2_REAL_UNLOCALIZED_NAMES.length];
             for (int i = 0; i < icons.length; i++) {
                 icons[i] = register.registerIcon(Reference.MOD_ID + ":"
-                        + BlockIds.ITEM_ELEX_ORE_2_REAL_UNLOCALIZED_NAMES[i]);
+                        + ElexIDs.ITEM_ELEX_ORE_2_REAL_UNLOCALIZED_NAMES[i]);
             }
         }
         if (blockListNumber == 2) {
-            icons = new Icon[BlockIds.ITEM_ELEX_ORE_3_REAL_UNLOCALIZED_NAMES.length];
+            icons = new Icon[ElexIDs.ITEM_ELEX_ORE_3_REAL_UNLOCALIZED_NAMES.length];
             for (int i = 0; i < icons.length; i++) {
                 icons[i] = register.registerIcon(Reference.MOD_ID + ":"
-                        + BlockIds.ITEM_ELEX_ORE_3_REAL_UNLOCALIZED_NAMES[i]);
+                        + ElexIDs.ITEM_ELEX_ORE_3_REAL_UNLOCALIZED_NAMES[i]);
             }
         }
     }
@@ -78,17 +75,17 @@ public class BlockElExItemOre extends Block {
     @SideOnly(Side.CLIENT)
     public void getSubBlocks(int id, CreativeTabs tab, List list) {
         if (blockListNumber == 0) {
-            for (int i = 0; i < BlockIds.ITEM_ELEX_ORE_REAL_UNLOCALIZED_NAMES.length; i++) {
+            for (int i = 0; i < ElexIDs.ITEM_ELEX_ORE_REAL_UNLOCALIZED_NAMES.length; i++) {
                 list.add(new ItemStack(id, 1, i));
             }
         }
         if (blockListNumber == 1) {
-            for (int i = 0; i < BlockIds.ITEM_ELEX_ORE_2_REAL_UNLOCALIZED_NAMES.length; i++) {
+            for (int i = 0; i < ElexIDs.ITEM_ELEX_ORE_2_REAL_UNLOCALIZED_NAMES.length; i++) {
                 list.add(new ItemStack(id, 1, i));
             }
         }
         if (blockListNumber == 2) {
-            for (int i = 0; i < BlockIds.ITEM_ELEX_ORE_3_REAL_UNLOCALIZED_NAMES.length; i++) {
+            for (int i = 0; i < ElexIDs.ITEM_ELEX_ORE_3_REAL_UNLOCALIZED_NAMES.length; i++) {
                 list.add(new ItemStack(id, 1, i));
             }
         }
@@ -96,7 +93,7 @@ public class BlockElExItemOre extends Block {
     
     @Override
     public int idDropped(int par1, Random par2Random, int par3) {
-        return ItemIds.ELEX_ORE;
+        return ElexIDs.ELEX_ORE;
     }
     
     @Override

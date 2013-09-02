@@ -1,6 +1,4 @@
-package elex.render;
-
-import elex.player.Position;
+package elex.util;
 
 import net.minecraftforge.common.ForgeDirection;
 

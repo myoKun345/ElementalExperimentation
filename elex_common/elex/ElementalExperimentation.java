@@ -17,21 +17,21 @@ import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
 import elex.api.Element;
 import elex.api.ElementTable;
-import elex.block.ModBlocks;
 import elex.client.gui.GUIHandler;
-import elex.configuration.ConfigurationHandler;
+import elex.core.ConfigurationHandler;
+import elex.core.CraftingRecipes;
+import elex.core.CreativeTabElEx;
+import elex.core.LogHelper;
+import elex.core.ModBlocks;
 import elex.core.ModElements;
+import elex.core.ModFluids;
+import elex.core.ModItems;
+import elex.core.OreDictionaryHandler;
 import elex.core.VanillaElementTable;
-import elex.crafting.CraftingRecipes;
-import elex.creativetab.CreativeTabElEx;
-import elex.fluids.ModFluids;
-import elex.item.ModItems;
-import elex.lib.BlockIds;
+import elex.lib.ElexIDs;
 import elex.lib.Reference;
 import elex.localization.LocalizationHandler;
-import elex.log.LogHelper;
 import elex.network.PacketHandler;
-import elex.oredict.OreDictionaryHandler;
 import elex.proxy.CommonProxy;
 import elex.tileentity.ModTileEntities;
 import elex.worldgen.ElExSurfaceWorldGen;
@@ -87,8 +87,6 @@ public class ElementalExperimentation {
         
         /* Biome Init */
         Biomes.init();
-        
-        // carbonArmorMat.customCraftingMaterial
     }
     
     @EventHandler
@@ -108,32 +106,35 @@ public class ElementalExperimentation {
         
         new GUIHandler();
         
-        for (int i = 0; i < BlockIds.BLOCK_ELEX_METAL_STORAGE_REAL_UNLOCALIZED_NAMES.size(); i++) {
-            FMLInterModComms.sendMessage("BuildCraft|Transport", "add-facade", BlockIds.BLOCK_ELEX_METAL_STORAGE + "@" + i);
+        for (int i = 0; i < ElexIDs.BLOCK_ELEX_METAL_STORAGE_REAL_UNLOCALIZED_NAMES.size(); i++) {
+            FMLInterModComms.sendMessage("BuildCraft|Transport", "add-facade", ElexIDs.BLOCK_ELEX_METAL_STORAGE + "@" + i);
         }
-        for (int i = 0; i < BlockIds.BLOCK_ELEX_METAL_STORAGE_2_REAL_UNLOCALIZED_NAMES.size(); i++) {
-            FMLInterModComms.sendMessage("BuildCraft|Transport", "add-facade", BlockIds.BLOCK_ELEX_METAL_STORAGE_2 + "@" + i);
+        for (int i = 0; i < ElexIDs.BLOCK_ELEX_METAL_STORAGE_2_REAL_UNLOCALIZED_NAMES.size(); i++) {
+            FMLInterModComms.sendMessage("BuildCraft|Transport", "add-facade", ElexIDs.BLOCK_ELEX_METAL_STORAGE_2 + "@" + i);
         }
-        for (int i = 0; i < BlockIds.BLOCK_ELEX_METAL_STORAGE_3_REAL_UNLOCALIZED_NAMES.size(); i++) {
-            FMLInterModComms.sendMessage("BuildCraft|Transport", "add-facade", BlockIds.BLOCK_ELEX_METAL_STORAGE_3 + "@" + i);
+        for (int i = 0; i < ElexIDs.BLOCK_ELEX_METAL_STORAGE_3_REAL_UNLOCALIZED_NAMES.size(); i++) {
+            FMLInterModComms.sendMessage("BuildCraft|Transport", "add-facade", ElexIDs.BLOCK_ELEX_METAL_STORAGE_3 + "@" + i);
         }
-        for (int i = 0; i < BlockIds.BLOCK_ELEX_METAL_STORAGE_4_REAL_UNLOCALIZED_NAMES.size(); i++) {
-            FMLInterModComms.sendMessage("BuildCraft|Transport", "add-facade", BlockIds.BLOCK_ELEX_METAL_STORAGE_4 + "@" + i);
+        for (int i = 0; i < ElexIDs.BLOCK_ELEX_METAL_STORAGE_4_REAL_UNLOCALIZED_NAMES.size(); i++) {
+            FMLInterModComms.sendMessage("BuildCraft|Transport", "add-facade", ElexIDs.BLOCK_ELEX_METAL_STORAGE_4 + "@" + i);
         }
-        for (int i = 0; i < BlockIds.BLOCK_ELEX_METAL_STORAGE_5_REAL_UNLOCALIZED_NAMES.size(); i++) {
-            FMLInterModComms.sendMessage("BuildCraft|Transport", "add-facade", BlockIds.BLOCK_ELEX_METAL_STORAGE_5 + "@" + i);
+        for (int i = 0; i < ElexIDs.BLOCK_ELEX_METAL_STORAGE_5_REAL_UNLOCALIZED_NAMES.size(); i++) {
+            FMLInterModComms.sendMessage("BuildCraft|Transport", "add-facade", ElexIDs.BLOCK_ELEX_METAL_STORAGE_5 + "@" + i);
         }
-        for (int i = 0; i < BlockIds.BLOCK_ELEX_ITEM_ORE_STORAGE_REAL_UNLOCALIZED_NAMES.length; i++) {
-            FMLInterModComms.sendMessage("BuildCraft|Transport", "add-facade", BlockIds.BLOCK_ELEX_ITEM_ORE_STORAGE + "@" + i);
+        for (int i = 0; i < ElexIDs.BLOCK_ELEX_METAL_STORAGE_6_REAL_UNLOCALIZED_NAMES.size(); i++) {
+            FMLInterModComms.sendMessage("BuildCraft|Transport", "add-facade", ElexIDs.BLOCK_ELEX_METAL_STORAGE_6 + "@" + i);
         }
-        for (int i = 0; i < BlockIds.BLOCK_ELEX_ORE_REAL_UNLOCALIZED_NAMES.length; i++) {
-            FMLInterModComms.sendMessage("BuildCraft|Transport", "add-facade", BlockIds.BLOCK_ELEX_ORE + "@" + i);
+        for (int i = 0; i < ElexIDs.BLOCK_ELEX_ITEM_ORE_STORAGE_REAL_UNLOCALIZED_NAMES.length; i++) {
+            FMLInterModComms.sendMessage("BuildCraft|Transport", "add-facade", ElexIDs.BLOCK_ELEX_ITEM_ORE_STORAGE + "@" + i);
         }
-        for (int i = 0; i < BlockIds.BLOCK_ELEX_ORE_2_REAL_UNLOCALIZED_NAMES.length; i++) {
-            FMLInterModComms.sendMessage("BuildCraft|Transport", "add-facade", BlockIds.BLOCK_ELEX_ORE_2 + "@" + i);
+        for (int i = 0; i < ElexIDs.BLOCK_ELEX_ORE_REAL_UNLOCALIZED_NAMES.length; i++) {
+            FMLInterModComms.sendMessage("BuildCraft|Transport", "add-facade", ElexIDs.BLOCK_ELEX_ORE + "@" + i);
         }
-        for (int i = 0; i < BlockIds.BLOCK_MACHINE_CASE_REAL_UNLOCALIZED_NAMES.length; i++) {
-            FMLInterModComms.sendMessage("BuildCraft|Transport", "add-facade", BlockIds.BLOCK_MACHINE_CASE + "@" + i);
+        for (int i = 0; i < ElexIDs.BLOCK_ELEX_ORE_2_REAL_UNLOCALIZED_NAMES.length; i++) {
+            FMLInterModComms.sendMessage("BuildCraft|Transport", "add-facade", ElexIDs.BLOCK_ELEX_ORE_2 + "@" + i);
+        }
+        for (int i = 0; i < ElexIDs.BLOCK_MACHINE_CASE_REAL_UNLOCALIZED_NAMES.length; i++) {
+            FMLInterModComms.sendMessage("BuildCraft|Transport", "add-facade", ElexIDs.BLOCK_MACHINE_CASE + "@" + i);
         }
     }
     

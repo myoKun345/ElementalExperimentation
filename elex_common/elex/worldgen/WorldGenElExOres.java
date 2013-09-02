@@ -7,8 +7,8 @@ import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 import cpw.mods.fml.common.IWorldGenerator;
-import elex.configuration.ConfigurationSettings;
-import elex.lib.BlockIds;
+import elex.core.ConfigurationSettings;
+import elex.lib.ElexIDs;
 
 /**
  * Elemental Experimentation
@@ -46,7 +46,7 @@ public class WorldGenElExOres implements IWorldGenerator {
                     int XCoord = chunkX + random.nextInt(16);
                     int YCoord = random.nextInt(ConfigurationSettings.COPPER_TOPY);
                     int ZCoord = chunkZ + random.nextInt(16);
-                    (new WorldGenMinable(BlockIds.BLOCK_ELEX_ORE, 4, ConfigurationSettings.COPPER_BPV, Block.stone.blockID)).generate(world, random, XCoord, YCoord, ZCoord);
+                    (new WorldGenMinable(ElexIDs.BLOCK_ELEX_ORE, 4, ConfigurationSettings.COPPER_BPV, Block.stone.blockID)).generate(world, random, XCoord, YCoord, ZCoord);
                 }
             }
             if (ConfigurationSettings.SILVER_GEN) {
@@ -54,7 +54,7 @@ public class WorldGenElExOres implements IWorldGenerator {
                     int XCoord = chunkX + random.nextInt(16);
                     int YCoord = random.nextInt(ConfigurationSettings.SILVER_TOPY);
                     int ZCoord = chunkZ + random.nextInt(16);
-                    (new WorldGenMinable(BlockIds.BLOCK_ELEX_ORE, 10, ConfigurationSettings.SILVER_BPV, Block.stone.blockID)).generate(world, random, XCoord, YCoord, ZCoord);
+                    (new WorldGenMinable(ElexIDs.BLOCK_ELEX_ORE, 10, ConfigurationSettings.SILVER_BPV, Block.stone.blockID)).generate(world, random, XCoord, YCoord, ZCoord);
                 }
             }
             if (ConfigurationSettings.TIN_GEN) {
@@ -62,7 +62,7 @@ public class WorldGenElExOres implements IWorldGenerator {
                     int XCoord = chunkX + random.nextInt(16);
                     int YCoord = random.nextInt(ConfigurationSettings.TIN_TOPY);
                     int ZCoord = chunkZ + random.nextInt(16);
-                    (new WorldGenMinable(BlockIds.BLOCK_ELEX_ORE, 13, ConfigurationSettings.TIN_BPV, Block.stone.blockID)).generate(world, random, XCoord, YCoord, ZCoord);
+                    (new WorldGenMinable(ElexIDs.BLOCK_ELEX_ORE, 13, ConfigurationSettings.TIN_BPV, Block.stone.blockID)).generate(world, random, XCoord, YCoord, ZCoord);
                 }
             }
             if (ConfigurationSettings.CHROMIUM_GEN) {
@@ -70,7 +70,7 @@ public class WorldGenElExOres implements IWorldGenerator {
                     int XCoord = chunkX + random.nextInt(16);
                     int YCoord = random.nextInt(ConfigurationSettings.CHROMIUM_TOPY);
                     int ZCoord = chunkZ + random.nextInt(16);
-                    (new WorldGenMinable(BlockIds.BLOCK_ELEX_ORE, 1, ConfigurationSettings.CHROMIUM_BPV, Block.stone.blockID)).generate(world, random, XCoord, YCoord, ZCoord);
+                    (new WorldGenMinable(ElexIDs.BLOCK_ELEX_ORE, 1, ConfigurationSettings.CHROMIUM_BPV, Block.stone.blockID)).generate(world, random, XCoord, YCoord, ZCoord);
                 }
             }
             if (ConfigurationSettings.OSMIUM_GEN) {
@@ -78,7 +78,7 @@ public class WorldGenElExOres implements IWorldGenerator {
                     int XCoord = chunkX + random.nextInt(16);
                     int YCoord = random.nextInt(ConfigurationSettings.OSMIUM_TOPY);
                     int ZCoord = chunkZ + random.nextInt(16);
-                    (new WorldGenMinable(BlockIds.BLOCK_ELEX_ORE_2, 1, ConfigurationSettings.OSMIUM_BPV, Block.stone.blockID)).generate(world, random, XCoord, YCoord, ZCoord);
+                    (new WorldGenMinable(ElexIDs.BLOCK_ELEX_ORE_2, 1, ConfigurationSettings.OSMIUM_BPV, Block.stone.blockID)).generate(world, random, XCoord, YCoord, ZCoord);
                 }
             }
             if (ConfigurationSettings.RUTHENIUM_GEN) {
@@ -86,7 +86,7 @@ public class WorldGenElExOres implements IWorldGenerator {
                     int XCoord = chunkX + random.nextInt(16);
                     int YCoord = random.nextInt(ConfigurationSettings.RUTHENIUM_TOPY);
                     int ZCoord = chunkZ + random.nextInt(16);
-                    (new WorldGenMinable(BlockIds.BLOCK_ELEX_ORE, 7, ConfigurationSettings.RUTHENIUM_BPV,
+                    (new WorldGenMinable(ElexIDs.BLOCK_ELEX_ORE, 7, ConfigurationSettings.RUTHENIUM_BPV,
                             Block.stone.blockID)).generate(world, random,
                             XCoord, YCoord, ZCoord);
                 }
@@ -96,7 +96,7 @@ public class WorldGenElExOres implements IWorldGenerator {
                     int XCoord = chunkX + random.nextInt(16);
                     int YCoord = random.nextInt(ConfigurationSettings.RHODIUM_TOPY);
                     int ZCoord = chunkZ + random.nextInt(16);
-                    (new WorldGenMinable(BlockIds.BLOCK_ELEX_ORE, 8, ConfigurationSettings.RHODIUM_BPV,
+                    (new WorldGenMinable(ElexIDs.BLOCK_ELEX_ORE, 8, ConfigurationSettings.RHODIUM_BPV,
                             Block.stone.blockID)).generate(world, random,
                             XCoord, YCoord, ZCoord);
                 }
@@ -106,7 +106,7 @@ public class WorldGenElExOres implements IWorldGenerator {
                     int XCoord = chunkX + random.nextInt(16);
                     int YCoord = random.nextInt(ConfigurationSettings.PALLADIUM_TOPY);
                     int ZCoord = chunkZ + random.nextInt(16);
-                    (new WorldGenMinable(BlockIds.BLOCK_ELEX_ORE, 9, ConfigurationSettings.PALLADIUM_BPV,
+                    (new WorldGenMinable(ElexIDs.BLOCK_ELEX_ORE, 9, ConfigurationSettings.PALLADIUM_BPV,
                             Block.stone.blockID)).generate(world, random,
                             XCoord, YCoord, ZCoord);
                 }
@@ -116,7 +116,7 @@ public class WorldGenElExOres implements IWorldGenerator {
                     int XCoord = chunkX + random.nextInt(16);
                     int YCoord = random.nextInt(ConfigurationSettings.IRIDIUM_TOPY);
                     int ZCoord = chunkZ + random.nextInt(16);
-                    (new WorldGenMinable(BlockIds.BLOCK_ELEX_ORE_2, 2, ConfigurationSettings.IRIDIUM_BPV,
+                    (new WorldGenMinable(ElexIDs.BLOCK_ELEX_ORE_2, 2, ConfigurationSettings.IRIDIUM_BPV,
                             Block.stone.blockID)).generate(world, random,
                             XCoord, YCoord, ZCoord);
                 }
@@ -126,7 +126,7 @@ public class WorldGenElExOres implements IWorldGenerator {
                     int XCoord = chunkX + random.nextInt(16);
                     int YCoord = random.nextInt(ConfigurationSettings.PLATINUM_TOPY);
                     int ZCoord = chunkZ + random.nextInt(16);
-                    (new WorldGenMinable(BlockIds.BLOCK_ELEX_ORE_2, 3, ConfigurationSettings.PLATINUM_BPV,
+                    (new WorldGenMinable(ElexIDs.BLOCK_ELEX_ORE_2, 3, ConfigurationSettings.PLATINUM_BPV,
                             Block.stone.blockID)).generate(world, random,
                             XCoord, YCoord, ZCoord);
                 }
@@ -136,7 +136,7 @@ public class WorldGenElExOres implements IWorldGenerator {
                     int XCoord = chunkX + random.nextInt(16);
                     int YCoord = random.nextInt(ConfigurationSettings.NICKEL_TOPY);
                     int ZCoord = chunkZ + random.nextInt(16);
-                    (new WorldGenMinable(BlockIds.BLOCK_ELEX_ORE, 3, ConfigurationSettings.NICKEL_BPV,
+                    (new WorldGenMinable(ElexIDs.BLOCK_ELEX_ORE, 3, ConfigurationSettings.NICKEL_BPV,
                             Block.stone.blockID)).generate(world, random,
                             XCoord, YCoord, ZCoord);
                 }
@@ -146,7 +146,7 @@ public class WorldGenElExOres implements IWorldGenerator {
                     int XCoord = chunkX + random.nextInt(16);
                     int YCoord = random.nextInt(ConfigurationSettings.COBALT_TOPY);
                     int ZCoord = chunkZ + random.nextInt(16);
-                    (new WorldGenMinable(BlockIds.BLOCK_ELEX_ORE, 2, ConfigurationSettings.COBALT_BPV,
+                    (new WorldGenMinable(ElexIDs.BLOCK_ELEX_ORE, 2, ConfigurationSettings.COBALT_BPV,
                             Block.stone.blockID)).generate(world, random,
                             XCoord, YCoord, ZCoord);
                 }
@@ -156,7 +156,7 @@ public class WorldGenElExOres implements IWorldGenerator {
                     int XCoord = chunkX + random.nextInt(16);
                     int YCoord = random.nextInt(ConfigurationSettings.CADMIUM_TOPY);
                     int ZCoord = chunkZ + random.nextInt(16);
-                    (new WorldGenMinable(BlockIds.BLOCK_ELEX_ORE, 11, ConfigurationSettings.CADMIUM_BPV,
+                    (new WorldGenMinable(ElexIDs.BLOCK_ELEX_ORE, 11, ConfigurationSettings.CADMIUM_BPV,
                             Block.stone.blockID)).generate(world, random,
                             XCoord, YCoord, ZCoord);
                 }
@@ -166,7 +166,7 @@ public class WorldGenElExOres implements IWorldGenerator {
                     int XCoord = chunkX + random.nextInt(16);
                     int YCoord = random.nextInt(ConfigurationSettings.MOLYBDENUM_TOPY);
                     int ZCoord = chunkZ + random.nextInt(16);
-                    (new WorldGenMinable(BlockIds.BLOCK_ELEX_ORE, 6, ConfigurationSettings.MOLYBDENUM_BPV,
+                    (new WorldGenMinable(ElexIDs.BLOCK_ELEX_ORE, 6, ConfigurationSettings.MOLYBDENUM_BPV,
                             Block.stone.blockID)).generate(world, random,
                             XCoord, YCoord, ZCoord);
                 }
@@ -176,7 +176,7 @@ public class WorldGenElExOres implements IWorldGenerator {
                     int XCoord = chunkX + random.nextInt(16);
                     int YCoord = random.nextInt(ConfigurationSettings.INDIUM_TOPY);
                     int ZCoord = chunkZ + random.nextInt(16);
-                    (new WorldGenMinable(BlockIds.BLOCK_ELEX_ORE, 12, ConfigurationSettings.INDIUM_BPV,
+                    (new WorldGenMinable(ElexIDs.BLOCK_ELEX_ORE, 12, ConfigurationSettings.INDIUM_BPV,
                             Block.stone.blockID)).generate(world, random,
                             XCoord, YCoord, ZCoord);
                 }
@@ -186,7 +186,7 @@ public class WorldGenElExOres implements IWorldGenerator {
                     int XCoord = chunkX + random.nextInt(16);
                     int YCoord = random.nextInt(ConfigurationSettings.ALUMINIUM_TOPY);
                     int ZCoord = chunkZ + random.nextInt(16);
-                    (new WorldGenMinable(BlockIds.BLOCK_ELEX_ORE, 0, ConfigurationSettings.ALUMINIUM_BPV,
+                    (new WorldGenMinable(ElexIDs.BLOCK_ELEX_ORE, 0, ConfigurationSettings.ALUMINIUM_BPV,
                             Block.stone.blockID)).generate(world, random,
                             XCoord, YCoord, ZCoord);
                 }
@@ -196,7 +196,7 @@ public class WorldGenElExOres implements IWorldGenerator {
                     int XCoord = chunkX + random.nextInt(16);
                     int YCoord = random.nextInt(ConfigurationSettings.TANTALUM_TOPY);
                     int ZCoord = chunkZ + random.nextInt(16);
-                    (new WorldGenMinable(BlockIds.BLOCK_ELEX_ORE_2, 0, ConfigurationSettings.TANTALUM_BPV,
+                    (new WorldGenMinable(ElexIDs.BLOCK_ELEX_ORE_2, 0, ConfigurationSettings.TANTALUM_BPV,
                             Block.stone.blockID)).generate(world, random,
                             XCoord, YCoord, ZCoord);
                 }
@@ -206,7 +206,7 @@ public class WorldGenElExOres implements IWorldGenerator {
                     int XCoord = chunkX + random.nextInt(16);
                     int YCoord = random.nextInt(ConfigurationSettings.ARSENIC_TOPY);
                     int ZCoord = chunkZ + random.nextInt(16);
-                    (new WorldGenMinable(BlockIds.BLOCK_ELEX_ORE, 5, ConfigurationSettings.ARSENIC_BPV,
+                    (new WorldGenMinable(ElexIDs.BLOCK_ELEX_ORE, 5, ConfigurationSettings.ARSENIC_BPV,
                             Block.stone.blockID)).generate(world, random,
                             XCoord, YCoord, ZCoord);
                 }
@@ -216,7 +216,7 @@ public class WorldGenElExOres implements IWorldGenerator {
                     int XCoord = chunkX + random.nextInt(16);
                     int YCoord = random.nextInt(ConfigurationSettings.TELLURIUM_TOPY);
                     int ZCoord = chunkZ + random.nextInt(16);
-                    (new WorldGenMinable(BlockIds.BLOCK_ELEX_ORE, 15, ConfigurationSettings.TELLURIUM_BPV,
+                    (new WorldGenMinable(ElexIDs.BLOCK_ELEX_ORE, 15, ConfigurationSettings.TELLURIUM_BPV,
                             Block.stone.blockID)).generate(world, random,
                             XCoord, YCoord, ZCoord);
                 }
@@ -226,7 +226,7 @@ public class WorldGenElExOres implements IWorldGenerator {
                     int XCoord = chunkX + random.nextInt(16);
                     int YCoord = random.nextInt(ConfigurationSettings.ANTIMONY_TOPY);
                     int ZCoord = chunkZ + random.nextInt(16);
-                    (new WorldGenMinable(BlockIds.BLOCK_ELEX_ORE, 14, ConfigurationSettings.ANTIMONY_BPV,
+                    (new WorldGenMinable(ElexIDs.BLOCK_ELEX_ORE, 14, ConfigurationSettings.ANTIMONY_BPV,
                             Block.stone.blockID)).generate(world, random,
                             XCoord, YCoord, ZCoord);
                 }
@@ -236,7 +236,7 @@ public class WorldGenElExOres implements IWorldGenerator {
                     int XCoord = chunkX + random.nextInt(16);
                     int YCoord = random.nextInt(ConfigurationSettings.BISMUTH_TOPY);
                     int ZCoord = chunkZ + random.nextInt(16);
-                    (new WorldGenMinable(BlockIds.BLOCK_ELEX_ORE_2, 5, ConfigurationSettings.BISMUTH_BPV,
+                    (new WorldGenMinable(ElexIDs.BLOCK_ELEX_ORE_2, 5, ConfigurationSettings.BISMUTH_BPV,
                             Block.stone.blockID)).generate(world, random,
                             XCoord, YCoord, ZCoord);
                 }
@@ -246,7 +246,7 @@ public class WorldGenElExOres implements IWorldGenerator {
                     int XCoord = chunkX + random.nextInt(16);
                     int YCoord = random.nextInt(ConfigurationSettings.LEAD_TOPY);
                     int ZCoord = chunkZ + random.nextInt(16);
-                    (new WorldGenMinable(BlockIds.BLOCK_ELEX_ORE_2, 4, ConfigurationSettings.LEAD_BPV,
+                    (new WorldGenMinable(ElexIDs.BLOCK_ELEX_ORE_2, 4, ConfigurationSettings.LEAD_BPV,
                             Block.stone.blockID)).generate(world, random,
                             XCoord, YCoord, ZCoord);
                 }
@@ -256,7 +256,7 @@ public class WorldGenElExOres implements IWorldGenerator {
                     int XCoord = chunkX + random.nextInt(16);
                     int YCoord = random.nextInt(ConfigurationSettings.AQUAMARINE_TOPY);
                     int ZCoord = chunkZ + random.nextInt(16);
-                    (new WorldGenMinable(BlockIds.ITEM_ELEX_ORE, 0, ConfigurationSettings.AQUAMARINE_BPV, Block.stone.blockID)).generate(world, random, XCoord, YCoord, ZCoord);
+                    (new WorldGenMinable(ElexIDs.ITEM_ELEX_ORE, 0, ConfigurationSettings.AQUAMARINE_BPV, Block.stone.blockID)).generate(world, random, XCoord, YCoord, ZCoord);
                 }
             }
             if (ConfigurationSettings.BORAX_GEN) {
@@ -264,7 +264,7 @@ public class WorldGenElExOres implements IWorldGenerator {
                     int XCoord = chunkX + random.nextInt(16);
                     int YCoord = random.nextInt(ConfigurationSettings.BORAX_TOPY);
                     int ZCoord = chunkZ + random.nextInt(16);
-                    (new WorldGenMinable(BlockIds.ITEM_ELEX_ORE, 1, ConfigurationSettings.BORAX_BPV, Block.stone.blockID)).generate(world, random, XCoord, YCoord, ZCoord);
+                    (new WorldGenMinable(ElexIDs.ITEM_ELEX_ORE, 1, ConfigurationSettings.BORAX_BPV, Block.stone.blockID)).generate(world, random, XCoord, YCoord, ZCoord);
                 }
             }
             if (ConfigurationSettings.FLUORITE_GEN) {
@@ -272,7 +272,7 @@ public class WorldGenElExOres implements IWorldGenerator {
                     int XCoord = chunkX + random.nextInt(16);
                     int YCoord = random.nextInt(ConfigurationSettings.FLUORITE_TOPY);
                     int ZCoord = chunkZ + random.nextInt(16);
-                    (new WorldGenMinable(BlockIds.ITEM_ELEX_ORE, 2, ConfigurationSettings.FLUORITE_BPV, Block.stone.blockID)).generate(world, random, XCoord, YCoord, ZCoord);
+                    (new WorldGenMinable(ElexIDs.ITEM_ELEX_ORE, 2, ConfigurationSettings.FLUORITE_BPV, Block.stone.blockID)).generate(world, random, XCoord, YCoord, ZCoord);
                 }
             }
             if (ConfigurationSettings.FORSTERITE_GEN) {
@@ -280,7 +280,7 @@ public class WorldGenElExOres implements IWorldGenerator {
                     int XCoord = chunkX + random.nextInt(16);
                     int YCoord = random.nextInt(ConfigurationSettings.FORSTERITE_TOPY);
                     int ZCoord = chunkZ + random.nextInt(16);
-                    (new WorldGenMinable(BlockIds.ITEM_ELEX_ORE, 3, ConfigurationSettings.FORSTERITE_BPV, Block.stone.blockID)).generate(world, random, XCoord, YCoord, ZCoord);
+                    (new WorldGenMinable(ElexIDs.ITEM_ELEX_ORE, 3, ConfigurationSettings.FORSTERITE_BPV, Block.stone.blockID)).generate(world, random, XCoord, YCoord, ZCoord);
                 }
             }
             if (ConfigurationSettings.PETALITE_GEN) {
@@ -288,7 +288,7 @@ public class WorldGenElExOres implements IWorldGenerator {
                     int XCoord = chunkX + random.nextInt(16);
                     int YCoord = random.nextInt(ConfigurationSettings.PETALITE_TOPY);
                     int ZCoord = chunkZ + random.nextInt(16);
-                    (new WorldGenMinable(BlockIds.ITEM_ELEX_ORE, 4, ConfigurationSettings.PETALITE_BPV, Block.stone.blockID)).generate(world, random, XCoord, YCoord, ZCoord);
+                    (new WorldGenMinable(ElexIDs.ITEM_ELEX_ORE, 4, ConfigurationSettings.PETALITE_BPV, Block.stone.blockID)).generate(world, random, XCoord, YCoord, ZCoord);
                 }
             }
             if (ConfigurationSettings.PURE_QUARTZ_GEN) {
@@ -296,7 +296,7 @@ public class WorldGenElExOres implements IWorldGenerator {
                     int XCoord = chunkX + random.nextInt(16);
                     int YCoord = random.nextInt(ConfigurationSettings.PURE_QUARTZ_TOPY);
                     int ZCoord = chunkZ + random.nextInt(16);
-                    (new WorldGenMinable(BlockIds.ITEM_ELEX_ORE, 5, ConfigurationSettings.PURE_QUARTZ_BPV, Block.stone.blockID)).generate(world, random, XCoord, YCoord, ZCoord);
+                    (new WorldGenMinable(ElexIDs.ITEM_ELEX_ORE, 5, ConfigurationSettings.PURE_QUARTZ_BPV, Block.stone.blockID)).generate(world, random, XCoord, YCoord, ZCoord);
                 }
             }
             if (ConfigurationSettings.SPODUMENE_GEN) {
@@ -304,7 +304,7 @@ public class WorldGenElExOres implements IWorldGenerator {
                     int XCoord = chunkX + random.nextInt(16);
                     int YCoord = random.nextInt(ConfigurationSettings.SPODUMENE_TOPY);
                     int ZCoord = chunkZ + random.nextInt(16);
-                    (new WorldGenMinable(BlockIds.ITEM_ELEX_ORE, 6, ConfigurationSettings.SPODUMENE_BPV, Block.stone.blockID)).generate(world, random, XCoord, YCoord, ZCoord);
+                    (new WorldGenMinable(ElexIDs.ITEM_ELEX_ORE, 6, ConfigurationSettings.SPODUMENE_BPV, Block.stone.blockID)).generate(world, random, XCoord, YCoord, ZCoord);
                 }
             }
             if (ConfigurationSettings.HALITE_GEN) {
@@ -312,7 +312,7 @@ public class WorldGenElExOres implements IWorldGenerator {
                     int XCoord = chunkX + random.nextInt(16);
                     int YCoord = random.nextInt(ConfigurationSettings.HALITE_TOPY);
                     int ZCoord = chunkZ + random.nextInt(16);
-                    (new WorldGenMinable(BlockIds.ITEM_ELEX_ORE, 7, ConfigurationSettings.HALITE_BPV, Block.stone.blockID)).generate(world, random, XCoord, YCoord, ZCoord);
+                    (new WorldGenMinable(ElexIDs.ITEM_ELEX_ORE, 7, ConfigurationSettings.HALITE_BPV, Block.stone.blockID)).generate(world, random, XCoord, YCoord, ZCoord);
                 }
             }
         }
