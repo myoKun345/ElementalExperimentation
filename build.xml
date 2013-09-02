@@ -33,9 +33,9 @@
 			
 		</copy>
 		
-		<copy todir="../../jobs/ElementalExperimentation/toAPI">
+		<copy todir="../../jobs/ElementalExperimentation/toAPI/elex/api">
 			
-			<fileset dir="elex_common/api/" />
+			<fileset dir="elex_common/elex/api/" />
 			
 		</copy>
 		
