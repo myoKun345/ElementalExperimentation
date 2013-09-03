@@ -186,6 +186,25 @@
 	<entry key="tile.caseOsmiridium.name">Osmiridium Machine Case</entry>
 	<entry key="tile.caseLead.name">Lead Machine Case</entry>
 	
+	<entry key="tile.blockMarble.name">Marble</entry>
+	<entry key="tile.blockBasalt.name">Basalt</entry>
+	<entry key="tile.blockDeepSandstone.name">Deep Sandstone</entry>
+	<entry key="tile.blockGranite.name">Granite</entry>
+	<entry key="tile.blockLimestone.name">Limestone</entry>
+	<entry key="tile.blockRedStone.name">Red Stone</entry>
+	<entry key="tile.blockBlueStone.name">Blue Stone</entry>
+	<entry key="tile.blockGreenStone.name">Green Stone</entry>
+	<entry key="tile.blockYellowStone.name">Yellow Stone</entry>
+	<entry key="tile.blockMarbleBrick.name">Marble Brick</entry>
+	<entry key="tile.blockBasaltBrick.name">Basalt Brick</entry>
+	<entry key="tile.blockDeepSandstoneBrick.name">Deep Sandstone Brick</entry>
+	<entry key="tile.blockGraniteBrick.name">Granite Brick</entry>
+	<entry key="tile.blockLimestoneBrick.name">Limestone Brick</entry>
+	<entry key="tile.blockRedStoneBrick.name">Red Stone Brick</entry>
+	<entry key="tile.blockBlueStoneBrick.name">Blue Stone Brick</entry>
+	<entry key="tile.blockGreenStoneBrick.name">Green Stone Brick</entry>
+	<entry key="tile.blockYellowStoneBrick.name">Yellow Stone Brick</entry>
+	
 	<entry key="item.aquamarine.name">Aquamarine</entry>
 	<entry key="item.borax.name">Borax</entry>
 	<entry key="item.fluorite.name">Fluorite</entry>

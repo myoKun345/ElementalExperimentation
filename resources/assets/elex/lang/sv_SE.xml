@@ -186,6 +186,25 @@
 	<entry key="tile.caseOsmiridium.name">Osmiridiummaskinkåpa</entry>
 	<entry key="tile.caseLead.name">Blymaskinkåpa</entry>
 	
+	<entry key="tile.blockMarble.name">Marmor</entry>
+	<entry key="tile.blockBasalt.name">Basalt</entry>
+	<entry key="tile.blockDeepSandstone.name">Djupsandsten</entry>
+	<entry key="tile.blockGranite.name">Granit</entry>
+	<entry key="tile.blockLimestone.name">Kalksten</entry>
+	<entry key="tile.blockRedStone.name">Röd sten</entry>
+	<entry key="tile.blockBlueStone.name">Blå sten</entry>
+	<entry key="tile.blockGreenStone.name">Grön sten</entry>
+	<entry key="tile.blockYellowStone.name">Gul sten</entry>
+	<entry key="tile.blockMarbleBrick.name">Marmortegel</entry>
+	<entry key="tile.blockBasaltBrick.name">Basalttegel</entry>
+	<entry key="tile.blockDeepSandstoneBrick.name">Djupsandstentegel</entry>
+	<entry key="tile.blockGraniteBrick.name">Granittegel</entry>
+	<entry key="tile.blockLimestoneBrick.name">Kalkstentegel</entry>
+	<entry key="tile.blockRedStoneBrick.name">Röd stentegel</entry>
+	<entry key="tile.blockBlueStoneBrick.name">Blå stentegel</entry>
+	<entry key="tile.blockGreenStoneBrick.name">Grön stentegel</entry>
+	<entry key="tile.blockYellowStoneBrick.name">Gul stentegel</entry>
+	
 	<entry key="item.aquamarine.name">Akvamarin</entry>
 	<entry key="item.borax.name">Borax</entry>
 	<entry key="item.fluorite.name">Fluorit</entry>

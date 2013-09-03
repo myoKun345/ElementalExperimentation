@@ -127,13 +127,13 @@ public class ElexIDs {
             { "blockCarbonSteel", "blockVanadiumSteel", "blockBronze", 
             "blockElectrum", "blockScandinium", "blockOsmiridium" };
         public static final String[] BLOCK_BUILDING_MATERIAL_UNLOCALIZED_NAMES = 
-            { "blockMarble", "blockBasalt", "blockGranite",
-            "blockLimestone", "blockRedStone", "blockBlueStone",
-            "blockGreenStone", "blockYellowStone" };
+            { "blockMarble", "blockBasalt", "blockDeepSandstone", 
+            "blockGranite", "blockLimestone", "blockRedStone", 
+            "blockBlueStone", "blockGreenStone", "blockYellowStone" };
         public static final String[] BLOCK_BRICK_UNLOCALIZED_NAMES = 
-            { "blockMarbleBrick", "blockBasaltBrick", "blockGraniteBrick",
-            "blockLimestoneBrick", "blockRedStoneBrick", "blockBlueStoneBrick",
-            "blockGreenStoneBrick", "blockYellowStoneBrick" };
+            { "blockMarbleBrick", "blockBasaltBrick", "blockDeepSandstoneBrick", 
+            "blockGraniteBrick", "blockLimestoneBrick", "blockRedStoneBrick", 
+            "blockBlueStoneBrick", "blockGreenStoneBrick", "blockYellowStoneBrick" };
         public static final String CENTRIFUGE_UNLOCALIZED_NAME = "centrifuge";
         public static final String GRINDER_UNLOCALIZED_NAME = "grinder";
         public static final String SALT_WATER_BLOCK_UNLOCALIZED_NAME = "blockSaltWater";
