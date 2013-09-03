@@ -57,6 +57,10 @@ public class CraftingRecipes {
         GameRegistry.addRecipe(new ItemStack(ModBlocks.blockMachineCase, 1, 1), new Object[] { "XXX", "X X", "XXX", 'X', new ItemStack(ModItems.itemAlloyIngot, 1, 4)});
         GameRegistry.addRecipe(new ItemStack(ModBlocks.blockMachineCase, 1, 2), new Object[] { "XXX", "X X", "XXX", 'X', new ItemStack(ModItems.itemAlloyIngot, 1, 5)});
         GameRegistry.addRecipe(new ItemStack(ModBlocks.blockMachineCase, 1, 3), new Object[] { "XXX", "X X", "XXX", 'X', new ItemStack(ModItems.itemElExIngot, 1, 61)});
+        // Building Materials Recipes
+        for (int i = 0; i < ElexIDs.BLOCK_BUILDING_MATERIAL_UNLOCALIZED_NAMES.length; i++) {
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.blockBrick, 1, i), new Object[] { "XX", "XX", 'X', new ItemStack(ModBlocks.blockBuildingMaterial, 1, i)});
+        }
         // Temporary Alloy Dust Recipes
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.itemAlloyDust, 4, 0), new ItemStack(ModItems.itemVanillaDust, 1, 1), new ItemStack(ModItems.itemVanillaDust, 1, 1), new ItemStack(ModItems.itemVanillaDust, 1, 1), new ItemStack(ModItems.itemVanillaDust, 1, 5));
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.itemAlloyDust, 4, 1), new ItemStack(ModItems.itemVanillaDust, 1, 1), new ItemStack(ModItems.itemVanillaDust, 1, 1), new ItemStack(ModItems.itemElExMetalDust, 1, 10), new ItemStack(ModItems.itemVanillaDust, 1, 5));
