@@ -2,6 +2,7 @@ package elex.core;
 
 import net.minecraft.block.Block;
 import cpw.mods.fml.common.registry.GameRegistry;
+import elex.block.BlockBuildingMaterial;
 import elex.block.BlockCentrifuge;
 import elex.block.BlockElExItemOre;
 import elex.block.BlockElExItemOreStorage;
@@ -10,20 +11,22 @@ import elex.block.BlockElExOre;
 import elex.block.BlockElExOre2;
 import elex.block.BlockGrinder;
 import elex.block.BlockMachineCase;
-import elex.block.ItemBlockAlloyStorage;
-import elex.block.ItemBlockElExItemOre;
-import elex.block.ItemBlockElExItemOre2;
-import elex.block.ItemBlockElExItemOre3;
-import elex.block.ItemBlockElExItemOreStorage;
-import elex.block.ItemBlockElExMetalStorage;
-import elex.block.ItemBlockElExMetalStorage2;
-import elex.block.ItemBlockElExMetalStorage3;
-import elex.block.ItemBlockElExMetalStorage4;
-import elex.block.ItemBlockElExMetalStorage5;
-import elex.block.ItemBlockElExMetalStorage6;
-import elex.block.ItemBlockElExOre;
-import elex.block.ItemBlockElExOre2;
-import elex.block.ItemBlockMachineCase;
+import elex.block.util.ItemBlockAlloyStorage;
+import elex.block.util.ItemBlockBrick;
+import elex.block.util.ItemBlockBuildingMaterial;
+import elex.block.util.ItemBlockElExItemOre;
+import elex.block.util.ItemBlockElExItemOre2;
+import elex.block.util.ItemBlockElExItemOre3;
+import elex.block.util.ItemBlockElExItemOreStorage;
+import elex.block.util.ItemBlockElExMetalStorage;
+import elex.block.util.ItemBlockElExMetalStorage2;
+import elex.block.util.ItemBlockElExMetalStorage3;
+import elex.block.util.ItemBlockElExMetalStorage4;
+import elex.block.util.ItemBlockElExMetalStorage5;
+import elex.block.util.ItemBlockElExMetalStorage6;
+import elex.block.util.ItemBlockElExOre;
+import elex.block.util.ItemBlockElExOre2;
+import elex.block.util.ItemBlockMachineCase;
 import elex.lib.ElexIDs;
 
 public class ModBlocks {
@@ -43,6 +46,8 @@ public class ModBlocks {
     public static Block blockElExMetalStorage6;
     public static Block blockMachineCase;
     public static Block blockAlloyStorage;
+    public static Block blockBuildingMaterial;
+    public static Block blockBrick;
     
     public static void init() {
         centrifuge = new BlockCentrifuge(ElexIDs.CENTRIFUGE);
@@ -61,6 +66,8 @@ public class ModBlocks {
         blockElExMetalStorage6 = new BlockElExMetalStorage(ElexIDs.BLOCK_ELEX_METAL_STORAGE_6, 5);
         blockMachineCase = new BlockMachineCase(ElexIDs.BLOCK_MACHINE_CASE);
         blockAlloyStorage = new BlockElExMetalStorage(ElexIDs.BLOCK_ALLOY_STORAGE, 6);
+        blockBuildingMaterial = new BlockBuildingMaterial(ElexIDs.BLOCK_BUILDING_MATERIAL, 0);
+        blockBrick = new BlockBuildingMaterial(ElexIDs.BLOCK_BRICK, 1);
         
         GameRegistry.registerBlock(centrifuge, "centrifugeElEx");
         GameRegistry.registerBlock(grinder, "grinderElEx");
@@ -78,5 +85,7 @@ public class ModBlocks {
         GameRegistry.registerBlock(blockElExMetalStorage6, ItemBlockElExMetalStorage6.class, "blockElExMetalStorage6");
         GameRegistry.registerBlock(blockMachineCase, ItemBlockMachineCase.class, "blockMachineCase");
         GameRegistry.registerBlock(blockAlloyStorage, ItemBlockAlloyStorage.class, "blockAlloyStorage");
+        GameRegistry.registerBlock(blockBuildingMaterial, ItemBlockBuildingMaterial.class, "blockBuildingMaterial");
+        GameRegistry.registerBlock(blockBrick, ItemBlockBrick.class, "blockBrick");
     }
 }

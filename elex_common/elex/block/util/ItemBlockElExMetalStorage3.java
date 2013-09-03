@@ -1,4 +1,4 @@
-package elex.block;
+package elex.block.util;
 
 import elex.lib.ElexIDs;
 import net.minecraft.item.ItemBlock;

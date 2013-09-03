@@ -2,6 +2,7 @@ package elex.block;
 
 import java.util.List;
 import java.util.Random;
+import java.util.logging.Level;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -12,6 +13,7 @@ import net.minecraft.util.Icon;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import elex.ElementalExperimentation;
+import elex.core.LogHelper;
 import elex.lib.ElexIDs;
 import elex.lib.Reference;
 
@@ -68,7 +70,35 @@ public class BlockElExItemOre extends Block {
     @Override
     @SideOnly(Side.CLIENT)
     public Icon getIcon(int side, int meta) {
-        return icons[meta];
+        int fixedMeta;
+        
+        if (blockListNumber == 0) {
+            fixedMeta = meta;
+            
+            return icons[fixedMeta];
+        }
+        if (blockListNumber == 1) {
+            fixedMeta = meta - 16;
+            
+            if (fixedMeta < 0) {
+                fixedMeta = fixedMeta + 16;
+            }
+            
+            return icons[fixedMeta];
+        }
+        if (blockListNumber == 2) {
+            fixedMeta = meta - 32;
+            
+            if (fixedMeta < 0) {
+                fixedMeta = fixedMeta + 32;
+            }
+            
+            return icons[fixedMeta];
+        }
+        else {
+            LogHelper.log(Level.SEVERE, "Block list number is out of range. Notify Myo-kun immediately!");
+            return icons[0];
+        }
     }
     
     @Override
@@ -104,17 +134,32 @@ public class BlockElExItemOre extends Block {
     
     @Override
     public int quantityDroppedWithBonus(int bonus, Random par2Random) {
-            int rnd = par2Random.nextInt(bonus) - 1;
-
-            if (rnd < 0) {
-                rnd = 0;
-            }
+        int output;
+        
+        if (bonus != 0) {
+            int rnd = par2Random.nextInt(bonus * 3) + 1;
             
-            if (rnd > 8) {
-                rnd = 8;
+            if (rnd <= 0) {
+                LogHelper.log(Level.INFO, rnd + ", so 1");
+                
+                output = 1;
             }
-            
-            return rnd;
+            if (rnd > 9) {
+                LogHelper.log(Level.INFO, rnd + ", so 9");
+                
+                output = 9;
+            }
+            else {
+                LogHelper.log(Level.INFO, rnd + "");
+                
+                output = rnd;
+            }
+        }
+        else {
+            output = 1;
+        }
+        
+        return output;
     }
     
     @Override

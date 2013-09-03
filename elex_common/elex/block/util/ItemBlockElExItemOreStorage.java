@@ -1,4 +1,4 @@
-package elex.block;
+package elex.block.util;
 
 import elex.lib.ElexIDs;
 import net.minecraft.item.ItemBlock;
@@ -7,21 +7,21 @@ import net.minecraft.item.ItemStack;
 /**
  * Elemental Experimentation
  * 
- * ItemBlockElExMetalStorage
+ * ItemBlockElExItemOreStorage
  * 
  * @author Myo-kun
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class ItemBlockElExMetalStorage extends ItemBlock {
+public class ItemBlockElExItemOreStorage extends ItemBlock {
     
-    public ItemBlockElExMetalStorage(int par1) {
+    public ItemBlockElExItemOreStorage(int par1) {
         super(par1);
         setHasSubtypes(true);
     }
     
     @Override
     public String getUnlocalizedName(ItemStack stack) {
-        return "tile." + ElexIDs.BLOCK_ELEX_METAL_STORAGE_REAL_UNLOCALIZED_NAMES.get(stack.getItemDamage());
+        return "tile." + ElexIDs.BLOCK_ELEX_ITEM_ORE_STORAGE_REAL_UNLOCALIZED_NAMES[stack.getItemDamage()];
     }
     
     @Override

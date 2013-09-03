@@ -6,6 +6,14 @@ import java.util.LinkedList;
 import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.item.EnumToolMaterial;
 
+/**
+ * Elemental Experimentation
+ * 
+ * ElexIDs
+ * 
+ * @author Myo-kun
+ * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
+ */
 public class ElexIDs {
     /* Block */
         /* Config Category */
@@ -26,6 +34,8 @@ public class ElexIDs {
         public static final int ITEM_ELEX_ORE_DEFAULT = 3682;
         public static final int ITEM_ELEX_ORE_2_DEFAULT = 3683;
         public static final int ITEM_ELEX_ORE_3_DEFAULT = 3684;
+        public static final int BLOCK_BUILDING_MATERIAL_DEFAULT = 3686;
+        public static final int BLOCK_BRICK_DEFAULT = 3687;
         public static final int CENTRIFUGE_DEFAULT = 3750;
         public static final int GRINDER_DEFAULT = 3751;
         public static final int SALT_WATER_BLOCK_DEFAULT = 3800;
@@ -45,6 +55,8 @@ public class ElexIDs {
         public static int BLOCK_ELEX_METAL_STORAGE_6;
         public static int BLOCK_MACHINE_CASE;
         public static int BLOCK_ALLOY_STORAGE;
+        public static int BLOCK_BUILDING_MATERIAL;
+        public static int BLOCK_BRICK;
         public static int CENTRIFUGE;
         public static int GRINDER;
         public static int SALT_WATER_BLOCK;
@@ -64,6 +76,8 @@ public class ElexIDs {
         public static final String BLOCK_ELEX_METAL_STORAGE_6_KEY = "METALSTORAGEBLOCKS6";
         public static final String BLOCK_MACHINE_CASE_KEY = "MACHINECASES";
         public static final String BLOCK_ALLOY_STORAGE_KEY = "ALLOYSTORAGEBLOCKS";
+        public static final String BLOCK_BUILDING_MATERIAL_KEY = "BUILDINGMATERIALS";
+        public static final String BLOCK_BRICK_KEY = "BRICKS";
         public static final String CENTRIFUGE_KEY = "CentrifugeID";
         public static final String GRINDER_KEY = "GrinderID";
         public static final String SALT_WATER_BLOCK_KEY = "SaltWaterBlockID";
@@ -110,8 +124,16 @@ public class ElexIDs {
             { "caseCarbonSteel", "caseScandinium", "caseOsmiridium",
             "caseLead" };
         public static final String[] BLOCK_ALLOY_STORAGE_REAL_UNLOCALIZED_NAMES = 
-            { "blockCarbonSteel", "blockVanadiumSteel", "BlockBronze", 
+            { "blockCarbonSteel", "blockVanadiumSteel", "blockBronze", 
             "blockElectrum", "blockScandinium", "blockOsmiridium" };
+        public static final String[] BLOCK_BUILDING_MATERIAL_UNLOCALIZED_NAMES = 
+            { "blockMarble", "blockBasalt", "blockGranite",
+            "blockLimestone", "blockRedStone", "blockBlueStone",
+            "blockGreenStone", "blockYellowStone" };
+        public static final String[] BLOCK_BRICK_UNLOCALIZED_NAMES = 
+            { "blockMarbleBrick", "blockBasaltBrick", "blockGraniteBrick",
+            "blockLimestoneBrick", "blockRedStoneBrick", "blockBlueStoneBrick",
+            "blockGreenStoneBrick", "blockYellowStoneBrick" };
         public static final String CENTRIFUGE_UNLOCALIZED_NAME = "centrifuge";
         public static final String GRINDER_UNLOCALIZED_NAME = "grinder";
         public static final String SALT_WATER_BLOCK_UNLOCALIZED_NAME = "blockSaltWater";
