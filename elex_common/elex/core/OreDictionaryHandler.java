@@ -22,6 +22,9 @@ public class OreDictionaryHandler {
         Loop.loopOreDictItem(ElexIDs.ELEX_ORE_REAL_UNLOCALIZED_NAMES, ModItems.itemElExOre);
         OreDictionary.registerOre("peridot", new ItemStack(ModItems.itemElExOre, 1, 4));
         OreDictionary.registerOre("olivine", new ItemStack(ModItems.itemElExOre, 1, 4));
+        Loop.loopOreDictGem(ElexIDs.ELEX_ORE_REAL_UNLOCALIZED_NAMES, ModItems.itemElExOre);
+        OreDictionary.registerOre("gemPeridot", new ItemStack(ModItems.itemElExOre, 1, 4));
+        OreDictionary.registerOre("gemOlivine", new ItemStack(ModItems.itemElExOre, 1, 4));
         // Compound Dusts
         Loop.loopOreDictItem(ElexIDs.ELEX_COMPOUND_DUST_REAL_UNLOCALIZED_NAMES, ModItems.itemElExCompoundDust);
         // Pure Metal Dusts
@@ -45,6 +48,10 @@ public class OreDictionaryHandler {
         // Native Metal Ores
         Loop.loopOreDictBlock(ElexIDs.BLOCK_ELEX_ORE_REAL_UNLOCALIZED_NAMES, ModBlocks.blockElExOre);
         Loop.loopOreDictBlock(ElexIDs.BLOCK_ELEX_ORE_2_REAL_UNLOCALIZED_NAMES, ModBlocks.blockElExOre2);
+        // Compound Ore Blocks
+        Loop.loopOreDictBlock(ElexIDs.ITEM_ELEX_ORE_REAL_UNLOCALIZED_NAMES, ModBlocks.blockElExItemOre);
+        Loop.loopOreDictBlock(ElexIDs.ITEM_ELEX_ORE_2_REAL_UNLOCALIZED_NAMES, ModBlocks.blockElExItemOre2);
+        Loop.loopOreDictBlock(ElexIDs.ITEM_ELEX_ORE_3_REAL_UNLOCALIZED_NAMES, ModBlocks.blockElExItemOre3);
         // Compound Ore Storage Blocks
         Loop.loopOreDictBlock(ElexIDs.BLOCK_ELEX_ITEM_ORE_STORAGE_REAL_UNLOCALIZED_NAMES, ModBlocks.blockElExItemOreStorage);
         // Pure Metal Storage Blocks
@@ -57,10 +64,9 @@ public class OreDictionaryHandler {
         // Alloy Storage Blocks
         Loop.loopOreDictBlock(ElexIDs.BLOCK_ALLOY_STORAGE_REAL_UNLOCALIZED_NAMES, ModBlocks.blockAlloyStorage);
         OreDictionary.registerOre("blockSteel", new ItemStack(ModBlocks.blockAlloyStorage, 1, 0));
-        // Compound Ore Blocks
-        Loop.loopOreDictBlock(ElexIDs.ITEM_ELEX_ORE_REAL_UNLOCALIZED_NAMES, ModBlocks.blockElExItemOre);
-        Loop.loopOreDictBlock(ElexIDs.ITEM_ELEX_ORE_2_REAL_UNLOCALIZED_NAMES, ModBlocks.blockElExItemOre2);
-        Loop.loopOreDictBlock(ElexIDs.ITEM_ELEX_ORE_3_REAL_UNLOCALIZED_NAMES, ModBlocks.blockElExItemOre3);
+        // Building Material Blocks
+        Loop.loopOreDictBlock(ElexIDs.BLOCK_BUILDING_MATERIAL_UNLOCALIZED_NAMES, ModBlocks.blockBuildingMaterial);
+        Loop.loopOreDictBlock(ElexIDs.BLOCK_BRICK_UNLOCALIZED_NAMES, ModBlocks.blockBrick);
     }
     
 }

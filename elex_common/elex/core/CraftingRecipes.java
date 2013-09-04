@@ -66,6 +66,14 @@ public class CraftingRecipes {
         GameRegistry.addRecipe(new ItemStack(ModBlocks.blockBuildingMaterial, 8, 6), new Object[] { "YYY", "YXY", "YYY", 'X', new ItemStack(Item.dyePowder, 1, 4), 'Y', new ItemStack(Block.stone) });
         GameRegistry.addRecipe(new ItemStack(ModBlocks.blockBuildingMaterial, 8, 7), new Object[] { "YYY", "YXY", "YYY", 'X', new ItemStack(Item.dyePowder, 1, 2), 'Y', new ItemStack(Block.stone) });
         GameRegistry.addRecipe(new ItemStack(ModBlocks.blockBuildingMaterial, 8, 8), new Object[] { "YYY", "YXY", "YYY", 'X', new ItemStack(Item.dyePowder, 1, 11), 'Y', new ItemStack(Block.stone) });
+        // Nugget Recipes
+        for (int i = 0; i < ElexIDs.ELEX_INGOT_REAL_UNLOCALIZED_NAMES.size(); i++) {
+            GameRegistry.addShapelessRecipe(new ItemStack(ModItems.itemMetalNugget, 9, i), new ItemStack(ModItems.itemElExIngot, 1, i));
+        }
+        for (int i = 0; i < ElexIDs.ALLOY_INGOT_REAL_UNLOCALIZED_NAMES.length; i++) {
+            GameRegistry.addShapelessRecipe(new ItemStack(ModItems.itemAlloyNugget, 9, i), new ItemStack(ModItems.itemAlloyIngot, 1, i));
+        }
+        GameRegistry.addShapelessRecipe(new ItemStack(ModItems.itemIronNugget, 9), new ItemStack(Item.ingotIron));
         // Temporary Alloy Dust Recipes
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.itemAlloyDust, 4, 0), new ItemStack(ModItems.itemVanillaDust, 1, 1), new ItemStack(ModItems.itemVanillaDust, 1, 1), new ItemStack(ModItems.itemVanillaDust, 1, 1), new ItemStack(ModItems.itemVanillaDust, 1, 5));
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.itemAlloyDust, 4, 1), new ItemStack(ModItems.itemVanillaDust, 1, 1), new ItemStack(ModItems.itemVanillaDust, 1, 1), new ItemStack(ModItems.itemElExMetalDust, 1, 10), new ItemStack(ModItems.itemVanillaDust, 1, 5));

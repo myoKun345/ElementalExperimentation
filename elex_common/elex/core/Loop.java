@@ -30,6 +30,12 @@ public class Loop {
         }
     }
     
+    public static void loopOreDictGem(String[] loopThrough, Item item) {
+        for (int i = 0; i < loopThrough.length; i++) {
+            OreDictionary.registerOre("gem" + loopThrough[i].substring(0, 1).toUpperCase(), new ItemStack(item, 1, i));
+        }
+    }
+    
     public static void loopOreDictBlockList(LinkedList<String> loopThrough, Block block) {
         for (int i = 0; i < loopThrough.size(); i++) {
             OreDictionary.registerOre(loopThrough.get(i), new ItemStack(block, 1, i));
