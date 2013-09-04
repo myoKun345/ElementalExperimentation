@@ -317,6 +317,26 @@ public class ConfigurationSettings {
     public static String HALITE_BPV_KEY = "HaliteNumberOfBlocksPerVein";
     public static String HALITE_TOPY_KEY = "HaliteMaxYValue";
     
+    /* Building Materials Gen Config Category */
+    public static String STONE_GEN_CATEGORY = "Building Materials Gen Configuration";
+    
+    /* Building Materials Gen Config Variables */
+    public static boolean STONE_GEN_MASTER_SWITCH;
+    
+    public static boolean MARBLE_GEN;
+    public static boolean BASALT_GEN;
+    public static boolean DEEP_SANDSTONE_GEN;
+    public static boolean GRANITE_GEN;
+    public static boolean LIMESTONE_GEN;
+    
+    public static String STONE_GEN_MASTER_KEY = "*MasterBuildingMaterialGenToggleSwitch";
+    
+    public static String MARBLE_GEN_KEY = "MarbleEnableGeneration";
+    public static String BASALT_GEN_KEY = "BasaltEnableGeneration";
+    public static String DEEP_SANDSTONE_GEN_KEY = "DeepSandstoneEnableGeneration";
+    public static String GRANITE_GEN_KEY = "GraniteEnableGeneration";
+    public static String LIMESTONE_GEN_KEY = "LimestoneEnableGeneration";
+    
     /* Surface Gen Config Category */
     public static String SURFACE_GEN_CATEGORY = "Surface Gen Configuration";
     

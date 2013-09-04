@@ -4,11 +4,13 @@ import java.util.Random;
 
 import net.minecraft.block.Block;
 import net.minecraft.world.World;
+import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 import cpw.mods.fml.common.IWorldGenerator;
 import elex.core.ConfigurationSettings;
 import elex.lib.ElexIDs;
+import elex.worldgen.biome.Biomes;
 
 /**
  * Elemental Experimentation
@@ -313,6 +315,69 @@ public class WorldGenElExOres implements IWorldGenerator {
                     int YCoord = random.nextInt(ConfigurationSettings.HALITE_TOPY);
                     int ZCoord = chunkZ + random.nextInt(16);
                     (new WorldGenMinable(ElexIDs.ITEM_ELEX_ORE, 7, ConfigurationSettings.HALITE_BPV, Block.stone.blockID)).generate(world, random, XCoord, YCoord, ZCoord);
+                }
+            }
+        }
+        
+        if (ConfigurationSettings.STONE_GEN_MASTER_SWITCH) {
+            if (ConfigurationSettings.MARBLE_GEN) {
+                for (int i = 0; i < 4; i++) {
+                    int x = chunkX + random.nextInt(16);
+                    int y = random.nextInt(96);
+                    int z = chunkZ + random.nextInt(16);
+                    if (world.getBiomeGenForCoords(x, z) == BiomeGenBase.plains || world.getBiomeGenForCoords(x, z).biomeID == ConfigurationSettings.EVAPORITE_PLAINS_ID) {
+                        new WorldGenMinable(ElexIDs.BLOCK_BUILDING_MATERIAL, 0,
+                                64, Block.stone.blockID).generate(world,
+                                random, x, y, z);
+                    }
+                }
+            }
+            if (ConfigurationSettings.BASALT_GEN) {
+                for (int i = 0; i < 4; i++) {
+                    int x = chunkX + random.nextInt(16);
+                    int y = random.nextInt(96);
+                    int z = chunkZ + random.nextInt(16);
+                    if (world.getBiomeGenForCoords(x, z) == BiomeGenBase.taiga || world.getBiomeGenForCoords(x, z) == BiomeGenBase.taigaHills) {
+                        new WorldGenMinable(ElexIDs.BLOCK_BUILDING_MATERIAL, 1,
+                                64, Block.stone.blockID).generate(world,
+                                random, x, y, z);
+                    }
+                }
+            }
+            if (ConfigurationSettings.DEEP_SANDSTONE_GEN) {
+                for (int i = 0; i < 4; i++) {
+                    int x = chunkX + random.nextInt(16);
+                    int y = random.nextInt(96);
+                    int z = chunkZ + random.nextInt(16);
+                    if (world.getBiomeGenForCoords(x, z) == BiomeGenBase.desert || world.getBiomeGenForCoords(x, z) == BiomeGenBase.desertHills) {
+                        new WorldGenMinable(ElexIDs.BLOCK_BUILDING_MATERIAL, 2,
+                                64, Block.stone.blockID).generate(world,
+                                random, x, y, z);
+                    }
+                }
+            }
+            if (ConfigurationSettings.GRANITE_GEN) {
+                for (int i = 0; i < 4; i++) {
+                    int x = chunkX + random.nextInt(16);
+                    int y = random.nextInt(96);
+                    int z = chunkZ + random.nextInt(16);
+                    if (world.getBiomeGenForCoords(x, z) == BiomeGenBase.extremeHills || world.getBiomeGenForCoords(x, z) == BiomeGenBase.extremeHillsEdge) {
+                        new WorldGenMinable(ElexIDs.BLOCK_BUILDING_MATERIAL, 3,
+                                64, Block.stone.blockID).generate(world,
+                                random, x, y, z);
+                    }
+                }
+            }
+            if (ConfigurationSettings.LIMESTONE_GEN) {
+                for (int i = 0; i < 4; i++) {
+                    int x = chunkX + random.nextInt(16);
+                    int y = random.nextInt(96);
+                    int z = chunkZ + random.nextInt(16);
+                    if (world.getBiomeGenForCoords(x, z) == BiomeGenBase.forest || world.getBiomeGenForCoords(x, z) == BiomeGenBase.forestHills) {
+                        new WorldGenMinable(ElexIDs.BLOCK_BUILDING_MATERIAL, 4,
+                                64, Block.stone.blockID).generate(world,
+                                random, x, y, z);
+                    }
                 }
             }
         }

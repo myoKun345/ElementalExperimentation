@@ -223,6 +223,14 @@ public class ConfigurationHandler {
         ConfigurationSettings.HALITE_BPV = config.get(ConfigurationSettings.ORE_GEN_CATEGORY, ConfigurationSettings.HALITE_BPV_KEY, 5).getInt();
         ConfigurationSettings.HALITE_TOPY = config.get(ConfigurationSettings.ORE_GEN_CATEGORY, ConfigurationSettings.HALITE_TOPY_KEY, 64).getInt();
         
+        ConfigurationSettings.STONE_GEN_MASTER_SWITCH = config.get(ConfigurationSettings.STONE_GEN_CATEGORY, ConfigurationSettings.STONE_GEN_MASTER_KEY, true, "This will disable ALL building material gen in the mod").getBoolean(true);
+        
+        ConfigurationSettings.MARBLE_GEN = config.get(ConfigurationSettings.STONE_GEN_CATEGORY, ConfigurationSettings.MARBLE_GEN_KEY, true, "Marble Configuration").getBoolean(true);
+        ConfigurationSettings.BASALT_GEN = config.get(ConfigurationSettings.STONE_GEN_CATEGORY, ConfigurationSettings.BASALT_GEN_KEY, true, "Basalt Configuration").getBoolean(true);
+        ConfigurationSettings.DEEP_SANDSTONE_GEN = config.get(ConfigurationSettings.STONE_GEN_CATEGORY, ConfigurationSettings.DEEP_SANDSTONE_GEN_KEY, true, "Deep Sandstone Configuration").getBoolean(true);
+        ConfigurationSettings.GRANITE_GEN = config.get(ConfigurationSettings.STONE_GEN_CATEGORY, ConfigurationSettings.GRANITE_GEN_KEY, true, "Granite Configuration").getBoolean(true);
+        ConfigurationSettings.LIMESTONE_GEN = config.get(ConfigurationSettings.STONE_GEN_CATEGORY, ConfigurationSettings.LIMESTONE_GEN_KEY, true, "Limestone Configuration").getBoolean(true);
+        
         ConfigurationSettings.EVAPORITE_RARITY = config.get(ConfigurationSettings.ORE_GEN_CATEGORY, ConfigurationSettings.EVAPORITE_RARITY_KEY, 4, "Evaporite Rarity").getInt();
         
         ConfigurationSettings.SURFACE_GEN_MASTER_SWITCH = config.get(ConfigurationSettings.SURFACE_GEN_CATEGORY, ConfigurationSettings.SURFACE_GEN_MASTER_KEY, true, "This will disable ALL surface world gen in the mod").getBoolean(true);
