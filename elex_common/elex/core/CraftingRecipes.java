@@ -1,5 +1,6 @@
 package elex.core;
 
+import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
@@ -61,6 +62,10 @@ public class CraftingRecipes {
         for (int i = 0; i < ElexIDs.BLOCK_BUILDING_MATERIAL_UNLOCALIZED_NAMES.length; i++) {
             GameRegistry.addRecipe(new ItemStack(ModBlocks.blockBrick, 1, i), new Object[] { "XX", "XX", 'X', new ItemStack(ModBlocks.blockBuildingMaterial, 1, i)});
         }
+        GameRegistry.addRecipe(new ItemStack(ModBlocks.blockBuildingMaterial, 8, 5), new Object[] { "YYY", "YXY", "YYY", 'X', new ItemStack(Item.dyePowder, 1, 1), 'Y', new ItemStack(Block.stone) });
+        GameRegistry.addRecipe(new ItemStack(ModBlocks.blockBuildingMaterial, 8, 6), new Object[] { "YYY", "YXY", "YYY", 'X', new ItemStack(Item.dyePowder, 1, 4), 'Y', new ItemStack(Block.stone) });
+        GameRegistry.addRecipe(new ItemStack(ModBlocks.blockBuildingMaterial, 8, 7), new Object[] { "YYY", "YXY", "YYY", 'X', new ItemStack(Item.dyePowder, 1, 2), 'Y', new ItemStack(Block.stone) });
+        GameRegistry.addRecipe(new ItemStack(ModBlocks.blockBuildingMaterial, 8, 8), new Object[] { "YYY", "YXY", "YYY", 'X', new ItemStack(Item.dyePowder, 1, 11), 'Y', new ItemStack(Block.stone) });
         // Temporary Alloy Dust Recipes
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.itemAlloyDust, 4, 0), new ItemStack(ModItems.itemVanillaDust, 1, 1), new ItemStack(ModItems.itemVanillaDust, 1, 1), new ItemStack(ModItems.itemVanillaDust, 1, 1), new ItemStack(ModItems.itemVanillaDust, 1, 5));
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.itemAlloyDust, 4, 1), new ItemStack(ModItems.itemVanillaDust, 1, 1), new ItemStack(ModItems.itemVanillaDust, 1, 1), new ItemStack(ModItems.itemElExMetalDust, 1, 10), new ItemStack(ModItems.itemVanillaDust, 1, 5));
