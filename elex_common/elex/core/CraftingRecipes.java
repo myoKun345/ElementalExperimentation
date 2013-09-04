@@ -21,7 +21,7 @@ public class CraftingRecipes {
         // Mercury Injector Recipe
         GameRegistry.addRecipe(new ItemStack(ModItems.mercuryInjector, 1), new Object[] { "X", "Z", "Y", 'X', Item.ingotIron, 'Z', Item.slimeBall, 'Y', Item.stick });
         // Storage Block Recipes for Compound Ores
-        for (int i = 0; i < ElexIDs.ELEX_ORE_REAL_UNLOCALIZED_NAMES.length; i++) {
+        for (int i = 0; i < ElexIDs.BLOCK_ELEX_ITEM_ORE_STORAGE_REAL_UNLOCALIZED_NAMES.length; i++) {
             GameRegistry.addRecipe(new ItemStack(ModBlocks.blockElExItemOreStorage, 1, i), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(ModItems.itemElExOre, 1, i) });
         }
         // Storage Block Recipes for Metals
