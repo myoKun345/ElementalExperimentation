@@ -169,16 +169,6 @@ public class TileEntityGrinder extends TileEntity implements ISidedInventory, IE
     }
     
     @Override
-    public boolean isAddedToEnergyNet() {
-        return false;
-    }
-    
-    @Override
-    public boolean acceptsEnergyFrom(TileEntity emitter, Direction direction) {
-        return true;
-    }
-    
-    @Override
     public PowerReceiver getPowerReceiver(ForgeDirection side) {
         return null;
     }
@@ -223,6 +213,12 @@ public class TileEntityGrinder extends TileEntity implements ISidedInventory, IE
     @Override
     public float getVoltage() {
         return 0;
+    }
+    
+    @Override
+    public boolean acceptsEnergyFrom(TileEntity emitter,
+            ForgeDirection direction) {
+        return false;
     }
     
 }
