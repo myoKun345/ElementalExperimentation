@@ -56,6 +56,10 @@ public class ConfigurationHandler {
         ElexIDs.METAL_NUGGET = config.getItem(ElexIDs.CATEGORY_ITEM_IDS, ElexIDs.METAL_NUGGET_KEY, ElexIDs.METAL_NUGGET_DEFAULT).getInt();
         ElexIDs.ALLOY_NUGGET = config.getItem(ElexIDs.CATEGORY_ITEM_IDS, ElexIDs.ALLOY_NUGGET_KEY, ElexIDs.ALLOY_NUGGET_DEFAULT).getInt();
         ElexIDs.IRON_NUGGET = config.getItem(ElexIDs.CATEGORY_ITEM_IDS, ElexIDs.IRON_NUGGET_KEY, ElexIDs.IRON_NUGGET_DEFAULT).getInt();
+        ElexIDs.SALTED_BEEF = config.getItem(ElexIDs.CATEGORY_ITEM_IDS, ElexIDs.SALTED_BEEF_KEY, ElexIDs.SALTED_BEEF_DEFAULT).getInt();
+        ElexIDs.SALTED_CHICKEN = config.getItem(ElexIDs.CATEGORY_ITEM_IDS, ElexIDs.SALTED_CHICKEN_KEY, ElexIDs.SALTED_CHICKEN_DEFAULT).getInt();
+        ElexIDs.SALTED_PORK = config.getItem(ElexIDs.CATEGORY_ITEM_IDS, ElexIDs.SALTED_PORK_KEY, ElexIDs.SALTED_PORK_DEFAULT).getInt();
+        ElexIDs.SALTED_FISH = config.getItem(ElexIDs.CATEGORY_ITEM_IDS, ElexIDs.SALTED_FISH_KEY, ElexIDs.SALTED_FISH_DEFAULT).getInt();
         ElexIDs.RESEARCH_BINDER = config.getItem(ElexIDs.CATEGORY_ITEM_IDS, ElexIDs.RESEARCH_BINDER_KEY, ElexIDs.RESEARCH_BINDER_DEFAULT).getInt();
         ElexIDs.ELEX_ARMOR[0] = config.getItem(ElexIDs.CATEGORY_ITEM_IDS, ElexIDs.ELEX_ARMOR_KEYS[0], ElexIDs.ELEX_ARMOR_DEFAULT[0]).getInt();
         ElexIDs.ELEX_ARMOR[1] = config.getItem(ElexIDs.CATEGORY_ITEM_IDS, ElexIDs.ELEX_ARMOR_KEYS[1], ElexIDs.ELEX_ARMOR_DEFAULT[1]).getInt();

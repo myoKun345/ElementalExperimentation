@@ -503,6 +503,11 @@
 	<entry key="item.pantsCarbon.name">Carbon Fiber Pants</entry>
 	<entry key="item.bootsCarbon.name">Carbon Fiber Boots</entry>
 	
+	<entry key="item.foodSaltedBeef.name">Salted Beef</entry>
+	<entry key="item.foodSaltedChicken.name">Salted Chicken</entry>
+	<entry key="item.foodSaltedPork.name">Salted Pork</entry>
+	<entry key="item.foodSaltedFish.name">Salted Fish</entry>
+	
 	<entry key="item.researchBinder.name">Research Binder</entry>
 	
 	<entry key="item.mercuryInjector.name">Mercury Injector</entry>

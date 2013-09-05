@@ -1,6 +1,7 @@
 package elex.core;
 
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemFood;
 import elex.ElementalExperimentation;
 import elex.item.ItemElExArmor;
 import elex.item.ItemElExDust;
@@ -10,6 +11,7 @@ import elex.item.ItemElExOre;
 import elex.item.ItemMachinePart;
 import elex.item.ItemMercuryInjector;
 import elex.item.ItemResearchBinder;
+import elex.item.ItemSaltedMeat;
 import elex.lib.ElexIDs;
 
 public class ModItems {
@@ -31,6 +33,10 @@ public class ModItems {
     public static Item itemCarbonPlate;
     public static Item itemCarbonPants;
     public static Item itemCarbonBoots;
+    public static Item foodSaltedBeef;
+    public static Item foodSaltedChicken;
+    public static Item foodSaltedPork;
+    public static Item foodSaltedFish;
     
     public static void init() {
         itemElExOre = new ItemElExOre(ElexIDs.ELEX_ORE);
@@ -51,5 +57,9 @@ public class ModItems {
         itemCarbonPlate = new ItemElExArmor(ElexIDs.ELEX_ARMOR[1], ElementalExperimentation.carbonArmorMat, 0, 1, "carbon");
         itemCarbonPants = new ItemElExArmor(ElexIDs.ELEX_ARMOR[2], ElementalExperimentation.carbonArmorMat, 1, 2, "carbon");
         itemCarbonBoots = new ItemElExArmor(ElexIDs.ELEX_ARMOR[3], ElementalExperimentation.carbonArmorMat, 0, 3, "carbon");
+        foodSaltedBeef = new ItemSaltedMeat(ElexIDs.SALTED_BEEF, (ItemFood)Item.beefCooked, 0);
+        foodSaltedChicken = new ItemSaltedMeat(ElexIDs.SALTED_CHICKEN, (ItemFood)Item.chickenCooked, 1);
+        foodSaltedPork = new ItemSaltedMeat(ElexIDs.SALTED_PORK, (ItemFood)Item.porkCooked, 2);
+        foodSaltedFish = new ItemSaltedMeat(ElexIDs.SALTED_FISH, (ItemFood)Item.fishCooked, 3);
     }
 }

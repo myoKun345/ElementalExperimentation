@@ -81,6 +81,11 @@ public class CraftingRecipes {
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.itemAlloyDust, 4, 3), new ItemStack(ModItems.itemVanillaDust, 1, 2), new ItemStack(ModItems.itemVanillaDust, 1, 2), new ItemStack(ModItems.itemElExMetalDust, 1, 30), new ItemStack(ModItems.itemElExMetalDust, 1, 30));
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.itemAlloyDust, 4, 4), new ItemStack(ModItems.itemElExMetalDust, 1, 4), new ItemStack(ModItems.itemElExMetalDust, 1, 4), new ItemStack(ModItems.itemElExMetalDust, 1, 4), new ItemStack(ModItems.itemElExMetalDust, 1, 8));
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.itemAlloyDust, 4, 5), new ItemStack(ModItems.itemElExMetalDust, 1, 57), new ItemStack(ModItems.itemElExMetalDust, 1, 57), new ItemStack(ModItems.itemElExMetalDust, 1, 57), new ItemStack(ModItems.itemElExMetalDust, 1, 58));
+        // Salted Meat Recipes
+        GameRegistry.addShapelessRecipe(new ItemStack(ModItems.foodSaltedBeef), new ItemStack(Item.beefCooked), new ItemStack(ModItems.itemElExCompoundDust, 1, 7));
+        GameRegistry.addShapelessRecipe(new ItemStack(ModItems.foodSaltedChicken), new ItemStack(Item.chickenCooked), new ItemStack(ModItems.itemElExCompoundDust, 1, 7));
+        GameRegistry.addShapelessRecipe(new ItemStack(ModItems.foodSaltedPork), new ItemStack(Item.porkCooked), new ItemStack(ModItems.itemElExCompoundDust, 1, 7));
+        GameRegistry.addShapelessRecipe(new ItemStack(ModItems.foodSaltedFish), new ItemStack(Item.fishCooked), new ItemStack(ModItems.itemElExCompoundDust, 1, 7));
         // Research Binder Recipe
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.itemResearchBinder, 1), new ItemStack(Item.leather, 1), new ItemStack(ModItems.itemIronNugget, 1), new ItemStack(Item.paper, 1), new ItemStack(Item.dyePowder, 1, 0));
         

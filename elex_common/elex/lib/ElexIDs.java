@@ -159,6 +159,10 @@ public class ElexIDs {
         public static final int METAL_NUGGET_DEFAULT = 16241;
         public static final int ALLOY_NUGGET_DEFAULT = 16242;
         public static final int IRON_NUGGET_DEFAULT = 16243;
+        public static final int SALTED_BEEF_DEFAULT = 16245;
+        public static final int SALTED_CHICKEN_DEFAULT = 16246;
+        public static final int SALTED_PORK_DEFAULT = 16247;
+        public static final int SALTED_FISH_DEFAULT = 16248;
         public static final int RESEARCH_BINDER_DEFAULT = 16260;
         public static final int[] ELEX_ARMOR_DEFAULT = 
             { 16280, 16281, 16282, 16283 };
@@ -177,6 +181,10 @@ public class ElexIDs {
         public static int METAL_NUGGET;
         public static int ALLOY_NUGGET;
         public static int IRON_NUGGET;
+        public static int SALTED_BEEF;
+        public static int SALTED_CHICKEN;
+        public static int SALTED_PORK;
+        public static int SALTED_FISH;
         public static int RESEARCH_BINDER;
         public static int[] ELEX_ARMOR = new int[4];
         
@@ -194,6 +202,10 @@ public class ElexIDs {
         public static final String METAL_NUGGET_KEY = "METALNUGGETS";
         public static final String ALLOY_NUGGET_KEY = "ALLOYNUGGETS";
         public static final String IRON_NUGGET_KEY = "IronNuggetID";
+        public static final String SALTED_BEEF_KEY = "SaltedBeefID";
+        public static final String SALTED_CHICKEN_KEY = "SaltedChickenID";
+        public static final String SALTED_PORK_KEY = "SaltedPorkID";
+        public static final String SALTED_FISH_KEY = "SaltedFishID";
         public static final String RESEARCH_BINDER_KEY = "ResearchBinderID";
         public static final String[] ELEX_ARMOR_KEYS = 
             { "CarbonHelmetID", "CarbonChestplateID", "CarbonPantsID", "CarbonBootsID" };
@@ -247,6 +259,9 @@ public class ElexIDs {
         public static final String RESEARCH_BINDER_UNLOCALIZED_NAME = "researchBinder";
         public static final String[] ELEX_ARMOR_REAL_UNLOCALIZED_NAMES = 
             { "helmetCarbon", "plateCarbon", "pantsCarbon", "bootsCarbon" }; 
+        public static final String[] SALTED_MEAT_UNLOCALIZED_NAMES = 
+            { "foodSaltedBeef", "foodSaltedChicken", "foodSaltedPork",
+            "foodSaltedFish" };
         
         /* Molecule Strings */
         public static final String[] COMPOUND_DUST_MOLECULE_STRINGS = 

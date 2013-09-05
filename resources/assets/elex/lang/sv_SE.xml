@@ -500,6 +500,11 @@
 	<entry key="item.pantsCarbon.name">Kolfiberbyxor</entry>
 	<entry key="item.bootsCarbon.name">Kolfiberstövlar</entry>
 	
+	<entry key="item.foodSaltedBeef.name">Saltadebiff</entry>
+	<entry key="item.foodSaltedChicken.name">Saltadekyckling</entry>
+	<entry key="item.foodSaltedPork.name">Saltadefläsk</entry>
+	<entry key="item.foodSaltedFish.name">Saltadefisk</entry>
+	
 	<entry key="item.researchBinder.name">Forskninganteckningsbok</entry>
 	
 	<entry key="item.mercuryInjector.name">Kvicksilverspruta</entry>
