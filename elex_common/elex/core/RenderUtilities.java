@@ -1,4 +1,4 @@
-package elex.util;
+package elex.core;
 
 import net.minecraftforge.common.ForgeDirection;
 
