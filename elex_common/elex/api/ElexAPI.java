@@ -6,6 +6,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.EnumHelper;
 import elex.core.LogHelper;
 import elex.core.ModFluids;
+import elex.lib.Reference;
 
 /**
  * Elemental Experimentation
@@ -58,9 +59,18 @@ public class ElexAPI {
      * @param bonus - The ItemStack output that will result only with a chance.
      * @param chance - The chance (denominator) that the result will include the bonus item.
      * @param time - The time it should take (in ticks, maybe?) for this recipe to complete.
+     * @param modid - Your mod id.
      */
-    public static void addGrinderRecipe(ItemStack input, ItemStack main, ItemStack bonus, int chance, int time) {
-        GrinderRecipe.grinderRecipes.put(input.getItemName(), new GrinderRecipe(input, main, bonus, chance, time));
+    public static void addGrinderRecipe(ItemStack input, ItemStack main, ItemStack bonus, int chance, int time, String modid) {
+        if (modid != "IC2" && modid != "GregTech") {
+            GrinderRecipe.grinderRecipes.put(input.getItemName(), new GrinderRecipe(input, main, bonus, chance, time));
+        }
+        if (modid == "IC2") {
+            LogHelper.log(Level.INFO, Reference.RECIPE_DENIED_GREG);
+        }
+        if (modid == "GregTech") {
+            LogHelper.log(Level.INFO, Reference.RECIPE_DENIED_GREG);
+        }
     }
     
     /**
@@ -68,9 +78,18 @@ public class ElexAPI {
      * @param input - The input ItemStack.
      * @param main - The ItemStack output.
      * @param time - The time it should take (in ticks, maybe?) for this recipe to complete.
+     * @param modid - Your mod id.
      */
-    public static void addGrinderRecipe(ItemStack input, ItemStack main, int time) {
-        GrinderRecipe.grinderRecipes.put(input.getItemName(), new GrinderRecipe(input, main, null, 0, time));
+    public static void addGrinderRecipe(ItemStack input, ItemStack main, int time, String modid) {
+        if (modid != "IC2" && modid != "GregTech") {
+            GrinderRecipe.grinderRecipes.put(input.getItemName(), new GrinderRecipe(input, main, null, 0, time));
+        }
+        if (modid == "IC2") {
+            LogHelper.log(Level.INFO, Reference.RECIPE_DENIED_GREG);
+        }
+        if (modid == "GregTech") {
+            LogHelper.log(Level.INFO, Reference.RECIPE_DENIED_GREG);
+        }
     }
     
     static int metalNumber;

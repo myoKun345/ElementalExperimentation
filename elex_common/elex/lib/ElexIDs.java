@@ -291,7 +291,10 @@ public class ElexIDs {
             "Co3(AsO4)2(H2O)8", "ZnS", "CuGaS2",
             "Cu26Fe4Ge4S32", "Cu(UO2)3(SeO3)3(OH)2(H2O)7", "HBrO2",
             "SrSO4", "YPO4", "ZrO2",
-            "FeNb2O6", "Cs(Be2Li)Al2Si6O18", "BaTiSi3O9" };
+            "FeNb2O6", "Cs(Be2Li)Al2Si6O18", "BaTiSi3O9",
+            "(Rare Earth)PO4", "(Y,Ca,Ce,U,Th)2O6", "HfSiO4",
+            "WO4", "ReS2", "HgS",
+            "Tl2As5S9", "ThO2", "UO2" };
         public static final List<String> METAL_DUST_MOLECULE_STRINGS = new LinkedList<String>();
         public static final List<String> PURE_NONMETAL_DUST_MOLECULE_STRINGS = new LinkedList<String>();
         public static final String[] VANILLA_DUST_MOLECULE_STRINGS =

@@ -10,6 +10,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import elex.api.ElexAPI;
 import elex.api.GrinderRecipe;
 import elex.lib.ElexIDs;
+import elex.lib.Reference;
 
 /**
  * Elemental Experimentation
@@ -150,30 +151,30 @@ public class CraftingRecipes {
             7 };
         for (int i = 0; i < ElexIDs.BLOCK_ELEX_ORE_REAL_UNLOCALIZED_NAMES.length; i++) {
             if (ElexIDs.NATIVE_ORE_BONUS_IDS[i] != null) {
-                ElexAPI.addGrinderRecipe(new ItemStack(ModBlocks.blockElExOre, 1, i), new ItemStack(ModItems.itemElExMetalDust, 2, ElexIDs.METAL_ORE_ELEMENT_IDS.get(i) - 1), ElexIDs.NATIVE_ORE_BONUS_IDS[i], ElexIDs.NATIVE_ORE_BONUS_CHANCES[i], 100);
+                ElexAPI.addGrinderRecipe(new ItemStack(ModBlocks.blockElExOre, 1, i), new ItemStack(ModItems.itemElExMetalDust, 2, ElexIDs.METAL_ORE_ELEMENT_IDS.get(i) - 1), ElexIDs.NATIVE_ORE_BONUS_IDS[i], ElexIDs.NATIVE_ORE_BONUS_CHANCES[i], 100, Reference.MOD_ID);
             }
             if (ElexIDs.NATIVE_ORE_BONUS_IDS[i] == null) {
-                ElexAPI.addGrinderRecipe(new ItemStack(ModBlocks.blockElExOre, 1, i), new ItemStack(ModItems.itemElExMetalDust, 2, ElexIDs.METAL_ORE_ELEMENT_IDS.get(i) - 1), 100);
+                ElexAPI.addGrinderRecipe(new ItemStack(ModBlocks.blockElExOre, 1, i), new ItemStack(ModItems.itemElExMetalDust, 2, ElexIDs.METAL_ORE_ELEMENT_IDS.get(i) - 1), 100, Reference.MOD_ID);
             }
         }
         for (int i = 0; i < ElexIDs.BLOCK_ELEX_ORE_2_REAL_UNLOCALIZED_NAMES.length; i++) {
             int j = i + ElexIDs.BLOCK_ELEX_ORE_REAL_UNLOCALIZED_NAMES.length;
             
-            ElexAPI.addGrinderRecipe(new ItemStack(ModBlocks.blockElExOre2, 1, i), new ItemStack(ModItems.itemElExMetalDust, 2, ElexIDs.METAL_ORE_ELEMENT_IDS.get(j) - 1), ElexIDs.NATIVE_ORE_BONUS_IDS[j], ElexIDs.NATIVE_ORE_BONUS_CHANCES[j], 100);
+            ElexAPI.addGrinderRecipe(new ItemStack(ModBlocks.blockElExOre2, 1, i), new ItemStack(ModItems.itemElExMetalDust, 2, ElexIDs.METAL_ORE_ELEMENT_IDS.get(j) - 1), ElexIDs.NATIVE_ORE_BONUS_IDS[j], ElexIDs.NATIVE_ORE_BONUS_CHANCES[j], 100, Reference.MOD_ID);
         }
         // Grinder Recipes for Compound Ores
         for (int i = 0; i < ElexIDs.ITEM_ELEX_ORE_REAL_UNLOCALIZED_NAMES.length; i++) {
-            ElexAPI.addGrinderRecipe(new ItemStack(ModBlocks.blockElExItemOre, 1, i), new ItemStack(ModItems.itemElExCompoundDust, 1, i), 100);
+            ElexAPI.addGrinderRecipe(new ItemStack(ModBlocks.blockElExItemOre, 1, i), new ItemStack(ModItems.itemElExCompoundDust, 2, i), 100, Reference.MOD_ID);
         }
         for (int i = 0; i < ElexIDs.ITEM_ELEX_ORE_2_REAL_UNLOCALIZED_NAMES.length; i++) {
             int j = i + ElexIDs.ITEM_ELEX_ORE_REAL_UNLOCALIZED_NAMES.length;
             
-            ElexAPI.addGrinderRecipe(new ItemStack(ModBlocks.blockElExItemOre2, 1, i), new ItemStack(ModItems.itemElExCompoundDust, 1, j), 100);
+            ElexAPI.addGrinderRecipe(new ItemStack(ModBlocks.blockElExItemOre2, 1, i), new ItemStack(ModItems.itemElExCompoundDust, 2, j), 100, Reference.MOD_ID);
         }
         for (int i = 0; i < ElexIDs.ITEM_ELEX_ORE_3_REAL_UNLOCALIZED_NAMES.length; i++) {
             int j = i + ElexIDs.ITEM_ELEX_ORE_REAL_UNLOCALIZED_NAMES.length + ElexIDs.ITEM_ELEX_ORE_2_REAL_UNLOCALIZED_NAMES.length;
             
-            ElexAPI.addGrinderRecipe(new ItemStack(ModBlocks.blockElExItemOre3, 1, i), new ItemStack(ModItems.itemElExCompoundDust, 1, j), 100);
+            ElexAPI.addGrinderRecipe(new ItemStack(ModBlocks.blockElExItemOre3, 1, i), new ItemStack(ModItems.itemElExCompoundDust, 2, j), 100, Reference.MOD_ID);
         }
     }
 }

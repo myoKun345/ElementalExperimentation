@@ -112,74 +112,88 @@ public class TileEntityGrinder extends TileEntity implements ISidedInventory, IE
     @Override
     public void updateEntity() {
         if (!this.worldObj.isRemote) {
+            
             if (getStackInSlot(0) != null) {
-                if (GrinderRecipe.canBeDone(getStackInSlot(0))
-                        && this.grinding == false) {
-                    this.grinderGrindTime = GrinderRecipe.grinderRecipes.get(getStackInSlot(0)
-                            .getItemName()).time;
-                    this.grinding = true;
-                }
-                if (this.grinding
-                        && buildcraftPowerHandler.getEnergyStored() >= buildcraftPowerHandler
-                                .getActivationEnergy()) {
-                    --this.grinderGrindTime;
-                    buildcraftPowerHandler.useEnergy(1, 2, true);
-
-                    if (this.grinderGrindTime == 0) {
-                        if (getStackInSlot(2) == null) {
-                            setInventorySlotContents(2,
-                                    GrinderRecipe.grinderRecipes
-                                            .get(getStackInSlot(0)
-                                                    .getItemName()).mainOutput);
-                        } else if (getStackInSlot(2).stackSize < 64) {
-                            if (getStackInSlot(2).stackSize != 0
-                                    && getStackInSlot(2).itemID == GrinderRecipe.grinderRecipes
-                                            .get(getStackInSlot(0)
-                                                    .getItemName()).mainOutput.itemID
-                                    && getStackInSlot(2).getItemDamage() == GrinderRecipe.grinderRecipes
-                                            .get(getStackInSlot(0)
-                                                    .getItemName()).mainOutput
-                                            .getItemDamage()) {
-                                getStackInSlot(2).stackSize = getStackInSlot(2).stackSize + GrinderRecipe.grinderRecipes.get(getStackInSlot(0).getItemName()).mainOutput.stackSize/*2*/;
+                
+                if ((getStackInSlot(2) == null && getStackInSlot(3) == null) || (getStackInSlot(2) == null && getStackInSlot(3).stackSize < 64) || (getStackInSlot(2).stackSize < 64 && getStackInSlot(3) == null) || (getStackInSlot(2).stackSize < 64 && getStackInSlot(3).stackSize < 64)) {
+                
+                    GrinderRecipe recipe;
+                    
+                    if (GrinderRecipe.canBeDone(getStackInSlot(0)) && this.grinding == false) {
+                        
+                        recipe = GrinderRecipe.grinderRecipes.get(getStackInSlot(0).getItemName());
+                        
+                        this.grinderGrindTime = recipe.time;
+                        this.grinding = true;
+                        
+                    }
+                    if (this.grinding && buildcraftPowerHandler.getEnergyStored() >= buildcraftPowerHandler.getActivationEnergy()) {
+                        
+                        --this.grinderGrindTime;
+                        buildcraftPowerHandler.useEnergy(1, 2, true);
+                        
+                        recipe = GrinderRecipe.grinderRecipes.get(getStackInSlot(0).getItemName());
+    
+                        if (this.grinderGrindTime == 0) {
+                            
+                            if (getStackInSlot(2) == null) {
+                                
+                                setInventorySlotContents(2, recipe.mainOutput.copy());
+                                
+                            } 
+                            else if (getStackInSlot(2).stackSize < 64) {
+                                
+                                if (getStackInSlot(2).stackSize != 0 && getStackInSlot(2).itemID == recipe.mainOutput.itemID && getStackInSlot(2).getItemDamage() == recipe.mainOutput.getItemDamage()) {
+                                    
+                                    LogHelper.log(Level.INFO, "Recipe stack size " + recipe.mainOutput.stackSize);
+                                    getStackInSlot(2).stackSize = getStackInSlot(2).stackSize + recipe.mainOutput.stackSize/*2*/;
+                                    
+                                }
                             }
-                        }
-                        if (GrinderRecipe.grinderRecipes.get(getStackInSlot(0)
-                                .getItemName()).bonusOutput != null) {
-                            Random rand = new Random();
-
-                            if (rand.nextInt(GrinderRecipe.grinderRecipes
-                                    .get(getStackInSlot(0).getItemName()).bonusChance) == 0) {
-                                if (getStackInSlot(3) == null) {
-                                    setInventorySlotContents(
-                                            3,
-                                            GrinderRecipe.grinderRecipes
-                                                    .get(getStackInSlot(0)
-                                                            .getItemName()).bonusOutput);
-                                } else if (getStackInSlot(3).stackSize < 64) {
-                                    if (getStackInSlot(3).stackSize != 0
-                                            && getStackInSlot(3).itemID == GrinderRecipe.grinderRecipes
-                                                    .get(getStackInSlot(0)
-                                                            .getItemName()).bonusOutput.itemID
-                                            && getStackInSlot(3)
-                                                    .getItemDamage() == GrinderRecipe.grinderRecipes
-                                                    .get(getStackInSlot(0)
-                                                            .getItemName()).bonusOutput
-                                                    .getItemDamage()) {
-                                        getStackInSlot(3).stackSize = getStackInSlot(3).stackSize
-                                                + GrinderRecipe.grinderRecipes
-                                                        .get(getStackInSlot(0)
-                                                                .getItemName()).bonusOutput.stackSize;
+                            if (recipe.bonusOutput != null) {
+                                
+                                Random rand = new Random();
+    
+                                if (rand.nextInt(recipe.bonusChance) == 0) {
+                                    
+                                    if (getStackInSlot(3) == null) {
+                                        
+                                        setInventorySlotContents(3, recipe.bonusOutput.copy());
+                                        
+                                    } 
+                                    else if (getStackInSlot(3).stackSize < 64) {
+                                        
+                                        if (getStackInSlot(3).stackSize != 0 && getStackInSlot(3).itemID == recipe.bonusOutput.itemID && getStackInSlot(3).getItemDamage() == recipe.bonusOutput.getItemDamage()) {
+                                            
+                                            getStackInSlot(3).stackSize = getStackInSlot(3).stackSize + recipe.bonusOutput.stackSize;
+                                            
+                                        }
                                     }
                                 }
                             }
-                        }
-                        decrStackSize(0, 1);
-                        if (getStackInSlot(0) == null) {
-                            this.grinderGrindTime = 0;
-                            this.grinding = false;
-                        } else {
-                            this.grinderGrindTime = GrinderRecipe.grinderRecipes
-                                    .get(getStackInSlot(0).getItemName()).time;
+                            
+                            if (getStackInSlot(0).stackSize >= 2) {
+                                
+                                decrStackSize(0, 1);
+                                
+                            } 
+                            else {
+                                
+                                setInventorySlotContents(0, null);
+                                
+                            }
+                            
+                            if (getStackInSlot(0) == null) {
+                                
+                                this.grinderGrindTime = 0;
+                                this.grinding = false;
+                                
+                            } 
+                            else {
+                                
+                                this.grinderGrindTime = recipe.time;
+                                
+                            }
                         }
                     }
                 }
