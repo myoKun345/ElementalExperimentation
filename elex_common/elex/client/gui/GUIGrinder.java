@@ -28,8 +28,8 @@ public class GUIGrinder extends GuiContainer {
     
     public GUIGrinder(InventoryPlayer player, TileEntityGrinder grinder) {
         super(new ContainerGrinder(player, grinder));
-        xSize = 190;
-        ySize = 175;
+        xSize = 176;
+        ySize = 166;
     }
     
     private static final ResourceLocation texture = new ResourceLocation(Reference.MOD_ID.toLowerCase(), "textures/gui/grinder.png");

@@ -105,7 +105,10 @@ public class ElexIDs {
             "oreXenotime", "oreBaddeleyite", "oreColumbite",
             "orePezzottaite" };
         public static final String[] ITEM_ELEX_ORE_3_REAL_UNLOCALIZED_NAMES = 
-            { "oreBenitoite" };
+            { "oreBenitoite", "oreMonazite", "oreEuxenite",
+            "oreHafnon", "oreTungstate", "oreRheniite",
+            "oreCinnabar", "oreHutchinsonite", "oreThorianite",
+            "oreUraninite"};
         public static final String[] BLOCK_ELEX_ORE_REAL_UNLOCALIZED_NAMES = 
             { "oreAluminium", "oreChromium", "oreCobalt",
             "oreNickel", "oreCopper", "oreArsenic",
@@ -230,7 +233,10 @@ public class ElexIDs {
             "erythrite", "sphalerite", "gallite",
             "germanite", "marthozite", "bromite",
             "celestine", "xenotime", "baddeleyite",
-            "columbite", "pezzottaite", "benitoite" };
+            "columbite", "pezzottaite", "benitoite",
+            "monazite", "euxenite", "hafnon",
+            "tungstate", "rheniite", "cinnabar",
+            "hutchinsonite", "thorianite", "uraninite" };
         public static final String MERCURY_INJECTOR_UNLOCALIZED_NAME = "mercuryInjector";
         public static final String[] ELEX_COMPOUND_DUST_REAL_UNLOCALIZED_NAMES = 
             { "dustAquamarine", "dustBorax", "dustFluorite", 
@@ -243,7 +249,10 @@ public class ElexIDs {
             "dustErythrite", "dustSphalerite", "dustGallite",
             "dustGermanite", "dustMarthozite", "dustBromite",
             "dustCelestine", "dustXenotime", "dustBaddeleyite",
-            "dustColumbite", "dustPezzottaite", "dustBenitoite" };
+            "dustColumbite", "dustPezzottaite", "dustBenitoite",
+            "dustMonazite", "dustEuxenite", "dustHafnon",
+            "dustTungstate", "dustRheniite", "dustCinnabar",
+            "dustHutchinsonite", "dustThorianite", "dustUraninite" };
         public static List<String> METAL_DUST_REAL_UNLOCALIZED_NAMES = new LinkedList<String>();
         public static List<String> ELEX_INGOT_REAL_UNLOCALIZED_NAMES = new LinkedList<String>();
         public static List<String> ELEX_PURE_NONMETAL_DUST_REAL_UNLOCALIZED_NAMES = new LinkedList<String>();
