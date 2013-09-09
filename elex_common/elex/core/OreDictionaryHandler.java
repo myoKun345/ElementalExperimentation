@@ -28,7 +28,7 @@ public class OreDictionaryHandler {
         // Compound Dusts
         Loop.loopOreDictItem(ElexIDs.ELEX_COMPOUND_DUST_REAL_UNLOCALIZED_NAMES, ModItems.itemElExCompoundDust);
         // Pure Metal Dusts
-        Loop.loopOreDictItemList(ElexIDs.ELEX_METAL_DUST_REAL_UNLOCALIZED_NAMES, ModItems.itemElExMetalDust);
+        Loop.loopOreDictItemList(ElexIDs.METAL_DUST_REAL_UNLOCALIZED_NAMES, ModItems.itemElExMetalDust);
         // Vanilla Dusts
         Loop.loopOreDictItem(ElexIDs.VANILLA_DUST_REAL_UNLOCALIZED_NAMES, ModItems.itemVanillaDust);
         // Pure Non-metal Dusts

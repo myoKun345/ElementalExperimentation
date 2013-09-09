@@ -2,9 +2,12 @@ package elex.lib;
 
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.List;
 
 import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.item.EnumToolMaterial;
+import net.minecraft.item.ItemStack;
+import elex.core.ModItems;
 
 /**
  * Elemental Experimentation
@@ -38,6 +41,7 @@ public class ElexIDs {
         public static final int BLOCK_BRICK_DEFAULT = 3687;
         public static final int CENTRIFUGE_DEFAULT = 3750;
         public static final int GRINDER_DEFAULT = 3751;
+        public static final int CONDENSATOR_DEFAULT = 3752;
         public static final int SALT_WATER_BLOCK_DEFAULT = 3800;
     
         /* Current Block IDs */
@@ -59,6 +63,7 @@ public class ElexIDs {
         public static int BLOCK_BRICK;
         public static int CENTRIFUGE;
         public static int GRINDER;
+        public static int CONDENSATOR;
         public static int SALT_WATER_BLOCK;
     
         /* Block Config Keys */
@@ -80,6 +85,7 @@ public class ElexIDs {
         public static final String BLOCK_BRICK_KEY = "BRICKS";
         public static final String CENTRIFUGE_KEY = "CentrifugeID";
         public static final String GRINDER_KEY = "GrinderID";
+        public static final String CONDENSATOR_KEY = "CondensatorID";
         public static final String SALT_WATER_BLOCK_KEY = "SaltWaterBlockID";
     
         /* Block Unlocalized Names */
@@ -114,12 +120,12 @@ public class ElexIDs {
             { "blockAquamarine", "blockBorax", "blockFluorite",
             "blockForsterite", "blockPetalite", "blockArtificialQuartz",
             "blockSpodumene", "blockHalite" };
-        public static final LinkedList<String> BLOCK_ELEX_METAL_STORAGE_REAL_UNLOCALIZED_NAMES = new LinkedList<String>();
-        public static final LinkedList<String> BLOCK_ELEX_METAL_STORAGE_2_REAL_UNLOCALIZED_NAMES = new LinkedList<String>();
-        public static final LinkedList<String> BLOCK_ELEX_METAL_STORAGE_3_REAL_UNLOCALIZED_NAMES = new LinkedList<String>();
-        public static final LinkedList<String> BLOCK_ELEX_METAL_STORAGE_4_REAL_UNLOCALIZED_NAMES = new LinkedList<String>();
-        public static final LinkedList<String> BLOCK_ELEX_METAL_STORAGE_5_REAL_UNLOCALIZED_NAMES = new LinkedList<String>();
-        public static final LinkedList<String> BLOCK_ELEX_METAL_STORAGE_6_REAL_UNLOCALIZED_NAMES = new LinkedList<String>();
+        public static final List<String> BLOCK_ELEX_METAL_STORAGE_REAL_UNLOCALIZED_NAMES = new LinkedList<String>();
+        public static final List<String> BLOCK_ELEX_METAL_STORAGE_2_REAL_UNLOCALIZED_NAMES = new LinkedList<String>();
+        public static final List<String> BLOCK_ELEX_METAL_STORAGE_3_REAL_UNLOCALIZED_NAMES = new LinkedList<String>();
+        public static final List<String> BLOCK_ELEX_METAL_STORAGE_4_REAL_UNLOCALIZED_NAMES = new LinkedList<String>();
+        public static final List<String> BLOCK_ELEX_METAL_STORAGE_5_REAL_UNLOCALIZED_NAMES = new LinkedList<String>();
+        public static final List<String> BLOCK_ELEX_METAL_STORAGE_6_REAL_UNLOCALIZED_NAMES = new LinkedList<String>();
         public static final String[] BLOCK_MACHINE_CASE_REAL_UNLOCALIZED_NAMES = 
             { "caseCarbonSteel", "caseScandinium", "caseOsmiridium",
             "caseLead" };
@@ -136,6 +142,7 @@ public class ElexIDs {
             "blockBlueStoneBrick", "blockGreenStoneBrick", "blockYellowStoneBrick" };
         public static final String CENTRIFUGE_UNLOCALIZED_NAME = "centrifuge";
         public static final String GRINDER_UNLOCALIZED_NAME = "grinder";
+        public static final String CONDENSATOR_UNLOCALIZED_NAME = "condensator";
         public static final String SALT_WATER_BLOCK_UNLOCALIZED_NAME = "blockSaltWater";
     
         /* Machine Block Base Texture */
@@ -237,9 +244,9 @@ public class ElexIDs {
             "dustGermanite", "dustMarthozite", "dustBromite",
             "dustCelestine", "dustXenotime", "dustBaddeleyite",
             "dustColumbite", "dustPezzottaite", "dustBenitoite" };
-        public static final LinkedList<String> ELEX_METAL_DUST_REAL_UNLOCALIZED_NAMES = new LinkedList<String>();
-        public static final LinkedList<String> ELEX_INGOT_REAL_UNLOCALIZED_NAMES = new LinkedList<String>();
-        public static final LinkedList<String> ELEX_PURE_NONMETAL_DUST_REAL_UNLOCALIZED_NAMES = new LinkedList<String>();
+        public static List<String> METAL_DUST_REAL_UNLOCALIZED_NAMES = new LinkedList<String>();
+        public static List<String> ELEX_INGOT_REAL_UNLOCALIZED_NAMES = new LinkedList<String>();
+        public static List<String> ELEX_PURE_NONMETAL_DUST_REAL_UNLOCALIZED_NAMES = new LinkedList<String>();
         public static final String[] VANILLA_DUST_REAL_UNLOCALIZED_NAMES = 
             { "dustNetherQuartz", "dustIron", "dustGold", 
             "dustEmerald", "dustCoal", "dustCharcoal" };
@@ -251,7 +258,7 @@ public class ElexIDs {
             "ingotElectrum", "ingotScandinium", "ingotOsmiridium" };
         public static final String[] MACHINE_PART_REAL_UNLOCALIZED_NAMES = 
             { "partSpinRotor", "partHighSpeedMotor", "partGrindStone" };
-        public static final LinkedList<String> METAL_NUGGET_REAL_UNLOCALIZED_NAMES = new LinkedList<String>();
+        public static final List<String> METAL_NUGGET_REAL_UNLOCALIZED_NAMES = new LinkedList<String>();
         public static final String[] ALLOY_NUGGET_REAL_UNLOCALIZED_NAMES = 
             { "nuggetCarbonSteel", "nuggetVanadiumSteel", "nuggetBronze",
             "nuggetElectrum", "nuggetScandinium", "nuggetOsmiridium" };
@@ -276,8 +283,8 @@ public class ElexIDs {
             "Cu26Fe4Ge4S32", "Cu(UO2)3(SeO3)3(OH)2(H2O)7", "HBrO2",
             "SrSO4", "YPO4", "ZrO2",
             "FeNb2O6", "Cs(Be2Li)Al2Si6O18", "BaTiSi3O9" };
-        public static final LinkedList<String> METAL_DUST_MOLECULE_STRINGS = new LinkedList<String>();
-        public static final LinkedList<String> PURE_NONMETAL_DUST_MOLECULE_STRINGS = new LinkedList<String>();
+        public static final List<String> METAL_DUST_MOLECULE_STRINGS = new LinkedList<String>();
+        public static final List<String> PURE_NONMETAL_DUST_MOLECULE_STRINGS = new LinkedList<String>();
         public static final String[] VANILLA_DUST_MOLECULE_STRINGS =
             { "FeSiO2", "Fe", "Au",
             "Be3Al2(SiO3)6", "C2", "C7H4O" };
@@ -288,15 +295,15 @@ public class ElexIDs {
         /* Other Information Strings */
         public static final String RADIOACTIVE_UNLOCALIZED = "string.element.radioactive";
         
-        /* Native Metal Ore Element ID Array */
-        public static final LinkedList<Integer> METAL_ORE_ELEMENT_IDS = new LinkedList<Integer>();
-        
     /* Fluid */
         /* Fluid Unlocalized Names */
         public static final String SALT_WATER_UNLOCALIZED_NAME = "saltwater";
-        public static final LinkedList<String> ELEMENTAL_GAS_UNLOCALIZED_NAMES = new LinkedList<String>();
+        public static final List<String> ELEMENTAL_GAS_UNLOCALIZED_NAMES = new LinkedList<String>();
     
     /* Utility */
         public static final HashMap<String, EnumArmorMaterial> ALLOY_ARMOR_MATERIAL_HASH_MAP = new HashMap<String, EnumArmorMaterial>();
         public static final HashMap<String, EnumToolMaterial> ALLOY_TOOL_MATERIAL_HASH_MAP = new HashMap<String, EnumToolMaterial>();
+        public static final List<Integer> METAL_ORE_ELEMENT_IDS = new LinkedList<Integer>();
+        public static ItemStack[] NATIVE_ORE_BONUS_IDS;
+        public static int[] NATIVE_ORE_BONUS_CHANCES;
 }

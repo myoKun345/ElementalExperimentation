@@ -1,6 +1,6 @@
 package elex.core;
 
-import java.util.LinkedList;
+import java.util.List;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -36,13 +36,13 @@ public class Loop {
         }
     }
     
-    public static void loopOreDictBlockList(LinkedList<String> loopThrough, Block block) {
+    public static void loopOreDictBlockList(List<String> loopThrough, Block block) {
         for (int i = 0; i < loopThrough.size(); i++) {
             OreDictionary.registerOre(loopThrough.get(i), new ItemStack(block, 1, i));
         }
     }
     
-    public static void loopOreDictItemList(LinkedList<String> loopThrough, Item item) {
+    public static void loopOreDictItemList(List<String> loopThrough, Item item) {
         for (int i = 0; i < loopThrough.size(); i++) {
             OreDictionary.registerOre(loopThrough.get(i), new ItemStack(item, 1, i));
         }
@@ -60,13 +60,13 @@ public class Loop {
         }
     }
     
-    public static void loopFurnaceBlockList(LinkedList<String> loopThrough, int inputID, Block output, float XP) {
+    public static void loopFurnaceBlockList(List<String> loopThrough, int inputID, Block output, float XP) {
         for (int i = 0; i < loopThrough.size(); i++) {
             FurnaceRecipes.smelting().addSmelting(inputID, i, new ItemStack(output, 1, i), XP);
         }
     }
     
-    public static void loopFurnaceItemList(LinkedList<String> loopThrough, int inputID, Item output, float XP) {
+    public static void loopFurnaceItemList(List<String> loopThrough, int inputID, Item output, float XP) {
         for (int i = 0; i < loopThrough.size(); i++) {
             FurnaceRecipes.smelting().addSmelting(inputID, i, new ItemStack(output, 1, i), XP);
         }
@@ -84,13 +84,13 @@ public class Loop {
         }
     }
     
-    public static void loopFurnaceBlockListShifted(LinkedList<String> loopThrough, int inputID, Block output, float XP, int shiftMetaBy) {
+    public static void loopFurnaceBlockListShifted(List<String> loopThrough, int inputID, Block output, float XP, int shiftMetaBy) {
         for (int i = 0; i < loopThrough.size(); i++) {
             FurnaceRecipes.smelting().addSmelting(inputID, i, new ItemStack(output, 1, i + shiftMetaBy), XP);
         }
     }
     
-    public static void loopFurnaceItemListShifted(LinkedList<String> loopThrough, int inputID, Item output, float XP, int shiftMetaBy) {
+    public static void loopFurnaceItemListShifted(List<String> loopThrough, int inputID, Item output, float XP, int shiftMetaBy) {
         for (int i = 0; i < loopThrough.size(); i++) {
             FurnaceRecipes.smelting().addSmelting(inputID, i, new ItemStack(output, 1, i + shiftMetaBy), XP);
         }

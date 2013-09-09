@@ -1,6 +1,7 @@
 package elex.api;
 
 import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Elemental Experimentation
@@ -12,21 +13,21 @@ import java.util.LinkedList;
  */
 public class ElementTable {
     
-    public static LinkedList<Element> elementList = new LinkedList<Element>();
+    public static List<Element> elementList = new LinkedList<Element>();
     
     public static String tableName;
     public static String tableMod;
     public static int tableLength;
-    public static LinkedList tableMetalDustUnlocalizedList;
-    public static LinkedList tableMetalDustMoleculeStringList;
-    public static LinkedList tableMetalIngotUnlocalizedList;
-    public static LinkedList tableMetalNuggetUnlocalizedList;
+    public static List tableMetalDustUnlocalizedList;
+    public static List tableMetalDustMoleculeStringList;
+    public static List tableMetalIngotUnlocalizedList;
+    public static List tableMetalNuggetUnlocalizedList;
     public static IStorageBlockHandler tableMetalStorageBlockListHandler;
-    public static LinkedList tableNativeOreList;
+    public static List tableNativeOreList;
     public static int[] tablePureNonmetalAllotropeNumbers;
-    public static LinkedList tablePureNonmetalDustUnlocalizedList;
-    public static LinkedList tablePureNonmetalDustMoleculeStringList;
-    public static LinkedList tablePureGasUnlocalizedList;
+    public static List tablePureNonmetalDustUnlocalizedList;
+    public static List tablePureNonmetalDustMoleculeStringList;
+    public static List tablePureGasUnlocalizedList;
     
     /**
      * And the longest list of parameters award goes to...
@@ -36,22 +37,22 @@ public class ElementTable {
      * @param name - The name of the table you are registering.
      * @param modid - The mod ID of the table you are registering.
      * @param length - The length of the table. Any element with an id past this number will be disregarded. (Probably.)
-     * @param metalDustUnlocalizedList - A LinkedList to store the unlocalized names of your metal dusts.
-     * @param metalDustMoleculeStringList - A LinkedList to store the molecule strings of your metal dusts.
-     * @param metalIngotUnlocalizedList - A LinkedList to store the unlocalized names of your metal ingots.
-     * @param metalNuggetUnlocalizedList - A LinkedList to store the unlocalized names of your metal nuggets.
+     * @param metalDustUnlocalizedList - A List to store the unlocalized names of your metal dusts.
+     * @param metalDustMoleculeStringList - A List to store the molecule strings of your metal dusts.
+     * @param metalIngotUnlocalizedList - A List to store the unlocalized names of your metal ingots.
+     * @param metalNuggetUnlocalizedList - A List to store the unlocalized names of your metal nuggets.
      * @param metalStorageBlockListHandler - A class that implements IStorageBlockHandler and handles your metal storage blocks. See VanillaStorageBlockHandler for an example.
-     * @param nativeOreList - A LinkedList to store which elements have native ore blocks that will generate in world.
+     * @param nativeOreList - A List to store which elements have native ore blocks that will generate in world.
      * @param pureNonmetalAllotropeNumbers - A simple integer array to store what allotrope number is shown in the tooltip for non-metal dusts.
-     * @param pureNonmetalDustUnlocalizedList - A LinkedList to store the unlocalized names of your non-metal dusts.
-     * @param pureNonmetalDustMoleculeStringList - A LinkedList to store the molecule strings of your non-metal dusts.
-     * @param pureGasUnlocalizedList - A LinkedList to store the unlocalized names of your gases.
+     * @param pureNonmetalDustUnlocalizedList - A List to store the unlocalized names of your non-metal dusts.
+     * @param pureNonmetalDustMoleculeStringList - A List to store the molecule strings of your non-metal dusts.
+     * @param pureGasUnlocalizedList - A List to store the unlocalized names of your gases.
      */
     public ElementTable(String name, String modid, int length, 
-            LinkedList metalDustUnlocalizedList, LinkedList metalDustMoleculeStringList, 
-            LinkedList metalIngotUnlocalizedList, LinkedList metalNuggetUnlocalizedList, IStorageBlockHandler metalStorageBlockListHandler, 
-            LinkedList nativeOreList, int[] pureNonmetalAllotropeNumbers, LinkedList pureNonmetalDustUnlocalizedList, 
-            LinkedList pureNonmetalDustMoleculeStringList, LinkedList pureGasUnlocalizedList) {
+            List metalDustUnlocalizedList, List metalDustMoleculeStringList, 
+            List metalIngotUnlocalizedList, List metalNuggetUnlocalizedList, IStorageBlockHandler metalStorageBlockListHandler, 
+            List nativeOreList, int[] pureNonmetalAllotropeNumbers, List pureNonmetalDustUnlocalizedList, 
+            List pureNonmetalDustMoleculeStringList, List pureGasUnlocalizedList) {
         this.tableName = name;
         this.tableMod = modid;
         this.tableLength = length;

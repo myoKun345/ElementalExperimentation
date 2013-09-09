@@ -14,11 +14,11 @@ import net.minecraftforge.common.ForgeDirection;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import elex.ElementalExperimentation;
+import elex.core.Position;
+import elex.core.RenderUtilities;
 import elex.lib.ElexIDs;
 import elex.lib.Reference;
 import elex.tileentity.TileEntityCentrifuge;
-import elex.util.Position;
-import elex.util.RenderUtilities;
 
 /**
  * Elemental Experimentation

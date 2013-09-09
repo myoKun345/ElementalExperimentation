@@ -4,6 +4,7 @@ import net.minecraft.block.Block;
 import cpw.mods.fml.common.registry.GameRegistry;
 import elex.block.BlockBuildingMaterial;
 import elex.block.BlockCentrifuge;
+import elex.block.BlockCondensator;
 import elex.block.BlockElExItemOre;
 import elex.block.BlockElExItemOreStorage;
 import elex.block.BlockElExMetalStorage;
@@ -32,6 +33,7 @@ import elex.lib.ElexIDs;
 public class ModBlocks {
     public static Block centrifuge;
     public static Block grinder;
+    public static Block condensator;
     public static Block blockElExOre;
     public static Block blockElExOre2;
     public static Block blockElExItemOre;
@@ -52,6 +54,7 @@ public class ModBlocks {
     public static void init() {
         centrifuge = new BlockCentrifuge(ElexIDs.CENTRIFUGE);
         grinder = new BlockGrinder(ElexIDs.GRINDER);
+        condensator = new BlockCondensator(ElexIDs.CONDENSATOR);
         blockElExOre = new BlockElExOre(ElexIDs.BLOCK_ELEX_ORE);
         blockElExOre2 = new BlockElExOre2(ElexIDs.BLOCK_ELEX_ORE_2);
         blockElExItemOre = new BlockElExItemOre(ElexIDs.ITEM_ELEX_ORE, 0);
@@ -71,6 +74,7 @@ public class ModBlocks {
         
         GameRegistry.registerBlock(centrifuge, "centrifugeElEx");
         GameRegistry.registerBlock(grinder, "grinderElEx");
+        GameRegistry.registerBlock(condensator, "condensatorElEx");
         GameRegistry.registerBlock(blockElExItemOre, ItemBlockElExItemOre.class, "blockElExItemOre");
         GameRegistry.registerBlock(blockElExItemOre2, ItemBlockElExItemOre2.class, "blockElExItemOre2");
         GameRegistry.registerBlock(blockElExItemOre3, ItemBlockElExItemOre3.class, "blockElExItemOre3");

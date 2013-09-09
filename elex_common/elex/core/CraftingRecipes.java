@@ -1,11 +1,14 @@
 package elex.core;
 
+import java.util.logging.Level;
+
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
 import cpw.mods.fml.common.registry.GameRegistry;
-import elex.lib.ElexIDs;
+import elex.api.ElexAPI;
+import elex.api.GrinderRecipe;
 import elex.lib.ElexIDs;
 
 /**
@@ -124,6 +127,39 @@ public class CraftingRecipes {
             int j = i + ElexIDs.ITEM_ELEX_ORE_REAL_UNLOCALIZED_NAMES.length + ElexIDs.ITEM_ELEX_ORE_2_REAL_UNLOCALIZED_NAMES.length;
             
             FurnaceRecipes.smelting().addSmelting(ElexIDs.ITEM_ELEX_ORE_3, i, new ItemStack(ModItems.itemElExOre, 1, j), 5F);
+        }
+        
+        // Grinder Recipes for Native Ore Dusts
+        ElexIDs.NATIVE_ORE_BONUS_IDS = 
+            new ItemStack[]{ null, new ItemStack(ModItems.itemVanillaDust, 1, 1), new ItemStack(ModItems.itemElExMetalDust, 1, 14),
+            new ItemStack(ModItems.itemElExPureNonmetalDust, 1, 3), null, new ItemStack(ModItems.itemElExPureNonmetalDust, 1, 3),
+            new ItemStack(ModItems.itemElExMetalDust, 1, 61), new ItemStack(ModItems.itemElExMetalDust, 1, 58), new ItemStack(ModItems.itemElExMetalDust, 1, 29),
+            new ItemStack(ModItems.itemVanillaDust, 1, 2), new ItemStack(ModItems.itemElExMetalDust, 1, 34), new ItemStack(ModItems.itemElExPureNonmetalDust, 1, 3),
+            new ItemStack(ModItems.itemVanillaDust, 1, 1), null, new ItemStack(ModItems.itemElExMetalDust, 1, 30),
+            new ItemStack(ModItems.itemVanillaDust, 1, 2), new ItemStack(ModItems.itemElExMetalDust, 1, 24), new ItemStack(ModItems.itemElExMetalDust, 1, 58),
+            new ItemStack(ModItems.itemElExMetalDust, 1, 57), new ItemStack(ModItems.itemElExMetalDust, 1, 58), new ItemStack(ModItems.itemElExMetalDust, 1, 16),
+            new ItemStack(ModItems.itemElExMetalDust, 1, 61) };
+        ElexIDs.NATIVE_ORE_BONUS_CHANCES =
+            new int[]{ 0, 10, 6,
+            5, 0, 5,
+            7, 15, 12,
+            8, 5, 5,
+            7, 0, 7,
+            8, 9, 15,
+            14, 15, 5,
+            7 };
+        for (int i = 0; i < ElexIDs.BLOCK_ELEX_ORE_REAL_UNLOCALIZED_NAMES.length; i++) {
+            if (ElexIDs.NATIVE_ORE_BONUS_IDS[i] != null) {
+                ElexAPI.addGrinderRecipe(new ItemStack(ModBlocks.blockElExOre, 1, i), new ItemStack(ModItems.itemElExMetalDust, 2, ElexIDs.METAL_ORE_ELEMENT_IDS.get(i) - 1), ElexIDs.NATIVE_ORE_BONUS_IDS[i], ElexIDs.NATIVE_ORE_BONUS_CHANCES[i], 100);
+            }
+            if (ElexIDs.NATIVE_ORE_BONUS_IDS[i] == null) {
+                ElexAPI.addGrinderRecipe(new ItemStack(ModBlocks.blockElExOre, 1, i), new ItemStack(ModItems.itemElExMetalDust, 2, ElexIDs.METAL_ORE_ELEMENT_IDS.get(i) - 1), 100);
+            }
+        }
+        for (int i = 0; i < ElexIDs.BLOCK_ELEX_ORE_2_REAL_UNLOCALIZED_NAMES.length; i++) {
+            int j = i + ElexIDs.BLOCK_ELEX_ORE_REAL_UNLOCALIZED_NAMES.length;
+            
+            ElexAPI.addGrinderRecipe(new ItemStack(ModBlocks.blockElExOre2, 1, i), new ItemStack(ModItems.itemElExMetalDust, 2, ElexIDs.METAL_ORE_ELEMENT_IDS.get(j) - 1), ElexIDs.NATIVE_ORE_BONUS_IDS[j], ElexIDs.NATIVE_ORE_BONUS_CHANCES[j], 100);
         }
     }
 }

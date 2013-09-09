@@ -1,9 +1,11 @@
 package elex.tileentity;
 
-import universalelectricity.core.block.IElectrical;
-import universalelectricity.core.electricity.ElectricityPack;
-import ic2.api.Direction;
-import ic2.api.energy.tile.IEnergyAcceptor;
+import ic2.api.energy.tile.IEnergySink;
+
+import java.util.Random;
+import java.util.logging.Level;
+
+import net.minecraft.block.BlockFurnace;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.ItemStack;
@@ -12,9 +14,13 @@ import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeDirection;
+import universalelectricity.core.block.IElectricalStorage;
 import buildcraft.api.power.IPowerReceptor;
 import buildcraft.api.power.PowerHandler;
 import buildcraft.api.power.PowerHandler.PowerReceiver;
+import cpw.mods.fml.common.FMLCommonHandler;
+import elex.api.GrinderRecipe;
+import elex.core.LogHelper;
 
 /**
  * Elemental Experimentation
@@ -24,27 +30,39 @@ import buildcraft.api.power.PowerHandler.PowerReceiver;
  * @author Myo-kun
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class TileEntityGrinder extends TileEntity implements ISidedInventory, IEnergyAcceptor, IPowerReceptor, IElectrical {
+public class TileEntityGrinder extends TileEntity implements ISidedInventory, IEnergySink, IPowerReceptor, IElectricalStorage {
     
     public ItemStack[] grinderItemStacks = new ItemStack[4];
     
     public int grinderGrindTime;
-    
     public int currentItemGrindTime;
-    
     public int grinderGroundTime;
+    public boolean grinding;
     
     public EntityPlayer placedBy;
     
-    public boolean isGrinding() {
-        return grinderGrindTime > 0;
+    public PowerHandler buildcraftPowerHandler;
+    public static int MAX_MJ = 4000;
+    
+    public TileEntityGrinder() {
+        buildcraftPowerHandler = new PowerHandler(this, PowerHandler.Type.MACHINE);
+        initBCPowerProvider();
+    }
+    
+    private void initBCPowerProvider() {
+        buildcraftPowerHandler.configure(2, 128, 2, MAX_MJ);
+        buildcraftPowerHandler.configurePowerPerdition(2, 1);
     }
     
     @Override
     public void writeToNBT(NBTTagCompound compound) {
         super.writeToNBT(compound);
+        buildcraftPowerHandler.writeToNBT(compound);
+        
         compound.setShort("GrindTime", (short)this.grinderGrindTime);
         compound.setShort("GroundTime", (short)this.grinderGroundTime);
+        
+        compound.setBoolean("Grinding", this.grinding);
         
         NBTTagList items = new NBTTagList();
         
@@ -65,9 +83,14 @@ public class TileEntityGrinder extends TileEntity implements ISidedInventory, IE
     @Override
     public void readFromNBT(NBTTagCompound compound) {
         super.readFromNBT(compound);
+        buildcraftPowerHandler.readFromNBT(compound);
+        initBCPowerProvider();
+        
         NBTTagList items = compound.getTagList("Items");
         this.grinderGrindTime = compound.getShort("GrindTime");
         this.grinderGroundTime = compound.getShort("GroundTime");
+        
+        this.grinding = compound.getBoolean("Grinding");
         
         for (int i = 0; i < items.tagCount(); ++i)
         {
@@ -77,6 +100,66 @@ public class TileEntityGrinder extends TileEntity implements ISidedInventory, IE
             if (b0 >= 0 && b0 < this.grinderItemStacks.length)
             {
                 this.grinderItemStacks[b0] = ItemStack.loadItemStackFromNBT(compoundStacks);
+            }
+        }
+    }
+    
+    public void grind(GrinderRecipe recipe) {
+        this.grinderGrindTime = recipe.time;
+        this.grinding = true;
+    }
+    
+    @Override
+    public boolean canUpdate() {
+        return !FMLCommonHandler.instance().getEffectiveSide().isClient();
+    }
+    
+    @Override
+    public void updateEntity() {
+        if (!this.worldObj.isRemote) {
+            if (GrinderRecipe.canBeDone(getStackInSlot(0)) && this.grinding == false) {
+                grind(GrinderRecipe.grinderRecipes.get(getStackInSlot(0).getItemName()));
+            }
+            
+            if (this.grinding && buildcraftPowerHandler.getEnergyStored() >= buildcraftPowerHandler.getActivationEnergy()) {
+                this.grinderGrindTime--;
+                buildcraftPowerHandler.useEnergy(1, 2, true);
+
+                if (this.grinderGrindTime == 0) {
+                    if (getStackInSlot(2) == null) {
+                        setInventorySlotContents(2, GrinderRecipe.grinderRecipes.get(getStackInSlot(0).getItemName()).mainOutput);
+                    }
+                    else if (getStackInSlot(2).stackSize < 64) {
+                        if (getStackInSlot(2).stackSize != 0 && 
+                                getStackInSlot(2).itemID == GrinderRecipe.grinderRecipes.get(getStackInSlot(0).getItemName()).mainOutput.itemID && 
+                                getStackInSlot(2).getItemDamage() == GrinderRecipe.grinderRecipes.get(getStackInSlot(0).getItemName()).mainOutput.getItemDamage()) {
+                            getStackInSlot(2).stackSize = getStackInSlot(2).stackSize + /*GrinderRecipe.grinderRecipes.get(getStackInSlot(0).getItemName()).mainOutput.stackSize*/2;
+                        }
+                    }
+                    if (GrinderRecipe.grinderRecipes.get(getStackInSlot(0).getItemName()).bonusOutput != null) {
+                        Random rand = new Random();
+                        
+                        if (rand.nextInt(GrinderRecipe.grinderRecipes.get(getStackInSlot(0).getItemName()).bonusChance) == 0) {
+                            if (getStackInSlot(2) == null) {
+                                setInventorySlotContents(3, GrinderRecipe.grinderRecipes.get(getStackInSlot(0).getItemName()).bonusOutput);
+                            }
+                            else if (getStackInSlot(2).stackSize < 64) {
+                                if (getStackInSlot(2).stackSize != 0 && 
+                                        getStackInSlot(2).itemID == GrinderRecipe.grinderRecipes.get(getStackInSlot(0).getItemName()).mainOutput.itemID && 
+                                        getStackInSlot(2).getItemDamage() == GrinderRecipe.grinderRecipes.get(getStackInSlot(0).getItemName()).mainOutput.getItemDamage()) {
+                                    getStackInSlot(2).stackSize = getStackInSlot(2).stackSize + GrinderRecipe.grinderRecipes.get(getStackInSlot(0).getItemName()).mainOutput.stackSize;
+                                }
+                            }
+                        }
+                    }
+                    decrStackSize(0, 1);
+                    if (getStackInSlot(0).stackSize == 0) {
+                        this.grinding = false;
+                    } 
+                    else {
+                        this.grinderGrindTime = GrinderRecipe.grinderRecipes.get(getStackInSlot(0).getItemName()).time;
+                    }
+                }
             }
         }
     }
@@ -113,9 +196,18 @@ public class TileEntityGrinder extends TileEntity implements ISidedInventory, IE
     
     @Override
     public void setInventorySlotContents(int i, ItemStack stack) {
-        grinderItemStacks[i] = stack;
-        
-        onInventoryChanged();
+        if (stack != null) {
+            if (isItemValidForSlot(i, stack)) {
+                grinderItemStacks[i] = stack;
+
+                onInventoryChanged();
+            }
+        }
+        else {
+            grinderItemStacks[i] = null;
+            
+            onInventoryChanged();
+        }
     }
     
     @Override
@@ -150,7 +242,18 @@ public class TileEntityGrinder extends TileEntity implements ISidedInventory, IE
     
     @Override
     public boolean isItemValidForSlot(int i, ItemStack stack) {
-        return true;
+        if (i == 0) {
+            LogHelper.log(Level.INFO, "slot 0 " + GrinderRecipe.canBeDone(stack));
+            return GrinderRecipe.canBeDone(stack);
+        }
+        if (i == 2 || i == 3) {
+            LogHelper.log(Level.INFO, "slot 2/3 true");
+            return true;
+        }
+        else {
+            LogHelper.log(Level.INFO, "false");
+            return false;
+        }
     }
     
     @Override
@@ -160,7 +263,7 @@ public class TileEntityGrinder extends TileEntity implements ISidedInventory, IE
     
     @Override
     public boolean canInsertItem(int i, ItemStack itemstack, int j) {
-        return false;
+        return isItemValidForSlot(j, itemstack);
     }
     
     @Override
@@ -170,7 +273,7 @@ public class TileEntityGrinder extends TileEntity implements ISidedInventory, IE
     
     @Override
     public PowerReceiver getPowerReceiver(ForgeDirection side) {
-        return null;
+        return buildcraftPowerHandler.getPowerReceiver();
     }
     
     @Override
@@ -184,41 +287,63 @@ public class TileEntityGrinder extends TileEntity implements ISidedInventory, IE
     }
     
     @Override
-    public boolean canConnect(ForgeDirection direction) {
-        return true;
-    }
-    
-    @Override
-    public float receiveElectricity(ForgeDirection from,
-            ElectricityPack receive, boolean doReceive) {
-        return 0;
-    }
-    
-    @Override
-    public ElectricityPack provideElectricity(ForgeDirection from,
-            ElectricityPack request, boolean doProvide) {
-        return null;
-    }
-    
-    @Override
-    public float getRequest(ForgeDirection direction) {
-        return 0;
-    }
-    
-    @Override
-    public float getProvide(ForgeDirection direction) {
-        return 0;
-    }
-    
-    @Override
-    public float getVoltage() {
-        return 0;
-    }
-    
-    @Override
     public boolean acceptsEnergyFrom(TileEntity emitter,
             ForgeDirection direction) {
         return false;
+    }
+
+    /* (non-Javadoc)
+     * @see universalelectricity.core.block.IElectricalStorage#setEnergyStored(float)
+     */
+    @Override
+    public void setEnergyStored(float energy) {
+        // TODO Auto-generated method stub
+        
+    }
+
+    /* (non-Javadoc)
+     * @see universalelectricity.core.block.IElectricalStorage#getEnergyStored()
+     */
+    @Override
+    public float getEnergyStored() {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+
+    /* (non-Javadoc)
+     * @see universalelectricity.core.block.IElectricalStorage#getMaxEnergyStored()
+     */
+    @Override
+    public float getMaxEnergyStored() {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+
+    /* (non-Javadoc)
+     * @see ic2.api.energy.tile.IEnergySink#demandedEnergyUnits()
+     */
+    @Override
+    public double demandedEnergyUnits() {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+
+    /* (non-Javadoc)
+     * @see ic2.api.energy.tile.IEnergySink#injectEnergyUnits(net.minecraftforge.common.ForgeDirection, double)
+     */
+    @Override
+    public double injectEnergyUnits(ForgeDirection directionFrom, double amount) {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+
+    /* (non-Javadoc)
+     * @see ic2.api.energy.tile.IEnergySink#getMaxSafeInput()
+     */
+    @Override
+    public int getMaxSafeInput() {
+        // TODO Auto-generated method stub
+        return 0;
     }
     
 }
