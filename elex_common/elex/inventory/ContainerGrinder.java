@@ -6,6 +6,9 @@ import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
 import net.minecraft.inventory.SlotFurnace;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.FurnaceRecipes;
+import net.minecraft.tileentity.TileEntityFurnace;
+import elex.api.GrinderRecipe;
 import elex.tileentity.TileEntityGrinder;
 
 /**
@@ -45,8 +48,77 @@ public class ContainerGrinder extends Container {
     }
     
     @Override
-    public ItemStack transferStackInSlot(EntityPlayer player, int i) {
-        return null;
+    public ItemStack transferStackInSlot(EntityPlayer player, int slotnumber) {
+        ItemStack itemstack = null;
+        Slot slot = (Slot)this.inventorySlots.get(slotnumber);
+
+        if (slot != null && slot.getHasStack())
+        {
+            ItemStack itemstack1 = slot.getStack();
+            itemstack = itemstack1.copy();
+
+            if (slotnumber == 2)
+            {
+                if (!this.mergeItemStack(itemstack1, 3, 39, true))
+                {
+                    return null;
+                }
+
+                slot.onSlotChange(itemstack1, itemstack);
+            }
+            if (slotnumber == 3)
+            {
+                if (!this.mergeItemStack(itemstack1, 3, 39, true))
+                {
+                    return null;
+                }
+
+                slot.onSlotChange(itemstack1, itemstack);
+            }
+            else if (slotnumber != 1 && slotnumber != 0)
+            {
+                if (GrinderRecipe.canBeDone(itemstack1))
+                {
+                    if (!this.mergeItemStack(itemstack1, 0, 1, false))
+                    {
+                        return null;
+                    }
+                }
+                else if (slotnumber >= 3 && slotnumber < 30)
+                {
+                    if (!this.mergeItemStack(itemstack1, 30, 39, false))
+                    {
+                        return null;
+                    }
+                }
+                else if (slotnumber >= 30 && slotnumber < 39 && !this.mergeItemStack(itemstack1, 3, 30, false))
+                {
+                    return null;
+                }
+            }
+            else if (!this.mergeItemStack(itemstack1, 3, 39, false))
+            {
+                return null;
+            }
+
+            if (itemstack1.stackSize == 0)
+            {
+                slot.putStack((ItemStack)null);
+            }
+            else
+            {
+                slot.onSlotChanged();
+            }
+
+            if (itemstack1.stackSize == itemstack.stackSize)
+            {
+                return null;
+            }
+
+            slot.onPickupFromSlot(player, itemstack1);
+        }
+
+        return itemstack;
     }
 
 }
