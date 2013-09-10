@@ -1,5 +1,7 @@
 package elex.client.gui;
 
+import java.util.logging.Level;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -10,6 +12,7 @@ import org.lwjgl.opengl.GL11;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import elex.core.LogHelper;
 import elex.inventory.ContainerGrinder;
 import elex.lib.Reference;
 import elex.tileentity.TileEntityGrinder;
@@ -38,7 +41,11 @@ public class GUIGrinder extends GuiContainer {
     protected void drawGuiContainerBackgroundLayer(float f, int i, int j) {
         GL11.glColor4f(1, 1, 1, 1);
         
-        Minecraft.getMinecraft().func_110434_K().func_110577_a(texture);
+        try {
+            Minecraft.getMinecraft().renderEngine.bindTexture(texture);
+        } catch (Exception e) {
+            LogHelper.log(Level.INFO, e.toString());
+        }
         drawTexturedModalRect(guiLeft, guiTop, 0, 0, xSize, ySize);
     }
     

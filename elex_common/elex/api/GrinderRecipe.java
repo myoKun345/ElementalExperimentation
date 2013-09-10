@@ -33,7 +33,7 @@ public class GrinderRecipe {
     
     public static boolean canBeDone(ItemStack input) {
         if (input != null) {
-            if (grinderRecipes.containsKey(input.getItemName())) {
+            if (grinderRecipes.containsKey(input.getUnlocalizedName())) {
                 return true;
             }
             else {
@@ -47,7 +47,7 @@ public class GrinderRecipe {
     
     @Override
     public String toString() {
-        return "Input: " + this.input.getItemName() + " Output: " + this.mainOutput.getItemName() + " Bonus: " + this.bonusOutput.getItemName();
+        return "Input: " + this.input.getUnlocalizedName() + " Output: " + this.mainOutput.getUnlocalizedName() + " Bonus: " + this.bonusOutput.getUnlocalizedName();
     }
     
 }

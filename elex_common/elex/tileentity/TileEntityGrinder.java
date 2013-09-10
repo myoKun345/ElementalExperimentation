@@ -121,7 +121,7 @@ public class TileEntityGrinder extends TileEntity implements ISidedInventory, IE
                     
                     if (GrinderRecipe.canBeDone(getStackInSlot(0)) && this.grinding == false) {
                         
-                        recipe = GrinderRecipe.grinderRecipes.get(getStackInSlot(0).getItemName());
+                        recipe = GrinderRecipe.grinderRecipes.get(getStackInSlot(0).getUnlocalizedName());
                         
                         this.grinderGrindTime = recipe.time;
                         this.grinding = true;
@@ -132,7 +132,7 @@ public class TileEntityGrinder extends TileEntity implements ISidedInventory, IE
                         --this.grinderGrindTime;
                         buildcraftPowerHandler.useEnergy(1, 2, true);
                         
-                        recipe = GrinderRecipe.grinderRecipes.get(getStackInSlot(0).getItemName());
+                        recipe = GrinderRecipe.grinderRecipes.get(getStackInSlot(0).getUnlocalizedName());
     
                         if (this.grinderGrindTime == 0) {
                             

@@ -63,7 +63,7 @@ public class ElexAPI {
      */
     public static void addGrinderRecipe(ItemStack input, ItemStack main, ItemStack bonus, int chance, int time, String modid) {
         if (modid != "IC2" && modid != "GregTech") {
-            GrinderRecipe.grinderRecipes.put(input.getItemName(), new GrinderRecipe(input, main, bonus, chance, time));
+            GrinderRecipe.grinderRecipes.put(input.getUnlocalizedName(), new GrinderRecipe(input, main, bonus, chance, time));
         }
         if (modid == "IC2") {
             LogHelper.log(Level.INFO, Reference.RECIPE_DENIED_GREG);
@@ -82,7 +82,7 @@ public class ElexAPI {
      */
     public static void addGrinderRecipe(ItemStack input, ItemStack main, int time, String modid) {
         if (modid != "IC2" && modid != "GregTech") {
-            GrinderRecipe.grinderRecipes.put(input.getItemName(), new GrinderRecipe(input, main, null, 0, time));
+            GrinderRecipe.grinderRecipes.put(input.getUnlocalizedName(), new GrinderRecipe(input, main, null, 0, time));
         }
         if (modid == "IC2") {
             LogHelper.log(Level.INFO, Reference.RECIPE_DENIED_GREG);

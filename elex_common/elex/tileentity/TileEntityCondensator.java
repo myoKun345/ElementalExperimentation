@@ -93,7 +93,7 @@ public class TileEntityCondensator extends TileEntity implements IFluidHandler, 
         this.modeNetherAir = compound.getBoolean("NetherAirEnabled");
         this.modeNederon = compound.getBoolean("NederonEnabled");
         
-        this.currentModeNBT = compound.getString("CurrentMode");
+        this.currentMode = EnumCondensatorMode.valueOf(compound.getString("CurrentMode").toUpperCase());
     }
     
     @Override
@@ -134,30 +134,39 @@ public class TileEntityCondensator extends TileEntity implements IFluidHandler, 
         return isCondensing;
     }
     
-    public void activate() {
-        if (this.currentMode != null) {
-            while (buildcraftPowerHandler.getPowerReceiver().getEnergyStored() >= this.currentMode.getActivation() && tank.getFluidAmount() < tank.getCapacity()) {
-                this.fill(null, new FluidStack(this.currentMode.getFluid(), 5), true);
-                buildcraftPowerHandler.useEnergy(1, 10, true);
-                this.isCondensing = true;
+    @Override
+    public void updateEntity() {
+        if (!this.worldObj.isRemote) {
+            
+            if (this.tank != null && this.buildcraftPowerHandler != null && this.currentMode != null) {
+                
+                if (buildcraftPowerHandler.getPowerReceiver().getEnergyStored() >= this.currentMode.getActivation() && tank.getFluidAmount() < tank.getCapacity()) {
+                    this.fill(null, new FluidStack(this.currentMode.getFluid(), this.currentMode.getUPT()), true);
+                    buildcraftPowerHandler.useEnergy(1 * this.currentMode.getActivation(), 10 * this.currentMode.getActivation(), true);
+                    this.isCondensing = true;
+                }
+                
             }
+            
         }
     }
     
     public enum EnumCondensatorMode {
-        AIR("compressedAir", ModFluids.fluidCompressedAir, 2.0F),
-        WATER("water", FluidRegistry.WATER, 2.5F),
-        HYDROGEN("hydrogen", ModFluids.fluidPureGas.get(0), 5.0F),
-        NETHER("netherAir", ModFluids.fluidCompressedAir, 2.0F);
+        AIR("air", ModFluids.fluidCompressedAir, 2.0F, 100),
+        WATER("water", FluidRegistry.WATER, 2.5F, 20),
+        HYDROGEN("hydrogen", ModFluids.fluidPureGas.get(0), 5.0F, 5),
+        NETHER("nether", ModFluids.fluidCompressedAir, 2.0F, 100);
         
         private Fluid modeFluid;
         private String modeName;
         private float modeActivation;
+        private int modeUPT;
         
-        private EnumCondensatorMode(String name, Fluid fluid, float activationEnergy) {
+        private EnumCondensatorMode(String name, Fluid fluid, float activationEnergy, int unitsPerTick) {
             this.modeName = name;
             this.modeFluid = fluid;
             this.modeActivation = activationEnergy;
+            this.modeUPT = unitsPerTick;
         }
         
         public Fluid getFluid() {
@@ -170,6 +179,10 @@ public class TileEntityCondensator extends TileEntity implements IFluidHandler, 
         
         public float getActivation() {
             return this.modeActivation;
+        }
+        
+        public int getUPT() {
+            return this.modeUPT;
         }
     }
     

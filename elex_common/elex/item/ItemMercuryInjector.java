@@ -44,7 +44,7 @@ public class ItemMercuryInjector extends Item {
     }
     
     @Override
-    public boolean func_111207_a(ItemStack stack, EntityPlayer player, EntityLivingBase target)
+    public boolean itemInteractionForEntity(ItemStack stack, EntityPlayer player, EntityLivingBase target)
     {
         target.attackEntityFrom(DamageSource.causePlayerDamage(player), 20.0F);
         stack.damageItem(1, target);

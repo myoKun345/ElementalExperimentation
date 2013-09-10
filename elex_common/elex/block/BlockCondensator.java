@@ -101,13 +101,10 @@ public class BlockCondensator extends BlockContainer {
     
     @Override
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ) {
-        TileEntityCondensator te = (TileEntityCondensator)world.getBlockTileEntity(x, y, z);
         
         if (!world.isRemote) {
             FMLNetworkHandler.openGui(player, ElementalExperimentation.instance, 2, world, x, y, z);
         }
-        
-        te.activate();
         
         return true;
     }
