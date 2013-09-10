@@ -236,8 +236,15 @@ public class TileEntityGrinder extends TileEntity implements ISidedInventory, IE
         if (stack != null) {
             if (isItemValidForSlot(i, stack)) {
                 grinderItemStacks[i] = stack;
-
+                
+                if (stack != null && stack.stackSize > getInventoryStackLimit()) {
+                    stack.stackSize = getInventoryStackLimit();
+                }
+                
                 onInventoryChanged();
+            }
+            else {
+                return;
             }
         }
         else {
