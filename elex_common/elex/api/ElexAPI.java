@@ -65,7 +65,7 @@ public class ElexAPI {
         if (!GrinderRecipe.grinderRecipes.containsKey(input.getUnlocalizedName())) {
             GrinderRecipe.grinderRecipes.put(input.getUnlocalizedName(), new GrinderRecipe(input, main, bonus, chance, time));
         }
-        if (GrinderRecipe.grinderRecipes.containsKey(input.getUnlocalizedName())) {
+        else if (GrinderRecipe.grinderRecipes.containsKey(input.getUnlocalizedName())) {
             LogHelper.log(Level.WARNING, "Mod " + modid + " attempted to override a base ElEx recipe. " + Reference.RECIPE_DENIED);
         }
     }
@@ -81,7 +81,23 @@ public class ElexAPI {
         if (!GrinderRecipe.grinderRecipes.containsKey(input.getUnlocalizedName())) {
             GrinderRecipe.grinderRecipes.put(input.getUnlocalizedName(), new GrinderRecipe(input, main, null, 0, time));
         }
-        if (GrinderRecipe.grinderRecipes.containsKey(input.getUnlocalizedName())) {
+        else if (GrinderRecipe.grinderRecipes.containsKey(input.getUnlocalizedName())) {
+            LogHelper.log(Level.WARNING, "Mod " + modid + " attempted to override a base ElEx recipe. " + Reference.RECIPE_DENIED);
+        }
+    }
+    
+    /**
+     * Adds a centrifuge recipe.
+     * @param input - The input ItemStack.
+     * @param outputs - An array of resulting ItemStacks.
+     * @param time - The time it should take, in ticks, for this recipe to complete.
+     * @param modid - Your mod id.
+     */
+    public static void addCentrifugeRecipe(ItemStack input, ItemStack[] outputs, int time, String modid) {
+        if (!CentrifugeRecipe.centrifugeRecipes.containsKey(input.getUnlocalizedName())) {
+            CentrifugeRecipe.centrifugeRecipes.put(input.getUnlocalizedName(), new CentrifugeRecipe(input, outputs, time));
+        }
+        else if (CentrifugeRecipe.centrifugeRecipes.containsKey(input.getUnlocalizedName())) {
             LogHelper.log(Level.WARNING, "Mod " + modid + " attempted to override a base ElEx recipe. " + Reference.RECIPE_DENIED);
         }
     }

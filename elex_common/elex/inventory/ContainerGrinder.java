@@ -54,26 +54,40 @@ public class ContainerGrinder extends Container {
         LogHelper.log(Level.INFO, "slotnumber " + slotnumber);
         
         if (slot != null && slot.getHasStack()) {
+            
             ItemStack stack = slot.getStack();
             ItemStack result = stack.copy();
             
             if (slotnumber >= 36) {
+                
                 if (!mergeItemStack(stack, 0, 36, false)) {
+                    
                     return null;
+                    
                 }
-            }else if(!this.grinder.isItemValidForSlot(slotnumber, result) || !mergeItemStack(stack, 36, 36 + grinder.getSizeInventory(), false)) {
+            }
+            else if (!this.grinder.isItemValidForSlot(slotnumber, result) || !mergeItemStack(stack, 36, 36 + grinder.getSizeInventory(), false)) {
+                
                 return null;
+                
             }
             
             if (stack.stackSize == 0) {
+                
                 slot.putStack(null);
-            }else{
+                
+            }
+            else {
+                
                 slot.onSlotChanged();
+                
             }
             
             slot.onPickupFromSlot(player, stack);
             
-            return result;
+            if (this.grinder.isItemValidForSlot(slotnumber, result)) {
+                return result;
+            }
         }
         
         return null;

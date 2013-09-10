@@ -140,9 +140,9 @@ public class TileEntityCondensator extends TileEntity implements IFluidHandler, 
             
             if (this.tank != null && this.buildcraftPowerHandler != null && this.currentMode != null) {
                 
-                if (buildcraftPowerHandler.getPowerReceiver().getEnergyStored() >= this.currentMode.getActivation() && tank.getFluidAmount() < tank.getCapacity()) {
+                if (buildcraftPowerHandler.getPowerReceiver().getEnergyStored() >= this.currentMode.getActivation() + 15 && tank.getFluidAmount() < tank.getCapacity()) {
                     this.fill(null, new FluidStack(this.currentMode.getFluid(), this.currentMode.getUPT()), true);
-                    buildcraftPowerHandler.useEnergy(1 * this.currentMode.getActivation(), 10 * this.currentMode.getActivation(), true);
+                    buildcraftPowerHandler.useEnergy(0.75F * this.currentMode.getActivation(), this.currentMode.getActivation(), true);
                     this.isCondensing = true;
                 }
                 
@@ -208,7 +208,12 @@ public class TileEntityCondensator extends TileEntity implements IFluidHandler, 
     
     @Override
     public FluidStack drain(ForgeDirection from, int maxDrain, boolean doDrain) {
-        return null;
+        if (tank != null && this != null) {
+            return this.tank.drain(maxDrain, doDrain);
+        }
+        else {
+            return null/*this.tank.getFluid()*/;
+        }
     }
     
     @Override
@@ -218,12 +223,23 @@ public class TileEntityCondensator extends TileEntity implements IFluidHandler, 
     
     @Override
     public boolean canDrain(ForgeDirection from, Fluid fluid) {
-        return false;
+        return true;
     }
     
     @Override
     public FluidTankInfo[] getTankInfo(ForgeDirection from) {
-        return null;
+        TileEntityCondensator tile = this;
+        
+        int capacity = this.tank.getCapacity();
+        
+        if (tile != null && this.tank.getFluid() != null) {
+            this.tank.setFluid(tile.tank.getFluid().copy());
+        } else {
+            return new FluidTankInfo[]{this.tank.getInfo()};
+        }
+        
+        tank.setCapacity(capacity);
+        return new FluidTankInfo[]{tank.getInfo()};
     }
     
     @Override
@@ -403,10 +419,7 @@ public class TileEntityCondensator extends TileEntity implements IFluidHandler, 
         // TODO Auto-generated method stub
         return 0;
     }
-
-    /* (non-Javadoc)
-     * @see buildcraft.api.transport.IPipeConnection#overridePipeConnection(buildcraft.api.transport.IPipeTile.PipeType, net.minecraftforge.common.ForgeDirection)
-     */
+    
     @Override
     public ConnectOverride overridePipeConnection(PipeType type,
             ForgeDirection with) {

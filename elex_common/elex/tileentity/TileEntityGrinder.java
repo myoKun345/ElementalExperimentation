@@ -127,6 +127,10 @@ public class TileEntityGrinder extends TileEntity implements ISidedInventory, IE
                         this.grinding = true;
                         
                     }
+                    else if (this.grinding == false) {
+                        return;
+                    }
+                    
                     if (this.grinding && buildcraftPowerHandler.getEnergyStored() >= buildcraftPowerHandler.getActivationEnergy()) {
                         
                         --this.grinderGrindTime;
@@ -234,20 +238,35 @@ public class TileEntityGrinder extends TileEntity implements ISidedInventory, IE
     @Override
     public void setInventorySlotContents(int i, ItemStack stack) {
         if (stack != null) {
-            if (isItemValidForSlot(i, stack)) {
+            /*if (isItemValidForSlot(i, stack)) {
                 grinderItemStacks[i] = stack;
                 
-                if (stack != null && stack.stackSize > getInventoryStackLimit()) {
+                LogHelper.log(Level.INFO, "set correctly");
+                
+                if (stack.stackSize > getInventoryStackLimit()) {
                     stack.stackSize = getInventoryStackLimit();
                 }
                 
                 onInventoryChanged();
             }
             else {
+                LogHelper.log(Level.INFO, "return");
                 return;
+            }*/
+            
+            grinderItemStacks[i] = stack;
+            
+            LogHelper.log(Level.INFO, "set correctly");
+            
+            if (stack.stackSize > getInventoryStackLimit()) {
+                stack.stackSize = getInventoryStackLimit();
             }
+            
+            onInventoryChanged();
         }
-        else {
+        else if (stack == null) {
+            LogHelper.log(Level.INFO, "set to null");
+            
             grinderItemStacks[i] = null;
             
             onInventoryChanged();
