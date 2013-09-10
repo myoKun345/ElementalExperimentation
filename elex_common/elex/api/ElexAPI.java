@@ -62,14 +62,11 @@ public class ElexAPI {
      * @param modid - Your mod id.
      */
     public static void addGrinderRecipe(ItemStack input, ItemStack main, ItemStack bonus, int chance, int time, String modid) {
-        if (modid != "IC2" && modid != "GregTech") {
+        if (!GrinderRecipe.grinderRecipes.containsKey(input.getUnlocalizedName())) {
             GrinderRecipe.grinderRecipes.put(input.getUnlocalizedName(), new GrinderRecipe(input, main, bonus, chance, time));
         }
-        if (modid == "IC2") {
-            LogHelper.log(Level.INFO, Reference.RECIPE_DENIED_GREG);
-        }
-        if (modid == "GregTech") {
-            LogHelper.log(Level.INFO, Reference.RECIPE_DENIED_GREG);
+        if (GrinderRecipe.grinderRecipes.containsKey(input.getUnlocalizedName())) {
+            LogHelper.log(Level.WARNING, "Mod " + modid + " attempted to override a base ElEx recipe. " + Reference.RECIPE_DENIED);
         }
     }
     
@@ -81,14 +78,11 @@ public class ElexAPI {
      * @param modid - Your mod id.
      */
     public static void addGrinderRecipe(ItemStack input, ItemStack main, int time, String modid) {
-        if (modid != "IC2" && modid != "GregTech") {
+        if (!GrinderRecipe.grinderRecipes.containsKey(input.getUnlocalizedName())) {
             GrinderRecipe.grinderRecipes.put(input.getUnlocalizedName(), new GrinderRecipe(input, main, null, 0, time));
         }
-        if (modid == "IC2") {
-            LogHelper.log(Level.INFO, Reference.RECIPE_DENIED_GREG);
-        }
-        if (modid == "GregTech") {
-            LogHelper.log(Level.INFO, Reference.RECIPE_DENIED_GREG);
+        if (GrinderRecipe.grinderRecipes.containsKey(input.getUnlocalizedName())) {
+            LogHelper.log(Level.WARNING, "Mod " + modid + " attempted to override a base ElEx recipe. " + Reference.RECIPE_DENIED);
         }
     }
     
