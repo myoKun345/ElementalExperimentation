@@ -195,15 +195,15 @@
 	<entry key="tile.blockBlueStone.name">Blå sten</entry>
 	<entry key="tile.blockGreenStone.name">Grön sten</entry>
 	<entry key="tile.blockYellowStone.name">Gul sten</entry>
-	<entry key="tile.blockMarbleBrick.name">Marmortegel</entry>
-	<entry key="tile.blockBasaltBrick.name">Basalttegel</entry>
-	<entry key="tile.blockDeepSandstoneBrick.name">Djupsandstentegel</entry>
-	<entry key="tile.blockGraniteBrick.name">Granittegel</entry>
-	<entry key="tile.blockLimestoneBrick.name">Kalkstentegel</entry>
-	<entry key="tile.blockRedStoneBrick.name">Röd stentegel</entry>
-	<entry key="tile.blockBlueStoneBrick.name">Blå stentegel</entry>
-	<entry key="tile.blockGreenStoneBrick.name">Grön stentegel</entry>
-	<entry key="tile.blockYellowStoneBrick.name">Gul stentegel</entry>
+	<entry key="tile.brickMarble.name">Marmortegel</entry>
+	<entry key="tile.brickBasalt.name">Basalttegel</entry>
+	<entry key="tile.brickDeepSandstone.name">Djupsandstentegel</entry>
+	<entry key="tile.brickGranite.name">Granittegel</entry>
+	<entry key="tile.brickLimestone.name">Kalkstentegel</entry>
+	<entry key="tile.brickRedStone.name">Röd stentegel</entry>
+	<entry key="tile.brickBlueStone.name">Blå stentegel</entry>
+	<entry key="tile.brickGreenStone.name">Grön stentegel</entry>
+	<entry key="tile.brickYellowStone.name">Gul stentegel</entry>
 	
 	<entry key="item.aquamarine.name">Akvamarin</entry>
 	<entry key="item.borax.name">Borax</entry>

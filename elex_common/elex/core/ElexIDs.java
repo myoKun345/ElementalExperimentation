@@ -139,9 +139,9 @@ public class ElexIDs {
             "blockGranite", "blockLimestone", "blockRedStone", 
             "blockBlueStone", "blockGreenStone", "blockYellowStone" };
         public static final String[] BLOCK_BRICK_UNLOCALIZED_NAMES = 
-            { "blockMarbleBrick", "blockBasaltBrick", "blockDeepSandstoneBrick", 
-            "blockGraniteBrick", "blockLimestoneBrick", "blockRedStoneBrick", 
-            "blockBlueStoneBrick", "blockGreenStoneBrick", "blockYellowStoneBrick" };
+            { "brickMarble", "brickBasalt", "brickDeepSandstone", 
+            "brickGranite", "brickLimestone", "brickRedStone", 
+            "brickBlueStone", "brickGreenStone", "brickYellowStone" };
         public static final String CENTRIFUGE_UNLOCALIZED_NAME = "centrifuge";
         public static final String GRINDER_UNLOCALIZED_NAME = "grinder";
         public static final String CONDENSATOR_UNLOCALIZED_NAME = "condensator";

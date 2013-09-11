@@ -195,15 +195,15 @@
 	<entry key="tile.blockBlueStone.name">Blue Stone</entry>
 	<entry key="tile.blockGreenStone.name">Green Stone</entry>
 	<entry key="tile.blockYellowStone.name">Yellow Stone</entry>
-	<entry key="tile.blockMarbleBrick.name">Marble Brick</entry>
-	<entry key="tile.blockBasaltBrick.name">Basalt Brick</entry>
-	<entry key="tile.blockDeepSandstoneBrick.name">Deep Sandstone Brick</entry>
-	<entry key="tile.blockGraniteBrick.name">Granite Brick</entry>
-	<entry key="tile.blockLimestoneBrick.name">Limestone Brick</entry>
-	<entry key="tile.blockRedStoneBrick.name">Red Stone Brick</entry>
-	<entry key="tile.blockBlueStoneBrick.name">Blue Stone Brick</entry>
-	<entry key="tile.blockGreenStoneBrick.name">Green Stone Brick</entry>
-	<entry key="tile.blockYellowStoneBrick.name">Yellow Stone Brick</entry>
+	<entry key="tile.brickMarble.name">Marble Brick</entry>
+	<entry key="tile.brickBasalt.name">Basalt Brick</entry>
+	<entry key="tile.brickDeepSandstone.name">Deep Sandstone Brick</entry>
+	<entry key="tile.brickGranite.name">Granite Brick</entry>
+	<entry key="tile.brickLimestone.name">Limestone Brick</entry>
+	<entry key="tile.brickRedStone.name">Red Stone Brick</entry>
+	<entry key="tile.brickBlueStone.name">Blue Stone Brick</entry>
+	<entry key="tile.brickGreenStone.name">Green Stone Brick</entry>
+	<entry key="tile.brickYellowStone.name">Yellow Stone Brick</entry>
 	
 	<entry key="item.aquamarine.name">Aquamarine</entry>
 	<entry key="item.borax.name">Borax</entry>
