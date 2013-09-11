@@ -164,15 +164,17 @@ public class ElexIDs {
         public static final int ELEX_PURE_NONMETAL_DUST_DEFAULT = 16236;
         public static final int VANILLA_DUST_DEFAULT = 16237;
         public static final int ALLOY_DUST_DEFAULT = 16238;
-        public static final int ALLOY_INGOT_DEFAULT = 16239;
-        public static final int MACHINE_PART_DEFAULT = 16240;
-        public static final int METAL_NUGGET_DEFAULT = 16241;
-        public static final int ALLOY_NUGGET_DEFAULT = 16242;
-        public static final int IRON_NUGGET_DEFAULT = 16243;
-        public static final int SALTED_BEEF_DEFAULT = 16245;
-        public static final int SALTED_CHICKEN_DEFAULT = 16246;
-        public static final int SALTED_PORK_DEFAULT = 16247;
-        public static final int SALTED_FISH_DEFAULT = 16248;
+        public static final int ARTIFICIAL_COMPOUND_DUST_DEFAULT = 16239;
+        public static final int ALLOY_INGOT_DEFAULT = 16240;
+        public static final int MACHINE_PART_DEFAULT = 16241;
+        public static final int METAL_NUGGET_DEFAULT = 16242;
+        public static final int ALLOY_NUGGET_DEFAULT = 16243;
+        public static final int IRON_NUGGET_DEFAULT = 16244;
+        public static final int IRON_ROD_DEFAULT = 16245;
+        public static final int SALTED_BEEF_DEFAULT = 16246;
+        public static final int SALTED_CHICKEN_DEFAULT = 16247;
+        public static final int SALTED_PORK_DEFAULT = 16248;
+        public static final int SALTED_FISH_DEFAULT = 16249;
         public static final int RESEARCH_BINDER_DEFAULT = 16260;
         public static final int[] ELEX_ARMOR_DEFAULT = 
             { 16280, 16281, 16282, 16283 };
@@ -186,11 +188,13 @@ public class ElexIDs {
         public static int ELEX_PURE_NONMETAL_DUST;
         public static int VANILLA_DUST;
         public static int ALLOY_DUST;
+        public static int ARTIFICIAL_COMPOUND_DUST;
         public static int ALLOY_INGOT;
         public static int MACHINE_PART;
         public static int METAL_NUGGET;
         public static int ALLOY_NUGGET;
         public static int IRON_NUGGET;
+        public static int IRON_ROD;
         public static int SALTED_BEEF;
         public static int SALTED_CHICKEN;
         public static int SALTED_PORK;
@@ -207,11 +211,13 @@ public class ElexIDs {
         public static final String ELEX_PURE_NONMETAL_DUST_KEY = "PURENONMETALDUSTS";
         public static final String VANILLA_DUST_KEY = "VANILLADUSTS";
         public static final String ALLOY_DUST_KEY = "ALLOYDUSTS";
+        public static final String ARTIFICIAL_COMPOUND_DUST_KEY = "ARTIFICIALDUSTS";
         public static final String ALLOY_INGOT_KEY = "ALLOYINGOTS";
         public static final String MACHINE_PART_KEY = "MACHINEPARTS";
         public static final String METAL_NUGGET_KEY = "METALNUGGETS";
         public static final String ALLOY_NUGGET_KEY = "ALLOYNUGGETS";
         public static final String IRON_NUGGET_KEY = "IronNuggetID";
+        public static final String IRON_ROD_KEY = "IronRodID";
         public static final String SALTED_BEEF_KEY = "SaltedBeefID";
         public static final String SALTED_CHICKEN_KEY = "SaltedChickenID";
         public static final String SALTED_PORK_KEY = "SaltedPorkID";
@@ -258,10 +264,13 @@ public class ElexIDs {
         public static List<String> ELEX_PURE_NONMETAL_DUST_REAL_UNLOCALIZED_NAMES = new LinkedList<String>();
         public static final String[] VANILLA_DUST_REAL_UNLOCALIZED_NAMES = 
             { "dustNetherQuartz", "dustIron", "dustGold", 
-            "dustEmerald", "dustCoal", "dustCharcoal" };
+            "dustEmerald", "dustCoal", "dustCharcoal",
+            "dustDiamond", "dustLapisLazuli", "dustObsidian" };
         public static final String[] ALLOY_DUST_REAL_UNLOCALIZED_NAMES = 
             { "dustCarbonSteel", "dustVanadiumSteel", "dustBronze", 
             "dustElectrum", "dustScandinium", "dustOsmiridium" };
+        public static final String[] ARTIFICIAL_COMPOUND_DUST_UNLOCALIZED_NAMES = 
+            { "dustSilicate" };
         public static final String[] ALLOY_INGOT_REAL_UNLOCALIZED_NAMES = 
             { "ingotCarbonSteel", "ingotVanadiumSteel", "ingotBronze",
             "ingotElectrum", "ingotScandinium", "ingotOsmiridium" };
@@ -272,6 +281,7 @@ public class ElexIDs {
             { "nuggetCarbonSteel", "nuggetVanadiumSteel", "nuggetBronze",
             "nuggetElectrum", "nuggetScandinium", "nuggetOsmiridium" };
         public static final String IRON_NUGGET_UNLOCALIZED_NAME = "nuggetIron";
+        public static final String IRON_ROD_UNLOCALIZED_NAME = "rodIron";
         public static final String RESEARCH_BINDER_UNLOCALIZED_NAME = "researchBinder";
         public static final String[] ELEX_ARMOR_REAL_UNLOCALIZED_NAMES = 
             { "helmetCarbon", "plateCarbon", "pantsCarbon", "bootsCarbon" }; 
@@ -299,10 +309,13 @@ public class ElexIDs {
         public static final List<String> PURE_NONMETAL_DUST_MOLECULE_STRINGS = new LinkedList<String>();
         public static final String[] VANILLA_DUST_MOLECULE_STRINGS =
             { "FeSiO2", "Fe", "Au",
-            "Be3Al2(SiO3)6", "C2", "C7H4O" };
+            "Be3Al2(SiO3)6", "C2", "C7H4O",
+            "C", "Ca8Al6Si6O24", "SiO2" };
         public static final String[] ALLOY_DUST_MOLECULE_STRINGS = 
             { "Fe-C", "Fe-V", "Cu-Sn",
             "Au-Ag", "Al-Sc", "Os-Ir" };
+        public static final String[] ARTIFICIAL_COMPOUND_DUST_MOLECULE_STRINGS = 
+            { "SiO3" };
         
         /* Other Information Strings */
         public static final String RADIOACTIVE_UNLOCALIZED = "string.element.radioactive";

@@ -1,6 +1,6 @@
 package elex.core;
 
-import java.util.logging.Level;
+import java.util.Random;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -8,7 +8,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
 import cpw.mods.fml.common.registry.GameRegistry;
 import elex.api.ElexAPI;
-import elex.api.GrinderRecipe;
 import elex.lib.ElexIDs;
 import elex.lib.Reference;
 
@@ -21,7 +20,16 @@ import elex.lib.Reference;
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
 public class CraftingRecipes {
+    /**
+     * 
+     */
+    /**
+     * 
+     */
     public static void registerRecipes() {
+        
+        Random rand = new Random();
+        
         // Mercury Injector Recipe
         GameRegistry.addRecipe(new ItemStack(ModItems.mercuryInjector, 1), new Object[] { "X", "Z", "Y", 'X', Item.ingotIron, 'Z', Item.slimeBall, 'Y', Item.stick });
         // Storage Block Recipes for Compound Ores
@@ -70,6 +78,16 @@ public class CraftingRecipes {
         GameRegistry.addRecipe(new ItemStack(ModBlocks.blockBuildingMaterial, 8, 6), new Object[] { "YYY", "YXY", "YYY", 'X', new ItemStack(Item.dyePowder, 1, 4), 'Y', new ItemStack(Block.stone) });
         GameRegistry.addRecipe(new ItemStack(ModBlocks.blockBuildingMaterial, 8, 7), new Object[] { "YYY", "YXY", "YYY", 'X', new ItemStack(Item.dyePowder, 1, 2), 'Y', new ItemStack(Block.stone) });
         GameRegistry.addRecipe(new ItemStack(ModBlocks.blockBuildingMaterial, 8, 8), new Object[] { "YYY", "YXY", "YYY", 'X', new ItemStack(Item.dyePowder, 1, 11), 'Y', new ItemStack(Block.stone) });
+        // Machine Part Recipes
+        /**
+         * TODO: make better recipe
+         */
+        GameRegistry.addRecipe(new ItemStack(ModItems.itemMachinePart, 1, 0), new Object[] { "XY", 'X', new ItemStack(Item.ingotIron, 1), 'Y', new ItemStack(ModItems.itemElExIngot, 1, 15) });
+        GameRegistry.addRecipe(new ItemStack(ModItems.itemMachinePart, 1, 1), new Object[] { "X", "Y", "X", 'X', new ItemStack(ModItems.itemElExIngot, 1, 15), 'Y', new ItemStack(Item.ingotIron, 1) });
+        GameRegistry.addRecipe(new ItemStack(ModItems.itemMachinePart, 1, 2), new Object[] { "XYX", 'X', new ItemStack(Item.flint, 1), 'Y', new ItemStack(Item.ingotIron, 1) });
+        // Machine Recipes
+        GameRegistry.addRecipe(new ItemStack(ModBlocks.grinder, 1), new Object[] { "X", "Y", "Z", 'X', new ItemStack(ModItems.itemMachinePart, 1, 2), 'Y', new ItemStack(ModBlocks.blockMachineCase, 1, 0), 'Z', new ItemStack(ModItems.itemMachinePart, 1, 1) });
+        GameRegistry.addRecipe(new ItemStack(ModBlocks.centrifuge, 1), new Object[] { "X", "Y", "Z", 'X', new ItemStack(ModItems.itemMachinePart, 1, 0), 'Y', new ItemStack(ModBlocks.blockMachineCase, 1, 0), 'Z', new ItemStack(ModItems.itemMachinePart, 1, 1) });
         // Nugget Recipes
         for (int i = 0; i < ElexIDs.ELEX_INGOT_REAL_UNLOCALIZED_NAMES.size(); i++) {
             GameRegistry.addShapelessRecipe(new ItemStack(ModItems.itemMetalNugget, 9, i), new ItemStack(ModItems.itemElExIngot, 1, i));
@@ -176,5 +194,19 @@ public class CraftingRecipes {
             
             ElexAPI.addGrinderRecipe(new ItemStack(ModBlocks.blockElExItemOre3, 1, i), new ItemStack(ModItems.itemElExCompoundDust, 2, j), 100, Reference.MOD_ID);
         }
+        // Grinder Recipes for Vanilla Blocks
+        ElexAPI.addGrinderRecipe(new ItemStack(Block.oreNetherQuartz, 1), new ItemStack(ModItems.itemVanillaDust, 2, 0), 100, Reference.MOD_ID);
+        ElexAPI.addGrinderRecipe(new ItemStack(Block.oreIron, 1), new ItemStack(ModItems.itemVanillaDust, 2, 1), 100, Reference.MOD_ID);
+        ElexAPI.addGrinderRecipe(new ItemStack(Block.oreGold, 1), new ItemStack(ModItems.itemVanillaDust, 2, 2), 100, Reference.MOD_ID);
+        ElexAPI.addGrinderRecipe(new ItemStack(Block.oreEmerald, 1), new ItemStack(ModItems.itemVanillaDust, 2, 3), 100, Reference.MOD_ID);
+        ElexAPI.addGrinderRecipe(new ItemStack(Block.oreCoal, 1), new ItemStack(ModItems.itemVanillaDust, 2, 4), 100, Reference.MOD_ID);
+        ElexAPI.addGrinderRecipe(new ItemStack(Block.oreDiamond, 1), new ItemStack(ModItems.itemVanillaDust, 2, 6), 150, Reference.MOD_ID);
+        ElexAPI.addGrinderRecipe(new ItemStack(Block.oreLapis, 1), new ItemStack(ModItems.itemVanillaDust, 2 + rand.nextInt(4), 7), 100, Reference.MOD_ID);
+        ElexAPI.addGrinderRecipe(new ItemStack(Block.oreRedstone, 1), new ItemStack(Item.redstone, 2), 100, Reference.MOD_ID);
+        ElexAPI.addGrinderRecipe(new ItemStack(Block.obsidian, 1), new ItemStack(ModItems.itemVanillaDust, 1, 8), 300, Reference.MOD_ID);
+        
+        // Centrifuge Recipes for Compound Dusts
+        ElexAPI.addCentrifugeRecipe(new ItemStack(ModItems.itemElExCompoundDust, 16, 0), new ItemStack[]{ new ItemStack(ModItems.itemElExMetalDust, 3, 1), new ItemStack(ModItems.itemElExMetalDust, 2, 4), new ItemStack(ModItems.itemArtificialDust, 6, 0) }, 240, Reference.MOD_ID);
+        ElexAPI.addCentrifugeRecipe(new ItemStack(ModItems.itemElExCompoundDust, 16, 1), new ItemStack[]{ new ItemStack(ModItems.itemElExMetalDust, 2, 2), new ItemStack(ModItems.itemElExPureNonmetalDust, 4, 0)}, 220, Reference.MOD_ID);
     }
 }

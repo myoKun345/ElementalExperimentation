@@ -23,6 +23,7 @@ public class ModItems {
     public static Item itemElExPureNonmetalDust;
     public static Item itemVanillaDust;
     public static Item itemAlloyDust;
+    public static Item itemArtificialDust;
     public static Item itemAlloyIngot;
     public static Item itemMachinePart;
     public static Item itemMetalNugget;
@@ -47,6 +48,7 @@ public class ModItems {
         itemElExPureNonmetalDust = new ItemElExDust(ElexIDs.ELEX_PURE_NONMETAL_DUST, 2);
         itemVanillaDust = new ItemElExDust(ElexIDs.VANILLA_DUST, 3);
         itemAlloyDust = new ItemElExDust(ElexIDs.ALLOY_DUST, 4);
+        itemArtificialDust = new ItemElExDust(ElexIDs.ARTIFICIAL_COMPOUND_DUST, 5);
         itemAlloyIngot = new ItemElExIngot(ElexIDs.ALLOY_INGOT, 1);
         itemMachinePart = new ItemMachinePart(ElexIDs.MACHINE_PART);
         itemMetalNugget = new ItemElExNugget(ElexIDs.METAL_NUGGET, 0);

@@ -1,12 +1,8 @@
 package elex.core;
 
 import java.io.File;
-import java.util.logging.Level;
 
 import net.minecraftforge.common.Configuration;
-import elex.api.Element;
-import elex.lib.ElexIDs;
-import elex.lib.ElexIDs;
 import elex.lib.ElexIDs;
 
 /**
@@ -52,6 +48,7 @@ public class ConfigurationHandler {
         ElexIDs.ELEX_PURE_NONMETAL_DUST = config.getItem(ElexIDs.CATEGORY_ITEM_IDS, ElexIDs.ELEX_PURE_NONMETAL_DUST_KEY, ElexIDs.ELEX_PURE_NONMETAL_DUST_DEFAULT).getInt();
         ElexIDs.VANILLA_DUST = config.getItem(ElexIDs.CATEGORY_ITEM_IDS, ElexIDs.VANILLA_DUST_KEY, ElexIDs.VANILLA_DUST_DEFAULT).getInt();
         ElexIDs.ALLOY_DUST = config.getItem(ElexIDs.CATEGORY_ITEM_IDS, ElexIDs.ALLOY_DUST_KEY, ElexIDs.ALLOY_DUST_DEFAULT).getInt();
+        ElexIDs.ARTIFICIAL_COMPOUND_DUST = config.getItem(ElexIDs.CATEGORY_ITEM_IDS, ElexIDs.ARTIFICIAL_COMPOUND_DUST_KEY, ElexIDs.ARTIFICIAL_COMPOUND_DUST_DEFAULT).getInt();
         ElexIDs.ALLOY_INGOT = config.getItem(ElexIDs.CATEGORY_ITEM_IDS, ElexIDs.ALLOY_INGOT_KEY, ElexIDs.ALLOY_INGOT_DEFAULT).getInt();
         ElexIDs.MACHINE_PART = config.getItem(ElexIDs.CATEGORY_ITEM_IDS, ElexIDs.MACHINE_PART_KEY, ElexIDs.MACHINE_PART_DEFAULT).getInt();
         ElexIDs.METAL_NUGGET = config.getItem(ElexIDs.CATEGORY_ITEM_IDS, ElexIDs.METAL_NUGGET_KEY, ElexIDs.METAL_NUGGET_DEFAULT).getInt();

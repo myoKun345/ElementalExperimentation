@@ -9,7 +9,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import elex.ElementalExperimentation;
 import elex.lib.ElexIDs;
 import elex.lib.Reference;
 
@@ -21,7 +20,7 @@ import elex.lib.Reference;
  * @author Myo-kun
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class ItemElExDust extends ItemElemental {
+public class ItemElExDust extends ItemElex {
     
     private int dustType;
     
@@ -29,8 +28,7 @@ public class ItemElExDust extends ItemElemental {
     private Icon[] icons;
     
     public ItemElExDust(int par1, int par2) {
-        super(par1 - Reference.SHIFTED_ID_RANGE_CORRECTION);
-        setCreativeTab(ElementalExperimentation.elexTab);
+        super(par1);
         setHasSubtypes(true);
         dustType = par2;
     }
@@ -51,6 +49,9 @@ public class ItemElExDust extends ItemElemental {
         }
         if (dustType == 4) {
             return "item." + ElexIDs.ALLOY_DUST_REAL_UNLOCALIZED_NAMES[stack.getItemDamage()];
+        }
+        if (dustType == 5) {
+            return "item." + ElexIDs.ARTIFICIAL_COMPOUND_DUST_UNLOCALIZED_NAMES[stack.getItemDamage()];
         }
         return "something.went.wrong";
     }
@@ -86,6 +87,12 @@ public class ItemElExDust extends ItemElemental {
             icons = new Icon[ElexIDs.ALLOY_DUST_REAL_UNLOCALIZED_NAMES.length];
             for (int i = 0; i < icons.length; i++) {
                 icons[i] = register.registerIcon(Reference.MOD_ID + ":" + ElexIDs.ALLOY_DUST_REAL_UNLOCALIZED_NAMES[i]);
+            }
+        }
+        if (dustType == 5) {
+            icons = new Icon[ElexIDs.ARTIFICIAL_COMPOUND_DUST_UNLOCALIZED_NAMES.length];
+            for (int i = 0; i < icons.length; i++) {
+                icons[i] = register.registerIcon(Reference.MOD_ID + ":" + ElexIDs.ARTIFICIAL_COMPOUND_DUST_UNLOCALIZED_NAMES[i]);
             }
         }
     }
@@ -129,6 +136,12 @@ public class ItemElExDust extends ItemElemental {
                 list.add(stack);
             }
         }
+        if (dustType == 5) {
+            for (int i = 0; i < ElexIDs.ARTIFICIAL_COMPOUND_DUST_UNLOCALIZED_NAMES.length; i++) {
+                ItemStack stack = new ItemStack(id, 1, i);
+                list.add(stack);
+            }
+        }
     }
     
     @Override
@@ -148,6 +161,9 @@ public class ItemElExDust extends ItemElemental {
         }
         if (dustType == 4) {
             info.add(ElexIDs.ALLOY_DUST_MOLECULE_STRINGS[stack.getItemDamage()]);
+        }
+        if (dustType == 5) {
+            info.add(ElexIDs.ARTIFICIAL_COMPOUND_DUST_MOLECULE_STRINGS[stack.getItemDamage()]);
         }
     }
     
