@@ -1,7 +1,7 @@
 package elex.localization;
 
 import cpw.mods.fml.common.registry.LanguageRegistry;
-import elex.lib.Localizations;
+import elex.core.Localizations;
 
 /**
  * Elemental Experimentation

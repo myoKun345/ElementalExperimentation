@@ -5,12 +5,14 @@ import java.util.List;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import elex.lib.ElexIDs;
-import elex.lib.Reference;
+import elex.ElementalExperimentation;
+import elex.core.ElexIDs;
+import elex.core.Reference;
 
 /**
  * Elemental Experimentation
@@ -20,7 +22,7 @@ import elex.lib.Reference;
  * @author Myo-kun
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class ItemElExDust extends ItemElex {
+public class ItemElExDust extends Item {
     
     private int dustType;
     
@@ -28,7 +30,8 @@ public class ItemElExDust extends ItemElex {
     private Icon[] icons;
     
     public ItemElExDust(int par1, int par2) {
-        super(par1);
+        super(par1 - Reference.SHIFTED_ID_RANGE_CORRECTION);
+        setCreativeTab(ElementalExperimentation.elexTab);
         setHasSubtypes(true);
         dustType = par2;
     }

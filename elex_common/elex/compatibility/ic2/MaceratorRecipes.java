@@ -9,10 +9,10 @@ import java.util.logging.Level;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import elex.core.ElexIDs;
 import elex.core.LogHelper;
 import elex.core.ModBlocks;
 import elex.core.ModItems;
-import elex.lib.ElexIDs;
 
 /**
  * Elemental Experimentation

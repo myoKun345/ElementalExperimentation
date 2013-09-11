@@ -1,7 +1,7 @@
 package elex.fluids;
 
-import elex.lib.ElexIDs;
-import elex.lib.Reference;
+import elex.core.ElexIDs;
+import elex.core.Reference;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.util.Icon;
 import net.minecraftforge.fluids.Fluid;

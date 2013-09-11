@@ -2,7 +2,7 @@ package elex.block.util;
 
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
-import elex.lib.ElexIDs;
+import elex.core.ElexIDs;
 
 /**
  * Elemental Experimentation

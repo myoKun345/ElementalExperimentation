@@ -4,10 +4,9 @@ import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import thermalexpansion.api.crafting.CraftingHelpers;
+import elex.core.ElexIDs;
 import elex.core.ModBlocks;
 import elex.core.ModItems;
-import elex.lib.ElexIDs;
-import elex.lib.ElexIDs;
 
 /**
  * Elemental Experimentation

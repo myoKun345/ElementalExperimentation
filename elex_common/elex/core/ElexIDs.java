@@ -1,4 +1,4 @@
-package elex.lib;
+package elex.core;
 
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -7,7 +7,6 @@ import java.util.List;
 import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.ItemStack;
-import elex.core.ModItems;
 
 /**
  * Elemental Experimentation

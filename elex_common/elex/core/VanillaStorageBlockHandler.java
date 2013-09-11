@@ -2,7 +2,6 @@ package elex.core;
 
 import elex.api.Element;
 import elex.api.IStorageBlockHandler;
-import elex.lib.ElexIDs;
 
 /**
  * Elemental Experimentation

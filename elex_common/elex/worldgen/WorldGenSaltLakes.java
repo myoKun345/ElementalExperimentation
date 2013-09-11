@@ -9,8 +9,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.feature.WorldGenLakes;
 import elex.core.ConfigurationSettings;
-import elex.lib.ElexIDs;
-import elex.lib.ElexIDs;
+import elex.core.ElexIDs;
 
 /**
  * Elemental Experimentation

@@ -28,7 +28,6 @@ import elex.block.util.ItemBlockElExMetalStorage6;
 import elex.block.util.ItemBlockElExOre;
 import elex.block.util.ItemBlockElExOre2;
 import elex.block.util.ItemBlockMachineCase;
-import elex.lib.ElexIDs;
 
 public class ModBlocks {
     public static Block centrifuge;

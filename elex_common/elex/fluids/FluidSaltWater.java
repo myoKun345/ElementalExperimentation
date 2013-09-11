@@ -3,7 +3,7 @@ package elex.fluids;
 import net.minecraft.util.Icon;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
-import elex.lib.ElexIDs;
+import elex.core.ElexIDs;
 
 /**
  * Elemental Experimentation

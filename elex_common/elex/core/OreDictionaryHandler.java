@@ -2,8 +2,6 @@ package elex.core;
 
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
-import elex.lib.ElexIDs;
-import elex.lib.ElexIDs;
 
 /**
  * Elemental Experimentation

@@ -1,4 +1,4 @@
-package elex.lib;
+package elex.core;
 
 /**
  * Elemental Experimentation

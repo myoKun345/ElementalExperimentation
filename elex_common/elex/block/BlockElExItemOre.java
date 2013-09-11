@@ -13,9 +13,9 @@ import net.minecraft.util.Icon;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import elex.ElementalExperimentation;
+import elex.core.ElexIDs;
 import elex.core.LogHelper;
-import elex.lib.ElexIDs;
-import elex.lib.Reference;
+import elex.core.Reference;
 
 /**
  * Elemental Experimentation

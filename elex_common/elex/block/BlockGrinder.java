@@ -19,10 +19,10 @@ import cpw.mods.fml.common.network.FMLNetworkHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import elex.ElementalExperimentation;
+import elex.core.ElexIDs;
 import elex.core.Position;
+import elex.core.Reference;
 import elex.core.RenderUtilities;
-import elex.lib.ElexIDs;
-import elex.lib.Reference;
 import elex.tileentity.TileEntityGrinder;
 
 /**

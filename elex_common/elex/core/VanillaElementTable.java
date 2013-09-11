@@ -1,8 +1,6 @@
 package elex.core;
 
 import elex.api.ElementTable;
-import elex.lib.ElexIDs;
-import elex.lib.ElexIDs;
 
 /**
  * Elemental Experimentation

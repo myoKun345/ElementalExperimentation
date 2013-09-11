@@ -2,7 +2,6 @@ package elex.core;
 
 import elex.api.Alloy;
 import elex.api.ElexAPI;
-import elex.lib.ElexIDs;
 
 /**
  * Elemental Experimentation

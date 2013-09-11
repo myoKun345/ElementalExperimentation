@@ -9,7 +9,7 @@ import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 import cpw.mods.fml.common.IWorldGenerator;
 import elex.core.ConfigurationSettings;
-import elex.lib.ElexIDs;
+import elex.core.ElexIDs;
 import elex.worldgen.biome.Biomes;
 
 /**

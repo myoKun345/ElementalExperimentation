@@ -12,7 +12,6 @@ import elex.item.ItemMachinePart;
 import elex.item.ItemMercuryInjector;
 import elex.item.ItemResearchBinder;
 import elex.item.ItemSaltedMeat;
-import elex.lib.ElexIDs;
 
 public class ModItems {
     public static Item itemElExOre;

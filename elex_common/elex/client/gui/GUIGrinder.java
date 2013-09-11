@@ -13,8 +13,8 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import elex.core.LogHelper;
+import elex.core.Reference;
 import elex.inventory.ContainerGrinder;
-import elex.lib.Reference;
 import elex.tileentity.TileEntityGrinder;
 
 /**

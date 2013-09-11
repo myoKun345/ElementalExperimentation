@@ -8,8 +8,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
 import cpw.mods.fml.common.registry.GameRegistry;
 import elex.api.ElexAPI;
-import elex.lib.ElexIDs;
-import elex.lib.Reference;
 
 /**
  * Elemental Experimentation

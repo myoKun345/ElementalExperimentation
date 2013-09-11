@@ -6,7 +6,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.EnumHelper;
 import elex.core.LogHelper;
 import elex.core.ModFluids;
-import elex.lib.Reference;
+import elex.core.Reference;
 
 /**
  * Elemental Experimentation

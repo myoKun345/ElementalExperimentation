@@ -1,6 +1,6 @@
 package elex.block.util;
 
-import elex.lib.ElexIDs;
+import elex.core.ElexIDs;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 

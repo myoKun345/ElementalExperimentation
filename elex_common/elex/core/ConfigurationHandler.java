@@ -3,7 +3,6 @@ package elex.core;
 import java.io.File;
 
 import net.minecraftforge.common.Configuration;
-import elex.lib.ElexIDs;
 
 /**
  * Elemental Experimentation

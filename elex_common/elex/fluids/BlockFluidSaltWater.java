@@ -6,9 +6,9 @@ import net.minecraft.util.Icon;
 import net.minecraftforge.fluids.BlockFluidClassic;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import elex.core.ElexIDs;
 import elex.core.ModFluids;
-import elex.lib.ElexIDs;
-import elex.lib.Reference;
+import elex.core.Reference;
 
 /**
  * Elemental Experimentation

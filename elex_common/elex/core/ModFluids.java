@@ -10,7 +10,6 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import elex.fluids.BlockFluidSaltWater;
 import elex.fluids.FluidPureGaseous;
 import elex.fluids.FluidSaltWater;
-import elex.lib.ElexIDs;
 
 /**
  * Elemental Experimentation

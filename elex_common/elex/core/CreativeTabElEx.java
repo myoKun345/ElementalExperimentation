@@ -3,8 +3,6 @@ package elex.core;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import elex.lib.ElexIDs;
-import elex.lib.ElexIDs;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
