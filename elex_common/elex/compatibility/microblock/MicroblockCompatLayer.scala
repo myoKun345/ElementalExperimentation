@@ -28,15 +28,17 @@ object MicroblockCompatLayer {
     def init(event:FMLInitializationEvent) {
         if(!Loader.isModLoaded("ForgeMicroblock")) {
             
-            FMLLog.warning("Forge Microblock missing - ElEx Microblock Compat not loading");
-            return;
+            FMLLog.warning("Forge Microblock missing - ElEx Microblock Compat not loading")
+            return
             
         } 
         try {
+            
             for (i <- 0 to 8) {
                 registerMaterial(new BlockMicroMaterial(blockBrick, i), "tile." + ElexIDs.BLOCK_BRICK_UNLOCALIZED_NAMES(i))
                 registerMaterial(new BlockMicroMaterial(blockBuildingMaterial, i), "tile." + ElexIDs.BLOCK_BUILDING_MATERIAL_UNLOCALIZED_NAMES(i))
             }
+            
         }
     }
     
