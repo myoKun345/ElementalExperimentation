@@ -25,7 +25,8 @@
 		<mkdir dir="deobf" />
 		
 		<replace file="elex_common/mcmod.info" token="@@BUILD@@" value="${build_number}" />
-		<replace file="elex_common/elex/lib/Reference.java" token="@@BUILD@@" value="${build_number}" />
+		<replace file="elex_common/elex/core/Reference.java" token="@@BUILD@@" value="${build_number}" />
+		<replace file="elex_common/elex/compatibility/MicroblockCompatLayer.scala" token="@@BUILD@@" value="${build_number}" />
 		
 		<copy todir="../Forge/forge/mcp/src/minecraft">
 			
