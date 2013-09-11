@@ -38,8 +38,6 @@ public class BlockGrinder extends BlockContainer {
     
     private final Random grinderRandom = new Random();
     
-    private boolean isActive;
-    
     private static boolean keepFurnaceInventory;
     
     @SideOnly(Side.CLIENT)
@@ -85,11 +83,18 @@ public class BlockGrinder extends BlockContainer {
     }
 
     @Override
+    @SideOnly(Side.CLIENT)
     public Icon getIcon(int i, int j) {
         if (j == 0 && i == 3) {
+            return idleFrontIcon;
+        }
+        if (i == j && i > 1) {
+            return idleFrontIcon;
+        }
+        if (j == 10 && i == 3) {
             return frontIcon;
         }
-        if (i == j && i>1) {
+        if (i + 10 == j && i > 1) {
             return frontIcon;
         }
         switch (i) {
@@ -106,7 +111,7 @@ public class BlockGrinder extends BlockContainer {
             return false;
         }
         
-        if (!world.isRemote) {
+        if (!world.isRemote && !player.isSneaking()) {
             FMLNetworkHandler.openGui(player, ElementalExperimentation.instance, 0, world, x, y, z);
         }
         

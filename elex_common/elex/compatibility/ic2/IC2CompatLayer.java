@@ -31,6 +31,7 @@ public class IC2CompatLayer {
         } try {
             
             MaceratorRecipes.addMaceratorRecipes();
+            GrinderRecipes.addGrinderRecipes();
             
         }
         catch (Exception x)

@@ -75,8 +75,6 @@ public class MaceratorRecipes {
                         new ItemStack(ModItems.itemElExMetalDust, 1, i));
             }
         }
-        Recipes.macerator.addRecipe(new RecipeInputItemStack(new ItemStack(Item.ingotIron)), null, new ItemStack(ModItems.itemVanillaDust, 1, 1));
-        Recipes.macerator.addRecipe(new RecipeInputItemStack(new ItemStack(Item.ingotGold)), null, new ItemStack(ModItems.itemVanillaDust, 1, 2));
     }
     
 }

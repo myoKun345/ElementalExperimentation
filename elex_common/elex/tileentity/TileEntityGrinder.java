@@ -111,23 +111,29 @@ public class TileEntityGrinder extends TileEntity implements ISidedInventory, IE
     
     @Override
     public void updateEntity() {
+        
         if (!this.worldObj.isRemote) {
             
             if (getStackInSlot(0) != null) {
                 
-                if ((getStackInSlot(2) == null && getStackInSlot(3) == null) || (getStackInSlot(2) == null && getStackInSlot(3).stackSize < 64) || (getStackInSlot(2).stackSize < 64 && getStackInSlot(3) == null) || (getStackInSlot(2).stackSize < 64 && getStackInSlot(3).stackSize < 64)) {
+                GrinderRecipe recipe;
                 
-                    GrinderRecipe recipe;
+                recipe = GrinderRecipe.grinderRecipes.get(getStackInSlot(0).getUnlocalizedName());
+                
+                if ((getStackInSlot(2) == null && getStackInSlot(3) == null) || (getStackInSlot(2) == null && getStackInSlot(3).stackSize < 64) || (getStackInSlot(2).stackSize < 64 && getStackInSlot(3) == null) || (getStackInSlot(2).stackSize < 64 && getStackInSlot(3).stackSize < 64)) {
                     
                     if (GrinderRecipe.canBeDone(getStackInSlot(0)) && this.grinding == false) {
-                        
-                        recipe = GrinderRecipe.grinderRecipes.get(getStackInSlot(0).getUnlocalizedName());
                         
                         this.grinderGrindTime = recipe.time;
                         this.grinding = true;
                         
                     }
                     else if (this.grinding == false) {
+                        
+                        if (worldObj.getBlockMetadata(xCoord, yCoord, zCoord) > 10) {
+                            worldObj.setBlockMetadataWithNotify(xCoord, yCoord, zCoord, worldObj.getBlockMetadata(xCoord, yCoord, zCoord) - 10, 2);
+                        }
+                        
                         return;
                     }
                     
@@ -136,7 +142,9 @@ public class TileEntityGrinder extends TileEntity implements ISidedInventory, IE
                         --this.grinderGrindTime;
                         buildcraftPowerHandler.useEnergy(1, 2, true);
                         
-                        recipe = GrinderRecipe.grinderRecipes.get(getStackInSlot(0).getUnlocalizedName());
+                        if (worldObj.getBlockMetadata(xCoord, yCoord, zCoord) < 10) {
+                            worldObj.setBlockMetadataWithNotify(xCoord, yCoord, zCoord, worldObj.getBlockMetadata(xCoord, yCoord, zCoord) + 10, 2);
+                        }
     
                         if (this.grinderGrindTime == 0) {
                             
@@ -149,8 +157,7 @@ public class TileEntityGrinder extends TileEntity implements ISidedInventory, IE
                                 
                                 if (getStackInSlot(2).stackSize != 0 && getStackInSlot(2).itemID == recipe.mainOutput.itemID && getStackInSlot(2).getItemDamage() == recipe.mainOutput.getItemDamage()) {
                                     
-                                    LogHelper.log(Level.INFO, "Recipe stack size " + recipe.mainOutput.stackSize);
-                                    getStackInSlot(2).stackSize = getStackInSlot(2).stackSize + recipe.mainOutput.stackSize/*2*/;
+                                    getStackInSlot(2).stackSize = getStackInSlot(2).stackSize + recipe.mainOutput.stackSize;
                                     
                                 }
                             }
@@ -187,12 +194,15 @@ public class TileEntityGrinder extends TileEntity implements ISidedInventory, IE
                                 
                             }
                             
+
                             if (getStackInSlot(0) == null) {
                                 
                                 this.grinderGrindTime = 0;
                                 this.grinding = false;
                                 
-                            } 
+                                worldObj.setBlockMetadataWithNotify(xCoord, yCoord, zCoord, worldObj.getBlockMetadata(xCoord, yCoord, zCoord) - 10, 2);
+                                
+                            }
                             else {
                                 
                                 this.grinderGrindTime = recipe.time;
@@ -201,6 +211,16 @@ public class TileEntityGrinder extends TileEntity implements ISidedInventory, IE
                         }
                     }
                 }
+            }
+            if (getStackInSlot(0) == null) {
+                
+                this.grinderGrindTime = 0;
+                this.grinding = false;
+                
+                if (worldObj.getBlockMetadata(xCoord, yCoord, zCoord) > 10) {
+                    worldObj.setBlockMetadataWithNotify(xCoord, yCoord, zCoord, worldObj.getBlockMetadata(xCoord, yCoord, zCoord) - 10, 2);
+                }
+                
             }
         }
     }
