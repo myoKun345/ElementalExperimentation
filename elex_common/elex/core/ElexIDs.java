@@ -25,19 +25,21 @@ public class ElexIDs {
         public static final int BLOCK_ELEX_ORE_DEFAULT = 3671;
         public static final int BLOCK_ELEX_ORE_2_DEFAULT = 3672;
         public static final int BLOCK_ELEX_ITEM_ORE_STORAGE_DEFAULT = 3673;
-        public static final int BLOCK_ELEX_METAL_STORAGE_DEFAULT = 3674;
-        public static final int BLOCK_ELEX_METAL_STORAGE_2_DEFAULT = 3675;
-        public static final int BLOCK_ELEX_METAL_STORAGE_3_DEFAULT = 3676;
-        public static final int BLOCK_ELEX_METAL_STORAGE_4_DEFAULT = 3677;
-        public static final int BLOCK_ELEX_METAL_STORAGE_5_DEFAULT = 3678;
-        public static final int BLOCK_ELEX_METAL_STORAGE_6_DEFAULT = 3679;
-        public static final int BLOCK_ALLOY_STORAGE_DEFAULT = 3680;
-        public static final int BLOCK_MACHINE_CASE_DEFAULT = 3681;
-        public static final int ITEM_ELEX_ORE_DEFAULT = 3682;
-        public static final int ITEM_ELEX_ORE_2_DEFAULT = 3683;
-        public static final int ITEM_ELEX_ORE_3_DEFAULT = 3684;
-        public static final int BLOCK_BUILDING_MATERIAL_DEFAULT = 3686;
-        public static final int BLOCK_BRICK_DEFAULT = 3687;
+        public static final int BLOCK_ELEX_ITEM_ORE_STORAGE_2_DEFAULT = 3674;
+        public static final int BLOCK_ELEX_ITEM_ORE_STORAGE_3_DEFAULT = 3675;
+        public static final int BLOCK_ELEX_METAL_STORAGE_DEFAULT = 3676;
+        public static final int BLOCK_ELEX_METAL_STORAGE_2_DEFAULT = 3677;
+        public static final int BLOCK_ELEX_METAL_STORAGE_3_DEFAULT = 3678;
+        public static final int BLOCK_ELEX_METAL_STORAGE_4_DEFAULT = 3679;
+        public static final int BLOCK_ELEX_METAL_STORAGE_5_DEFAULT = 3680;
+        public static final int BLOCK_ELEX_METAL_STORAGE_6_DEFAULT = 3681;
+        public static final int BLOCK_ALLOY_STORAGE_DEFAULT = 3682;
+        public static final int BLOCK_MACHINE_CASE_DEFAULT = 3683;
+        public static final int ITEM_ELEX_ORE_DEFAULT = 3684;
+        public static final int ITEM_ELEX_ORE_2_DEFAULT = 3685;
+        public static final int ITEM_ELEX_ORE_3_DEFAULT = 3686;
+        public static final int BLOCK_BUILDING_MATERIAL_DEFAULT = 3687;
+        public static final int BLOCK_BRICK_DEFAULT = 3688;
         public static final int CENTRIFUGE_DEFAULT = 3750;
         public static final int GRINDER_DEFAULT = 3751;
         public static final int CONDENSATOR_DEFAULT = 3752;
@@ -50,6 +52,8 @@ public class ElexIDs {
         public static int BLOCK_ELEX_ORE;
         public static int BLOCK_ELEX_ORE_2;
         public static int BLOCK_ELEX_ITEM_ORE_STORAGE;
+        public static int BLOCK_ELEX_ITEM_ORE_STORAGE_2;
+        public static int BLOCK_ELEX_ITEM_ORE_STORAGE_3;
         public static int BLOCK_ELEX_METAL_STORAGE;
         public static int BLOCK_ELEX_METAL_STORAGE_2;
         public static int BLOCK_ELEX_METAL_STORAGE_3;
@@ -72,6 +76,8 @@ public class ElexIDs {
         public static final String BLOCK_ELEX_ORE_KEY = "BLOCKORES";
         public static final String BLOCK_ELEX_ORE_2_KEY = "BLOCKORES2";
         public static final String BLOCK_ELEX_ITEM_ORE_STORAGE_KEY = "ITEMORESTORAGEBLOCKS";
+        public static final String BLOCK_ELEX_ITEM_ORE_STORAGE_2_KEY = "ITEMORESTORAGEBLOCKS2";
+        public static final String BLOCK_ELEX_ITEM_ORE_STORAGE_3_KEY = "ITEMORESTORAGEBLOCKS3"; 
         public static final String BLOCK_ELEX_METAL_STORAGE_KEY = "METALSTORAGEBLOCKS";
         public static final String BLOCK_ELEX_METAL_STORAGE_2_KEY = "METALSTORAGEBLOCKS2";
         public static final String BLOCK_ELEX_METAL_STORAGE_3_KEY = "METALSTORAGEBLOCKS3";
@@ -121,7 +127,22 @@ public class ElexIDs {
         public static final String[] BLOCK_ELEX_ITEM_ORE_STORAGE_REAL_UNLOCALIZED_NAMES = 
             { "blockAquamarine", "blockBorax", "blockFluorite",
             "blockForsterite", "blockPetalite", "blockArtificialQuartz",
-            "blockSpodumene", "blockHalite" };
+            "blockSpodumene", "blockHalite", "blockRuby",
+            "blockSapphire", "blockUvarovite", "blockTsavorite",
+            "blockTurquoise", "blockGalena", "blockSylvite",
+            "blockGypsum" };
+        public static final String[] BLOCK_ELEX_ITEM_ORE_STORAGE_2_REAL_UNLOCALIZED_NAMES = 
+            { "blockThortveitite", "blockAnatase", "blockBrookite",
+            "blockVanadinite", "blockPyrolusite", "blockErythrite",
+            "blockSphalerite", "blockGallite", "blockGermanite",
+            "blockMarthozite", "blockBromite", "blockCelestine",
+            "blockXenotime", "blockBaddeleyite", "blockColumbite",
+            "blockPezzottaite" };
+        public static final String[] BLOCK_ELEX_ITEM_ORE_STORAGE_3_REAL_UNLOCALIZED_NAMES = 
+            { "blockBenitoite", "blockMonazite", "blockEuxenite",
+            "blockHafnon", "blockTungstate", "blockRheniite",
+            "blockCinnabar", "blockHutchinsonite", "blockThorianite",
+            "blockUraninite" };
         public static final List<String> BLOCK_ELEX_METAL_STORAGE_REAL_UNLOCALIZED_NAMES = new LinkedList<String>();
         public static final List<String> BLOCK_ELEX_METAL_STORAGE_2_REAL_UNLOCALIZED_NAMES = new LinkedList<String>();
         public static final List<String> BLOCK_ELEX_METAL_STORAGE_3_REAL_UNLOCALIZED_NAMES = new LinkedList<String>();

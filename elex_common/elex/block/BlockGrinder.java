@@ -38,8 +38,6 @@ public class BlockGrinder extends BlockContainer {
     
     private final Random grinderRandom = new Random();
     
-    private static boolean keepFurnaceInventory;
-    
     @SideOnly(Side.CLIENT)
     private Icon baseIcon;
     
