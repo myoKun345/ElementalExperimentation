@@ -5,7 +5,6 @@ import ic2.api.energy.tile.IEnergySink;
 import java.util.Random;
 import java.util.logging.Level;
 
-import net.minecraft.block.BlockFurnace;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.ItemStack;

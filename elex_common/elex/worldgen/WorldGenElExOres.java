@@ -10,7 +10,6 @@ import net.minecraft.world.gen.feature.WorldGenMinable;
 import cpw.mods.fml.common.IWorldGenerator;
 import elex.core.ConfigurationSettings;
 import elex.core.ElexIDs;
-import elex.worldgen.biome.Biomes;
 
 /**
  * Elemental Experimentation

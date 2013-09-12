@@ -1,12 +1,8 @@
 package elex.compatibility.ic2;
 
 import ic2.api.item.Items;
-
-import java.util.logging.Level;
-
 import net.minecraft.item.ItemStack;
 import elex.api.ElexAPI;
-import elex.core.LogHelper;
 import elex.core.ModItems;
 import elex.core.Reference;
 

@@ -1,7 +1,6 @@
 package elex.api;
 
 import java.util.HashMap;
-import java.util.LinkedList;
 
 import net.minecraft.item.ItemStack;
 

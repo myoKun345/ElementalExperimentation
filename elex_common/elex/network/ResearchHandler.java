@@ -4,7 +4,6 @@ import java.io.File;
 import java.util.HashMap;
 
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.world.World;
 import elex.research.ResearchData;
 
 /**
