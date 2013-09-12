@@ -196,3 +196,60 @@ class ElexItemDust(var id:Int, var kind:Int) extends Item(id - SHIFTED_ID_RANGE_
     }
     
 }
+
+class ElexItemIngot(var id:Int, var kind:Int) extends Item(id - SHIFTED_ID_RANGE_CORRECTION) {
+    
+    @SideOnly(Side.CLIENT)
+    var icons:Array[Icon] = new Array[Icon](0)
+    
+    setCreativeTab(elexTab)
+    setHasSubtypes(true)
+    
+    override def getUnlocalizedName(stack:ItemStack):String = {
+        if (kind == 0) {
+            return "item." + ELEX_INGOT_REAL_UNLOCALIZED_NAMES.get(stack.getItemDamage())
+        }
+        if (kind == 1) {
+            return "item." + ALLOY_INGOT_REAL_UNLOCALIZED_NAMES(stack.getItemDamage())
+        }
+        return "something.went.wrong"
+    }
+    
+    @SideOnly(Side.CLIENT)
+    override def registerIcons(register:IconRegister) {
+        if (kind == 0) {
+            icons = new Array[Icon](ELEX_INGOT_REAL_UNLOCALIZED_NAMES.size())
+            for (i <- 0 until ELEX_INGOT_REAL_UNLOCALIZED_NAMES.size()) {
+                icons(i) = register.registerIcon(MOD_ID + ":" + ELEX_INGOT_REAL_UNLOCALIZED_NAMES.get(i))
+            }
+        }
+        if (kind == 1) {
+            icons = new Array[Icon](ALLOY_INGOT_REAL_UNLOCALIZED_NAMES.length)
+            for (i <- 0 until ALLOY_INGOT_REAL_UNLOCALIZED_NAMES.length) {
+                icons(i) = register.registerIcon(MOD_ID + ":" + ALLOY_INGOT_REAL_UNLOCALIZED_NAMES(i))
+            }
+        }
+    }
+    
+    @SideOnly(Side.CLIENT)
+    override def getIconFromDamage(dmg:Int):Icon = {
+        return icons(dmg)
+    }
+    
+    @SideOnly(Side.CLIENT)
+    override def getSubItems(id:Int, tab:CreativeTabs, list:List[_]) {
+        if (kind == 0) {
+            for (i <- 0 until ELEX_INGOT_REAL_UNLOCALIZED_NAMES.size()) {
+                var stack:ItemStack = new ItemStack(id, 1, i)
+                list.asInstanceOf[List[ItemStack]].add(stack)
+            }
+        }
+        if (kind == 1) {
+            for (i <- 0 until ALLOY_INGOT_REAL_UNLOCALIZED_NAMES.length) {
+                var stack:ItemStack = new ItemStack(id, 1, i)
+                list.asInstanceOf[List[ItemStack]].add(stack)
+            }
+        }
+    }
+    
+}
