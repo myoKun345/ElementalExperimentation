@@ -6,9 +6,11 @@
 	
 	<entry key="container.centrifuge.name">Centrifuge</entry>
 	<entry key="container.grinder.name">Grinder</entry>
+	<entry key="container.condensator.name">Condensator</entry>
 	
 	<entry key="tile.centrifuge.name">Centrifuge</entry>
 	<entry key="tile.grinder.name">Grinder</entry>
+	<entry key="tile.condensator.name">Condensator</entry>
 	
 	<entry key="tile.oreAquamarine.name">Aquamarine Ore</entry>
 	<entry key="tile.oreBorax.name">Borax Ore</entry>

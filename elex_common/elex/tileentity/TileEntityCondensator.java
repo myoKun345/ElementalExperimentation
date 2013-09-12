@@ -33,7 +33,7 @@ import elex.core.ModFluids;
  */
 public class TileEntityCondensator extends TileEntity implements IFluidHandler, IPipeConnection, IExtractionHandler, ISidedInventory, IEnergySink, IPowerReceptor, IElectricalStorage {
     
-    public ItemStack[] condensatorSlots = new ItemStack[2];
+    public ItemStack[] condensatorSlots = new ItemStack[3];
     
     protected FluidTank tank = new FluidTank(4000);
     

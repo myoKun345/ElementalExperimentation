@@ -32,8 +32,9 @@ public class ContainerCondensator extends Container {
             }
         }
         
-        addSlotToContainer(new Slot(condensator, 0, 35, 35));
-        addSlotToContainer(new Slot(condensator, 1, 55, 35));
+        addSlotToContainer(new Slot(condensator, 0, 80, 16));
+        addSlotToContainer(new Slot(condensator, 1, 80, 58));
+        addSlotToContainer(new Slot(condensator, 2, 135, 37));
     }
     
     @Override
