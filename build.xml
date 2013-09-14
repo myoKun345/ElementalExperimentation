@@ -15,6 +15,9 @@
 		<delete dir="../../jobs/ElementalExperimentation/toDeobf" />
 		<mkdir dir="../../jobs/ElementalExperimentation/toDeobf" />
 		
+		<delete dir="../../jobs/ElementalExperimentation/toIntermediaryClasses" />
+		<mkdir dir="../../jobs/ElementalExperimentation/toIntermediaryClases" />
+		
 		<delete dir="API" />
 		<mkdir dir="API" />
 		
@@ -23,6 +26,8 @@
 		
 		<delete dir="deobf" />
 		<mkdir dir="deobf" />
+		
+		<delete file="../Forge/forge/mcp/lib/elexscalaclasses.jar" />
 		
 		<replace file="elex_common/mcmod.info" token="@@BUILD@@" value="${build_number}" />
 		<replace file="elex_common/elex/core/Reference.java" token="@@BUILD@@" value="${build_number}" />
@@ -57,6 +62,16 @@
 		</copy>
 
 		<exec executable="../Forge/forge/mcp/recompile.sh" dir="../Forge/forge/mcp" resolveexecutable="true" osfamily="unix"></exec>
+		
+		<copy todir="../../jobs/ElementalExperimentation/toIntermediaryClasses/elex">
+			
+			<fileset dir="../Forge/forge/mcp/bin/minecraft/elex" />
+			
+		</copy>
+		
+		<jar destfile="../Forge/forge/mcp/lib/elexscalaclasses.jar" basedir="../../jobs/ElementalExperimentation/toIntermediaryClasses" />
+		
+		<exec executable="../Forge/forge/mcp/recompile.sh" dir="../Forge/forge/mcp" resolveexecutable="true" osfamily="unix"></exec>
 
 		<exec executable="../Forge/forge/mcp/reobfuscate_srg.sh" dir="../Forge/forge/mcp" resolveexecutable="true" osfamily="unix"></exec>
 
@@ -66,28 +81,10 @@
 
 		</copy>
 		
-		<copy todir="../../jobs/ElementalExperimentation/toJar/buildcraft">
-
-			<fileset dir="../Forge/forge/mcp/reobf/minecraft/buildcraft" />
-
-		</copy>
-		
-		<copy todir="../../jobs/ElementalExperimentation/toJar/ic2">
-
-			<fileset dir="../Forge/forge/mcp/reobf/minecraft/ic2" />
-
-		</copy>
-		
-		<copy todir="../../jobs/ElementalExperimentation/toJar/thermalexpansion">
-
-			<fileset dir="../Forge/forge/mcp/reobf/minecraft/thermalexpansion" />
-
-		</copy>
-		
-		<copy todir="../../jobs/ElementalExperimentation/toJar/universalelectricity">
-
-			<fileset dir="../Forge/forge/mcp/reobf/minecraft/universalelectricity" />
-
+		<copy todir="../../jobs/ElementalExperimentation/toJar">
+			
+			<fileset dir="../../jobs/ElementalExperimentation/compiledObfAPI" />
+			
 		</copy>
 		
 		<copy todir="../../jobs/ElementalExperimentation/toDeobf/elex">
@@ -96,28 +93,10 @@
 
 		</copy>
 		
-		<copy todir="../../jobs/ElementalExperimentation/toDeobf/buildcraft">
-
-			<fileset dir="../Forge/forge/mcp/bin/minecraft/buildcraft" />
-
-		</copy>
-		
-		<copy todir="../../jobs/ElementalExperimentation/toDeobf/ic2">
-
-			<fileset dir="../Forge/forge/mcp/bin/minecraft/ic2" />
-
-		</copy>
-		
-		<copy todir="../../jobs/ElementalExperimentation/toDeobf/thermalexpansion">
-
-			<fileset dir="../Forge/forge/mcp/bin/minecraft/thermalexpansion" />
-
-		</copy>
-		
-		<copy todir="../../jobs/ElementalExperimentation/toDeobf/universalelectricity">
-
-			<fileset dir="../Forge/forge/mcp/bin/minecraft/universalelectricity" />
-
+		<copy todir="../../jobs/ElementalExperimentation/toDeobf">
+			
+			<fileset dir="../../jobs/ElementalExperimentation/compiledDeobfAPI" />
+			
 		</copy>
 		
 		<zip destfile="API/ElementalExperimentation-API-0.0.01.${build_number}.zip" basedir="../../jobs/ElementalExperimentation/toAPI" />
