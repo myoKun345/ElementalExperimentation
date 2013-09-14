@@ -16,7 +16,7 @@
 		<mkdir dir="../../jobs/ElementalExperimentation/toDeobf" />
 		
 		<delete dir="../../jobs/ElementalExperimentation/toIntermediaryClasses" />
-		<mkdir dir="../../jobs/ElementalExperimentation/toIntermediaryClases" />
+		<mkdir dir="../../jobs/ElementalExperimentation/toIntermediaryClasses" />
 		
 		<delete dir="API" />
 		<mkdir dir="API" />
