@@ -1,6 +1,3 @@
-/**
- *
- */
 package elex.block
 
 import elex.ElementalExperimentation._
