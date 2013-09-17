@@ -18,12 +18,7 @@ import elex.api.ElexAPI;
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
 public class CraftingRecipes {
-    /**
-     * 
-     */
-    /**
-     * 
-     */
+	
     public static void registerRecipes() {
         
         Random rand = new Random();
