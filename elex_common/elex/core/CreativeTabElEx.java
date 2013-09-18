@@ -21,6 +21,6 @@ public class CreativeTabElEx extends CreativeTabs {
     @Override
     @SideOnly(Side.CLIENT)
     public int getTabIconItemIndex() {
-        return ModBlocks.centrifuge.blockID;
+        return ElexIDs.CENTRIFUGE;
     }
 }

@@ -184,8 +184,8 @@ public class ElexIDs {
         public static final int VANILLA_DUST_DEFAULT = 16236;
         public static final int ALLOY_DUST_DEFAULT = 16237;
         public static final int ELEX_INGOT_DEFAULT = 16238;
-        public static final int ARTIFICIAL_COMPOUND_DUST_DEFAULT = 16239;
-        public static final int ALLOY_INGOT_DEFAULT = 16240;
+        public static final int ALLOY_INGOT_DEFAULT = 16239;
+        public static final int ARTIFICIAL_COMPOUND_DUST_DEFAULT = 16240;
         public static final int MACHINE_PART_DEFAULT = 16241;
         public static final int METAL_NUGGET_DEFAULT = 16242;
         public static final int ALLOY_NUGGET_DEFAULT = 16243;

@@ -71,6 +71,10 @@ class ElexItemArmor(var id:Int, var material:EnumArmorMaterial, var render:Int, 
     }
     
 }
+object ElexCarbonHead extends ElexItemArmor(ELEX_ARMOR(0), carbonArmorMat, 0, 0, "carbon")
+object ElexCarbonPlate extends ElexItemArmor(ELEX_ARMOR(1), carbonArmorMat, 0, 1, "carbon")
+object ElexCarbonLegs extends ElexItemArmor(ELEX_ARMOR(2), carbonArmorMat, 1, 2, "carbon")
+object ElexCarbonBoots extends ElexItemArmor(ELEX_ARMOR(3), carbonArmorMat, 0, 3, "carbon")
 
 class ElexItemDust(var id:Int, var kind:Int) extends ElexItem(id) {
     
@@ -209,6 +213,12 @@ class ElexItemDust(var id:Int, var kind:Int) extends ElexItem(id) {
     }
     
 }
+object ElexCompoundDust extends ElexItemDust(ELEX_COMPOUND_DUST, 0)
+object ElexMetalDust extends ElexItemDust(ELEX_METAL_DUST, 1)
+object ElexPureNonmetalDust extends ElexItemDust(ELEX_PURE_NONMETAL_DUST, 2)
+object ElexVanillaDust extends ElexItemDust(VANILLA_DUST, 3)
+object ElexAlloyDust extends ElexItemDust(ALLOY_DUST, 4)
+object ElexMiscDust extends ElexItemDust(ARTIFICIAL_COMPOUND_DUST, 5)
 
 class ElexItemIngot(var id:Int, var kind:Int) extends ElexItem(id) {
     
@@ -265,6 +275,8 @@ class ElexItemIngot(var id:Int, var kind:Int) extends ElexItem(id) {
     }
     
 }
+object ElexIngot extends ElexItemIngot(ELEX_INGOT, 0)
+object ElexAlloyIngot extends ElexItemIngot(ALLOY_INGOT, 1)
 
 class ElexItemNugget(var id:Int, var kind:Int) extends ElexItem(id) {
     
@@ -334,8 +346,11 @@ class ElexItemNugget(var id:Int, var kind:Int) extends ElexItem(id) {
     }
     
 }
+object ElexMetalNugget extends ElexItemNugget(METAL_NUGGET, 0)
+object ElexAlloyNugget extends ElexItemNugget(ALLOY_NUGGET, 1)
+object ElexIronNugget extends ElexItemNugget(IRON_NUGGET, 2)
 
-class ElexItemOre(var id:Int) extends ElexItem(id) {
+object ElexItemOre extends ElexItem(ELEX_ORE) {
     
     @SideOnly(Side.CLIENT)
     var icons:Array[Icon] = new Array[Icon](0)
@@ -369,7 +384,7 @@ class ElexItemOre(var id:Int) extends ElexItem(id) {
     
 }
 
-class ElexItemMachinePart(var id:Int) extends ElexItem(id) {
+object ElexMachinePart extends ElexItem(MACHINE_PART) {
     
     @SideOnly(Side.CLIENT)
     var icons:Array[Icon] = new Array[Icon](0)
@@ -400,10 +415,9 @@ class ElexItemMachinePart(var id:Int) extends ElexItem(id) {
             list.asInstanceOf[List[ItemStack]].add(stack)
         }
     }
-    
 }
 
-class ElexItemMercuryInjector(var id:Int) extends ElexItem(id) {
+object ElexMercuryInjector extends ElexItem(MERCURY_INJECTOR) {
     
     @SideOnly(Side.CLIENT)
     var empty:Icon = null
@@ -454,7 +468,7 @@ class ElexItemMercuryInjector(var id:Int) extends ElexItem(id) {
     
 }
 
-class ElexItemResearchBinder(var id:Int) extends ElexItem(id) {
+object ElexResearchBinder extends ElexItem(RESEARCH_BINDER) {
     
     setMaxStackSize(1)
     
@@ -485,7 +499,7 @@ class ElexItemResearchBinder(var id:Int) extends ElexItem(id) {
     
 }
 
-class ElexItemSaltedMeat(var id:Int, var base:ItemFood, var kind:Int) extends ItemFood(id - SHIFTED_ID_RANGE_CORRECTION, base.getHealAmount() + 1, base.getSaturationModifier() - 0.1F, true) {
+class ElexSaltedMeat(var id:Int, var base:ItemFood, var kind:Int) extends ItemFood(id - SHIFTED_ID_RANGE_CORRECTION, base.getHealAmount() + 1, base.getSaturationModifier() - 0.1F, true) {
     
     @SideOnly(Side.CLIENT)
     var icons:Array[Icon] = new Array[Icon](0)
@@ -499,8 +513,8 @@ class ElexItemSaltedMeat(var id:Int, var base:ItemFood, var kind:Int) extends It
     @SideOnly(Side.CLIENT)
     override def registerIcons(register:IconRegister) {
         icons = new Array[Icon](SALTED_MEAT_UNLOCALIZED_NAMES.length)
-        for (i <- 0 until SALTED_MEAT_UNLOCALIZED_NAMES.length) {
-            icons(i) = register.registerIcon(MOD_ID + ":" + SALTED_MEAT_UNLOCALIZED_NAMES(i))
+        for (i <- 0 until SALTED_MEAT_UNLOCALIZED_NAMES.length) yield {
+          icons(i) = register.registerIcon(MOD_ID + ":" + SALTED_MEAT_UNLOCALIZED_NAMES(i))
         }
     }
     
@@ -510,3 +524,7 @@ class ElexItemSaltedMeat(var id:Int, var base:ItemFood, var kind:Int) extends It
     }
     
 }
+object ElexSaltedBeef extends ElexSaltedMeat(SALTED_BEEF, Item.beefCooked.asInstanceOf[ItemFood], 0)
+object ElexSaltedChicken extends ElexSaltedMeat(SALTED_CHICKEN, Item.chickenCooked.asInstanceOf[ItemFood], 1)
+object ElexSaltedPork extends ElexSaltedMeat(SALTED_PORK, Item.porkCooked.asInstanceOf[ItemFood], 2)
+object ElexSaltedFish extends ElexSaltedMeat(SALTED_FISH, Item.fishCooked.asInstanceOf[ItemFood], 3)

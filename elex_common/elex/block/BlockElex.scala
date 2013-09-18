@@ -31,6 +31,7 @@ import elex.tileentity.TileEntityCondensator.EnumCondensatorMode
 import elex.core.LogHelper
 import net.minecraft.world.biome.BiomeGenBase
 import java.util.logging.Level
+import cpw.mods.fml.common.network.FMLNetworkHandler
 
 /**
  * Elemental Experimentation
@@ -101,8 +102,10 @@ class ElexBlockBuildingMaterial(var id:Int, var kind:Int) extends ElexBlock(id, 
     }
     
 }
+object ElexStone extends ElexBlockBuildingMaterial(BLOCK_BUILDING_MATERIAL, 0)
+object ElexBrick extends ElexBlockBuildingMaterial(BLOCK_BRICK, 1)
 
-class ElexBlockCentrifuge(var id:Int) extends ElexBlockContainer(id, Material.iron) {
+object ElexCentrifuge extends ElexBlockContainer(CENTRIFUGE, Material.iron) {
     
     @SideOnly(Side.CLIENT)
     var baseIcon:Icon = null
@@ -158,7 +161,7 @@ class ElexBlockCentrifuge(var id:Int) extends ElexBlockContainer(id, Material.ir
     
 }
 
-class ElexBlockCondensator(var id:Int) extends ElexBlockContainer(id, Material.iron) {
+object ElexCondensator extends ElexBlockContainer(CONDENSATOR, Material.iron) {
     
     @SideOnly(Side.CLIENT)
     var baseIcon:Icon = null
@@ -276,7 +279,7 @@ class ElexBlockCondensator(var id:Int) extends ElexBlockContainer(id, Material.i
     
 }
 
-class ElexBlockGrinder(var id:Int) extends ElexBlockContainer(id, Material.iron) {
+object ElexGrinder extends ElexBlockContainer(GRINDER, Material.iron) {
     
     @SideOnly(Side.CLIENT)
     var baseIcon:Icon = null
@@ -511,6 +514,9 @@ class ElexBlockCompoundOre(var id:Int, var kind:Int) extends ElexBlock(id, Mater
     }
     
 }
+object ElexCompoundOre extends ElexBlockCompoundOre(ITEM_ELEX_ORE, 0)
+object ElexCompoundOre2 extends ElexBlockCompoundOre(ITEM_ELEX_ORE_2, 1)
+object ElexCompoundOre3 extends ElexBlockCompoundOre(ITEM_ELEX_ORE_3, 2)
 
 class ElexBlockCompoundOreStorage(var id:Int, var kind:Int) extends ElexBlock(id, Material.iron) {
     
@@ -576,6 +582,9 @@ class ElexBlockCompoundOreStorage(var id:Int, var kind:Int) extends ElexBlock(id
     }
     
 }
+object ElexCompoundOreStorage extends ElexBlockCompoundOreStorage(BLOCK_ELEX_ITEM_ORE_STORAGE, 0)
+object ElexCompoundOreStorage2 extends ElexBlockCompoundOreStorage(BLOCK_ELEX_ITEM_ORE_STORAGE_2, 1)
+object ElexCompoundOreStorage3 extends ElexBlockCompoundOreStorage(BLOCK_ELEX_ITEM_ORE_STORAGE_3, 2)
 
 class ElexBlockMetalStorage(var id:Int, var kind:Int) extends ElexBlock(id, Material.iron) {
     
@@ -685,6 +694,13 @@ class ElexBlockMetalStorage(var id:Int, var kind:Int) extends ElexBlock(id, Mate
     }
     
 }
+object ElexMetalStorage extends ElexBlockMetalStorage(BLOCK_ELEX_METAL_STORAGE, 0)
+object ElexMetalStorage2 extends ElexBlockMetalStorage(BLOCK_ELEX_METAL_STORAGE_2, 1)
+object ElexMetalStorage3 extends ElexBlockMetalStorage(BLOCK_ELEX_METAL_STORAGE_3, 2)
+object ElexMetalStorage4 extends ElexBlockMetalStorage(BLOCK_ELEX_METAL_STORAGE_4, 3)
+object ElexMetalStorage5 extends ElexBlockMetalStorage(BLOCK_ELEX_METAL_STORAGE_5, 4)
+object ElexMetalStorage6 extends ElexBlockMetalStorage(BLOCK_ELEX_METAL_STORAGE_6, 5)
+object ElexAlloyStorage extends ElexBlockMetalStorage(BLOCK_ALLOY_STORAGE, 6)
 
 class ElexBlockOre(var id:Int, var kind:Int) extends ElexBlock(id, Material.rock) {
     
@@ -735,8 +751,10 @@ class ElexBlockOre(var id:Int, var kind:Int) extends ElexBlock(id, Material.rock
     }
     
 }
+object ElexOre extends ElexBlockOre(BLOCK_ELEX_ORE, 0)
+object ElexOre2 extends ElexBlockOre(BLOCK_ELEX_ORE_2, 1)
 
-class ElexBlockMachineCase(var id:Int) extends ElexBlock(id, Material.iron) {
+object ElexMachineCase extends ElexBlock(BLOCK_MACHINE_CASE, Material.iron) {
     
     @SideOnly(Side.CLIENT)
     var icons:Array[Icon] = new Array[Icon](0)

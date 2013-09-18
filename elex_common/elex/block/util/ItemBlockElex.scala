@@ -83,7 +83,12 @@ class ElexItemBlockCompoundOre(var id:Int) extends ElexItemBlock(id) {
 class ElexItemBlockCompoundOre2(var id:Int) extends ElexItemBlock(id) {
     
     override def getUnlocalizedName(stack:ItemStack):String = {
-        return "tile." + ITEM_ELEX_ORE_2_REAL_UNLOCALIZED_NAMES(stack.getItemDamage())
+    	if (stack.getItemDamage() > 15) {
+    		return "tile." + ITEM_ELEX_ORE_2_REAL_UNLOCALIZED_NAMES(stack.getItemDamage() - 16)
+    	}
+    	else {
+    		return "tile." + ITEM_ELEX_ORE_2_REAL_UNLOCALIZED_NAMES(stack.getItemDamage())
+    	}
     }
     
 }
@@ -91,7 +96,12 @@ class ElexItemBlockCompoundOre2(var id:Int) extends ElexItemBlock(id) {
 class ElexItemBlockCompoundOre3(var id:Int) extends ElexItemBlock(id) {
     
     override def getUnlocalizedName(stack:ItemStack):String = {
-        return "tile." + ITEM_ELEX_ORE_3_REAL_UNLOCALIZED_NAMES(stack.getItemDamage())
+    	if (stack.getItemDamage() > 31) {
+    		return "tile." + ITEM_ELEX_ORE_3_REAL_UNLOCALIZED_NAMES(stack.getItemDamage() - 32)
+    	}
+    	else {
+    		return "tile." + ITEM_ELEX_ORE_3_REAL_UNLOCALIZED_NAMES(stack.getItemDamage())
+    	}
     }
     
 }

@@ -18,14 +18,12 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import elex.api.ElementTable;
 import elex.client.gui.GUIHandler;
 import elex.core.ConfigurationHandler;
-import elex.core.CraftingRecipes;
 import elex.core.CreativeTabElEx;
 import elex.core.ElexIDs;
+import elex.core.ElexStuff;
 import elex.core.LogHelper;
-import elex.core.ModBlocks;
 import elex.core.ModElements;
 import elex.core.ModFluids;
-import elex.core.ModItems;
 import elex.core.ModTileEntities;
 import elex.core.OreDictionaryHandler;
 import elex.core.Reference;
@@ -76,10 +74,10 @@ public class ElementalExperimentation {
         ConfigurationHandler.genConfig(new File(event.getModConfigurationDirectory().getAbsolutePath() + File.separator + Reference.CHANNEL + File.separator + "WorldGen" + ".cfg"));
         
         /* Block Init */
-        ModBlocks.init();
+        ElexStuff.addBlocks();
         
         /* Item Init */
-        ModItems.init();
+        ElexStuff.addItems();
         
         /* Fluid Init */
         ModFluids.init();
@@ -91,7 +89,7 @@ public class ElementalExperimentation {
     @EventHandler
     public void init(FMLInitializationEvent event) {
         /* Crafting */
-        CraftingRecipes.registerRecipes();
+        ElexStuff.addCrafting();
         
         /* Ore Dictionary */
         OreDictionaryHandler.registerOres();
