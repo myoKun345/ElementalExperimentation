@@ -177,24 +177,24 @@ public class ElexIDs {
         
         /* Default Item IDs */
         public static final int ELEX_ORE_DEFAULT = 16231;
-        public static final int MERCURY_INJECTOR_DEFAULT = 16232;
-        public static final int ELEX_COMPOUND_DUST_DEFAULT = 16233;
-        public static final int ELEX_METAL_DUST_DEFAULT = 16234;
-        public static final int ELEX_PURE_NONMETAL_DUST_DEFAULT = 16235;
-        public static final int VANILLA_DUST_DEFAULT = 16236;
-        public static final int ALLOY_DUST_DEFAULT = 16237;
+        public static final int ELEX_COMPOUND_DUST_DEFAULT = 16232;
+        public static final int ELEX_METAL_DUST_DEFAULT = 16233;
+        public static final int ELEX_PURE_NONMETAL_DUST_DEFAULT = 16234;
+        public static final int VANILLA_DUST_DEFAULT = 16235;
+        public static final int ALLOY_DUST_DEFAULT = 16236;
+        public static final int ARTIFICIAL_COMPOUND_DUST_DEFAULT = 16237;
         public static final int ELEX_INGOT_DEFAULT = 16238;
         public static final int ALLOY_INGOT_DEFAULT = 16239;
-        public static final int ARTIFICIAL_COMPOUND_DUST_DEFAULT = 16240;
-        public static final int MACHINE_PART_DEFAULT = 16241;
-        public static final int METAL_NUGGET_DEFAULT = 16242;
-        public static final int ALLOY_NUGGET_DEFAULT = 16243;
-        public static final int IRON_NUGGET_DEFAULT = 16244;
-        public static final int IRON_ROD_DEFAULT = 16245;
-        public static final int SALTED_BEEF_DEFAULT = 16246;
-        public static final int SALTED_CHICKEN_DEFAULT = 16247;
-        public static final int SALTED_PORK_DEFAULT = 16248;
-        public static final int SALTED_FISH_DEFAULT = 16249;
+        public static final int MACHINE_PART_DEFAULT = 16240;
+        public static final int METAL_NUGGET_DEFAULT = 16241;
+        public static final int ALLOY_NUGGET_DEFAULT = 16242;
+        public static final int IRON_NUGGET_DEFAULT = 16243;
+        public static final int IRON_ROD_DEFAULT = 16244;
+        public static final int SALTED_BEEF_DEFAULT = 16245;
+        public static final int SALTED_CHICKEN_DEFAULT = 16246;
+        public static final int SALTED_PORK_DEFAULT = 16247;
+        public static final int SALTED_FISH_DEFAULT = 16248;
+        public static final int MERCURY_INJECTOR_DEFAULT = 16259;
         public static final int RESEARCH_BINDER_DEFAULT = 16260;
         public static final int[] ELEX_ARMOR_DEFAULT = 
             { 16280, 16281, 16282, 16283 };
