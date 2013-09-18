@@ -6,8 +6,10 @@ import net.minecraft.world.World;
 import cpw.mods.fml.common.network.IGuiHandler;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import elex.ElementalExperimentation;
+import elex.inventory.ContainerCentrifuge;
 import elex.inventory.ContainerCondensator;
 import elex.inventory.ContainerGrinder;
+import elex.tileentity.TileEntityCentrifuge;
 import elex.tileentity.TileEntityCondensator;
 import elex.tileentity.TileEntityGrinder;
 
@@ -35,6 +37,10 @@ public class GUIHandler implements IGuiHandler {
                 }
                 break;
             case 1:
+            	TileEntity entity1 = world.getBlockTileEntity(x, y, z);
+            	if (entity1 != null && entity1 instanceof TileEntityCentrifuge) {
+            		return new ContainerCentrifuge(player.inventory, (TileEntityCentrifuge)entity1);
+            	}
                 break;
             case 2:
                 TileEntity entity2 = world.getBlockTileEntity(x, y, z);
@@ -58,6 +64,10 @@ public class GUIHandler implements IGuiHandler {
                 }
                 break;
             case 1:
+            	TileEntity entity1 = world.getBlockTileEntity(x, y, z);
+                if (entity1 != null && entity1 instanceof TileEntityCentrifuge) {
+                    return new GUICentrifuge(player.inventory, (TileEntityCentrifuge)entity1);
+                }
                 break;
             case 2:
                 TileEntity entity2 = world.getBlockTileEntity(x, y, z);

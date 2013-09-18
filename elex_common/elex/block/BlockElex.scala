@@ -152,11 +152,18 @@ object ElexCentrifuge extends ElexBlockContainer(CENTRIFUGE, Material.iron) {
     }
     
     override def onBlockActivated(world:World, x:Int, y:Int, z:Int, player:EntityPlayer, side:Int, hitX:Float, hitY:Float, hitZ:Float):Boolean = {
-        return true;
+        if (player.isSneaking()) {
+            return false
+        }
+        if (!world.isRemote && !player.isSneaking()) {
+            FMLNetworkHandler.openGui(player, instance, 1, world, x, y, z)
+        }
+        
+        return true
     }
     
     override def createNewTileEntity(world:World):TileEntity = {
-        return new TileEntityCentrifuge();
+        return new TileEntityCentrifuge()
     }
     
 }
