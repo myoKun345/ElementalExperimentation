@@ -1,5 +1,7 @@
 package elex.client.gui;
 
+import myokun.lib.gui.DynamicGUIHandler;
+import myokun.lib.gui.VanillaSlices;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
@@ -66,7 +68,9 @@ public class GUIHandler implements IGuiHandler {
             case 1:
             	TileEntity entity1 = world.getBlockTileEntity(x, y, z);
                 if (entity1 != null && entity1 instanceof TileEntityCentrifuge) {
-                    return new GUICentrifuge(player.inventory, (TileEntityCentrifuge)entity1);
+                	GUICentrifuge gui = new GUICentrifuge(player.inventory, (TileEntityCentrifuge)entity1);
+                	gui.drawGuiContainerBackgroundLayer(8, 8, 8);
+                    return gui;
                 }
                 break;
             case 2:
