@@ -1,7 +1,6 @@
 package elex.core
 
 import java.util.Random
-
 import cpw.mods.fml.common.registry.GameRegistry
 import elex.api.ElexAPI
 import elex.block.ElexAlloyStorage
@@ -71,6 +70,9 @@ import net.minecraft.block.Block
 import net.minecraft.item.Item
 import net.minecraft.item.ItemStack
 import net.minecraft.item.crafting.FurnaceRecipes
+import elex.tileentity.TileEntityGrinder
+import elex.tileentity.TileEntityCondensator
+import elex.tileentity.TileEntityCentrifuge
 
 object ElexStuff {
 	
@@ -320,6 +322,14 @@ object ElexStuff {
         // Centrifuge Recipes for Compound Dusts
         ElexAPI.addCentrifugeRecipe(new ItemStack(ElexCompoundDust, 16, 0), Array(new ItemStack(ElexMetalDust, 3, 1), new ItemStack(ElexMetalDust, 2, 4), new ItemStack(ElexMiscDust, 6, 0)), 240, Reference.MOD_ID)
         ElexAPI.addCentrifugeRecipe(new ItemStack(ElexCompoundDust, 16, 1), Array(new ItemStack(ElexMetalDust, 2, 2), new ItemStack(ElexPureNonmetalDust, 4, 0)), 220, Reference.MOD_ID)
+		
+	}
+	
+	def addTileEntities {
+		
+		GameRegistry.registerTileEntity(classOf[TileEntityGrinder], "grinderElEx")
+		GameRegistry.registerTileEntity(classOf[TileEntityCentrifuge], "centrifugeElEx")
+		GameRegistry.registerTileEntity(classOf[TileEntityCondensator], "condensatorElEx")
 		
 	}
 	

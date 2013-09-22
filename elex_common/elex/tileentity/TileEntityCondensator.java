@@ -1,7 +1,11 @@
 package elex.tileentity;
 
 import ic2.api.energy.tile.IEnergySink;
+
+import java.util.logging.Level;
+
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.ICrafting;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -21,7 +25,9 @@ import buildcraft.api.power.PowerHandler.PowerReceiver;
 import buildcraft.api.transport.IExtractionHandler;
 import buildcraft.api.transport.IPipeConnection;
 import buildcraft.api.transport.IPipeTile.PipeType;
+import elex.core.LogHelper;
 import elex.core.ModFluids;
+import elex.inventory.ContainerCondensator;
 
 /**
  * Elemental Experimentation
@@ -35,11 +41,12 @@ public class TileEntityCondensator extends TileEntity implements IFluidHandler, 
     
     public ItemStack[] condensatorSlots = new ItemStack[3];
     
-    protected FluidTank tank = new FluidTank(4000);
+    protected FluidTank tank;
     
     public EntityPlayer placedBy;
     
     public PowerHandler buildcraftPowerHandler;
+    public static int MAX_FLUID = 4000;
     public static int MAX_ENERGY = 12000;
     
     public EnumCondensatorMode currentMode;
@@ -63,6 +70,7 @@ public class TileEntityCondensator extends TileEntity implements IFluidHandler, 
     public boolean isCondensing;
     
     public TileEntityCondensator() {
+    	tank = new FluidTank(MAX_FLUID);
         buildcraftPowerHandler = new PowerHandler(this, PowerHandler.Type.MACHINE);
         initBCPowerProvider();
     }
@@ -136,11 +144,13 @@ public class TileEntityCondensator extends TileEntity implements IFluidHandler, 
     
     @Override
     public void updateEntity() {
+    	
         if (!this.worldObj.isRemote) {
             
             if (this.tank != null && this.buildcraftPowerHandler != null && this.currentMode != null) {
                 
                 if (buildcraftPowerHandler.getPowerReceiver().getEnergyStored() >= this.currentMode.getActivation() + 15 && tank.getFluidAmount() < tank.getCapacity()) {
+                	LogHelper.log(Level.INFO, "from update" + (this.tank.getFluidAmount()));
                     this.fill(null, new FluidStack(this.currentMode.getFluid(), this.currentMode.getUPT()), true);
                     buildcraftPowerHandler.useEnergy(0.75F * this.currentMode.getActivation(), this.currentMode.getActivation(), true);
                     this.isCondensing = true;
@@ -184,6 +194,48 @@ public class TileEntityCondensator extends TileEntity implements IFluidHandler, 
         public int getUPT() {
             return this.modeUPT;
         }
+    }
+    
+    public int getScaledTankLiquid(int i) {
+    	return this.tank.getFluid() != null ? (int)(((float)this.tank.getFluidAmount() / (float)MAX_FLUID) * i) : 0;
+    }
+    
+    public int getScaledTankGas() {
+    	return this.tank.getFluid() != null ? (int)(((float)this.tank.getFluid().amount / (float)MAX_FLUID)) : 0;
+    }
+    
+    public boolean isTankFluidGaseous() {
+    	return this.tank.getFluid() != null ? this.tank.getFluid().getFluid().isGaseous() : false;
+    }
+    
+    public FluidStack getFluid() {
+    	return this.tank.getFluid();
+    }
+    
+    public void getGUINetworkData(int id, int value) {
+    	switch (id) {
+    	case 20:
+    		if (tank.getFluid() == null) {
+    			tank.setFluid(new FluidStack(value, 0));
+    		}
+    		else {
+    			tank.getFluid().fluidID = value;
+    		}
+    		break;
+    	case 21:
+    		if (tank.getFluid() == null) {
+    			tank.setFluid(new FluidStack(0, value));
+    		}
+    		else {
+    			tank.getFluid().amount = value;
+    		}
+    		break;
+    	}
+    }
+    
+    public void sendNetworkData(ContainerCondensator container, ICrafting crafting) {
+    	crafting.sendProgressBarUpdate(container, 20, tank.getFluid() != null ? tank.getFluid().fluidID : 0);
+    	crafting.sendProgressBarUpdate(container, 21, tank.getFluid() != null ? tank.getFluid().amount : 0);
     }
     
     @Override

@@ -1,7 +1,5 @@
 package elex.client.gui;
 
-import myokun.lib.gui.DynamicGUIHandler;
-import myokun.lib.gui.VanillaSlices;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
@@ -58,25 +56,24 @@ public class GUIHandler implements IGuiHandler {
     
     @Override
     public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
+    	TileEntity entity = world.getBlockTileEntity(x, y, z);
+    	
         switch (ID) {
             case 0:
-                TileEntity entity0 = world.getBlockTileEntity(x, y, z);
-                if (entity0 != null && entity0 instanceof TileEntityGrinder) {
-                    return new GUIGrinder(player.inventory, (TileEntityGrinder)entity0);
+                if (entity != null && entity instanceof TileEntityGrinder) {
+                    return new GUIGrinder(player.inventory, (TileEntityGrinder)entity);
                 }
                 break;
             case 1:
-            	TileEntity entity1 = world.getBlockTileEntity(x, y, z);
-                if (entity1 != null && entity1 instanceof TileEntityCentrifuge) {
-                	GUICentrifuge gui = new GUICentrifuge(player.inventory, (TileEntityCentrifuge)entity1);
+                if (entity != null && entity instanceof TileEntityCentrifuge) {
+                	GUICentrifuge gui = new GUICentrifuge(player.inventory, (TileEntityCentrifuge)entity);
                 	gui.drawGuiContainerBackgroundLayer(8, 8, 8);
                     return gui;
                 }
                 break;
             case 2:
-                TileEntity entity2 = world.getBlockTileEntity(x, y, z);
-                if (entity2 != null && entity2 instanceof TileEntityCondensator) {
-                    return new GUICondensator(player.inventory, (TileEntityCondensator)entity2);
+                if (entity != null && entity instanceof TileEntityCondensator) {
+                    return new GUICondensator(player.inventory, (TileEntityCondensator)entity);
                 }
                 break;
         }

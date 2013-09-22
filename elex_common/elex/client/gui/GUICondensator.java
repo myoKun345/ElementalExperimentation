@@ -4,8 +4,12 @@ import java.util.logging.Level;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.inventory.GuiContainer;
+import net.minecraft.client.renderer.texture.TextureMap;
 import net.minecraft.entity.player.InventoryPlayer;
+import net.minecraft.util.Icon;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fluids.Fluid;
+import net.minecraftforge.fluids.FluidStack;
 
 import org.lwjgl.opengl.GL11;
 
@@ -28,9 +32,14 @@ import elex.tileentity.TileEntityCondensator;
 
 @SideOnly(Side.CLIENT)
 public class GUICondensator extends GuiContainer {
+	
+	private static final ResourceLocation BLOCK_TEXTURE = TextureMap.locationBlocksTexture;
+	
+	private TileEntityCondensator te;
     
     public GUICondensator(InventoryPlayer player, TileEntityCondensator condensator) {
         super(new ContainerCondensator(player, condensator));
+        this.te = condensator;
         xSize = 176;
         ySize = 166;
     }
@@ -47,10 +56,59 @@ public class GUICondensator extends GuiContainer {
             LogHelper.log(Level.INFO, e.toString());
         }
         drawTexturedModalRect(guiLeft, guiTop, 0, 0, xSize, ySize);
+        
+        if (!te.getFluid().getFluid().isGaseous()) {
+        	if (te.getScaledTankLiquid(58) > 0) {
+        		drawFluidGauge(guiLeft, guiTop, 108, 16, te.getScaledTankLiquid(58), te.getFluid());
+        	}
+        }
+        else {
+        	if (te.getScaledTankGas() > 0) {
+        		
+        	}
+        }
     }
     
     @Override
     protected void drawGuiContainerForegroundLayer(int x, int y) {
         fontRenderer.drawString(LanguageRegistry.instance().getStringLocalization("container.condensator.name"), 8, 6, 0x404040);
+    }
+    
+    private void drawFluidGauge(int i, int j, int k, int l, int scaled, FluidStack stack) {
+    	
+    	if (stack == null) {
+    		return;
+    	}
+    	int start = 0;
+    	
+    	Icon fluidIcon = null;
+    	Fluid fluid = stack.getFluid();
+    	if (fluid != null && fluid.getStillIcon() != null) {
+    		fluidIcon = fluid.getStillIcon();
+    	}
+    	Minecraft.getMinecraft().renderEngine.bindTexture(BLOCK_TEXTURE);
+    	
+    	if (fluidIcon != null) {
+    		while (true) {
+    			int x;
+    			
+    			if (scaled > 16) {
+    				x = 16;
+    				scaled -= 16;
+    			}
+    			else {
+    				x = scaled;
+    				scaled = 0;
+    			}
+    			
+    			drawTexturedModelRectFromIcon(i + k, j + l + 58 - x - start, fluidIcon, 16, 16 - (16 - x));
+    			start = start + 16;
+    			
+    			if (x == 0 || scaled == 0) {
+    				break;
+    			}
+    		}
+    	}
+    	
     }
 }

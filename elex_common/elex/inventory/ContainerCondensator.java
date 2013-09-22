@@ -3,6 +3,7 @@ package elex.inventory;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
+import net.minecraft.inventory.ICrafting;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 import elex.tileentity.TileEntityCondensator;
@@ -35,6 +36,20 @@ public class ContainerCondensator extends Container {
         addSlotToContainer(new Slot(condensator, 0, 80, 16));
         addSlotToContainer(new Slot(condensator, 1, 80, 58));
         addSlotToContainer(new Slot(condensator, 2, 135, 37));
+    }
+    
+    @Override
+    public void detectAndSendChanges() {
+    	super.detectAndSendChanges();
+    	
+    	for (int i = 0; i < crafters.size(); i++) {
+    		condensator.sendNetworkData(this, (ICrafting)crafters.get(i));
+    	}
+    }
+    
+    @Override
+    public void updateProgressBar(int i, int j) {
+    	condensator.getGUINetworkData(i, j);
     }
     
     @Override
