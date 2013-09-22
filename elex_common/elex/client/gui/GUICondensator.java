@@ -56,17 +56,8 @@ public class GUICondensator extends GuiContainer {
             LogHelper.log(Level.INFO, e.toString());
         }
         drawTexturedModalRect(guiLeft, guiTop, 0, 0, xSize, ySize);
-        
-        if (!te.getFluid().getFluid().isGaseous()) {
-        	if (te.getScaledTankLiquid(58) > 0) {
-        		drawFluidGauge(guiLeft, guiTop, 108, 16, te.getScaledTankLiquid(58), te.getFluid());
-        	}
-        }
-        else {
-        	if (te.getScaledTankGas() > 0) {
-        		
-        	}
-        }
+		
+        drawFluidGauge(guiLeft, guiTop, 108, 16, te.getScaledTankLiquid(58), te.getFluid());
     }
     
     @Override
@@ -75,6 +66,7 @@ public class GUICondensator extends GuiContainer {
     }
     
     private void drawFluidGauge(int i, int j, int k, int l, int scaled, FluidStack stack) {
+		GL11.glColor4f(1, 1, 1, 0.5F);
     	
     	if (stack == null) {
     		return;
@@ -109,6 +101,11 @@ public class GUICondensator extends GuiContainer {
     			}
     		}
     	}
+    	
+    	GL11.glColor4f(1, 1, 1, 1);
+    	
+    	Minecraft.getMinecraft().renderEngine.bindTexture(texture);
+    	drawTexturedModalRect(i + k, j + l, 0, 166, 16, 58);
     	
     }
 }
