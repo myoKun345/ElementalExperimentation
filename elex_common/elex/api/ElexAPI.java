@@ -66,8 +66,11 @@ public class ElexAPI {
             GrinderRecipe.grinderRecipes.put(input.getUnlocalizedName(), new GrinderRecipe(input, main, bonus, chance, time));
         }
         else if (GrinderRecipe.grinderRecipes.containsKey(input.getUnlocalizedName())) {
-            LogHelper.log(Level.WARNING, "Mod " + modid + " attempted to override a base ElEx recipe. " + Reference.RECIPE_DENIED);
+            LogHelper.log(Level.WARNING, "Mod " + modid + " attempted to override a grinder recipe. " + Reference.RECIPE_DENIED);
         }
+    	else {
+    		LogHelper.log(Level.SEVERE, "Failed to add grinder recipe for an unknown reason.");
+    	}
     }
     
     /**
@@ -82,8 +85,11 @@ public class ElexAPI {
             GrinderRecipe.grinderRecipes.put(input.getUnlocalizedName(), new GrinderRecipe(input, main, null, 0, time));
         }
         else if (GrinderRecipe.grinderRecipes.containsKey(input.getUnlocalizedName())) {
-            LogHelper.log(Level.WARNING, "Mod " + modid + " attempted to override a base ElEx recipe. " + Reference.RECIPE_DENIED);
+            LogHelper.log(Level.WARNING, "Mod " + modid + " attempted to override a grinder recipe. " + Reference.RECIPE_DENIED);
         }
+    	else {
+    		LogHelper.log(Level.SEVERE, "Failed to add grinder recipe for an unknown reason.");
+    	}
     }
     
     /**
@@ -98,8 +104,23 @@ public class ElexAPI {
             CentrifugeRecipe.centrifugeRecipes.put(input.getUnlocalizedName(), new CentrifugeRecipe(input, outputs, time));
         }
         else if (CentrifugeRecipe.centrifugeRecipes.containsKey(input.getUnlocalizedName())) {
-            LogHelper.log(Level.WARNING, "Mod " + modid + " attempted to override a base ElEx recipe. " + Reference.RECIPE_DENIED);
+            LogHelper.log(Level.WARNING, "Mod " + modid + " attempted to override a centrifuge recipe. " + Reference.RECIPE_DENIED);
         }
+    	else {
+    		LogHelper.log(Level.SEVERE, "Failed to add centrifuge recipe for an unknown reason.");
+    	}
+    }
+    
+    public static void addCondensatorAccelerant(ItemStack accelerant, int multiplier, String modid) {
+    	if (!CondensatorAccelerant.condensatorAccelerants.containsKey(accelerant.getUnlocalizedName())) {
+    		CondensatorAccelerant.condensatorAccelerants.put(accelerant.getUnlocalizedName(), new CondensatorAccelerant(accelerant, multiplier));
+    	}
+    	else if (CondensatorAccelerant.condensatorAccelerants.containsKey(accelerant.getUnlocalizedName())) {
+    		LogHelper.log(Level.WARNING, "Mod " + modid + " attempted to override a condensator accelerant. " + Reference.RECIPE_DENIED);
+    	}
+    	else {
+    		LogHelper.log(Level.SEVERE, "Failed to add condensator accelerant for an unknown reason.");
+    	}
     }
     
     static int metalNumber;

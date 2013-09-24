@@ -16,5 +16,5 @@ public class Reference {
     public static final String CHANNEL = "elex";
     public static final int SHIFTED_ID_RANGE_CORRECTION = 256;
     
-    public static final String RECIPE_DENIED = "Overriding base ElEx recipes is not allowed. If you feel that something is \"unbalanced\" feel free to submit a pull request.";
+    public static final String RECIPE_DENIED = "Overriding is not allowed. If you feel that something is \"unbalanced\" feel free to submit a pull request.";
 }

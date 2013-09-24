@@ -3,6 +3,7 @@ package elex.client.gui;
 import java.util.logging.Level;
 
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.renderer.texture.TextureMap;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -63,6 +64,42 @@ public class GUICondensator extends GuiContainer {
     @Override
     protected void drawGuiContainerForegroundLayer(int x, int y) {
         fontRenderer.drawString(LanguageRegistry.instance().getStringLocalization("container.condensator.name"), 8, 6, 0x404040);
+    }
+    
+    @Override
+    public void initGui() {
+    	super.initGui();
+    	buttonList.clear();
+    	
+    	GuiButton waterButton = new GuiButton(0, guiLeft + 25, guiTop + 15, 22, 12, "H2O");
+    	GuiButton airButton = new GuiButton(1, guiLeft + 47, guiTop + 15, 22, 12, "Air");
+    	GuiButton hydrogenButton = new GuiButton(2, guiLeft + 25, guiTop + 27, 22, 12, "H");
+    	hydrogenButton.enabled = false;
+    	GuiButton heliumButton = new GuiButton(3, guiLeft + 47, guiTop + 27, 22, 12, "He");
+    	heliumButton.enabled = false;
+    	GuiButton nitrogenButton = new GuiButton(4, guiLeft + 25, guiTop + 39, 22, 12, "N");
+    	nitrogenButton.enabled = false;
+    	GuiButton oxygenButton = new GuiButton(5, guiLeft + 47, guiTop + 39, 22, 12, "O");
+    	oxygenButton.enabled = false;
+    	GuiButton neonButton = new GuiButton(6, guiLeft + 25, guiTop + 51, 22, 12, "Ne");
+    	neonButton.enabled = false;
+    	GuiButton argonButton = new GuiButton(7, guiLeft + 47, guiTop + 51, 22, 12, "Ar");
+    	argonButton.enabled = false;
+    	GuiButton kryptonButton = new GuiButton(8, guiLeft + 25, guiTop + 63, 22, 12, "Kr");
+    	kryptonButton.enabled = false;
+    	GuiButton xenonButton = new GuiButton(9, guiLeft + 47, guiTop + 63, 22, 12, "Xe");
+    	xenonButton.enabled = false;
+    	
+    	buttonList.add(waterButton);
+    	buttonList.add(airButton);
+    	buttonList.add(hydrogenButton);
+    	buttonList.add(heliumButton);
+    	buttonList.add(nitrogenButton);
+    	buttonList.add(oxygenButton);
+    	buttonList.add(neonButton);
+    	buttonList.add(argonButton);
+    	buttonList.add(kryptonButton);
+    	buttonList.add(xenonButton);
     }
     
     private void drawFluidGauge(int i, int j, int k, int l, int scaled, FluidStack stack) {
