@@ -1,10 +1,9 @@
-package elex.network;
+package elex.core;
 
 import java.io.File;
 import java.util.HashMap;
 
 import net.minecraft.entity.player.EntityPlayer;
-import elex.research.ResearchData;
 
 /**
  * Elemental Experimentation

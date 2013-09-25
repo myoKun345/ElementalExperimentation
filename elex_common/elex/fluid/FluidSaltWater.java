@@ -1,4 +1,4 @@
-package elex.fluids;
+package elex.fluid;
 
 import net.minecraft.util.Icon;
 import net.minecraftforge.fluids.Fluid;

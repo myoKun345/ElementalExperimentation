@@ -1,4 +1,4 @@
-package elex.fluids;
+package elex.fluid;
 
 import elex.core.ElexIDs;
 import elex.core.Reference;

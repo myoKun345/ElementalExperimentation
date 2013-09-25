@@ -1,4 +1,4 @@
-package elex.proxy;
+package elex.core;
 
 public class CommonProxy {
 

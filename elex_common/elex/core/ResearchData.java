@@ -1,4 +1,4 @@
-package elex.research;
+package elex.core;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;

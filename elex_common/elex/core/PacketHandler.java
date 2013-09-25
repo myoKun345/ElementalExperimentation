@@ -1,4 +1,4 @@
-package elex.network;
+package elex.core;
 
 import net.minecraft.network.INetworkManager;
 import net.minecraft.network.packet.Packet250CustomPayload;

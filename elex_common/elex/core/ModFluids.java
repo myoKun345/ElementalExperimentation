@@ -7,9 +7,9 @@ import net.minecraft.block.Block;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
-import elex.fluids.BlockFluidSaltWater;
-import elex.fluids.FluidPureGaseous;
-import elex.fluids.FluidSaltWater;
+import elex.fluid.BlockFluidSaltWater;
+import elex.fluid.FluidPureGaseous;
+import elex.fluid.FluidSaltWater;
 
 /**
  * Elemental Experimentation

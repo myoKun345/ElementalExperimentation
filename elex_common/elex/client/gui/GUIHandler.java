@@ -22,6 +22,9 @@ import elex.tileentity.TileEntityGrinder;
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
 public class GUIHandler implements IGuiHandler {
+	
+	World server;
+	World client;
     
     public GUIHandler() {
         NetworkRegistry.instance().registerGuiHandler(ElementalExperimentation.instance, this);
@@ -29,23 +32,35 @@ public class GUIHandler implements IGuiHandler {
     
     @Override
     public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
+        TileEntity entity = world.getBlockTileEntity(x, y, z);
+        
         switch (ID) {
             case 0:
-                TileEntity entity0 = world.getBlockTileEntity(x, y, z);
-                if (entity0 != null && entity0 instanceof TileEntityGrinder) {
-                    return new ContainerGrinder(player.inventory, (TileEntityGrinder)entity0);
+                if (entity != null && entity instanceof TileEntityGrinder) {
+                    return new ContainerGrinder(player.inventory, (TileEntityGrinder)entity);
                 }
                 break;
             case 1:
-            	TileEntity entity1 = world.getBlockTileEntity(x, y, z);
-            	if (entity1 != null && entity1 instanceof TileEntityCentrifuge) {
-            		return new ContainerCentrifuge(player.inventory, (TileEntityCentrifuge)entity1);
+            	if (entity != null && entity instanceof TileEntityCentrifuge) {
+            		return new ContainerCentrifuge(player.inventory, (TileEntityCentrifuge)entity);
             	}
                 break;
             case 2:
-                TileEntity entity2 = world.getBlockTileEntity(x, y, z);
-                if (entity2 != null && entity2 instanceof TileEntityCondensator) {
-                    return new ContainerCondensator(player.inventory, (TileEntityCondensator)entity2);
+                if (entity != null && entity instanceof TileEntityCondensator) {
+                	TileEntityCondensator serverEnt = (TileEntityCondensator)entity;
+                	this.server = world;
+                	if (this.client != null) {
+                		TileEntityCondensator clientEnt = (TileEntityCondensator)client.getBlockTileEntity(x, y, z);
+                		if (serverEnt.modeAir != clientEnt.modeAir) {
+                			if (clientEnt.modeAir) {
+                				serverEnt.modeAir = clientEnt.modeAir;
+                			}
+                			else {
+                				clientEnt.modeAir = serverEnt.modeAir;
+                			}
+                		}
+                	}
+                    return new ContainerCondensator(player.inventory, (TileEntityCondensator)entity);
                 }
                 break;
         }
@@ -73,6 +88,19 @@ public class GUIHandler implements IGuiHandler {
                 break;
             case 2:
                 if (entity != null && entity instanceof TileEntityCondensator) {
+                	TileEntityCondensator clientEnt = (TileEntityCondensator)entity;
+                	this.client = world;
+                	if (this.server != null) {
+                		TileEntityCondensator serverEnt = (TileEntityCondensator)server.getBlockTileEntity(x, y, z);
+                		if (serverEnt.modeAir != clientEnt.modeAir) {
+                			if (clientEnt.modeAir) {
+                				serverEnt.modeAir = clientEnt.modeAir;
+                			}
+                			else {
+                				clientEnt.modeAir = serverEnt.modeAir;
+                			}
+                		}
+                	}
                     return new GUICondensator(player.inventory, (TileEntityCondensator)entity);
                 }
                 break;

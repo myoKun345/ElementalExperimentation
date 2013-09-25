@@ -17,6 +17,7 @@ import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
 import elex.api.ElementTable;
 import elex.client.gui.GUIHandler;
+import elex.core.CommonProxy;
 import elex.core.ConfigurationHandler;
 import elex.core.CreativeTabElEx;
 import elex.core.ElexIDs;
@@ -26,11 +27,10 @@ import elex.core.ModElements;
 import elex.core.ModFluids;
 import elex.core.ModTileEntities;
 import elex.core.OreDictionaryHandler;
+import elex.core.PacketHandler;
 import elex.core.Reference;
 import elex.core.VanillaElementTable;
 import elex.localization.LocalizationHandler;
-import elex.network.PacketHandler;
-import elex.proxy.CommonProxy;
 import elex.worldgen.ElExSurfaceWorldGen;
 import elex.worldgen.WorldGenElExOres;
 import elex.worldgen.biome.Biomes;
@@ -49,7 +49,7 @@ public class ElementalExperimentation {
     @Instance(Reference.MOD_ID)
     public static ElementalExperimentation instance;
     
-    @SidedProxy(clientSide = "elex.proxy.ClientProxy", serverSide = "elex.proxy.CommonProxy")
+    @SidedProxy(clientSide = "elex.core.ClientProxy", serverSide = "elex.core.CommonProxy")
     public static CommonProxy proxy;
     
     public static CreativeTabs elexTab = new CreativeTabElEx(CreativeTabs.getNextID(), Reference.MOD_ID);

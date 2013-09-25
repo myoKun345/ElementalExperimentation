@@ -69,6 +69,8 @@ public class TileEntityCondensator extends TileEntity implements IFluidHandler, 
     
     public boolean isCondensing;
     
+    public boolean isEnabled;
+    
     public TileEntityCondensator() {
     	tank = new FluidTank(MAX_FLUID);
         buildcraftPowerHandler = new PowerHandler(this, PowerHandler.Type.MACHINE);
@@ -101,6 +103,8 @@ public class TileEntityCondensator extends TileEntity implements IFluidHandler, 
         this.modeNetherAir = compound.getBoolean("NetherAirEnabled");
         this.modeNederon = compound.getBoolean("NederonEnabled");
         
+        this.isEnabled = compound.getBoolean("Active");
+        
         this.currentMode = EnumCondensatorMode.valueOf(compound.getString("CurrentMode").toUpperCase());
     }
     
@@ -124,6 +128,8 @@ public class TileEntityCondensator extends TileEntity implements IFluidHandler, 
         compound.setBoolean("NetherAirEnabled", modeNetherAir);
         compound.setBoolean("NederonEnabled", modeNederon);
         
+        compound.setBoolean("Active", isEnabled);
+        
         compound.setString("CurrentMode", currentMode.getName());
     }
     
@@ -138,10 +144,6 @@ public class TileEntityCondensator extends TileEntity implements IFluidHandler, 
         toggle = true;
     }
     
-    public boolean isActive() {
-        return isCondensing;
-    }
-    
     @Override
     public void updateEntity() {
     	
@@ -150,15 +152,21 @@ public class TileEntityCondensator extends TileEntity implements IFluidHandler, 
             if (this.tank != null && this.buildcraftPowerHandler != null && this.currentMode != null) {
                 
                 if (buildcraftPowerHandler.getPowerReceiver().getEnergyStored() >= this.currentMode.getActivation() + 15 && tank.getFluidAmount() < tank.getCapacity()) {
-                	LogHelper.log(Level.INFO, "from update" + (this.tank.getFluidAmount()));
-                    this.fill(null, new FluidStack(this.currentMode.getFluid(), this.currentMode.getUPT()), true);
-                    buildcraftPowerHandler.useEnergy(0.75F * this.currentMode.getActivation(), this.currentMode.getActivation(), true);
-                    this.isCondensing = true;
+                	
+                	if (this.isEnabled) {
+                		
+	                    this.fill(null, new FluidStack(this.currentMode.getFluid(), this.currentMode.getUPT()), true);
+	                    buildcraftPowerHandler.useEnergy(0.75F * this.currentMode.getActivation(), this.currentMode.getActivation(), true);
+	                    this.isCondensing = true;
+	                    
+                	}
+                    
                 }
                 
             }
             
         }
+        
     }
     
     public enum EnumCondensatorMode {

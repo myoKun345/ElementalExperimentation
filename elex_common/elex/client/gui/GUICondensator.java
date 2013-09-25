@@ -72,23 +72,26 @@ public class GUICondensator extends GuiContainer {
     	buttonList.clear();
     	
     	GuiButton waterButton = new GuiButton(0, guiLeft + 25, guiTop + 15, 22, 12, "H2O");
+    	waterButton.enabled = te.modeWater;
     	GuiButton airButton = new GuiButton(1, guiLeft + 47, guiTop + 15, 22, 12, "Air");
+    	airButton.enabled = te.modeAir;
     	GuiButton hydrogenButton = new GuiButton(2, guiLeft + 25, guiTop + 27, 22, 12, "H");
-    	hydrogenButton.enabled = false;
+    	hydrogenButton.enabled = te.modeHydrogen;
     	GuiButton heliumButton = new GuiButton(3, guiLeft + 47, guiTop + 27, 22, 12, "He");
-    	heliumButton.enabled = false;
+    	heliumButton.enabled = te.modeHelium;
     	GuiButton nitrogenButton = new GuiButton(4, guiLeft + 25, guiTop + 39, 22, 12, "N");
-    	nitrogenButton.enabled = false;
+    	nitrogenButton.enabled = te.modeNitrogen;
     	GuiButton oxygenButton = new GuiButton(5, guiLeft + 47, guiTop + 39, 22, 12, "O");
-    	oxygenButton.enabled = false;
+    	oxygenButton.enabled = te.modeOxygen;
     	GuiButton neonButton = new GuiButton(6, guiLeft + 25, guiTop + 51, 22, 12, "Ne");
-    	neonButton.enabled = false;
+    	neonButton.enabled = te.modeNeon;
     	GuiButton argonButton = new GuiButton(7, guiLeft + 47, guiTop + 51, 22, 12, "Ar");
-    	argonButton.enabled = false;
+    	argonButton.enabled = te.modeArgon;
     	GuiButton kryptonButton = new GuiButton(8, guiLeft + 25, guiTop + 63, 22, 12, "Kr");
-    	kryptonButton.enabled = false;
+    	kryptonButton.enabled = te.modeKrypton;
     	GuiButton xenonButton = new GuiButton(9, guiLeft + 47, guiTop + 63, 22, 12, "Xe");
-    	xenonButton.enabled = false;
+    	xenonButton.enabled = te.modeXenon;
+    	GuiButton enableButton = new GuiButton(12, guiLeft + 128, guiTop + 56, 40, 20, "Start");
     	
     	buttonList.add(waterButton);
     	buttonList.add(airButton);
@@ -100,6 +103,14 @@ public class GUICondensator extends GuiContainer {
     	buttonList.add(argonButton);
     	buttonList.add(kryptonButton);
     	buttonList.add(xenonButton);
+    	buttonList.add(enableButton);
+    }
+    
+    @Override
+    protected void actionPerformed(GuiButton button) {
+    	if (button.id == 12) {
+    		
+    	}
     }
     
     private void drawFluidGauge(int i, int j, int k, int l, int scaled, FluidStack stack) {
