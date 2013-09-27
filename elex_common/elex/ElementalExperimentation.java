@@ -44,7 +44,7 @@ import elex.worldgen.biome.Biomes;
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION, modLanguage = "java,scala")
-@NetworkMod(channels = {Reference.CHANNEL}, clientSideRequired = true, serverSideRequired = false, packetHandler = PacketHandler.class)
+@NetworkMod(channels = { Reference.CHANNEL_MAIN }, clientSideRequired = true, serverSideRequired = false, packetHandler = PacketHandler.class)
 public class ElementalExperimentation {
     @Instance(Reference.MOD_ID)
     public static ElementalExperimentation instance;
@@ -70,8 +70,8 @@ public class ElementalExperimentation {
         LocalizationHandler.loadLanguages();
         
         /* Config */
-        ConfigurationHandler.mainConfig(new File(event.getModConfigurationDirectory().getAbsolutePath() + File.separator + Reference.CHANNEL + File.separator + Reference.MOD_ID + ".cfg"));
-        ConfigurationHandler.genConfig(new File(event.getModConfigurationDirectory().getAbsolutePath() + File.separator + Reference.CHANNEL + File.separator + "WorldGen" + ".cfg"));
+        ConfigurationHandler.mainConfig(new File(event.getModConfigurationDirectory().getAbsolutePath() + File.separator + "elex" + File.separator + Reference.MOD_ID + ".cfg"));
+        ConfigurationHandler.genConfig(new File(event.getModConfigurationDirectory().getAbsolutePath() + File.separator + "elex" + File.separator + "WorldGen" + ".cfg"));
         
         /* Block Init */
         ElexStuff.addBlocks();

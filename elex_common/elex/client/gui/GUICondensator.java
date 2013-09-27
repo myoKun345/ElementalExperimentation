@@ -92,6 +92,7 @@ public class GUICondensator extends GuiContainer {
     	GuiButton xenonButton = new GuiButton(9, guiLeft + 47, guiTop + 63, 22, 12, "Xe");
     	xenonButton.enabled = te.modeXenon;
     	GuiButton enableButton = new GuiButton(12, guiLeft + 128, guiTop + 56, 40, 20, "Start");
+    	enableButton.enabled = !te.buttonDisabled;
     	
     	buttonList.add(waterButton);
     	buttonList.add(airButton);
@@ -109,8 +110,21 @@ public class GUICondensator extends GuiContainer {
     @Override
     protected void actionPerformed(GuiButton button) {
     	if (button.id == 12) {
-    		
+    		LogHelper.log(Level.INFO, "" + 12);
+    		if (te != null) {
+    			LogHelper.log(Level.INFO, "!null");
+    			if (te.canBeEnabled) {
+    				LogHelper.log(Level.INFO, "canBeEnabled");
+    				te.isEnabled = true;
+    				this.sendButtonPacket(12, (byte)0);
+    				LogHelper.log(Level.INFO, "" + te.isEnabled);
+    			}
+    		}
     	}
+    }
+    
+    protected void sendButtonPacket(int buttonId, byte packetId) {
+    	
     }
     
     private void drawFluidGauge(int i, int j, int k, int l, int scaled, FluidStack stack) {

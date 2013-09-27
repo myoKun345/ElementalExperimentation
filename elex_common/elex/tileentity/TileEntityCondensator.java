@@ -70,6 +70,8 @@ public class TileEntityCondensator extends TileEntity implements IFluidHandler, 
     public boolean isCondensing;
     
     public boolean isEnabled;
+    public boolean canBeEnabled = buildcraftPowerHandler != null ? buildcraftPowerHandler.getPowerReceiver().getEnergyStored() >= this.currentMode.getActivation() + 15 : false;
+    public boolean buttonDisabled;
     
     public TileEntityCondensator() {
     	tank = new FluidTank(MAX_FLUID);
@@ -104,6 +106,7 @@ public class TileEntityCondensator extends TileEntity implements IFluidHandler, 
         this.modeNederon = compound.getBoolean("NederonEnabled");
         
         this.isEnabled = compound.getBoolean("Active");
+        this.buttonDisabled = compound.getBoolean("DisableButton");
         
         this.currentMode = EnumCondensatorMode.valueOf(compound.getString("CurrentMode").toUpperCase());
     }
@@ -129,6 +132,7 @@ public class TileEntityCondensator extends TileEntity implements IFluidHandler, 
         compound.setBoolean("NederonEnabled", modeNederon);
         
         compound.setBoolean("Active", isEnabled);
+        compound.setBoolean("DisableButton", buttonDisabled);
         
         compound.setString("CurrentMode", currentMode.getName());
     }
@@ -151,16 +155,27 @@ public class TileEntityCondensator extends TileEntity implements IFluidHandler, 
             
             if (this.tank != null && this.buildcraftPowerHandler != null && this.currentMode != null) {
                 
-                if (buildcraftPowerHandler.getPowerReceiver().getEnergyStored() >= this.currentMode.getActivation() + 15 && tank.getFluidAmount() < tank.getCapacity()) {
+                if (buildcraftPowerHandler.getPowerReceiver().getEnergyStored() >= this.currentMode.getActivation() + 15) {
                 	
-                	if (this.isEnabled) {
-                		
-	                    this.fill(null, new FluidStack(this.currentMode.getFluid(), this.currentMode.getUPT()), true);
-	                    buildcraftPowerHandler.useEnergy(0.75F * this.currentMode.getActivation(), this.currentMode.getActivation(), true);
-	                    this.isCondensing = true;
-	                    
-                	}
+                	LogHelper.log(Level.INFO, "" + this.canBeEnabled);
+                	
+                	this.buttonDisabled = false;
+                	
+                	if (tank.getFluidAmount() < tank.getCapacity()) {
+	                	
+	                	if (this.isEnabled) {
+	                		
+		                    this.fill(null, new FluidStack(this.currentMode.getFluid(), this.currentMode.getUPT()), true);
+		                    buildcraftPowerHandler.useEnergy(0.75F * this.currentMode.getActivation(), this.currentMode.getActivation(), true);
+		                    this.isCondensing = true;
+		                    
+	                	}
                     
+                	}
+                	
+                }
+                else {
+                	this.buttonDisabled = true;
                 }
                 
             }

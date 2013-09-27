@@ -59,6 +59,14 @@ public class GUIHandler implements IGuiHandler {
                 				clientEnt.modeAir = serverEnt.modeAir;
                 			}
                 		}
+                		if (serverEnt.buttonDisabled != clientEnt.buttonDisabled) {
+                			if (!clientEnt.buttonDisabled) {
+                				serverEnt.buttonDisabled = clientEnt.buttonDisabled;
+                			}
+                			else {
+                				clientEnt.buttonDisabled = serverEnt.buttonDisabled;
+                			}
+                		}
                 	}
                     return new ContainerCondensator(player.inventory, (TileEntityCondensator)entity);
                 }
@@ -98,6 +106,14 @@ public class GUIHandler implements IGuiHandler {
                 			}
                 			else {
                 				clientEnt.modeAir = serverEnt.modeAir;
+                			}
+                		}
+                		if (serverEnt.buttonDisabled != clientEnt.buttonDisabled) {
+                			if (!clientEnt.buttonDisabled) {
+                				serverEnt.buttonDisabled = clientEnt.buttonDisabled;
+                			}
+                			else {
+                				clientEnt.buttonDisabled = serverEnt.buttonDisabled;
                 			}
                 		}
                 	}
