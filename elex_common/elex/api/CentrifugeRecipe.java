@@ -3,6 +3,7 @@ package elex.api;
 import java.util.HashMap;
 
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.fluids.FluidStack;
 
 /**
  * Elemental Experimentation
@@ -18,11 +19,13 @@ public class CentrifugeRecipe {
     
     public ItemStack input;
     public ItemStack[] outputs;
+    public FluidStack fluidOutput;
     public int time;
     
-    public CentrifugeRecipe(ItemStack i, ItemStack[] o, int t) {
+    public CentrifugeRecipe(ItemStack i, ItemStack[] o, FluidStack of, int t) {
         this.input = i;
         this.outputs = o;
+        this.fluidOutput = of;
         this.time = t;
     }
     

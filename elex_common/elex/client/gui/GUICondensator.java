@@ -1,5 +1,7 @@
 package elex.client.gui;
 
+import java.io.ByteArrayOutputStream;
+import java.io.DataOutputStream;
 import java.util.logging.Level;
 
 import net.minecraft.client.Minecraft;
@@ -7,6 +9,7 @@ import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.renderer.texture.TextureMap;
 import net.minecraft.entity.player.InventoryPlayer;
+import net.minecraft.network.packet.Packet250CustomPayload;
 import net.minecraft.util.Icon;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fluids.Fluid;
@@ -14,6 +17,8 @@ import net.minecraftforge.fluids.FluidStack;
 
 import org.lwjgl.opengl.GL11;
 
+import cpw.mods.fml.common.FMLCommonHandler;
+import cpw.mods.fml.common.network.PacketDispatcher;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -113,18 +118,53 @@ public class GUICondensator extends GuiContainer {
     		LogHelper.log(Level.INFO, "" + 12);
     		if (te != null) {
     			LogHelper.log(Level.INFO, "!null");
+				LogHelper.log(Level.INFO, "" + te.canBeEnabled);
+				te.isEnabled = true;
+				this.sendButtonPacket(12, (byte)0);
     			if (te.canBeEnabled) {
-    				LogHelper.log(Level.INFO, "canBeEnabled");
-    				te.isEnabled = true;
-    				this.sendButtonPacket(12, (byte)0);
-    				LogHelper.log(Level.INFO, "" + te.isEnabled);
     			}
     		}
     	}
+    	LogHelper.log(Level.INFO, "" + te.isEnabled);
     }
     
     protected void sendButtonPacket(int buttonId, byte packetId) {
+
+		ByteArrayOutputStream bos = new ByteArrayOutputStream(8);
+		DataOutputStream outputStream = new DataOutputStream(bos);
+		
+    	switch (buttonId) {
+    	case 12:
+    		try {
+    			outputStream.writeByte(packetId);
+    			outputStream.writeInt(buttonId);
+    			outputStream.writeInt(te.xCoord);
+    			outputStream.writeInt(te.yCoord);
+    			outputStream.writeInt(te.zCoord);
+    			outputStream.writeBoolean(te.canBeEnabled);
+    			outputStream.writeBoolean(te.buttonDisabled);
+    			outputStream.writeBoolean(te.isEnabled);
+    		} catch (Exception ex) {
+    	        ex.printStackTrace();
+    		}
+    		break;
+    	}
     	
+		Packet250CustomPayload packet = new Packet250CustomPayload();
+		packet.channel = Reference.CHANNEL_MAIN;
+		packet.data = bos.toByteArray();
+		packet.length = bos.size();
+		
+		Side side = FMLCommonHandler.instance().getEffectiveSide();
+		if (side == Side.CLIENT) {
+			PacketDispatcher.sendPacketToServer(packet);
+		}
+		else if (side == Side.SERVER) {
+			PacketDispatcher.sendPacketToAllPlayers(packet);
+		}
+		else {
+			LogHelper.log(Level.WARNING, "What side is this?!? I don't understand the side " + side.toString() + "!");
+		}
     }
     
     private void drawFluidGauge(int i, int j, int k, int l, int scaled, FluidStack stack) {

@@ -67,6 +67,22 @@ public class GUIHandler implements IGuiHandler {
                 				clientEnt.buttonDisabled = serverEnt.buttonDisabled;
                 			}
                 		}
+                		if (serverEnt.canBeEnabled != clientEnt.canBeEnabled) {
+                			if (!clientEnt.canBeEnabled) {
+                				serverEnt.canBeEnabled = clientEnt.canBeEnabled;
+                			}
+                			else {
+                				clientEnt.canBeEnabled = serverEnt.canBeEnabled;
+                			}
+                		}
+                		if (serverEnt.isEnabled != clientEnt.isEnabled) {
+                			if (!clientEnt.isEnabled) {
+                				serverEnt.isEnabled = clientEnt.isEnabled;
+                			}
+                			else {
+                				clientEnt.isEnabled = serverEnt.isEnabled;
+                			}
+                		}
                 	}
                     return new ContainerCondensator(player.inventory, (TileEntityCondensator)entity);
                 }
@@ -114,6 +130,22 @@ public class GUIHandler implements IGuiHandler {
                 			}
                 			else {
                 				clientEnt.buttonDisabled = serverEnt.buttonDisabled;
+                			}
+                		}
+                		if (serverEnt.canBeEnabled != clientEnt.canBeEnabled) {
+                			if (!clientEnt.canBeEnabled) {
+                				serverEnt.canBeEnabled = clientEnt.canBeEnabled;
+                			}
+                			else {
+                				clientEnt.canBeEnabled = serverEnt.canBeEnabled;
+                			}
+                		}
+                		if (serverEnt.isEnabled != clientEnt.isEnabled) {
+                			if (!clientEnt.isEnabled) {
+                				serverEnt.isEnabled = clientEnt.isEnabled;
+                			}
+                			else {
+                				clientEnt.isEnabled = serverEnt.isEnabled;
                 			}
                 		}
                 	}

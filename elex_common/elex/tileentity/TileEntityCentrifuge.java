@@ -1,10 +1,9 @@
 package elex.tileentity;
 
 import ic2.api.energy.tile.IEnergySink;
-import universalelectricity.core.block.IElectricalStorage;
-import buildcraft.api.power.IPowerReceptor;
-import buildcraft.api.power.PowerHandler;
-import buildcraft.api.power.PowerHandler.PowerReceiver;
+
+import java.util.logging.Level;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.ItemStack;
@@ -17,6 +16,13 @@ import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.FluidTank;
 import net.minecraftforge.fluids.FluidTankInfo;
 import net.minecraftforge.fluids.IFluidHandler;
+import universalelectricity.core.block.IElectricalStorage;
+import buildcraft.api.power.IPowerReceptor;
+import buildcraft.api.power.PowerHandler;
+import buildcraft.api.power.PowerHandler.PowerReceiver;
+import cpw.mods.fml.common.FMLCommonHandler;
+import elex.api.CentrifugeRecipe;
+import elex.core.LogHelper;
 
 /**
  * Elemental Experimentation
@@ -28,15 +34,14 @@ import net.minecraftforge.fluids.IFluidHandler;
  */
 public class TileEntityCentrifuge extends TileEntity implements IFluidHandler, ISidedInventory, IEnergySink, IPowerReceptor, IElectricalStorage {
     
-    public ItemStack[] centrifugeStacks = new ItemStack[11];
+    public ItemStack[] centrifugeStacks = new ItemStack[12];
     
     protected FluidTank tank = new FluidTank(4000);
     
     public int centrifugeSpinTime;
-    
     public int currentItemSpinTime;
-    
     public int centrifugeSpunTime;
+    public boolean spinning;
     
     public EntityPlayer placedBy;
     
@@ -78,139 +83,211 @@ public class TileEntityCentrifuge extends TileEntity implements IFluidHandler, I
         centrifugeSpunTime = compound.getShort("SpunTime");
         
     }
+    
+    @Override
+    public boolean canUpdate() {
+    	return !FMLCommonHandler.instance().getEffectiveSide().isClient();
+    }
+    
+    @Override
+    public void updateEntity() {
+    	
+    	if (!this.worldObj.isRemote) {
+    		
+    		if (this.getStackInSlot(0) != null) {
+    			
+    			CentrifugeRecipe recipe;
+    			
+    			recipe = CentrifugeRecipe.centrifugeRecipes.get(getStackInSlot(0).getUnlocalizedName());
+    			
+    			if ((getStackInSlot(3) == null && getStackInSlot(4) == null && 
+					getStackInSlot(5) == null && getStackInSlot(6) == null && 
+					getStackInSlot(7) == null && getStackInSlot(8) == null && 
+					getStackInSlot(9) == null && getStackInSlot(10) == null && 
+					getStackInSlot(11) == null)) {
+    				
+    				if (!this.spinning && CentrifugeRecipe.canBeDone(getStackInSlot(0))) {
+    					
+    					this.centrifugeSpinTime = recipe.time;
+    					this.spinning = true;
+    					
+    				}
+    				
+    				if (this.spinning &&
+						buildcraftPowerHandler.getEnergyStored() >= buildcraftPowerHandler.getActivationEnergy()) {
+    					
+    					--this.centrifugeSpinTime;
+    					buildcraftPowerHandler.useEnergy(2, 4, true);
+    					
+    					if (this.centrifugeSpinTime == 0) {
+    						
+    						for (int i = 0; i < recipe.outputs.length; i++) {
+    							
+    							if (getStackInSlot(i) == null) {
+    								
+    								setInventorySlotContents(i, recipe.outputs[i].copy());
+    								
+    							}
+    							
+    						}
+    						
+    						if (recipe.fluidOutput != null) {
+    							this.fill(null, recipe.fluidOutput, true);
+    						}
+    						
+    						if (getStackInSlot(0).stackSize >= 2) {
+                                
+                                decrStackSize(0, 1);
+                                
+                            } 
+                            else {
+                                
+                                setInventorySlotContents(0, null);
+                                
+                            }
+                            
 
-    /* (non-Javadoc)
-     * @see net.minecraft.inventory.IInventory#getSizeInventory()
-     */
+                            if (getStackInSlot(0) == null) {
+                                
+                                this.centrifugeSpinTime = 0;
+                                this.spinning = false;
+                                
+                                worldObj.setBlockMetadataWithNotify(xCoord, yCoord, zCoord, worldObj.getBlockMetadata(xCoord, yCoord, zCoord) - 10, 2);
+                                
+                            }
+                            else {
+                                
+                                this.centrifugeSpinTime = recipe.time;
+                                
+                            }
+    						
+    					}
+    					
+    				}
+    				
+    			}
+    			
+    		}
+    		
+    	}
+    	
+    }
+    
     @Override
     public int getSizeInventory() {
-        // TODO Auto-generated method stub
-        return 0;
+        return centrifugeStacks.length;
     }
-
-    /* (non-Javadoc)
-     * @see net.minecraft.inventory.IInventory#getStackInSlot(int)
-     */
+    
     @Override
     public ItemStack getStackInSlot(int i) {
-        // TODO Auto-generated method stub
-        return null;
+        return centrifugeStacks[i];
     }
-
-    /* (non-Javadoc)
-     * @see net.minecraft.inventory.IInventory#decrStackSize(int, int)
-     */
+    
     @Override
     public ItemStack decrStackSize(int i, int j) {
-        // TODO Auto-generated method stub
-        return null;
+    	ItemStack stack = getStackInSlot(i);
+        
+        if (stack != null) {
+            stack = stack.splitStack(j);
+            
+            onInventoryChanged();
+        }
+        
+        return stack;
     }
-
-    /* (non-Javadoc)
-     * @see net.minecraft.inventory.IInventory#getStackInSlotOnClosing(int)
-     */
+    
     @Override
     public ItemStack getStackInSlotOnClosing(int i) {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    /* (non-Javadoc)
-     * @see net.minecraft.inventory.IInventory#setInventorySlotContents(int, net.minecraft.item.ItemStack)
-     */
-    @Override
-    public void setInventorySlotContents(int i, ItemStack itemstack) {
-        // TODO Auto-generated method stub
+    	ItemStack stack = getStackInSlot(i);
         
+        return stack;
     }
-
-    /* (non-Javadoc)
-     * @see net.minecraft.inventory.IInventory#getInvName()
-     */
+    
+    @Override
+    public void setInventorySlotContents(int i, ItemStack stack) {
+    	if (stack != null) {
+            /*if (isItemValidForSlot(i, stack)) {
+                grinderItemStacks[i] = stack;
+                
+                LogHelper.log(Level.INFO, "set correctly");
+                
+                if (stack.stackSize > getInventoryStackLimit()) {
+                    stack.stackSize = getInventoryStackLimit();
+                }
+                
+                onInventoryChanged();
+            }
+            else {
+                LogHelper.log(Level.INFO, "return");
+                return;
+            }*/
+            
+            centrifugeStacks[i] = stack;
+            
+            LogHelper.log(Level.INFO, "set correctly");
+            
+            if (stack.stackSize > getInventoryStackLimit()) {
+                stack.stackSize = getInventoryStackLimit();
+            }
+            
+            onInventoryChanged();
+        }
+        else if (stack == null) {
+            LogHelper.log(Level.INFO, "set to null");
+            
+            centrifugeStacks[i] = null;
+            
+            onInventoryChanged();
+        }
+    }
+    
     @Override
     public String getInvName() {
-        // TODO Auto-generated method stub
-        return null;
+        return "container.centrifuge";
     }
-
-    /* (non-Javadoc)
-     * @see net.minecraft.inventory.IInventory#isInvNameLocalized()
-     */
+    
     @Override
     public boolean isInvNameLocalized() {
-        // TODO Auto-generated method stub
         return false;
     }
-
-    /* (non-Javadoc)
-     * @see net.minecraft.inventory.IInventory#getInventoryStackLimit()
-     */
+    
     @Override
     public int getInventoryStackLimit() {
-        // TODO Auto-generated method stub
-        return 0;
+        return 64;
     }
-
-    /* (non-Javadoc)
-     * @see net.minecraft.inventory.IInventory#isUseableByPlayer(net.minecraft.entity.player.EntityPlayer)
-     */
+    
     @Override
-    public boolean isUseableByPlayer(EntityPlayer entityplayer) {
-        // TODO Auto-generated method stub
-        return false;
+    public boolean isUseableByPlayer(EntityPlayer player) {
+        return player.getDistanceSq(xCoord + 0.5F, yCoord + 0.5F, zCoord + 0.5F) <= 64;
     }
-
-    /* (non-Javadoc)
-     * @see net.minecraft.inventory.IInventory#openChest()
-     */
+    
     @Override
     public void openChest() {
-        // TODO Auto-generated method stub
         
     }
-
-    /* (non-Javadoc)
-     * @see net.minecraft.inventory.IInventory#closeChest()
-     */
+    
     @Override
     public void closeChest() {
-        // TODO Auto-generated method stub
         
     }
-
-    /* (non-Javadoc)
-     * @see net.minecraft.inventory.IInventory#isItemValidForSlot(int, net.minecraft.item.ItemStack)
-     */
+    
     @Override
     public boolean isItemValidForSlot(int i, ItemStack itemstack) {
-        // TODO Auto-generated method stub
-        return false;
+        return true;
     }
-
-    /* (non-Javadoc)
-     * @see net.minecraft.inventory.ISidedInventory#getAccessibleSlotsFromSide(int)
-     */
+    
     @Override
     public int[] getAccessibleSlotsFromSide(int var1) {
-        // TODO Auto-generated method stub
         return null;
     }
-
-    /* (non-Javadoc)
-     * @see net.minecraft.inventory.ISidedInventory#canInsertItem(int, net.minecraft.item.ItemStack, int)
-     */
+    
     @Override
-    public boolean canInsertItem(int i, ItemStack itemstack, int j) {
-        // TODO Auto-generated method stub
-        return false;
+    public boolean canInsertItem(int i, ItemStack stack, int j) {
+        return isItemValidForSlot(j, stack);
     }
-
-    /* (non-Javadoc)
-     * @see net.minecraft.inventory.ISidedInventory#canExtractItem(int, net.minecraft.item.ItemStack, int)
-     */
+    
     @Override
     public boolean canExtractItem(int i, ItemStack itemstack, int j) {
-        // TODO Auto-generated method stub
         return false;
     }
     
@@ -261,14 +338,10 @@ public class TileEntityCentrifuge extends TileEntity implements IFluidHandler, I
         tank.setCapacity(capacity);
         return new FluidTankInfo[]{tank.getInfo()};
     }
-
-    /* (non-Javadoc)
-     * @see ic2.api.energy.tile.IEnergyAcceptor#acceptsEnergyFrom(net.minecraft.tileentity.TileEntity, net.minecraftforge.common.ForgeDirection)
-     */
+    
     @Override
     public boolean acceptsEnergyFrom(TileEntity emitter,
             ForgeDirection direction) {
-        // TODO Auto-generated method stub
         return false;
     }
 
@@ -298,32 +371,20 @@ public class TileEntityCentrifuge extends TileEntity implements IFluidHandler, I
         // TODO Auto-generated method stub
         return 0;
     }
-
-    /* (non-Javadoc)
-     * @see buildcraft.api.power.IPowerReceptor#getPowerReceiver(net.minecraftforge.common.ForgeDirection)
-     */
+    
     @Override
     public PowerReceiver getPowerReceiver(ForgeDirection side) {
-        // TODO Auto-generated method stub
-        return null;
+        return this.buildcraftPowerHandler.getPowerReceiver();
     }
-
-    /* (non-Javadoc)
-     * @see buildcraft.api.power.IPowerReceptor#doWork(buildcraft.api.power.PowerHandler)
-     */
+    
     @Override
     public void doWork(PowerHandler workProvider) {
-        // TODO Auto-generated method stub
         
     }
-
-    /* (non-Javadoc)
-     * @see buildcraft.api.power.IPowerReceptor#getWorld()
-     */
+    
     @Override
     public World getWorld() {
-        // TODO Auto-generated method stub
-        return null;
+        return this.worldObj;
     }
 
     /* (non-Javadoc)

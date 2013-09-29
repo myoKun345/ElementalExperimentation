@@ -4,6 +4,7 @@ import ic2.api.energy.tile.IEnergySink;
 
 import java.util.logging.Level;
 
+import cpw.mods.fml.common.FMLCommonHandler;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.ICrafting;
 import net.minecraft.inventory.ISidedInventory;
@@ -70,7 +71,7 @@ public class TileEntityCondensator extends TileEntity implements IFluidHandler, 
     public boolean isCondensing;
     
     public boolean isEnabled;
-    public boolean canBeEnabled = buildcraftPowerHandler != null ? buildcraftPowerHandler.getPowerReceiver().getEnergyStored() >= this.currentMode.getActivation() + 15 : false;
+    public boolean canBeEnabled;
     public boolean buttonDisabled;
     
     public TileEntityCondensator() {
@@ -149,6 +150,11 @@ public class TileEntityCondensator extends TileEntity implements IFluidHandler, 
     }
     
     @Override
+    public boolean canUpdate() {
+    	return !FMLCommonHandler.instance().getEffectiveSide().isClient();
+    }
+    
+    @Override
     public void updateEntity() {
     	
         if (!this.worldObj.isRemote) {
@@ -156,6 +162,8 @@ public class TileEntityCondensator extends TileEntity implements IFluidHandler, 
             if (this.tank != null && this.buildcraftPowerHandler != null && this.currentMode != null) {
                 
                 if (buildcraftPowerHandler.getPowerReceiver().getEnergyStored() >= this.currentMode.getActivation() + 15) {
+                	
+                	this.canBeEnabled = true;
                 	
                 	LogHelper.log(Level.INFO, "" + this.canBeEnabled);
                 	
@@ -175,6 +183,7 @@ public class TileEntityCondensator extends TileEntity implements IFluidHandler, 
                 	
                 }
                 else {
+                	this.canBeEnabled = false;
                 	this.buttonDisabled = true;
                 }
                 

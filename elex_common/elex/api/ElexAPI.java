@@ -4,6 +4,7 @@ import java.util.logging.Level;
 
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.EnumHelper;
+import net.minecraftforge.fluids.FluidStack;
 import elex.core.LogHelper;
 import elex.core.ModFluids;
 import elex.core.Reference;
@@ -96,12 +97,32 @@ public class ElexAPI {
      * Adds a centrifuge recipe.
      * @param input - The input ItemStack.
      * @param outputs - An array of resulting ItemStacks.
+     * @param fluidOutput - A resulting amount of fluid.
+     * @param time - The time it should take, in ticks, for this recipe to complete.
+     * @param modid - Your mod id.
+     */
+    public static void addCentrifugeRecipe(ItemStack input, ItemStack[] outputs, FluidStack fluidOutput, int time, String modid) {
+        if (!CentrifugeRecipe.centrifugeRecipes.containsKey(input.getUnlocalizedName())) {
+            CentrifugeRecipe.centrifugeRecipes.put(input.getUnlocalizedName(), new CentrifugeRecipe(input, outputs, fluidOutput, time));
+        }
+        else if (CentrifugeRecipe.centrifugeRecipes.containsKey(input.getUnlocalizedName())) {
+            LogHelper.log(Level.WARNING, "Mod " + modid + " attempted to override a centrifuge recipe. " + Reference.RECIPE_DENIED);
+        }
+    	else {
+    		LogHelper.log(Level.SEVERE, "Failed to add centrifuge recipe for an unknown reason.");
+    	}
+    }
+    
+    /**
+     * Adds a centrifuge recipe.
+     * @param input - The input ItemStack.
+     * @param outputs - An array of resulting ItemStacks.
      * @param time - The time it should take, in ticks, for this recipe to complete.
      * @param modid - Your mod id.
      */
     public static void addCentrifugeRecipe(ItemStack input, ItemStack[] outputs, int time, String modid) {
         if (!CentrifugeRecipe.centrifugeRecipes.containsKey(input.getUnlocalizedName())) {
-            CentrifugeRecipe.centrifugeRecipes.put(input.getUnlocalizedName(), new CentrifugeRecipe(input, outputs, time));
+            CentrifugeRecipe.centrifugeRecipes.put(input.getUnlocalizedName(), new CentrifugeRecipe(input, outputs, null, time));
         }
         else if (CentrifugeRecipe.centrifugeRecipes.containsKey(input.getUnlocalizedName())) {
             LogHelper.log(Level.WARNING, "Mod " + modid + " attempted to override a centrifuge recipe. " + Reference.RECIPE_DENIED);
