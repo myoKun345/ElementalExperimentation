@@ -4,7 +4,7 @@ import ic2.api.energy.tile.IEnergySink;
 
 import java.util.logging.Level;
 
-import cpw.mods.fml.common.FMLCommonHandler;
+import myokun.lib.util.SyncThis;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.ICrafting;
 import net.minecraft.inventory.ISidedInventory;
@@ -26,6 +26,7 @@ import buildcraft.api.power.PowerHandler.PowerReceiver;
 import buildcraft.api.transport.IExtractionHandler;
 import buildcraft.api.transport.IPipeConnection;
 import buildcraft.api.transport.IPipeTile.PipeType;
+import cpw.mods.fml.common.FMLCommonHandler;
 import elex.core.LogHelper;
 import elex.core.ModFluids;
 import elex.inventory.ContainerCondensator;
@@ -68,10 +69,13 @@ public class TileEntityCondensator extends TileEntity implements IFluidHandler, 
     
     public String currentModeNBT;
     
+    @SyncThis
     public boolean isCondensing;
-    
+    @SyncThis
     public boolean isEnabled;
+    @SyncThis
     public boolean canBeEnabled;
+    @SyncThis
     public boolean buttonDisabled;
     
     public TileEntityCondensator() {

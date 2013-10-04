@@ -40,6 +40,7 @@ public class ElexIDs {
         public static final int BLOCK_MACHINE_CASE_DEFAULT = 3686;
         public static final int BLOCK_BUILDING_MATERIAL_DEFAULT = 3687;
         public static final int BLOCK_BRICK_DEFAULT = 3688;
+        public static final int QUARTZ_CHEST_DEFAULT = 3689;
         public static final int CENTRIFUGE_DEFAULT = 3750;
         public static final int GRINDER_DEFAULT = 3751;
         public static final int CONDENSATOR_DEFAULT = 3752;
@@ -64,6 +65,7 @@ public class ElexIDs {
         public static int BLOCK_ALLOY_STORAGE;
         public static int BLOCK_BUILDING_MATERIAL;
         public static int BLOCK_BRICK;
+        public static int QUARTZ_CHEST;
         public static int CENTRIFUGE;
         public static int GRINDER;
         public static int CONDENSATOR;
@@ -88,6 +90,7 @@ public class ElexIDs {
         public static final String BLOCK_ALLOY_STORAGE_KEY = "ALLOYSTORAGEBLOCKS";
         public static final String BLOCK_BUILDING_MATERIAL_KEY = "BUILDINGMATERIALS";
         public static final String BLOCK_BRICK_KEY = "BRICKS";
+        public static final String QUARTZ_CHEST_KEY = "QuartzChestID";
         public static final String CENTRIFUGE_KEY = "CentrifugeID";
         public static final String GRINDER_KEY = "GrinderID";
         public static final String CONDENSATOR_KEY = "CondensatorID";
@@ -163,6 +166,7 @@ public class ElexIDs {
             { "brickMarble", "brickBasalt", "brickDeepSandstone", 
             "brickGranite", "brickLimestone", "brickRedStone", 
             "brickBlueStone", "brickGreenStone", "brickYellowStone" };
+        public static final String QUARTZ_CHEST_UNLOC = "quartzChest";
         public static final String CENTRIFUGE_UNLOCALIZED_NAME = "centrifuge";
         public static final String GRINDER_UNLOCALIZED_NAME = "grinder";
         public static final String CONDENSATOR_UNLOCALIZED_NAME = "condensator";

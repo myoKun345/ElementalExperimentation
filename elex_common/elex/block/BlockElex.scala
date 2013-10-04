@@ -32,6 +32,7 @@ import elex.core.LogHelper
 import net.minecraft.world.biome.BiomeGenBase
 import java.util.logging.Level
 import cpw.mods.fml.common.network.FMLNetworkHandler
+import net.minecraft.block.BlockChest
 
 /**
  * Elemental Experimentation
@@ -794,4 +795,12 @@ object ElexMachineCase extends ElexBlock(BLOCK_MACHINE_CASE, Material.iron) {
         return meta
     }
     
+}
+
+object QuartzChest extends ElexBlockContainer(QUARTZ_CHEST, Material.iron) {
+	
+	override def createNewTileEntity(world:World):TileEntity = {
+		return null
+	}
+	
 }

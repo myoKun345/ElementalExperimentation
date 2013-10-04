@@ -1,5 +1,6 @@
 package elex.api;
 
+import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -14,6 +15,7 @@ import java.util.List;
 public class ElementTable {
     
     public static List<Element> elementList = new LinkedList<Element>();
+    public static LinkedHashMap<String, ElementTable> tables = new LinkedHashMap<String, ElementTable>();
     
     public static String tableName;
     public static String tableMod;
@@ -66,6 +68,7 @@ public class ElementTable {
         this.tablePureNonmetalDustUnlocalizedList = pureNonmetalDustUnlocalizedList;
         this.tablePureNonmetalDustMoleculeStringList = pureNonmetalDustMoleculeStringList;
         this.tablePureGasUnlocalizedList = pureGasUnlocalizedList;
+        tables.put(name, this);
     }
 
 }
