@@ -799,6 +799,10 @@ object ElexMachineCase extends ElexBlock(BLOCK_MACHINE_CASE, Material.iron) {
 
 object QuartzChest extends ElexBlockContainer(QUARTZ_CHEST, Material.iron) {
 	
+    setBlockBounds(0.0625F, 0.0F, 0.0625F, 0.9375F, 0.875F, 0.9375F)
+	
+    override def isOpaqueCube:Boolean = false
+    
 	override def createNewTileEntity(world:World):TileEntity = {
 		return null
 	}
