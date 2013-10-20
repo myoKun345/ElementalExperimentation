@@ -75,6 +75,7 @@ import elex.tileentity.TileEntityCondensator
 import elex.tileentity.TileEntityCentrifuge
 import net.minecraftforge.fluids.FluidStack
 import net.minecraftforge.fluids.FluidRegistry
+import elex.item.ElexGemPlate
 
 object ElexStuff {
 	
@@ -202,6 +203,9 @@ object ElexStuff {
         CraftingRecipeHandler.addShapedRecipe(new ItemStack(ElexGrinder, 1), "X", "Y", "Z", Array(new ItemStack(ElexMachinePart, 1, 2), new ItemStack(ElexMachineCase, 1, 0), new ItemStack(ElexMachinePart, 1, 1)), Array('X', 'Y', 'Z'))
         CraftingRecipeHandler.addShapedRecipe(new ItemStack(ElexCentrifuge, 1),  "X", "Y", "Z", Array(new ItemStack(ElexMachinePart, 1, 0), new ItemStack(ElexMachineCase, 1, 0), new ItemStack(ElexMachinePart, 1, 1)), Array('X', 'Y', 'Z'))
         
+        CraftingRecipeHandler.addShapedRecipe(new ItemStack(ElexGemPlate, 1, 0), "XX", "XX", null, Array(new ItemStack(Item.emerald)), Array('X'))
+        CraftingRecipeHandler.addShapedRecipe(new ItemStack(Block.endPortalFrame, 1), "XYX", "YZY", "ZZZ", Array(new ItemStack(ElexVanillaDust, 1, 9), new ItemStack(ElexGemPlate, 1, 0), new ItemStack(Block.whiteStone)), Array('X', 'Y', 'Z'))
+        
         for (i <- 0 until ElexIDs.ELEX_INGOT_REAL_UNLOCALIZED_NAMES.size()) {
             GameRegistry.addShapelessRecipe(new ItemStack(ElexMetalNugget, 9, i), new ItemStack(ElexIngot, 1, i))
         }
@@ -320,6 +324,7 @@ object ElexStuff {
         ElexAPI.addGrinderRecipe(new ItemStack(Block.oreLapis, 1), new ItemStack(ElexVanillaDust, 2 + rand.nextInt(4), 7), 100, Reference.MOD_ID)
         ElexAPI.addGrinderRecipe(new ItemStack(Block.oreRedstone, 1), new ItemStack(Item.redstone, 2), 100, Reference.MOD_ID)
         ElexAPI.addGrinderRecipe(new ItemStack(Block.obsidian, 1), new ItemStack(ElexVanillaDust, 1, 8), 300, Reference.MOD_ID)
+        ElexAPI.addGrinderRecipe(new ItemStack(Item.enderPearl, 1), new ItemStack(ElexVanillaDust, 2, 9), 150, Reference.MOD_ID)
         
         // Centrifuge Recipes for Compound Dusts
         ElexAPI.addCentrifugeRecipe(new ItemStack(ElexCompoundDust, 16, 0), Array(new ItemStack(ElexMetalDust, 3, 1), new ItemStack(ElexMetalDust, 2, 4), new ItemStack(ElexMiscDust, 6, 0)), 240, Reference.MOD_ID)

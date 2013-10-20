@@ -449,6 +449,7 @@
 	<entry key="item.dustDiamond.name">Diamond Dust</entry>
 	<entry key="item.dustLapisLazuli.name">Lapis Lazuli Dust</entry>
 	<entry key="item.dustObsidian.name">Obsidian Dust</entry>
+	<entry key="item.dustEnderPearl.name">Ender Pearl Dust</entry>
 	
 	<entry key="item.dustSilicate.name">Silicate Dust</entry>
 	
@@ -666,6 +667,8 @@
 	<entry key="item.nuggetOsmiridium.name">Osmiridium Nugget</entry>
 	
 	<entry key="item.nuggetIron.name">Iron Nugget</entry>
+	
+	<entry key="item.plateEmerald.name">Emerald Plate</entry>
 	
 	<entry key="item.partSpinRotor.name">Spin Rotor Machine Component</entry>
 	<entry key="item.partHighSpeedMotor.name">High Speed Motor Machine Component</entry>

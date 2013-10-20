@@ -194,10 +194,11 @@ public class ElexIDs {
         public static final int ALLOY_NUGGET_DEFAULT = 16242;
         public static final int IRON_NUGGET_DEFAULT = 16243;
         public static final int IRON_ROD_DEFAULT = 16244;
-        public static final int SALTED_BEEF_DEFAULT = 16245;
-        public static final int SALTED_CHICKEN_DEFAULT = 16246;
-        public static final int SALTED_PORK_DEFAULT = 16247;
-        public static final int SALTED_FISH_DEFAULT = 16248;
+        public static final int GEM_PLATE_DEFAULT = 16245;
+        public static final int SALTED_BEEF_DEFAULT = 16246;
+        public static final int SALTED_CHICKEN_DEFAULT = 16247;
+        public static final int SALTED_PORK_DEFAULT = 16248;
+        public static final int SALTED_FISH_DEFAULT = 16249;
         public static final int MERCURY_INJECTOR_DEFAULT = 16259;
         public static final int RESEARCH_BINDER_DEFAULT = 16260;
         public static final int[] ELEX_ARMOR_DEFAULT = 
@@ -219,6 +220,7 @@ public class ElexIDs {
         public static int ALLOY_NUGGET;
         public static int IRON_NUGGET;
         public static int IRON_ROD;
+        public static int GEM_PLATE;
         public static int SALTED_BEEF;
         public static int SALTED_CHICKEN;
         public static int SALTED_PORK;
@@ -242,6 +244,7 @@ public class ElexIDs {
         public static final String ALLOY_NUGGET_KEY = "ALLOYNUGGETS";
         public static final String IRON_NUGGET_KEY = "IronNuggetID";
         public static final String IRON_ROD_KEY = "IronRodID";
+        public static final String GEM_PLATE_KEY = "GEMPLATES";
         public static final String SALTED_BEEF_KEY = "SaltedBeefID";
         public static final String SALTED_CHICKEN_KEY = "SaltedChickenID";
         public static final String SALTED_PORK_KEY = "SaltedPorkID";
@@ -289,7 +292,8 @@ public class ElexIDs {
         public static final String[] VANILLA_DUST_REAL_UNLOCALIZED_NAMES = 
             { "dustNetherQuartz", "dustIron", "dustGold", 
             "dustEmerald", "dustCoal", "dustCharcoal",
-            "dustDiamond", "dustLapisLazuli", "dustObsidian" };
+            "dustDiamond", "dustLapisLazuli", "dustObsidian",
+            "dustEnderPearl" };
         public static final String[] ALLOY_DUST_REAL_UNLOCALIZED_NAMES = 
             { "dustCarbonSteel", "dustVanadiumSteel", "dustBronze", 
             "dustElectrum", "dustScandinium", "dustOsmiridium" };
@@ -306,6 +310,8 @@ public class ElexIDs {
             "nuggetElectrum", "nuggetScandinium", "nuggetOsmiridium" };
         public static final String IRON_NUGGET_UNLOCALIZED_NAME = "nuggetIron";
         public static final String IRON_ROD_UNLOCALIZED_NAME = "rodIron";
+        public static final String[] GEM_PLATE_UNLOCALIZED_NAMES = 
+        	{ "plateEmerald" };
         public static final String RESEARCH_BINDER_UNLOCALIZED_NAME = "researchBinder";
         public static final String[] ELEX_ARMOR_REAL_UNLOCALIZED_NAMES = 
             { "helmetCarbon", "plateCarbon", "pantsCarbon", "bootsCarbon" }; 
@@ -334,7 +340,8 @@ public class ElexIDs {
         public static final String[] VANILLA_DUST_MOLECULE_STRINGS =
             { "FeSiO2", "Fe", "Au",
             "Be3Al2(SiO3)6", "C2", "C7H4O",
-            "C", "Ca8Al6Si6O24", "SiO2" };
+            "C", "Ca8Al6Si6O24", "SiO2",
+            "(SiO3)16W3Ir (Temporary)" };
         public static final String[] ALLOY_DUST_MOLECULE_STRINGS = 
             { "Fe-C", "Fe-V", "Cu-Sn",
             "Au-Ag", "Al-Sc", "Os-Ir" };

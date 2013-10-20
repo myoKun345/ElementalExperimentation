@@ -64,6 +64,7 @@ public class ConfigurationHandler {
         ElexIDs.ELEX_ARMOR[1] = config.getItem(ElexIDs.CATEGORY_ITEM_IDS, ElexIDs.ELEX_ARMOR_KEYS[1], ElexIDs.ELEX_ARMOR_DEFAULT[1]).getInt();
         ElexIDs.ELEX_ARMOR[2] = config.getItem(ElexIDs.CATEGORY_ITEM_IDS, ElexIDs.ELEX_ARMOR_KEYS[2], ElexIDs.ELEX_ARMOR_DEFAULT[2]).getInt();
         ElexIDs.ELEX_ARMOR[3] = config.getItem(ElexIDs.CATEGORY_ITEM_IDS, ElexIDs.ELEX_ARMOR_KEYS[3], ElexIDs.ELEX_ARMOR_DEFAULT[3]).getInt();
+        ElexIDs.GEM_PLATE = config.getItem(ElexIDs.CATEGORY_ITEM_IDS, ElexIDs.GEM_PLATE_KEY, ElexIDs.GEM_PLATE_DEFAULT).getInt();
         
         config.save();
     }

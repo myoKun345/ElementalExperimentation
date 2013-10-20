@@ -528,3 +528,50 @@ object ElexSaltedBeef extends ElexSaltedMeat(SALTED_BEEF, Item.beefCooked.asInst
 object ElexSaltedChicken extends ElexSaltedMeat(SALTED_CHICKEN, Item.chickenCooked.asInstanceOf[ItemFood], 1)
 object ElexSaltedPork extends ElexSaltedMeat(SALTED_PORK, Item.porkCooked.asInstanceOf[ItemFood], 2)
 object ElexSaltedFish extends ElexSaltedMeat(SALTED_FISH, Item.fishCooked.asInstanceOf[ItemFood], 3)
+
+class ElexPlate(var id:Int, var kind:Int) extends ElexItem(id) {
+	
+	@SideOnly(Side.CLIENT)
+	var icons:Array[Icon] = new Array[Icon](0)
+	
+	setHasSubtypes(true)
+	
+	override def getUnlocalizedName(stack:ItemStack):String = {
+		
+		if (kind == 0) {
+			return "item." + GEM_PLATE_UNLOCALIZED_NAMES(stack.getItemDamage())
+		}
+		return "something.went.wrong"
+		
+	}
+	
+	override def registerIcons(register:IconRegister) {
+		
+		if (kind == 0) {
+			icons = new Array[Icon](GEM_PLATE_UNLOCALIZED_NAMES.length)
+			for (i <- 0 until GEM_PLATE_UNLOCALIZED_NAMES.length) {
+				icons(i) = register.registerIcon(MOD_ID + ":" + GEM_PLATE_UNLOCALIZED_NAMES(i))
+			}
+		}
+		
+	}
+	
+	@SideOnly(Side.CLIENT)
+	override def getIconFromDamage(dmg:Int):Icon = {
+		return icons(dmg)
+	}
+	
+	@SideOnly(Side.CLIENT)
+	override def getSubItems(id:Int, tab:CreativeTabs, list:List[_]) {
+		
+		if (kind == 0) {
+			for (i <- 0 until GEM_PLATE_UNLOCALIZED_NAMES.length) {
+				var stack:ItemStack = new ItemStack(id, 1, i)
+				list.asInstanceOf[List[ItemStack]].add(stack)
+			}
+		}
+		
+	}
+	
+}
+object ElexGemPlate extends ElexPlate(GEM_PLATE, 0)

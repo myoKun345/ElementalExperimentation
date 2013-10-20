@@ -803,6 +803,10 @@ object QuartzChest extends ElexBlockContainer(QUARTZ_CHEST, Material.iron) {
 	
     override def isOpaqueCube:Boolean = false
     
+    override def renderAsNormalBlock:Boolean = false
+    
+    override def getRenderType:Int = 22
+    
 	override def createNewTileEntity(world:World):TileEntity = {
 		return null
 	}
