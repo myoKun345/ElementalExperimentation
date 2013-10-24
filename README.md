@@ -6,6 +6,8 @@ Builds: http://mods.austin-jones.info/builds/elex/
 
 This mod will recreate the entire periodic table of elements in Minecraft and allow the player to break down items into their component elements for use in further mixing and compounding to make stronger and more useful materials. This mod, by the nature of how it will denote elements and characteristics, will be easily compatible with the many other technical mods that are available for Minecraft.
 
+*Disclaimer to Mod Authors:* Closed-or-limited-source mods will most likely not receive my full effort for compatibility, unless they directly share aspects where I see compatibility would be very beneficial. This does not mean I will not accept contributions of compatibility layers from people who feel like doing it for me, by all means feel free! I am only stating my personal advocation for open source projects. This is intended in no way to offend certain people.
+
 Building it yourself
 ============
 
